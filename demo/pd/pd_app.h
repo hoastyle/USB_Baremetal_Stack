@@ -58,6 +58,9 @@
 
 #define PD_DEMO_PRINT_BUFFER_COUNT (15)
 
+/* Source capabilities extended
+ * 3 bytes extended header + 24 bytes Data Block
+ */
 typedef struct _pd_source_cap_ext_data_block
 {
     uint16_t vid;
@@ -77,6 +80,7 @@ typedef struct _pd_source_cap_ext_data_block
     uint8_t batteries;
 } pd_source_cap_ext_data_block_t;
 
+/* status message，but lack two bytes:event flags and temperature status */
 typedef struct _pd_status_data_block
 {
     uint8_t internalTemp;
@@ -84,6 +88,9 @@ typedef struct _pd_status_data_block
     uint8_t presentBatteryInput;
 } pd_status_data_block_t;
 
+/* 6.4.6 Alert message
+ * Alert message will be followed by get status or get battery status
+ */
 typedef struct _pd_alert_data_object
 {
     union
@@ -99,6 +106,7 @@ typedef struct _pd_alert_data_object
     };
 } pd_alert_data_object_t;
 
+/* 6.5.5 Battery capabilities message is sent in response to get_battery_cap */
 typedef struct _pd_battery_cap_data_block
 {
     uint16_t vid;
@@ -108,13 +116,17 @@ typedef struct _pd_battery_cap_data_block
     uint8_t batteryType;
 } pd_battery_cap_data_block_t;
 
+/* 6.4.5 battery status message */
 typedef struct _pd_battery_status_data_object
 {
     uint8_t reserved;
+	//battery status
     uint8_t batterInfo;
+	//battery capacity
     uint16_t batteryPC;
 } pd_battery_status_data_object_t;
 
+/* 6.5.7 Manufacturer info message */
 typedef struct _pd_manufac_info_data_block
 {
     uint16_t vid;
@@ -122,6 +134,7 @@ typedef struct _pd_manufac_info_data_block
     uint8_t manufacturerString[22];
 } pd_manufac_info_data_block_t;
 
+/* id header VDO of discover identity response*/
 typedef struct _pd_id_heaer_vdo
 {
     union
@@ -140,10 +153,13 @@ typedef struct _pd_id_heaer_vdo
     };
 } pd_id_header_vdo_t;
 
+/* 6.4.4.3.1 discover identity response */
 typedef struct _pd_vdm_identity_data
 {
     pd_id_header_vdo_t idHeaderVDO;
+	// cert VDO
     uint32_t certStatVDO;
+	// product VDO
     uint16_t bcdDevice;
     uint16_t pid;
 } pd_vdm_identity_data_t;
@@ -158,6 +174,7 @@ typedef enum _pd_demo_sw_state
     kDEMO_SWProcessed,
 } pd_demo_sw_state_t;
 
+//app表示一种应用场景？
 typedef struct _pd_app
 {
     pd_handle pdHandle;
@@ -170,13 +187,21 @@ typedef struct _pd_app
     uint32_t selfVdmModes;
     pd_rdo_t sinkRequestRDO; /* sink - the self requested RDO; source - the partner sink requested RDO */
     pd_svdm_command_param_t structuredVDMCommandParam;
+	/* structured vdm header */
     pd_structured_vdm_header_t defaultSVDMCommandHeader;
+	/* unstructured vdm header */
     pd_unstructured_vdm_header_t unstructuredVDMCommandHeader;
+	/* source extended data message */
     pd_source_cap_ext_data_block_t selfExtCap;
+	/* status message*/
     pd_status_data_block_t selfStatus;
+	/* Alert message */
     pd_alert_data_object_t selfAlert;
+	/* Battery capabilities */
     pd_battery_cap_data_block_t selfBatteryCap;
+	/* Battery status */
     pd_battery_status_data_object_t selfBatteryStatus;
+	/* manufacturer info */
     pd_manufac_info_data_block_t selfManufacInfo;
     uint32_t sourceVbusVoltage;
     uint32_t sinkRequestVoltage;

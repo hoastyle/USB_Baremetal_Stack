@@ -205,6 +205,7 @@ void LPTMR0_IRQHandler(void)
     PD_Demo1msIsrProcessSW(&g_PDAppInstance);
 }
 
+/* 1ms low power timer */
 static void PD_1mstimerInit(void)
 {
     lptmr_config_t lptmrConfig;
@@ -252,6 +253,7 @@ static void pd_port_task(void *arg)
 static void pd_demo_task(void *arg)
 {
     g_PDAppInstance.pdHandle = NULL;
+	/* Set and enable interrupt of I2C */
     NVIC_SetPriority(PD_I2C_MASTER_IRQn, 1);
     NVIC_EnableIRQ(PD_I2C_MASTER_IRQn);
 

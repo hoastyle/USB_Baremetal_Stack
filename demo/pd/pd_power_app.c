@@ -64,10 +64,12 @@ uint32_t *PD_PowerBoardGetSelfSourceCaps(void *callbackParam)
     return (uint32_t *)&(pdAppInstance->selfSourcePdo1);
 }
 
+// 对应PD_PowerBoardSourceEnableVbusPower
 pd_status_t PD_PowerBoardReset(void)
 {
     pd_ptn5110_ctrl_pin_t phyPowerPinCtrl;
 
+	//Question: reset的时候设置为0，什么时候会设置为其他值？
     g_PDAppInstance.sourceVbusVoltage = 0u;
     phyPowerPinCtrl.enSRC = 0;
     phyPowerPinCtrl.enSNK1 = 0;
@@ -80,6 +82,7 @@ pd_status_t PD_PowerBoardReset(void)
 /*...............source need implement follow vbus power related functions..................*/
 
 /* voltage: the unit is 50mV */
+// Question: 这边的硬件做了什么？
 pd_status_t PD_PowerBoardSourceEnableVbusPower(pd_vbus_power_t vbusPower)
 {
     uint32_t delay = 1000000;
@@ -98,6 +101,7 @@ pd_status_t PD_PowerBoardSourceEnableVbusPower(pd_vbus_power_t vbusPower)
 
     if (vbusPower.minVoltage > VSAFE5V_IN_50MV)
     {
+		//(basic, pin number, logic), GPIOA + 13
         GPIO_WritePinOutput(PD_EXTRA_EN_SRC_GPIO, PD_EXTRA_EN_SRC_GPIO_PIN, 1);
         /* when return, the power is ready. */
         while (--delay)

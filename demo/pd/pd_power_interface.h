@@ -30,18 +30,21 @@
 #ifndef __PD_POWER_INTERFACE_T__
 #define __PD_POWER_INTERFACE_T__
 
+//以50mV为单位，不同的电压对应的单位数
 #define PD_POWER_REQUEST_MIN_VOLTAGE (5000 / 50) /* 5V */
 
 #define VSAFE5V_IN_50MV (5000 / 50)
 #define VBUS_REQ_20V (20000 / 50)
 #define VBUS_REQ_5V (5000 / 50)
 
+//两种类型，电流或者是功率，对于battery来说以功率计量
 typedef enum _pd_request_value_type
 {
     kRequestPower_Current,
     kRequestPower_Power,
 } pd_request_value_type_t;
 
+//为什么需要该结构体？
 typedef struct _pd_vbus_power
 {
     uint32_t valueType : 2; /* pd_request_value_type_t */
@@ -50,6 +53,7 @@ typedef struct _pd_vbus_power
     uint32_t requestValue : 10; /* current or power according to valueType */
 } pd_vbus_power_t;
 
+//defined in pd_power_interface.c
 pd_status_t PD_PowerSrcTurnOnDefaultVbus(void *callbackParam, uint8_t powerProgress);
 pd_status_t PD_PowerSrcTurnOnRequestVbus(void *callbackParam, pd_rdo_t rdo);
 pd_status_t PD_PowerSrcTurnOffVbus(void *callbackParam, uint8_t powerProgress);
@@ -60,6 +64,7 @@ pd_status_t PD_PowerSnkStopDrawVbus(void *callbackParam, uint8_t powerProgress);
 pd_status_t PD_PowerSnkGotoMinReducePower(void *callbackParam);
 pd_status_t PD_PowerControlVconn(void *callbackParam, uint8_t on);
 
+//defined in pd_power_app.c
 uint32_t *PD_PowerBoardGetPartnerSourceCaps(void *callbackParam);
 uint32_t *PD_PowerBoardGetSelfSourceCaps(void *callbackParam);
 pd_status_t PD_PowerBoardReset(void);

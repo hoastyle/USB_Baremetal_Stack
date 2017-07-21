@@ -48,6 +48,7 @@
  * Code
  ******************************************************************************/
 
+// request data object, 
 static void PD_PowerGetVbusVoltage(uint32_t *partnerSourceCaps, pd_rdo_t rdo, pd_vbus_power_t *vbusPower)
 {
     pd_source_pdo_t pdo;
@@ -86,6 +87,7 @@ static void PD_PowerGetVbusVoltage(uint32_t *partnerSourceCaps, pd_rdo_t rdo, pd
 
 /*...............source need implement follow vbus power related functions..................*/
 
+//Question: power部分的代码对应的硬件是那部分？
 pd_status_t PD_PowerSrcTurnOnDefaultVbus(void *callbackParam, uint8_t powerProgress)
 {
     pd_vbus_power_t vbusPower;

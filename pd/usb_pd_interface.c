@@ -69,6 +69,7 @@ static const pd_phy_api_interface_t s_PTN5110Interface = {
 /*******************************************************************************
  * Code
  ******************************************************************************/
+/* 从代码看，one instance <-> one port, 将pd_instance_t类型的变量初始化为0 */
 static pd_instance_t *PD_GetInstance(void)
 {
     uint8_t i = 0;
@@ -137,6 +138,7 @@ pd_status_t PD_PhyControl(pd_instance_t *pdInstance, uint32_t control, void *par
     }
 }
 
+//initialize instance
 pd_status_t PD_InstanceInit(pd_handle *pdHandle,
                             pd_stack_callback_t callbackFn,
                             pd_power_handle_callback_t *callbackFunctions,
@@ -145,6 +147,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 {
     pd_instance_t *pdInstance;
     pd_status_t status = kStatus_PD_Success;
+	//phy interface configuration
     pd_phy_config_t phyConfig;
 
     pdInstance = PD_GetInstance();
@@ -163,15 +166,23 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
         PD_ReleaseInstance(pdInstance);
         return kStatus_PD_Error;
     }
+
+	//phyType的类型，PTN5100 or others
     pdInstance->phyType = config->phyType;
+	//PD_DpmDemoAppCallback
     pdInstance->pdCallback = callbackFn;
+	//callbackFunctions, power related
     pdInstance->callbackFns = callbackFunctions;
+	//pd_app_t
     pdInstance->callbackParam = callbackParam;
+	//PD REVISION，如果需要改为3.0，需要在usb_pd_config.h中修改
     pdInstance->revision = PD_CONFIG_REVISION;
     pdInstance->sendingMsgHeader.bitFields.specRevision = pdInstance->revision;
     pdInstance->initializeLabel = 0;
+	// 这里的10是什么意思？event group的等待时间
     pdInstance->waitTime = PD_WAIT_EVENT_TIME;
 
+	// 创建event，句柄保存在pdInstance->taskEventHandle
     if (kStatus_USB_OSA_Success != USB_OsaEventCreate(&(pdInstance->taskEventHandle), 0))
     {
         PD_ReleaseInstance(pdInstance);
@@ -180,7 +191,9 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 
     /* initialize PHY */
     pdInstance->pdPhyHandle = NULL;
+	//instance config
     pdInstance->pdConfig = config;
+	//这里的device是指本身还是port partner?
     if (pdInstance->pdConfig->deviceType == kDeviceType_NormalPowerPort)
     {
         pdInstance->pdPowerPortConfig = (pd_power_port_config_t *)pdInstance->pdConfig->deviceConfig;
@@ -192,10 +205,13 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
     }
     else
     {
+		//audio, debug, alternate mode
         pdInstance->pendingSOP = kPD_MsgSOPMask;
     }
+	// phy interface
     phyConfig.interface = config->phyInterface;
     phyConfig.i2cConfig.slaveAddress = config->interfaceParam;
+	// phy initialize, call PDPTN5110_Init
     status = pdInstance->phyInterface->pdPhyInit(pdInstance, &(pdInstance->pdPhyHandle), &phyConfig);
     if ((status != kStatus_PD_Success) || (pdInstance->pdPhyHandle == NULL))
     {

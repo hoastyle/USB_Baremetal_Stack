@@ -70,6 +70,7 @@ typedef enum _pd_connect_state
 typedef struct _pd_instance
 {
     pd_phy_handle pdPhyHandle;
+	//instance configuration
     pd_instance_config_t *pdConfig;
     pd_power_port_config_t *pdPowerPortConfig;
     const pd_phy_api_interface_t *phyInterface;

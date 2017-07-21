@@ -158,6 +158,13 @@ pd_power_port_config_t g_PowerPortConfig = {
 };
 #endif
 
+//instace configuration
+// device type
+// phy interrupt num
+// phy type
+// phy interface, i2c or spi
+// phy interface, slave address
+// device config which depends on device type 
 pd_instance_config_t g_PDConfig = {
     kDeviceType_NormalPowerPort,  /* normal power port */
     PORTB_PORTC_PORTD_PORTE_IRQn, /* interrupt number */
@@ -167,6 +174,7 @@ pd_instance_config_t g_PDConfig = {
     &g_PowerPortConfig,
 };
 
+// 在pd_power_interface.c中定义, pd_power_interface.h中声明, 赋值给pd_instance_t.callbackFns
 pd_power_handle_callback_t callbackFunctions = {
     PD_PowerSrcTurnOnDefaultVbus,  PD_PowerSrcTurnOnRequestVbus,  PD_PowerSrcTurnOffVbus,
     PD_PowerSrcGotoMinReducePower, PD_PowerSnkDrawTypeCVbus,      PD_PowerSnkDrawRequestVbus,
@@ -255,10 +263,13 @@ pd_status_t PD_DpmDemoAppCallback(void *callbackParam, uint32_t event, void *par
 
 void PD_AppInit(void)
 {
+	/* port config */
+	//因为给的是指针，所以sourceCaps 指向 selfSourcePdo1
     g_PowerPortConfig.sourceCaps = (uint32_t *)&g_PDAppInstance.selfSourcePdo1, /* source caps */
         g_PowerPortConfig.sourceCapCount = 2;
     g_PowerPortConfig.sinkCaps = (uint32_t *)&g_PDAppInstance.selfSinkPdo1, /* self sink caps */
         g_PowerPortConfig.sinkCapCount = 2;
+	// pd_app_t.pdHandle = pd_instance_t
     if (PD_InstanceInit(&g_PDAppInstance.pdHandle, PD_DpmDemoAppCallback, &callbackFunctions, &g_PDAppInstance,
                         &g_PDConfig) != kStatus_PD_Success)
     {
@@ -274,6 +285,8 @@ void PD_AppInit(void)
 
     PD_PowerBoardReset();
 
+	// pd_app_t type
+	// Question: pd_app_t 的作用是什么？
     g_PDAppInstance.msgSop = kPD_MsgSOP;
     g_PDAppInstance.partnerSourceCapNumber = 0;
     g_PDAppInstance.partnerSinkCapNumber = 0;

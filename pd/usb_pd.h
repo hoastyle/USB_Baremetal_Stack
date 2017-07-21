@@ -773,6 +773,7 @@ typedef struct _pd_power_port_config
     void *drpConfig;
 } pd_power_port_config_t;
 
+// Question: port和instance的关系是什么？
 /**
 * @brief PD instance config
 *
@@ -893,6 +894,7 @@ typedef struct _pd_pdo_common
 /**
 * @brief source PDO union
 */
+/* Lack of PPS PDO, why? */
 typedef struct _pd_source_pdo
 {
     union
