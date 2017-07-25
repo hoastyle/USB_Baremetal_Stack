@@ -1621,8 +1621,10 @@ TypeCState_t PD_ConnectGetInitRoleState(pd_instance_t *pdInstance, uint32_t type
     return newState;
 }
 
+/* PD_StackStateMachine 中被调用 */
 void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t errorRecovery)
 {
+	//state in Type-C Spec
     TypeCState_t newState;
     uint32_t infoVal;
 

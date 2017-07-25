@@ -77,6 +77,7 @@ static pd_instance_t *PD_GetInstance(void)
     USB_OSA_ENTER_CRITICAL();
     for (; i < PD_CONFIG_MAX_PORT; i++)
     {
+		/* 如果该instance没有被occupy，则可以进行初始化 */
         if (s_PDInstance[i].occupied != 1)
         {
             uint8_t *buffer = (uint8_t *)&s_PDInstance[i];
@@ -119,11 +120,13 @@ static void PD_GetPhyInterface(uint8_t phyType, const pd_phy_api_interface_t **c
 
 pd_status_t PD_PhyControl(pd_instance_t *pdInstance, uint32_t control, void *param)
 {
+	// usb_pd_phy.h: pd_phy_control_t enum
     if ((control == PD_PHY_UPDATE_STATE) ||
         (USB_OsaEventCheck(pdInstance->taskEventHandle, PD_TASK_EVENT_PHY_STATE_CHAGNE, NULL) ==
          kStatus_USB_OSA_Success))
     {
         USB_OsaEventClear(pdInstance->taskEventHandle, PD_TASK_EVENT_PHY_STATE_CHAGNE);
+		// pd/usb_pd_interface.c中初始化，对应phy中的control函数
         pdInstance->phyInterface->pdPhyControl(pdInstance->pdPhyHandle, PD_PHY_UPDATE_STATE, NULL);
         NVIC_EnableIRQ((IRQn_Type)pdInstance->pdConfig->phyInterruptNum);
     }
@@ -147,7 +150,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 {
     pd_instance_t *pdInstance;
     pd_status_t status = kStatus_PD_Success;
-	//phy interface configuration
+	//phy interface configuration, including i2c or spi interface config
     pd_phy_config_t phyConfig;
 
     pdInstance = PD_GetInstance();
@@ -158,6 +161,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 
     /* get phy API table */
     pdInstance->phyInterface = NULL;
+	/* get corresponding interface according to phyType */
     PD_GetPhyInterface(config->phyType, &pdInstance->phyInterface);
     if ((pdInstance->phyInterface == NULL) || (pdInstance->phyInterface->pdPhyInit == NULL) ||
         (pdInstance->phyInterface->pdPhyDeinit == NULL) || (pdInstance->phyInterface->pdPhySend == NULL) ||
@@ -179,7 +183,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
     pdInstance->revision = PD_CONFIG_REVISION;
     pdInstance->sendingMsgHeader.bitFields.specRevision = pdInstance->revision;
     pdInstance->initializeLabel = 0;
-	// 这里的10是什么意思？event group的等待时间
+	// FreeRTOS event group的等待时间
     pdInstance->waitTime = PD_WAIT_EVENT_TIME;
 
 	// 创建event，句柄保存在pdInstance->taskEventHandle
@@ -219,7 +223,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
         PD_ReleaseInstance(pdInstance);
         return kStatus_PD_Error;
     }
-    /* initialize pd stack */
+    /* usb_pd_msg.c: initialize pd stack */
     PD_MsgInit(pdInstance);
     PD_TimerInit(pdInstance);
 
@@ -246,6 +250,7 @@ void PD_InstanceTask(pd_handle pdHandle)
 {
     pd_instance_t *pdInstance = (pd_instance_t *)pdHandle;
 
+	// usb_pd_policy.c
     PD_StackStateMachine(pdInstance);
 }
 

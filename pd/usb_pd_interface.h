@@ -70,9 +70,10 @@ typedef enum _pd_connect_state
 typedef struct _pd_instance
 {
     pd_phy_handle pdPhyHandle;
-	//instance configuration
+	// instance configuration
     pd_instance_config_t *pdConfig;
     pd_power_port_config_t *pdPowerPortConfig;
+	// defined in usb_pd_phy.h, including PDPhyInit()
     const pd_phy_api_interface_t *phyInterface;
     pd_stack_callback_t pdCallback;
     pd_power_handle_callback_t *callbackFns;
@@ -86,6 +87,7 @@ typedef struct _pd_instance
     pd_source_pdo_t selfOrPartnerFirstSourcePDO;
     pd_phy_vendor_info_t phyInfo;
     /* timr */
+	// Question: 什么意思 ?
     volatile uint32_t timrsRunningState[32 / 32];
     volatile uint32_t timrsTimeOutState[32 / 32];
     volatile uint16_t timrsTimeValue[32];

@@ -261,6 +261,7 @@ static void pd_demo_task(void *arg)
     PD_AppInit();
     PRINTF("pd init success\r\n");
 
+	// state machine task
     if (xTaskCreate(pd_port_task, "port", (1024u + 512u) / sizeof(portSTACK_TYPE), NULL, 5, NULL) != pdPASS)
     {
         PRINTF("create pd task error\r\n");

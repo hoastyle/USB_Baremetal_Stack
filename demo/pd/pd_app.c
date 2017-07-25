@@ -265,11 +265,12 @@ void PD_AppInit(void)
 {
 	/* port config */
 	//因为给的是指针，所以sourceCaps 指向 selfSourcePdo1
+	// Question: g_PowerPortConfig的作用是什么？
     g_PowerPortConfig.sourceCaps = (uint32_t *)&g_PDAppInstance.selfSourcePdo1, /* source caps */
         g_PowerPortConfig.sourceCapCount = 2;
     g_PowerPortConfig.sinkCaps = (uint32_t *)&g_PDAppInstance.selfSinkPdo1, /* self sink caps */
         g_PowerPortConfig.sinkCapCount = 2;
-	// pd_app_t.pdHandle = pd_instance_t
+	// initialize pd_instance, pd_app_t.pdHandle = pd_instance_t
     if (PD_InstanceInit(&g_PDAppInstance.pdHandle, PD_DpmDemoAppCallback, &callbackFunctions, &g_PDAppInstance,
                         &g_PDConfig) != kStatus_PD_Success)
     {
@@ -277,10 +278,12 @@ void PD_AppInit(void)
     }
 
     /* initialize port interrupt */
+	//设置MCU分配给PTN5110的GPIO pin
     PORT_SetPinInterruptConfig(BOARD_PTN5110_GPIO_PORT, BOARD_PTN5110_GPIO_PIN, kPORT_InterruptLogicZero);
     BOARD_PTN5110_GPIO->PDDR &= ~(1U << BOARD_PTN5110_GPIO_PIN);    /* gpio set as input */
     PD_EXTRA_EN_SRC_GPIO->PDDR |= (1U << PD_EXTRA_EN_SRC_GPIO_PIN); /* as output */
 
+	//设置PTN5110 GPIO Interrupt的优先级
     NVIC_SetPriority((IRQn_Type)BOARD_PTN5110_GPIO_IRQ, PD_PTN5110_GPIO_INTERRUPT_PRIORITY);
 
     PD_PowerBoardReset();

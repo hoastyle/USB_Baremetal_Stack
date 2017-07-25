@@ -445,6 +445,7 @@ static void USB_PDDemoProcessMenu(pd_app_t *pdAppInstance, char ch)
 
 void PD_DemoInit(pd_app_t *pdAppInstance)
 {
+	//sw1 & sw3 默认状态都是idle
     g_PDAppInstance.sw1State = kDEMO_SWIdle;
     g_PDAppInstance.sw3State = kDEMO_SWIdle;
     /* button */
@@ -557,8 +558,14 @@ void USB_PDDemoProcessSW(pd_app_t *pdAppInstance)
 
     PD_Control(pdAppInstance->pdHandle, PD_CONTROL_GET_POWER_ROLE, &powerRole);
 
+	/* sw1State通过中断函数PD_Demo1msIsrProcessSW处理
+	   sw1 短按，request 5V@2.7A
+		   长按，request 9V@1.5A
+	*/
+	/* 短按 */
     if (pdAppInstance->sw1State == kDEMO_SWShortPress)
     {
+		// 表示已经处理过了
         pdAppInstance->sw1State = kDEMO_SWProcessed;
         if (powerRole == kPD_PowerRoleSink)
         {
@@ -580,6 +587,7 @@ void USB_PDDemoProcessSW(pd_app_t *pdAppInstance)
             }
         }
     }
+	/* 长按 */
     else if (pdAppInstance->sw1State == kDEMO_SWLongPress)
     {
         pdAppInstance->sw1State = kDEMO_SWProcessed;
@@ -607,6 +615,7 @@ void USB_PDDemoProcessSW(pd_app_t *pdAppInstance)
     {
     }
 
+	//sw3: 短按 power role swap, 长按hard reset
     if (pdAppInstance->sw3State == kDEMO_SWShortPress)
     {
         PRINTF("request power role swap\r\n");
@@ -759,6 +768,7 @@ void PD_DemoProcessPrint(pd_app_t *pdAppInstance)
     }
 }
 
+/* Demo related function, 包括按键demo以及console command部分 */
 void PD_DemoTaskFun(pd_app_t *pdAppInstance)
 {
     char uartData;

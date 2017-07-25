@@ -61,6 +61,7 @@ void PD_MsgInit(pd_instance_t *pdInstance)
     pdInstance->hardResetReceived = 0;
     pdInstance->sendingMsgHeader.msgHeaderVal = 0;
 
+	// call phy control function, control code is PD_PHY_RESET_MSG_FUNCTION
     PD_PhyControl(pdInstance, PD_PHY_RESET_MSG_FUNCTION, NULL);
 }
 

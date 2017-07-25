@@ -117,6 +117,7 @@ typedef enum _extended_message_type
     kPD_ExtMsgFirmwareUpdaetResponse,
 } extended_message_type_t;
 
+/* Policy Engine Machine */
 typedef enum _pd_psm_state
 {
     PSM_UNKNOWN = 0, // Internal state

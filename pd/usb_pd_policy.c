@@ -6647,6 +6647,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
     uint8_t smState = 0;
     uint8_t connected;
 
+	//表示state machine是否被初始化过
     if (pdInstance->initializeLabel == 0)
     {
         pdInstance->initializeLabel = 1;
