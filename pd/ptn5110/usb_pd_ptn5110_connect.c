@@ -706,6 +706,7 @@ void PDPTN5110_ConnectSetInProgress(pd_phy_ptn5110_instance_t *ptn5110Instance, 
             REG_CACHE_MODIFY_FIELD(ptn5110Instance, CONTROL, power_control,
                                    TCPC_POWER_CONTROL_AUTO_DISCHARGE_DISCONNECT_MASK, 0);
         }
+		//如果status为kVbusPower_Stable，则
         else
         {
             if (ptn5110Instance->pwrInProgress == kVbusPower_InPRSwap)
@@ -714,6 +715,7 @@ void PDPTN5110_ConnectSetInProgress(pd_phy_ptn5110_instance_t *ptn5110Instance, 
                 PDPTN5110_ConnectUpdateAfterPRSwap(ptn5110Instance, ptn5110Instance->phyPowerRole);
             }
             /* Enable automatic disconnection after resuming normal operation */
+			// ADDR_power_control == TCPC_POWER_CONTROL_IDX
             REG_CACHE_MODIFY_FIELD(ptn5110Instance, CONTROL, power_control,
                                    TCPC_POWER_CONTROL_AUTO_DISCHARGE_DISCONNECT_MASK,
                                    TCPC_POWER_CONTROL_AUTO_DISCHARGE_DISCONNECT_MASK);

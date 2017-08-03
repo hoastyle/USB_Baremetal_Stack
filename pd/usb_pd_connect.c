@@ -81,6 +81,8 @@ static uint8_t PD_ConnectState(pd_instance_t *pdInstance);
  * Code
  ******************************************************************************/
 
+/* 设置CC monitor的参数 */
+// Question: cc monitor的作用是什么？
 static void PD_ConnectSetMonitorCC(pd_instance_t *pdInstance)
 {
     if (pdInstance->ccUsed == kPD_CCInvalid)
@@ -527,16 +529,22 @@ static void PD_ConnectSetupNewState(pd_instance_t *pdInstance, uint8_t prSwap)
             break;
     }
 
+	//设置cc monitor的参数，根据cc的使用情况，设置CCxMonitor变量
     PD_ConnectSetMonitorCC(pdInstance);
 
+	//上面的switch case中根据需求设置writeRegsNeeded和相关的变量，在最后如果writeRegsNeeded为1
+	//则表示需要写phy register
     if (writeRegsNeeded)
     {
+		//如果当前不是attached状态
         if ((pdInstance->curConnectState != TYPEC_ATTACHED_SRC) && (pdInstance->curConnectState != TYPEC_ATTACHED_SNK))
         {
             controlVal = kPD_CCInvalid;
+			// Question: disable cc? why?
             PD_PhyControl(pdInstance, PD_PHY_CONNECT_SET_CC, &controlVal);
         }
 
+		//设置vconn
         if ((pdInstance->pdPowerPortConfig->vconnSupported) && (vconn_en != VCONN_NO_CHANGE))
         {
             controlVal = (vconn_en == VCONN_FORCE_ON);
@@ -1574,6 +1582,7 @@ void PD_ConnectSetPowerProgress(pd_instance_t *pdInstance, uint8_t state)
 {
     if ((state != kVbusPower_Invalid) && (pdInstance->inProgress != state))
     {
+		//设置power progress
         pdInstance->inProgress = state;
         PD_PhyControl(pdInstance, PD_PHY_SET_VBUS_TRANSFORM_STATE, &state);
     }
@@ -1637,6 +1646,10 @@ void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t e
     Unattached.SRC state based on port type. This is the equivalent of forcing a detach event
     and looking for a new attach.
     */
+	/* error recovery 两件事
+	 * 1. remove terminations for CC1 and CC2 for tErrorRecovery
+	 * 2. transition to unattached state
+	 */
     if (errorRecovery)
     {
         if (pdInstance->curConnectState != TYPEC_ERROR_RECOVERY)
@@ -1644,22 +1657,27 @@ void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t e
             pdInstance->ccUsed = kPD_CCInvalid;
             PD_ConnectSetPowerProgress(pdInstance, kVbusPower_Stable);
             pdInstance->curConnectState = TYPEC_ERROR_RECOVERY;
+			//设置CC，包括Vconn
             PD_ConnectSetupNewState(pdInstance, 0);
         }
 
+		// 这里是tErrorRecovery的延迟，那么上面是做remove terminations?
         PD_TimerStart(pdInstance, tDelayTimer, T_ERROR_RECOVERY);
 
         while (!PD_TimerCheckValidTimeOut(pdInstance, tDelayTimer))
         {
         }
     }
+	// Question: 经过上述操作可以保证state transition to unattached.xxx ?
 
+	// Question: 设置power progress -> stable的作用 ? 
+	/* 以下四种都是初始状态 */
     PD_ConnectSetPowerProgress(pdInstance, kVbusPower_Stable);
     pdInstance->vbusDischargeInProgress = kVbus_NoDischarge;
     pdInstance->ccUsed = kPD_CCInvalid;
     pdInstance->curConnectState = TYPEC_DISABLED;
 
-    newState = PD_ConnectGetInitRoleState(pdInstance, typecRole);
+    newState = PD_ConnectetInitRoleState(pdInstance, typecRole);
     if (newState != pdInstance->curConnectState)
     {
         /* In the process of connecting, just change the role */

@@ -443,6 +443,7 @@ static void USB_PDDemoProcessMenu(pd_app_t *pdAppInstance, char ch)
     }
 }
 
+/* Demo相关软硬件初始化 */
 void PD_DemoInit(pd_app_t *pdAppInstance)
 {
 	//sw1 & sw3 默认状态都是idle
@@ -452,7 +453,7 @@ void PD_DemoInit(pd_app_t *pdAppInstance)
     gpio_pin_config_t sw_config = {
         kGPIO_DigitalInput, 0,
     };
-    /* Init input switch GPIO. */
+    /* Init input switch GPIO. 初始化Demo需要用到的button */
     GPIO_PinInit(BOARD_SW3_GPIO, BOARD_SW3_GPIO_PIN, &sw_config);
 
     GPIO_PinInit(BOARD_SW1_GPIO, BOARD_SW1_GPIO_PIN, &sw_config);
