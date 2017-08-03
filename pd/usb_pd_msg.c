@@ -570,6 +570,7 @@ uint8_t PD_MsgRecvPending(pd_instance_t *pdInstance)
     return (pdInstance->receiveState == 2);
 }
 
+// 要开始发送AMS?
 void PD_MsgSrcStartCommand(pd_instance_t *pdInstance)
 {
 #if defined(PD_CONFIG_PD3_AMS_COLLISION_AVOID_ENABLE) && (PD_CONFIG_PD3_AMS_COLLISION_AVOID_ENABLE)
@@ -586,6 +587,7 @@ void PD_MsgSrcStartCommand(pd_instance_t *pdInstance)
     {
         uint8_t rpVal = kCurrent_1A5;
         pdInstance->commandSrcOwner = 1;
+		// set SinkTxNG
         PD_PhyControl(pdInstance, PD_PHY_SRC_SET_TYPEC_CURRENT_CAP, &rpVal);
         PD_TimerStart(pdInstance, tSinkTxTimer, T_SINK_TX);
         while (!PD_TimerCheckInvalidOrTimeOut(pdInstance, tSinkTxTimer))
@@ -598,8 +600,10 @@ void PD_MsgSrcStartCommand(pd_instance_t *pdInstance)
 void PD_MsgSrcEndCommand(pd_instance_t *pdInstance)
 {
 #if defined(PD_CONFIG_PD3_AMS_COLLISION_AVOID_ENABLE) && (PD_CONFIG_PD3_AMS_COLLISION_AVOID_ENABLE)
+	//3A means SinkTxOK
     uint8_t rpVal = kCurrent_3A;
     pdInstance->commandSrcOwner = 0;
+	// control phy to change rp value by rpVal
     PD_PhyControl(pdInstance, PD_PHY_SRC_SET_TYPEC_CURRENT_CAP, &rpVal);
 #endif
 }

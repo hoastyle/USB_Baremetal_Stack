@@ -158,7 +158,7 @@ pd_power_port_config_t g_PowerPortConfig = {
 };
 #endif
 
-//instace configuration
+//instace board configuration
 // device type
 // phy interrupt num
 // phy type
@@ -238,6 +238,8 @@ pd_status_t PD_DpmConnectCallback(void *callbackParam, uint32_t event, void *par
     return status;
 }
 
+// DPM Event Callback
+// Question: 初步看下来只是为了根据操作情况输出相关信息，提升用户体验而已？
 pd_status_t PD_DpmDemoAppCallback(void *callbackParam, uint32_t event, void *param)
 {
     pd_status_t status = kStatus_PD_Error;

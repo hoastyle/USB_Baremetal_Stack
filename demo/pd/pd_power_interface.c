@@ -92,6 +92,7 @@ pd_status_t PD_PowerSrcTurnOnDefaultVbus(void *callbackParam, uint8_t powerProgr
 {
     pd_vbus_power_t vbusPower;
 
+	//type: current for Fixed Variable PPS, power for battery
     vbusPower.valueType = kRequestPower_Current;
     vbusPower.minVoltage = vbusPower.maxVoltage = VSAFE5V_IN_50MV;
     vbusPower.requestValue = 0;

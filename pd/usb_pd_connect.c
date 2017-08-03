@@ -1578,12 +1578,14 @@ static TypeCState_t PD_ConnectStateMachine(pd_instance_t *pdInstance)
     }
 }
 
+// vbus power progress
 void PD_ConnectSetPowerProgress(pd_instance_t *pdInstance, uint8_t state)
 {
     if ((state != kVbusPower_Invalid) && (pdInstance->inProgress != state))
     {
 		//设置power progress
         pdInstance->inProgress = state;
+		// 告知phy driver vbus的状态
         PD_PhyControl(pdInstance, PD_PHY_SET_VBUS_TRANSFORM_STATE, &state);
     }
 }

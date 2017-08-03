@@ -343,8 +343,10 @@ void PDPTN5110_SetFetControl(pd_phy_ptn5110_instance_t *ptn5110Instance, pd_ptn5
         REG_SET_REG_REF(ptn5110Instance, ADDR_command, TCPC_SINKVBUS);
     }
 
+	//如果enSRC和enSNK1都为0，则
     if ((!(set->enSRC)) && (!(set->enSNK1)))
     {
+		//disable source vbus and sink vbus by COMMAND register
         REG_SET_REG_REF(ptn5110Instance, ADDR_command, TCPC_DISABLESOURCEVBUS);
         REG_SET_REG_REF(ptn5110Instance, ADDR_command, TCPC_DISABLESINKVBUS);
     }

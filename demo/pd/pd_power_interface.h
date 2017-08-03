@@ -44,7 +44,7 @@ typedef enum _pd_request_value_type
     kRequestPower_Power,
 } pd_request_value_type_t;
 
-//为什么需要该结构体？
+//为什么需要该结构体？类似于PDO?
 typedef struct _pd_vbus_power
 {
     uint32_t valueType : 2; /* pd_request_value_type_t */

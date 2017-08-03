@@ -7252,6 +7252,7 @@ pd_status_t PD_Control(pd_handle pdHandle, uint32_t controlCode, void *param)
             PD_PhyControl(pdInstance, PD_PHY_SNK_GET_TYPEC_CURRENT_CAP, param);
             break;
 
+		//params are phyPowerPinCtrl.enSRC or enSNK1
         case PD_CONTROL_PHY_POWER_PIN:
             PD_PhyControl(pdInstance, PD_PHY_CONTROL_POWER_PIN, param);
             break;
@@ -7303,19 +7304,25 @@ pd_status_t PD_Control(pd_handle pdHandle, uint32_t controlCode, void *param)
     return status;
 }
 
+// Question: 该函数的作用是什么？ 申请情况会使Done为1
 pd_status_t PD_DpmAppCallback(pd_instance_t *pdInstance, uint32_t event, void *param, uint8_t done)
 {
+	// Question: Done的含义是什么？
     if (done)
     {
+		// power role as source
         if (pdInstance->curPowerRole == kPD_PowerRoleSource)
         {
+			//set SinkTxOK
             PD_MsgSrcEndCommand(pdInstance);
         }
 
         /* in case the power is not reset to normal operation */
         PD_ConnectSetPowerProgress(pdInstance, kVbusPower_Stable);
+		// Question: 表示当前没有command正在处理？
         pdInstance->commandProcessing = 0;
     }
 
+	// 实际调用的是通过PD_InstanceInit初始化的PD_DpmDemoAppCallback函数
     return pdInstance->pdCallback(pdInstance->callbackParam, event, param);
 }

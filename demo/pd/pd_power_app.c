@@ -92,6 +92,7 @@ pd_status_t PD_PowerBoardSourceEnableVbusPower(pd_vbus_power_t vbusPower)
     pd_ptn5110_ctrl_pin_t phyPowerPinCtrl;
 
     phyPowerPinCtrl.enSNK1 = 0;
+	// 这里的单位是50mV，如果minVoltage > 5V
     if (vbusPower.minVoltage >= VSAFE5V_IN_50MV)
     {
         phyPowerPinCtrl.enSRC = 1;

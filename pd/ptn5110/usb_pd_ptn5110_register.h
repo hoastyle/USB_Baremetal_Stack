@@ -839,6 +839,7 @@ typedef enum
               /* stretching is disabled by the TCPC. */
 } I2C_Clock_Stretching_Control_t;
 
+//以下是ROLE_CONTROL Register中的field
 /* Register: ROLE_CONTROL
 */
 
@@ -983,6 +984,7 @@ TCPC to MAINTAIN_STATE in Figure 4 11
 1111 1111b:I2C Idle
 */
 
+/* Definition of COMMAND Register */
 typedef enum
 {
     TCPC_WAKEI2C = 0x11,           /* WakeI2C (no action is taken other than to wake the I2C interface). */
