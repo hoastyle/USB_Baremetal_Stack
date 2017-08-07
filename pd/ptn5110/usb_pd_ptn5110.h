@@ -83,10 +83,12 @@
 
 #define TcpcRegMask(REG_NAME, FIELD_NAME) (TCPC_##REG_NAME##_##FIELD_NAME##_MASK)
 #define TcpcRegLsb(REG_NAME, FIELD_NAME) (TCPC_##REG_NAME##_##FIELD_NAME##_LSB)
+// 按照寄存器以及field name返回待检测对象对应域中的值
 #define TcpcReadField(VALUE, REG_NAME, FIELD_NAME) \
     (((VALUE)&TcpcRegMask(REG_NAME, FIELD_NAME)) >> TcpcRegLsb(REG_NAME, FIELD_NAME))
 
 /* NOTE: masks should be defined in the device specific header */
+// TCPC Register 类别
 typedef enum
 {
     kRegModule_Intc = 1 << 0,
@@ -104,6 +106,8 @@ typedef enum
     kRegModule_All = 0xFFFF,
 } RegModuleMaskTcpc_t;
 
+// reigster map in tcpc
+// 在该结构体中，通过结构体对不同类别的寄存器进行分类
 typedef struct
 {
     struct
@@ -235,6 +239,7 @@ typedef struct __pd_phy_tcpc_instance_
     uint8_t msgRxSopMask;
     uint8_t msgTxSop;
     uint8_t msgAMSState;
+	// 表示当前有数据正在发送还是有数据需要发送?
     volatile uint8_t txHave;
     volatile uint8_t rxHave;
     volatile uint8_t revision;
@@ -248,6 +253,7 @@ typedef struct __pd_phy_tcpc_instance_
  * API
  ******************************************************************************/
 
+// 单字节寄存器操作函数
 static inline void REG_SET_REG_REF(pd_phy_ptn5110_instance_t *ptn5110Instance, uint32_t reg, uint8_t data)
 {
     CMSIS_PortControlInterfaceWriteRegister((ptn5110Instance)->cmsisAdapter, (reg), 1, &data, 1);
@@ -260,6 +266,7 @@ static inline uint8_t REG_GET_REG_REF(pd_phy_ptn5110_instance_t *ptn5110Instance
     return dataTmp;
 }
 
+// 多字节寄存器操作函数
 #define REG_GET_BLOCK_REF(ptn5110Instance, reg, length, dst) \
     CMSIS_PortControlInterfaceReadRegister((ptn5110Instance)->cmsisAdapter, (reg), 1, (dst), (length))
 
@@ -285,6 +292,7 @@ static inline uint8_t REG_GET_FIELD(pd_phy_ptn5110_instance_t *ptn5110Instance, 
 
 #define REG_ADDR(REG) (ADDR_##REG)
 
+// 通过宏操作cache中的register值
 #define RegCacheRead(ptn5110Instance, MODULE, REGISTER) ((ptn5110Instance)->tcpcRegCache.MODULE.REGISTER)
 #define RegCacheWrite(ptn5110Instance, MODULE, REGISTER, VALUE) \
     ((ptn5110Instance)->tcpcRegCache.MODULE.REGISTER) = (VALUE)
@@ -296,6 +304,7 @@ static inline uint8_t REG_GET_FIELD(pd_phy_ptn5110_instance_t *ptn5110Instance, 
     (ptn5110Instances->tcpcRegCache.MODULE.REGISTER) =                             \
         (((ptn5110Instances->tcpcRegCache.MODULE.REGISTER) & ~(MASK)) | ((UPDATE_VALUE) & (MASK)))
 
+// 按bit操作寄存器
 #define REG_CLR_BIT(ptn5110Instance, reg, field) REG_CLR_ALL_BITS(ptn5110Instance, reg, field)
 static inline void REG_CLR_ALL_BITS(pd_phy_ptn5110_instance_t *ptn5110Instance, uint32_t reg, uint8_t field)
 {

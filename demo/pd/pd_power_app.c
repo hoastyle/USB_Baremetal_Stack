@@ -65,6 +65,7 @@ uint32_t *PD_PowerBoardGetSelfSourceCaps(void *callbackParam)
 }
 
 // 对应PD_PowerBoardSourceEnableVbusPower
+// disable extra source, disable source vbus and disable sink vbus
 pd_status_t PD_PowerBoardReset(void)
 {
     pd_ptn5110_ctrl_pin_t phyPowerPinCtrl;
@@ -74,9 +75,11 @@ pd_status_t PD_PowerBoardReset(void)
     phyPowerPinCtrl.enSRC = 0;
     phyPowerPinCtrl.enSNK1 = 0;
 	// (base, pin, output), 设置output为0
+	// PTA13 on MCU <-> J403 pin5 EXTRA_EN_SRC, source 9V, disable extra source
     GPIO_WritePinOutput(PD_EXTRA_EN_SRC_GPIO, PD_EXTRA_EN_SRC_GPIO_PIN, 0);
 	//g_PDAppInstance.pdHandle指向PD_Instance
 	//PD_Control中，大部分case将获得的结果存进第三个参数变量
+	//if enSRC & enSNK1都为0，则会通过register command to disable source vbus and disable sink vbus
     PD_Control(g_PDAppInstance.pdHandle, PD_CONTROL_PHY_POWER_PIN, &phyPowerPinCtrl);
     PD_Control(g_PDAppInstance.pdHandle, PD_CONTROL_DISCHARGE_VBUS, NULL);
     return kStatus_PD_Success;

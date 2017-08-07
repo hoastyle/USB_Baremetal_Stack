@@ -254,6 +254,9 @@ void PD_InstanceTask(pd_handle pdHandle)
     PD_StackStateMachine(pdInstance);
 }
 
+// 该函数在phy中被使用，根据phy的变化，通知PE
+// 根据event的类型，采取相应的操作。一般是改变相应状态变量，并使用event group进行通知
+// 这是一种类似中断的异步机制
 void PD_Notify(pd_handle pdHandle, uint32_t event, void *param)
 {
     pd_instance_t *pdInstance = (pd_instance_t *)pdHandle;
@@ -266,6 +269,7 @@ void PD_Notify(pd_handle pdHandle, uint32_t event, void *param)
             USB_OsaEventSet(pdInstance->taskEventHandle, PD_TASK_EVENT_TYPEC_STATE_PROCESS);
             break;
 
+		//设置相关变量，并设置event group
         case PD_PHY_EVENT_SEND_COMPLETE:
         {
             PD_MsgSendDone(pdInstance, (pd_status_t) * ((uint32_t *)param));

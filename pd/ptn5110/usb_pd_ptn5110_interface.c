@@ -196,6 +196,7 @@ pd_status_t PDPTN5110_Init(pd_handle upperLayerHandle, pd_phy_handle *pdPhyHandl
     pd_phy_ptn5110_instance_t *ptn5110Instance;
     uint8_t *buffer;
 
+	// initialize phy instance
     ptn5110Instance = PDPTN5110_GetInstance();
     if (ptn5110Instance == NULL)
     {
@@ -401,6 +402,7 @@ pd_status_t PDPTN5110_Control(pd_phy_handle pdPhyHandle, uint32_t control, void 
 
         /* there is no param */
         /* reset phy protocol layer message function */
+		// reset phy driver中protocol layer相关
         case PD_PHY_RESET_MSG_FUNCTION:
             PDPTN5110_MsgSendCompLete(pdPhyHandle, kStatus_PD_Abort);
             PDPTN5110_MsgReceiveCompLete(pdPhyHandle, kStatus_PD_Abort);

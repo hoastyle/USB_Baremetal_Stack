@@ -62,6 +62,7 @@ void PD_MsgInit(pd_instance_t *pdInstance)
     pdInstance->sendingMsgHeader.msgHeaderVal = 0;
 
 	// call phy control function, control code is PD_PHY_RESET_MSG_FUNCTION
+	// PDPTN5110_Control, usb_pd_ptn5110_interface.c
     PD_PhyControl(pdInstance, PD_PHY_RESET_MSG_FUNCTION, NULL);
 }
 
@@ -95,12 +96,17 @@ void PD_MsgSetPortRole(pd_instance_t *pdInstance, uint8_t powerRole, uint8_t dat
     PD_PhyControl(pdInstance, PD_PHY_SET_MSG_HEADER_INFO, &headerInfo);
 }
 
+//对于msg，有两个相关变量, sendingState & sendingResult
 void PD_MsgSendDone(pd_instance_t *pdInstance, pd_status_t result)
 {
+	// 1: sending
     if (pdInstance->sendingState == 1)
     {
+		// 2: send call back done
         pdInstance->sendingState = 2;
+		// 设置为特定result
         pdInstance->sendingResult = result;
+		// 采用freertos中的event group，进行通知
         USB_OsaEventSet(pdInstance->taskEventHandle, PD_TASK_EVENT_SEND_DONE);
     }
 }

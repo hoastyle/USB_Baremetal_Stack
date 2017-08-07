@@ -577,16 +577,22 @@ void PDPTN5110_IntcTypecChipInit(pd_phy_ptn5110_instance_t *ptn5110Instance)
 /*! **************************************************************************
     \brief Callback to be called on assertion of INT_N by victoria
 ******************************************************************************/
+// be called in PD_PHY_UPDATE_STATE
 void PDPTN5110_IntcIntNCallback(pd_phy_ptn5110_instance_t *ptn5110Instance)
 {
     uint8_t tmp8Val = REG_GET_REG_REF(ptn5110Instance, ADDR_receive_detect);
+	// 为0表示receive detect为0，则接收到命令后无法发送GoodCRC
     if ((tmp8Val == 0) && (ptn5110Instance->msgRxSopMask != 0))
     {
         tmp8Val = ptn5110Instance->msgRxSopMask;
+		//这里应该是为了适应定义的API
         ptn5110Instance->msgRxSopMask = 0;
+		//enable receive by receive detect register, also enable hard reset receive by default
         PDPTN5110_MsgHalSetRxSopEnable(ptn5110Instance, tmp8Val);
     }
 
+	// 按照RegModule的分类，更新tcpcRegCache里对应的寄存器值
+	// Question: cache register的作用是什么
     PDPTN5110_RegCacheSynC(ptn5110Instance, kRegModule_Intc);
 
     PDPTN5110_IntcProcessIntAll(ptn5110Instance);
@@ -651,6 +657,7 @@ uint16_t PDPTN5110_IntcTxDoneSeen(pd_phy_ptn5110_instance_t *ptn5110Instance)
 /*! **************************************************************************
     \brief Handler for Int10
 ******************************************************************************/
+// handler for alert
 void PDPTN5110_IntcProcessIntAll(pd_phy_handle pdPhyHandle)
 {
     pd_phy_ptn5110_instance_t *ptn5110Instance = (pd_phy_ptn5110_instance_t *)pdPhyHandle;
