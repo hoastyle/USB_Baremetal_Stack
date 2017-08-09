@@ -135,6 +135,7 @@ typedef struct _pd_manufac_info_data_block
 } pd_manufac_info_data_block_t;
 
 /* id header VDO of discover identity response*/
+// Question: 这里为什么使用union而不直接使用struct bitFields
 typedef struct _pd_id_heaer_vdo
 {
     union
@@ -154,6 +155,7 @@ typedef struct _pd_id_heaer_vdo
 } pd_id_header_vdo_t;
 
 /* 6.4.4.3.1 discover identity response */
+// 这个struct不全，应该无法支持多个AMA?
 typedef struct _pd_vdm_identity_data
 {
     pd_id_header_vdo_t idHeaderVDO;

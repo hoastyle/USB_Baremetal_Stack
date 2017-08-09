@@ -191,6 +191,7 @@ void PD_TimerInit(pd_handle pdHandle)
     uint32_t index32;
     pd_instance_t *pdInstance = (pd_instance_t *)pdHandle;
 
+	// tTimerCount是timer的个数，初始化所有timer的相关变量，包括state和value
     for (index32 = 0; index32 < ((tTimerCount + 31) / 32); ++index32)
     {
         pdInstance->timrsRunningState[index32] = 0;

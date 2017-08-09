@@ -63,6 +63,7 @@ void PD_MsgInit(pd_instance_t *pdInstance)
 
 	// call phy control function, control code is PD_PHY_RESET_MSG_FUNCTION
 	// PDPTN5110_Control, usb_pd_ptn5110_interface.c
+	// reset message related in phy layer
     PD_PhyControl(pdInstance, PD_PHY_RESET_MSG_FUNCTION, NULL);
 }
 

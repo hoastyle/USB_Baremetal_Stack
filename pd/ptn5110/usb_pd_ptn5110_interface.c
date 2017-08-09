@@ -212,6 +212,7 @@ pd_status_t PDPTN5110_Init(pd_handle upperLayerHandle, pd_phy_handle *pdPhyHandl
 
     CMSIS_PortControlInterfaceInit(&(ptn5110Instance->cmsisAdapter), phyConfig->interface, &(phyConfig->i2cConfig));
 
+	// clear cache register
     for (buffer = (uint8_t *)&ptn5110Instance->tcpcRegCache;
          buffer < ((uint8_t *)&ptn5110Instance->tcpcRegCache) + sizeof(pd_phy_TCPC_reg_cache_t); buffer++)
     {
@@ -301,6 +302,7 @@ pd_status_t PDPTN5110_Control(pd_phy_handle pdPhyHandle, uint32_t control, void 
             break;
         }
 
+		// Question: cache register中的内容是何时进行初始化的？
         case PD_PHY_GET_PHY_VENDOR_INFO:
         {
             pd_phy_vendor_info_t *phyInfo = (pd_phy_vendor_info_t *)param;

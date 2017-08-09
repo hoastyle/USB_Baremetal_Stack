@@ -50,6 +50,7 @@
 
 #define PD_PTN5110_GPIO_INTERRUPT_PRIORITY (4)
 
+// 这里使用的是DRP模式，所以用DRP模式下的pd_power_port_config_t
 #define PD_COMPLIANCE_TEST_DRP (1)
 #define PD_COMPLIANCE_TEST_DRP_TRY_SNK (0)
 #define PD_COMPLIANCE_TEST_DRP_TRY_SRC (0)
@@ -185,11 +186,14 @@ pd_power_handle_callback_t callbackFunctions = {
  * Code
  ******************************************************************************/
 
+// Question: 这个中断是什么中断？
 void PORTB_PORTC_PORTD_PORTE_IRQHandler(void)
 {
+	// 如果成立表示最高位位1
     if (BOARD_PTN5110_GPIO_PORT->ISFR & (1U << BOARD_PTN5110_GPIO_PIN))
     {
         BOARD_PTN5110_GPIO_PORT->ISFR = 1U << BOARD_PTN5110_GPIO_PIN;
+		// port data input register，猜测应该是最高位的值，如果为1表示发生中断 ? ，则进入中断处理函数
         if (!(BOARD_PTN5110_GPIO->PDIR & (1U << BOARD_PTN5110_GPIO_PIN)))
         {
             PD_PTN5110IsrFunction(g_PDAppInstance.pdHandle);
@@ -280,9 +284,13 @@ void PD_AppInit(void)
     }
 
     /* initialize port interrupt */
-	//设置MCU分配给PTN5110的GPIO pin
+	/* 设置MCU分配给PTN5110的GPIO pin interrupt, PORTE 31 pin
+	set IRQC field of PORTE 31 pin PCR, NVIC除系统规定的中断，
+	其他的中断是由芯片生产厂商硬件设计规定好的。对于KL27，参考KL27 ReferenceManual P52*/
     PORT_SetPinInterruptConfig(BOARD_PTN5110_GPIO_PORT, BOARD_PTN5110_GPIO_PIN, kPORT_InterruptLogicZero);
+	// set PORTE 31 pin data direction to 0 as input
     BOARD_PTN5110_GPIO->PDDR &= ~(1U << BOARD_PTN5110_GPIO_PIN);    /* gpio set as input */
+	// set PORTA 13 pin data direction to 1 as output
     PD_EXTRA_EN_SRC_GPIO->PDDR |= (1U << PD_EXTRA_EN_SRC_GPIO_PIN); /* as output */
 
 	//设置PTN5110 GPIO Interrupt的优先级
@@ -363,6 +371,7 @@ void PD_AppInit(void)
     g_PDAppInstance.selfManufacInfo.manufacturerString[1] = 'X';
     g_PDAppInstance.selfManufacInfo.manufacturerString[2] = 'P';
     /* alternate mode (VDM) */
+	// idHeader
     g_PDAppInstance.selfVdmIdentity.idHeaderVDO.vdoValue = 0;
     g_PDAppInstance.selfVdmIdentity.idHeaderVDO.bitFields.modalOperateSupport = 1;
 #if ((defined PD_CONFIG_REVISION) && (PD_CONFIG_REVISION >= PD_SPEC_REVISION_30))

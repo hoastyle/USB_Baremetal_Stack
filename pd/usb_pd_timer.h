@@ -77,7 +77,7 @@ typedef enum tTimer_t
     tDRPTryWaitTimer,
     tDRPTryTimer,
 
-    tTimerCount,
+    tTimerCount,	//表示timer的个数
     _tEnd = tTimerCount - 1,
 
     /* don't implement yet */

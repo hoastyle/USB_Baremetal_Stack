@@ -232,6 +232,7 @@ void PDPTN5110_EnableVSafe0VComparator(pd_phy_ptn5110_instance_t *ptn5110Instanc
 void PDPTN5110_PsStatChangeEnableInterrupt(pd_phy_ptn5110_instance_t *ptn5110Instance)
 {
     /* Need to Read Power_Status before clear Alert, otherwise Power_status Alert cannot be cleared in Mead */
+	// 根据选择种类，同步该类型的register
     PDPTN5110_RegCacheSynC(ptn5110Instance, kRegModule_PowerStatus);
     PDPTN5110_IntcIrqClearAndEnable(ptn5110Instance, TCPC_ALERT_PORT_POWER_STATUS_MASK);
 
@@ -372,6 +373,7 @@ uint8_t PDPTN5110_VsysIsPresent(pd_phy_ptn5110_instance_t *ptn5110Instance)
   \brief Return true if vbus is within loose bounds of VSafe0V
 ******************************************************************************/
 
+// Question: hal的作用是什么？
 void PDPTN5110_HalInit(pd_phy_handle pdPhyHandle)
 {
     pd_phy_ptn5110_instance_t *ptn5110Instance = (pd_phy_ptn5110_instance_t *)pdPhyHandle;
@@ -395,6 +397,7 @@ void PDPTN5110_HalInit(pd_phy_handle pdPhyHandle)
     /* Save the initial CC_STATUS so we can determine if we are dead battery or debug accessory on reset */
     ptn5110Instance->initialCcStatus = RegCacheRead(ptn5110Instance, CC_STATUS, cc_status);
 
+	// this is NXP vender defined register
     if (RegCacheRead(ptn5110Instance, GLOBAL, vendor_id) == PD_VENDOR_ID_NXP)
     {
         if (RegCacheRead(ptn5110Instance, GLOBAL, product_id) == PRODUCT_ID_PTN5110)
@@ -587,6 +590,7 @@ void PDPTN5110_IntcIntNCallback(pd_phy_ptn5110_instance_t *ptn5110Instance)
         tmp8Val = ptn5110Instance->msgRxSopMask;
 		//这里应该是为了适应定义的API
         ptn5110Instance->msgRxSopMask = 0;
+
 		//enable receive by receive detect register, also enable hard reset receive by default
         PDPTN5110_MsgHalSetRxSopEnable(ptn5110Instance, tmp8Val);
     }

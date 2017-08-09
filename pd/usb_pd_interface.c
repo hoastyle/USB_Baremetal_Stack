@@ -131,6 +131,7 @@ pd_status_t PD_PhyControl(pd_instance_t *pdInstance, uint32_t control, void *par
         NVIC_EnableIRQ((IRQn_Type)pdInstance->pdConfig->phyInterruptNum);
     }
 
+	// call PDPTN5110_Control
     if (control != PD_PHY_UPDATE_STATE)
     {
         return pdInstance->phyInterface->pdPhyControl(pdInstance->pdPhyHandle, control, param);
@@ -173,7 +174,8 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 
 	//phyType的类型，PTN5100 or others
     pdInstance->phyType = config->phyType;
-	//PD_DpmDemoAppCallback
+	//PD_DpmDemoAppCallback, event callback, 对应枚举体pd_dpm_callback_event_t
+	// Question: 作用是什么？
     pdInstance->pdCallback = callbackFn;
 	//callbackFunctions, power related
     pdInstance->callbackFns = callbackFunctions;
@@ -198,6 +200,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
 	//instance config
     pdInstance->pdConfig = config;
 	//这里的device是指本身还是port partner?
+	// 根据device type，初始化对应的power config以及sop
     if (pdInstance->pdConfig->deviceType == kDeviceType_NormalPowerPort)
     {
         pdInstance->pdPowerPortConfig = (pd_power_port_config_t *)pdInstance->pdConfig->deviceConfig;
@@ -217,6 +220,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
     phyConfig.i2cConfig.slaveAddress = config->interfaceParam;
 	// phy initialize, call PDPTN5110_Init
     status = pdInstance->phyInterface->pdPhyInit(pdInstance, &(pdInstance->pdPhyHandle), &phyConfig);
+	// 如果失败，则需要关闭或者释放已经占用的资源，包括内存以及event group
     if ((status != kStatus_PD_Success) || (pdInstance->pdPhyHandle == NULL))
     {
         USB_OsaEventDestroy(pdInstance->taskEventHandle);
@@ -227,6 +231,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
     PD_MsgInit(pdInstance);
     PD_TimerInit(pdInstance);
 
+	// call PDPTN5110_Control, get phy vender info from cache register in phy driver
     PD_PhyControl(pdInstance, PD_PHY_GET_PHY_VENDOR_INFO, &pdInstance->phyInfo);
 
     *pdHandle = pdInstance;
