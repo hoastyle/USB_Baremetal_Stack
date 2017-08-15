@@ -70,6 +70,7 @@ static const pd_phy_api_interface_t s_PTN5110Interface = {
  * Code
  ******************************************************************************/
 /* 从代码看，one instance <-> one port, 将pd_instance_t类型的变量初始化为0 */
+// 只能顺序调用，否则将不能正确获得instance，应该添加按instance号获取instance的API
 static pd_instance_t *PD_GetInstance(void)
 {
     uint8_t i = 0;

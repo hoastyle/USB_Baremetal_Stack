@@ -56,6 +56,7 @@
 #define TCPC_TX_BUF_UNAVAILABLE 0xEE
 
 /* VBus definition */
+// vSafe0V: 0 - 0.8V
 /* Unit: 25mV, Real value is 800mV as per USBPD R3 V0.91 Table 7-18 Common Source/Sink Electrical Parameters */
 #define VBUS_VSAFE0V_MAX_THRESHOLD 32
 /* Unit: 25mV, Real value is 400mV as per USBPD R3 V0.91 Table 7-18 Common Source/Sink Electrical Parameters */
@@ -226,6 +227,7 @@ typedef struct __pd_phy_tcpc_instance_
     volatile uint16_t intcLastStatus;
     volatile uint8_t usedCC;
     volatile uint8_t roleControlUpdated;
+	// pd_power_role_t
     uint8_t phyPowerRole;
     uint8_t phyDataRole;
     uint8_t amsSinkTxOK;
@@ -329,6 +331,7 @@ static inline void REG_SET_ALL_BITS(pd_phy_ptn5110_instance_t *ptn5110Instance, 
     PDPTN5110_RegCacheModIfyWordField(ptn5110Instance, &(ptn5110Instance->tcpcRegCache.MODULE.REGISTER), \
                                       REG_ADDR(REGISTER), MASK, UPDATE_VALUE)
 
+// MASK: field mask
 #define REG_CACHE_MODIFY_FIELD(ptn5110Instance, MODULE, REGISTER, MASK, UPDATE_VALUE)                \
     PDPTN5110_RegCacheModIfyField(ptn5110Instance, &(ptn5110Instance->tcpcRegCache.MODULE.REGISTER), \
                                   REG_ADDR(REGISTER), MASK, UPDATE_VALUE)

@@ -41,6 +41,7 @@
  * Definitions
  ******************************************************************************/
 
+// 如果有值，返回true, 如果0值，返回false
 #define PDPTN5110_VbusIsPresent(PORT) \
     ((bool)(RegCacheReadField(ptn5110Instance, POWER_STATUS, power_status, TCPC_POWER_STATUS_VBUS_PRESENT_MASK)))
 
@@ -471,13 +472,21 @@ pd_status_t PDPTN5110_Control(pd_phy_handle pdPhyHandle, uint32_t control, void 
             *((uint8_t *)param) = ptn5110Instance->frSwapSourceOK;
             break;
 
+		// get vbus volage
         case PD_PHY_GET_VBUS_POWER_STATE:
         {
+			// 获取vbus voltage
             uint32_t voltage = PDPTN5110_GetVbusVoltage(ptn5110Instance);
+			// 该变量用来表示当前vbus
             paramVal = 0;
 
+			// 如果是vSafe5V
+			// 应该是4.75 - 5.5， 这里为什么是4 - 5.5
+			// if in range, 160 - 220 LSB, 4V - 5.5V
             if ((voltage <= VBUS_VSAFE5V_MAX_THRESHOLD) && (voltage >= VBUS_VSAFE5V_MIN_THRESHOLD))
             {
+				// check vbus present field of cache register POWER_STATUS, 这个是中断状态寄存器
+				// 如果vbus is not present，表示该寄存器没有被更新，则应该更新power status register
                 if (!PDPTN5110_VbusIsPresent(ptn5110Instance))
                 {
                     PDPTN5110_RegCacheSynC(ptn5110Instance, kRegModule_PowerStatus);
@@ -485,16 +494,19 @@ pd_status_t PDPTN5110_Control(pd_phy_handle pdPhyHandle, uint32_t control, void 
                 paramVal |= PD_VBUS_POWER_STATE_VSAFE5V_MASK;
             }
 
+			// vSafe0V
             if (voltage <= VBUS_VSAFE0V_MAX_THRESHOLD)
             {
                 paramVal |= PD_VBUS_POWER_STATE_VSAFE0V_MASK;
             }
 
+			// means vbus exist
             if (PDPTN5110_VbusIsPresent(ptn5110Instance))
             {
                 paramVal |= PD_VBUS_POWER_STATE_VBUS_MASK;
             }
 
+			// 默认为1， 什么是vSys
             if (PDPTN5110_VsysIsPresent(ptn5110Instance))
             {
                 paramVal |= PD_VBUS_POWER_STATE_VSYS_MASK;
@@ -625,6 +637,7 @@ pd_status_t PDPTN5110_Receive(pd_phy_handle pdPhyHandle, uint8_t startOfPacketMa
     return kStatus_PD_Success;
 }
 
+// Call by GPIO interrupt handler PORTB_PORTC_PORTD_PORTE_IRQHandler which was called from startup.s on FL27
 void PD_PTN5110IsrFunction(pd_handle pdHandle)
 {
     PD_Notify(pdHandle, PD_PHY_EVENT_STATE_CHANGE, NULL);

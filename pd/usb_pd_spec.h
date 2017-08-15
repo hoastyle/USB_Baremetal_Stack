@@ -27,6 +27,14 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+/*
+ * Define 4 kinds of type
+ * 1. message type, including control and data message
+ * 2. extended message type
+ * 3. policy engine type
+ * 4. type c state type
+ */
+
 #ifndef __PD_SPEC_H__
 #define __PD_SPEC_H__
 

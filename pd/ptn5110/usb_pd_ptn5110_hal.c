@@ -63,6 +63,7 @@ void PDPTN5110_RegCacheModIfyField(
     uint8_t value;
     USB_OSA_SR_ALLOC();
     USB_OSA_ENTER_CRITICAL();
+	// set target field to 0 | field value
     value = ((*reg) & (~mask)) | ((update_value) & (mask));
     *reg = value;
     USB_OSA_EXIT_CRITICAL();
@@ -184,9 +185,12 @@ void PDPTN5110_RegCacheSynC(pd_phy_ptn5110_instance_t *ptn5110Instance, uint16_t
 uint32_t PDPTN5110_GetVbusVoltage(pd_phy_ptn5110_instance_t *ptn5110Instance)
 {
     uint32_t voltage;
+	// 获取vbus voltage，存进vbus_voltage中
     REG_GET_BLOCK_REF(ptn5110Instance, ADDR_vbus_voltage, 2,
                       (uint8_t *)&ptn5110Instance->tcpcRegCache.VBUS.vbus_voltage);
+	// 读取cache register中的vbus
     voltage = RegCacheRead(ptn5110Instance, VBUS, vbus_voltage);
+	// 取voltage中对应域的值， 这里voltage = measurement * scale
     voltage = TcpcReadField(voltage, VBUS_VOLTAGE, VBUS_VOLTAGE_MEASUREMENT) *
               (1 << TcpcReadField(voltage, VBUS_VOLTAGE, VBUS_SCALE_FACTOR));
 
@@ -596,9 +600,11 @@ void PDPTN5110_IntcIntNCallback(pd_phy_ptn5110_instance_t *ptn5110Instance)
     }
 
 	// 按照RegModule的分类，更新tcpcRegCache里对应的寄存器值
-	// Question: cache register的作用是什么
+	// sync alert register
+	// Question: cache register的作用是什么, sync alert register
     PDPTN5110_RegCacheSynC(ptn5110Instance, kRegModule_Intc);
 
+	// alert interrupt handler
     PDPTN5110_IntcProcessIntAll(ptn5110Instance);
 }
 

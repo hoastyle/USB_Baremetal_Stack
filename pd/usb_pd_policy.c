@@ -78,6 +78,7 @@ typedef struct _psm_trigger_info
     uint8_t dpmMsg;
 } psm_trigger_info_t;
 
+// state of state machine
 typedef enum _pd_state_machine_state
 {
     kSM_None = 0,
@@ -656,6 +657,7 @@ static uint8_t PD_PsmPrimaryStateProcessPdMsg(pd_instance_t *pdInstance,
     return didNothing;
 }
 
+// event handler
 void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
 {
     if (eventSet & PD_TASK_EVENT_PHY_STATE_CHAGNE)
@@ -2381,6 +2383,7 @@ static uint8_t PD_PsmCanPendingReceive(pd_instance_t *pdInstance)
     return 1;
 }
 
+// Policy Engine State Machine
 static uint8_t PD_PsmProcessState(pd_instance_t *pdInstance)
 {
     uint32_t taskEventSet;
@@ -4206,13 +4209,16 @@ static uint8_t PD_PsmEnterState(pd_instance_t *pdInstance)
 {
     pd_psm_state_t prevState;
     uint32_t inCase32Tmp = 0;
+	// error code
     pd_status_t sendStatus = kStatus_PD_Error;
     uint8_t didNothingC = 1;
 
     (void)sendStatus;
+	// 如果之前是unknown state， 则New置为idle
     while (pdInstance->psmNewState != pdInstance->psmCurState)
     {
         didNothingC = 0;
+		// 保存当前state, 将当前state置为new state
         prevState = pdInstance->psmCurState;
         pdInstance->psmCurState = pdInstance->psmNewState;
 
@@ -4227,17 +4233,21 @@ static uint8_t PD_PsmEnterState(pd_instance_t *pdInstance)
                 PD_ConnectSetPowerProgress(pdInstance, kVbusPower_Stable);
                 PD_MsgReset(pdInstance);
                 PD_PsmReset(pdInstance);
+				// 该timer的作用？ Spec中没有记录
                 if (pdInstance->pdConfig->deviceType == kDeviceType_AlternateModeProduct)
                 {
                     /* If we are an alternate mode adapter, then set tAMETimeout. */
                     PD_TimerStart(pdInstance, tAMETimeoutTimer, T_AME_TIMEOUT);
                 }
 
+				// 如果配置成source， 但是stack的source role相关没有enable，则newstate = bypass
                 if (pdInstance->curPowerRole == kPD_PowerRoleSource)
                 {
+// 两个条件，定义了，并且定义了非零值
 #if (defined PD_CONFIG_SOURCE_ROLE_ENABLE) && (PD_CONFIG_SOURCE_ROLE_ENABLE)
                     pdInstance->curPowerRole = kPD_PowerRoleSource;
                     pdInstance->enterSrcFromSwap = 0;
+					// 这里开始了pe state的变化
                     pdInstance->psmNewState = PSM_PE_SRC_STARTUP;
 #else
                     pdInstance->psmNewState = PSM_BYPASS;
@@ -6464,13 +6474,17 @@ void PD_DpmConnect(pd_instance_t *pdInstance)
     PD_PsmConnect(pdInstance);
 }
 
+// Policy Engine State Machine
 uint8_t PD_PsmStateMachine(pd_instance_t *pdInstance)
 {
     uint32_t infoVal;
+	// error, continue, wait event
     uint8_t returnVal = kSM_Continue;
 
+	// dpmStateMachine的作用？ 表示是否进入了DPM State machine ?
     switch (pdInstance->dpmStateMachine)
     {
+		// 如果该变量为0，则检查是否有vbus，如果有，设置为1 （这应该是初始化的流程）
         case 0:
             /* wait vbus charge */
             /* Neither Source nor Sink should enter PSM before VSafe5V is available */
@@ -6482,6 +6496,7 @@ uint8_t PD_PsmStateMachine(pd_instance_t *pdInstance)
             break;
 
         case 1:
+			// 什么情况会unknown, 如果unknown，则置为idle，否则保持
             pdInstance->psmNewState = (pdInstance->psmCurState == PSM_UNKNOWN) ? PSM_IDLE : pdInstance->psmCurState;
 
             /* Did we do anything in Step A or B or C */
@@ -6489,6 +6504,7 @@ uint8_t PD_PsmStateMachine(pd_instance_t *pdInstance)
             /* Step B: state is not changed */
             /* Step C: change to new state */
 
+			// 作用 ？
             do
             {
                 returnVal = PD_PsmEnterState(pdInstance);
@@ -6640,6 +6656,7 @@ void PD_DpmSendMsg(pd_handle pdHandle, uint8_t id)
     USB_OsaEventSet(pdInstance->taskEventHandle, PD_TASK_EVENT_DPM_MSG);
 }
 
+// DPM State Machine
 void PD_StackStateMachine(pd_instance_t *pdInstance)
 {
     uint32_t taskEventSet;
@@ -6654,10 +6671,12 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
         pdInstance->initializeLabel = 1;
         pdInstance->isConnected = 0;
         /* We want to override any existing MTP-based connection */
+		// 根据typec power role (typec_power_role_config_t) init
         PD_ConnectInitRole(pdInstance, pdInstance->pdPowerPortConfig->typecRole, 0);
         pdInstance->connectedResult = PD_ConnectGetStateMachine(pdInstance);
         PD_DpmSetVconn(pdInstance, 0);
     }
+	// 该event group在init func中已经建立了
     USB_OsaEventWait(pdInstance->taskEventHandle, 0xffu, 0, pdInstance->waitTime, &taskEventSet);
     pdInstance->waitTime = PD_WAIT_EVENT_TIME;
     PD_PortTaskEventProcess(pdInstance, taskEventSet);

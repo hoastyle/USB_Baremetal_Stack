@@ -695,23 +695,34 @@ void PDPTN5110_ConnectInTcChecKDetacHDurIngHardReset(pd_phy_ptn5110_instance_t *
     \brief Inform the Hardware chip that an activity is in progress
     \note Called from both ISR and CLP task context
 ******************************************************************************/
+/*
+	input: phy instance, state in progress
+	output: void
+	function: enable/disable auto discharge of disconnect and cc status alert change according to different target state
+	question: 该action实在change之前或者之后，比如swap, reset ? 
+ */
 void PDPTN5110_ConnectSetInProgress(pd_phy_ptn5110_instance_t *ptn5110Instance, uint8_t state)
 {
+	// 如果target state和phy中的state不一致
     if (ptn5110Instance->pwrInProgress != state)
     {
+		// state: reset, swap, change in progress, stable
         if (state != kVbusPower_Stable)
         {
             ptn5110Instance->currentStable = 0;
             /* Disable any automatic disconnection during a swap */
+			// disable automatci discharge when detect disconnect to avoid wrong activities in swap operation
             REG_CACHE_MODIFY_FIELD(ptn5110Instance, CONTROL, power_control,
                                    TCPC_POWER_CONTROL_AUTO_DISCHARGE_DISCONNECT_MASK, 0);
         }
-		//如果status为kVbusPower_Stable，则
+		//如果status to kVbusPower_Stable is in progress
         else
         {
             if (ptn5110Instance->pwrInProgress == kVbusPower_InPRSwap)
             {
                 ptn5110Instance->currentStable = 1;
+				// pd power role: sink, source, none
+				// 根据role重新初始化alert相关的部分
                 PDPTN5110_ConnectUpdateAfterPRSwap(ptn5110Instance, ptn5110Instance->phyPowerRole);
             }
             /* Enable automatic disconnection after resuming normal operation */

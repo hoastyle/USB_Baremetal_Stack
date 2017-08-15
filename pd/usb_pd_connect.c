@@ -102,6 +102,9 @@ static void PD_ConnectSetMonitorCC(pd_instance_t *pdInstance)
     }
 }
 
+/*
+	input: pd port instance, prSwap(作用是什么)
+ */
 static void PD_ConnectSetupNewState(pd_instance_t *pdInstance, uint8_t prSwap)
 {
     uint8_t writeRegsNeeded = 1;
@@ -1583,13 +1586,19 @@ void PD_ConnectSetPowerProgress(pd_instance_t *pdInstance, uint8_t state)
 {
     if ((state != kVbusPower_Invalid) && (pdInstance->inProgress != state))
     {
-		//设置power progress
+		// 设置power progress
         pdInstance->inProgress = state;
 		// 告知phy driver vbus的状态
         PD_PhyControl(pdInstance, PD_PHY_SET_VBUS_TRANSFORM_STATE, &state);
     }
 }
 
+/*
+	input: pd port instance, power role
+	output: TypeCState_t, 表示cc当前state
+	function: 根据power role设置type-c cc initial role
+	additional: 该部分和Type-C state machine相关
+ */
 TypeCState_t PD_ConnectGetInitRoleState(pd_instance_t *pdInstance, uint32_t typecRole)
 {
     TypeCState_t newState = TYPEC_DISABLED;
@@ -1633,6 +1642,12 @@ TypeCState_t PD_ConnectGetInitRoleState(pd_instance_t *pdInstance, uint32_t type
 }
 
 /* PD_StackStateMachine 中被调用 */
+/*
+	innut: pd port instance, typec_power_role_config_t, errorRecovery
+	output: void
+	function: 
+	question: 
+ */
 void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t errorRecovery)
 {
 	//state in Type-C Spec
@@ -1674,12 +1689,15 @@ void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t e
 
 	// Question: 设置power progress -> stable的作用 ? 
 	/* 以下四种都是初始状态 */
+	// set phy pwr_inprogress state
     PD_ConnectSetPowerProgress(pdInstance, kVbusPower_Stable);
     pdInstance->vbusDischargeInProgress = kVbus_NoDischarge;
     pdInstance->ccUsed = kPD_CCInvalid;
     pdInstance->curConnectState = TYPEC_DISABLED;
 
-    newState = PD_ConnectetInitRoleState(pdInstance, typecRole);
+	// set cc initial state according to power role, confirm cc state tendency
+    newState = PD_ConnectGetInitRoleState(pdInstance, typecRole);
+	// 注意，这里的curConnectState在上面刚刚被置为TYPEC_DISABLED
     if (newState != pdInstance->curConnectState)
     {
         /* In the process of connecting, just change the role */
@@ -1693,6 +1711,7 @@ void PD_ConnectInitRole(pd_instance_t *pdInstance, uint32_t typecRole, uint8_t e
         {
             if (newState != TYPEC_DISABLED)
             {
+				// get vbus info, save it to infoVal
                 PD_PhyControl(pdInstance, PD_PHY_GET_VBUS_POWER_STATE, &infoVal);
                 if (infoVal & PD_VBUS_POWER_STATE_VSYS_MASK)
                 {

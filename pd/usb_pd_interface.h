@@ -27,6 +27,14 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+/*
+ * Define two types:
+ * 1. PD Task event type
+ * 2. PD connect state type
+ * Deinfe PD port instance
+ * 1. pd_instance_t
+ */
+
 #ifndef __PD_INTERFACE_H__
 #define __PD_INTERFACE_H__
 
