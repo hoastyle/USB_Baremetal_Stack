@@ -1,0 +1,5 @@
+<map id="PD_DemoReset" name="PD_DemoReset">
+<area shape="rect" id="node2" href="$battery_2pd__app__demo_8c.html#ad2600cc824c1726cccfed3267a9af27c" title="PD_DemoInit" alt="" coords="228,5,329,32"/>
+<area shape="rect" id="node3" href="$battery_2pd__command__app_8c.html#a34306bb735461e522c573f87e8a4049b" title="PD_DpmHardResetCallback" alt="" coords="183,56,374,83"/>
+<area shape="rect" id="node4" href="$battery_2pd__command__app_8c.html#a3d92f8202fc73da16faf6d8496bae858" title="PD_DpmPowerRoleSwapResult\lCallback" alt="" coords="173,107,384,149"/>
+</map>

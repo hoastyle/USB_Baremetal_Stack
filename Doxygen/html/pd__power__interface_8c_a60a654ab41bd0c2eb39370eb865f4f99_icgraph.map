@@ -1,0 +1,4 @@
+<map id="PD_PowerGetVbusVoltage" name="PD_PowerGetVbusVoltage">
+<area shape="rect" id="node2" href="$source__charger_2pd__power__interface_8h.html#a19f863f127ba9c21cacaa20e050ce6c7" title="PD_PowerSrcTurnOnRequestVbus" alt="" coords="235,5,461,32"/>
+<area shape="rect" id="node3" href="$battery_2pd__power__interface_8h.html#ab758e7331b2908377e1eee984c7a18ec" title="PD_PowerSnkDrawRequestVbus" alt="" coords="239,56,457,83"/>
+</map>

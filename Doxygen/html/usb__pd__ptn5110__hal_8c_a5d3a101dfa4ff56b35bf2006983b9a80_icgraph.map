@@ -1,0 +1,10 @@
+<map id="PDPTN5110_IntcGetLastExtIntStatus" name="PDPTN5110_IntcGetLastExtIntStatus">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#a57a93596569ed29179bb8569b2fdd3b2" title="Query if an external tx done interrupts has been seen. " alt="" coords="246,99,447,125"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__msg_8c.html#a36d74aa3b6c70875e850cc202526cdeb" title="Common prefix for all send data and control functions. " alt="" coords="497,26,727,67"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__msg_8c.html#a2695a5daf065aa9d9e9064f8565a9447" title="Wait the result of the send after the tx_done interrupt has been received. " alt="" coords="509,91,715,133"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__msg_8c.html#a197ab289f188adce834d460f882e7955" title="Send a hard reset or cable reset, and perform the associated reset of our state. hardResetOrCableRese..." alt="" coords="780,139,993,165"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__msg_8c.html#a29dc8db6b2478eca435f22cee25f6a61" title="Common prefix for all send data functions. " alt="" coords="783,5,990,46"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__msg_8c.html#a4c2dd9dfad91380bc2e067e0ae3f5311" title="Send a control message, specify sop. " alt="" coords="777,71,997,97"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__interface_8c.html#a637498f43bc0fed57fc7eb8d6992a042" title="PDPTN5110_Send" alt="" coords="1052,71,1185,97"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="1046,139,1191,165"/>
+</map>

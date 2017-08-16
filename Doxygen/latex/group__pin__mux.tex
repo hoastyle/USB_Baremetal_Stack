@@ -1,0 +1,246 @@
+\hypertarget{group__pin__mux}{\section{Pin\-\_\-mux}
+\label{group__pin__mux}\index{Pin\-\_\-mux@{Pin\-\_\-mux}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__pin__mux_ga8652eb15efb9dfe7368dd7f292dab554}{B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Calls initialization functions. \end{DoxyCompactList}\item 
+void \hyperlink{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966}{B\-O\-A\-R\-D\-\_\-\-Init\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Configures pin routing and optionally pin electrical features. \end{DoxyCompactList}\item 
+void \hyperlink{group__pin__mux_ga3a18c9665d7d526b76488e90a271cc8e}{I2\-C0\-\_\-\-Init\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Configures pin routing and optionally pin electrical features. \end{DoxyCompactList}\item 
+void \hyperlink{group__pin__mux_ga8e9cb3ef8722919469dc52bd99cb9cc5}{I2\-C0\-\_\-\-Deinit\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Configures pin routing and optionally pin electrical features. \end{DoxyCompactList}\item 
+void \hyperlink{group__pin__mux_gaa63f3828e7f823cef465873563ca99c4}{I2\-C1\-\_\-\-Init\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Configures pin routing and optionally pin electrical features. \end{DoxyCompactList}\item 
+void \hyperlink{group__pin__mux_ga455ca4e86bd4798c0368a926fe30f692}{I2\-C1\-\_\-\-Deinit\-Pins} (void)
+\begin{DoxyCompactList}\small\item\em Configures pin routing and optionally pin electrical features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__pin__mux_ga8652eb15efb9dfe7368dd7f292dab554}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins@{B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins}}
+\index{B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins@{B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Init\-Boot\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_ga8652eb15efb9dfe7368dd7f292dab554}
+
+
+Calls initialization functions. 
+
+
+\begin{DoxyCode}
+51                               \{
+52     \hyperlink{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966}{BOARD\_InitPins}();
+53     \hyperlink{group__pin__mux_gaa63f3828e7f823cef465873563ca99c4}{I2C1\_InitPins}();
+54 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{group__pin__mux_ga8652eb15efb9dfe7368dd7f292dab554_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!B\-O\-A\-R\-D\-\_\-\-Init\-Pins@{B\-O\-A\-R\-D\-\_\-\-Init\-Pins}}
+\index{B\-O\-A\-R\-D\-\_\-\-Init\-Pins@{B\-O\-A\-R\-D\-\_\-\-Init\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Init\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Init\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966}
+
+
+Configures pin routing and optionally pin electrical features. 
+
+
+\begin{DoxyCode}
+86                           \{
+87   CLOCK\_EnableClock(kCLOCK\_PortA);                           \textcolor{comment}{/* Port A Clock Gate Control: Clock enabled */}
+88   CLOCK\_EnableClock(kCLOCK\_PortC);                           \textcolor{comment}{/* Port C Clock Gate Control: Clock enabled */}
+89   CLOCK\_EnableClock(kCLOCK\_PortE);                           \textcolor{comment}{/* Port E Clock Gate Control: Clock enabled */}
+90 
+91   PORT\_SetPinMux(PORTA, \hyperlink{pin__mux_8c_af36e8fbe0cdf23dbe5fe82d0a1abe929}{PIN1\_IDX}, kPORT\_MuxAlt2);            \textcolor{comment}{/* PORTA1 (pin 23) is configured as
+       LPUART0\_RX */}
+92   PORT\_SetPinMux(PORTA, \hyperlink{pin__mux_8c_aa53d7055dbc0d10a271855831f6f89cf}{PIN13\_IDX}, kPORT\_MuxAsGpio);         \textcolor{comment}{/* PORTA13 (pin 29) is configured as
+       PTA13 */}
+93   PORT\_SetPinMux(PORTA, \hyperlink{pin__mux_8c_a34077169afb876e5a2afa8b23e671cec}{PIN2\_IDX}, kPORT\_MuxAlt2);            \textcolor{comment}{/* PORTA2 (pin 24) is configured as
+       LPUART0\_TX */}
+94   \textcolor{keyword}{const} port\_pin\_config\_t porta4\_pin26\_config = \{
+95     kPORT\_PullUp,                                            \textcolor{comment}{/* Internal pull-up resistor is enabled */}
+96     kPORT\_SlowSlewRate,                                      \textcolor{comment}{/* Slow slew rate is configured */}
+97     kPORT\_PassiveFilterEnable,                               \textcolor{comment}{/* Passive filter is enabled */}
+98     kPORT\_LowDriveStrength,                                  \textcolor{comment}{/* Low drive strength is configured */}
+99     kPORT\_MuxAsGpio,                                         \textcolor{comment}{/* Pin is configured as PTA4 */}
+100   \};
+101   PORT\_SetPinConfig(PORTA, \hyperlink{pin__mux_8c_a1ada504d2c7f594db50cfd1d222e6339}{PIN4\_IDX}, &porta4\_pin26\_config);  \textcolor{comment}{/* PORTA4 (pin 26) is configured as
+       PTA4 */}
+102   \textcolor{keyword}{const} port\_pin\_config\_t portc1\_pin44\_config = \{
+103     kPORT\_PullUp,                                            \textcolor{comment}{/* Internal pull-up resistor is enabled */}
+104     kPORT\_SlowSlewRate,                                      \textcolor{comment}{/* Slow slew rate is configured */}
+105     kPORT\_PassiveFilterDisable,                              \textcolor{comment}{/* Passive filter is disabled */}
+106     kPORT\_LowDriveStrength,                                  \textcolor{comment}{/* Low drive strength is configured */}
+107     kPORT\_MuxAsGpio,                                         \textcolor{comment}{/* Pin is configured as PTC1 */}
+108   \};
+109   PORT\_SetPinConfig(PORTC, \hyperlink{pin__mux_8c_af36e8fbe0cdf23dbe5fe82d0a1abe929}{PIN1\_IDX}, &portc1\_pin44\_config);  \textcolor{comment}{/* PORTC1 (pin 44) is configured as
+       PTC1 */}
+110   \textcolor{keyword}{const} port\_pin\_config\_t porte31\_pin19\_config = \{
+111     kPORT\_PullUp,                                            \textcolor{comment}{/* Internal pull-up resistor is enabled */}
+112     kPORT\_SlowSlewRate,                                      \textcolor{comment}{/* Slow slew rate is configured */}
+113     kPORT\_PassiveFilterDisable,                              \textcolor{comment}{/* Passive filter is disabled */}
+114     kPORT\_LowDriveStrength,                                  \textcolor{comment}{/* Low drive strength is configured */}
+115     kPORT\_MuxAsGpio,                                         \textcolor{comment}{/* Pin is configured as PTE31 */}
+116   \};
+117   PORT\_SetPinConfig(PORTE, \hyperlink{pin__mux_8c_ad3f3f3f40fb3dfe98dd2ec8d06d12a91}{PIN31\_IDX}, &porte31\_pin19\_config); \textcolor{comment}{/* PORTE31 (pin 19) is configured as
+       PTE31 */}
+118   SIM->SOPT5 = ((SIM->SOPT5 &
+119     (~(SIM\_SOPT5\_LPUART0TXSRC\_MASK | SIM\_SOPT5\_LPUART0RXSRC\_MASK))) \textcolor{comment}{/* Mask bits to zero which are setting 
+      */}
+120       | SIM\_SOPT5\_LPUART0TXSRC(\hyperlink{pin__mux_8c_ab1b68d7a21112e9371b021390fcb2204}{SOPT5\_LPUART0TXSRC\_LPUART\_TX}) \textcolor{comment}{/* LPUART0
+       Transmit Data Source Select: LPUART0\_TX pin */}
+121       | SIM\_SOPT5\_LPUART0RXSRC(\hyperlink{pin__mux_8c_ae37cc1f248b28e553138ab4e54967c57}{SOPT5\_LPUART0RXSRC\_LPUART\_RX}) \textcolor{comment}{/* LPUART0 Receive
+       Data Source Select: LPUART\_RX pin */}
+122     );
+123 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__pin__mux_ga8e9cb3ef8722919469dc52bd99cb9cc5}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!I2\-C0\-\_\-\-Deinit\-Pins@{I2\-C0\-\_\-\-Deinit\-Pins}}
+\index{I2\-C0\-\_\-\-Deinit\-Pins@{I2\-C0\-\_\-\-Deinit\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{I2\-C0\-\_\-\-Deinit\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C0\-\_\-\-Deinit\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_ga8e9cb3ef8722919469dc52bd99cb9cc5}
+
+
+Configures pin routing and optionally pin electrical features. 
+
+
+\begin{DoxyCode}
+183                            \{
+184   CLOCK\_EnableClock(kCLOCK\_PortB);                           \textcolor{comment}{/* Port B Clock Gate Control: Clock enabled */}
+185 
+186   PORT\_SetPinMux(PORTB, \hyperlink{pin__mux_8c_a0a301fe265343a5b6e6a48af5276ac84}{PIN0\_IDX}, kPORT\_PinDisabledOrAnalog); \textcolor{comment}{/* PORTB0 (pin 35) is configured as
+       ADC0\_SE8 */}
+187   PORT\_SetPinMux(PORTB, \hyperlink{pin__mux_8c_af36e8fbe0cdf23dbe5fe82d0a1abe929}{PIN1\_IDX}, kPORT\_PinDisabledOrAnalog); \textcolor{comment}{/* PORTB1 (pin 36) is configured as
+       ADC0\_SE9 */}
+188 \}
+\end{DoxyCode}
+\hypertarget{group__pin__mux_ga3a18c9665d7d526b76488e90a271cc8e}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!I2\-C0\-\_\-\-Init\-Pins@{I2\-C0\-\_\-\-Init\-Pins}}
+\index{I2\-C0\-\_\-\-Init\-Pins@{I2\-C0\-\_\-\-Init\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{I2\-C0\-\_\-\-Init\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C0\-\_\-\-Init\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_ga3a18c9665d7d526b76488e90a271cc8e}
+
+
+Configures pin routing and optionally pin electrical features. 
+
+
+\begin{DoxyCode}
+147                          \{
+148   CLOCK\_EnableClock(kCLOCK\_PortB);                           \textcolor{comment}{/* Port B Clock Gate Control: Clock enabled */}
+149 
+150   PORT\_SetPinMux(PORTB, \hyperlink{pin__mux_8c_a0a301fe265343a5b6e6a48af5276ac84}{PIN0\_IDX}, kPORT\_MuxAlt2);            \textcolor{comment}{/* PORTB0 (pin 35) is configured as
+       I2C0\_SCL */}
+151   PORTB->PCR[0] = ((PORTB->PCR[0] &
+152     (~(PORT\_PCR\_DSE\_MASK | PORT\_PCR\_ISF\_MASK)))              \textcolor{comment}{/* Mask bits to zero which are setting */}
+153       | PORT\_PCR\_DSE(\hyperlink{pin__mux_8c_a91f13f97309f3c88c3cd188d2f2997ed}{PCR\_DSE\_HIGH})                           \textcolor{comment}{/* Drive Strength Enable: High
+       drive strength is configured on the corresponding pin, if pin is configured as a digital output. */}
+154     );
+155   PORT\_SetPinMux(PORTB, \hyperlink{pin__mux_8c_af36e8fbe0cdf23dbe5fe82d0a1abe929}{PIN1\_IDX}, kPORT\_MuxAlt2);            \textcolor{comment}{/* PORTB1 (pin 36) is configured as
+       I2C0\_SDA */}
+156   PORTB->PCR[1] = ((PORTB->PCR[1] &
+157     (~(PORT\_PCR\_DSE\_MASK | PORT\_PCR\_ISF\_MASK)))              \textcolor{comment}{/* Mask bits to zero which are setting */}
+158       | PORT\_PCR\_DSE(\hyperlink{pin__mux_8c_a91f13f97309f3c88c3cd188d2f2997ed}{PCR\_DSE\_HIGH})                           \textcolor{comment}{/* Drive Strength Enable: High
+       drive strength is configured on the corresponding pin, if pin is configured as a digital output. */}
+159     );
+160 \}
+\end{DoxyCode}
+\hypertarget{group__pin__mux_ga455ca4e86bd4798c0368a926fe30f692}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!I2\-C1\-\_\-\-Deinit\-Pins@{I2\-C1\-\_\-\-Deinit\-Pins}}
+\index{I2\-C1\-\_\-\-Deinit\-Pins@{I2\-C1\-\_\-\-Deinit\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{I2\-C1\-\_\-\-Deinit\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C1\-\_\-\-Deinit\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_ga455ca4e86bd4798c0368a926fe30f692}
+
+
+Configures pin routing and optionally pin electrical features. 
+
+
+\begin{DoxyCode}
+248                            \{
+249   CLOCK\_EnableClock(kCLOCK\_PortD);                           \textcolor{comment}{/* Port D Clock Gate Control: Clock enabled */}
+250 
+251   PORT\_SetPinMux(PORTD, \hyperlink{pin__mux_8c_ae62ce800c3f07b0f2802b9573d5971a8}{PIN6\_IDX}, kPORT\_PinDisabledOrAnalog); \textcolor{comment}{/* PORTD6 (pin 63) is configured as
+       ADC0\_SE7b */}
+252   PORT\_SetPinMux(PORTD, \hyperlink{pin__mux_8c_aa91e0ac7896fd4816e892df2509110be}{PIN7\_IDX}, kPORT\_PinDisabledOrAnalog); \textcolor{comment}{/* PORTD7 (pin 64) is disabled */}
+253 \}
+\end{DoxyCode}
+\hypertarget{group__pin__mux_gaa63f3828e7f823cef465873563ca99c4}{\index{Pin\-\_\-mux@{Pin\-\_\-mux}!I2\-C1\-\_\-\-Init\-Pins@{I2\-C1\-\_\-\-Init\-Pins}}
+\index{I2\-C1\-\_\-\-Init\-Pins@{I2\-C1\-\_\-\-Init\-Pins}!Pin_mux@{Pin\-\_\-mux}}
+\subsubsection[{I2\-C1\-\_\-\-Init\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C1\-\_\-\-Init\-Pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__pin__mux_gaa63f3828e7f823cef465873563ca99c4}
+
+
+Configures pin routing and optionally pin electrical features. 
+
+
+\begin{DoxyCode}
+212                          \{
+213   CLOCK\_EnableClock(kCLOCK\_PortD);                           \textcolor{comment}{/* Port D Clock Gate Control: Clock enabled */}
+214 
+215   PORT\_SetPinMux(PORTD, \hyperlink{pin__mux_8c_ae62ce800c3f07b0f2802b9573d5971a8}{PIN6\_IDX}, kPORT\_MuxAlt4);            \textcolor{comment}{/* PORTD6 (pin 63) is configured as
+       I2C1\_SDA */}
+216   PORTD->PCR[6] = ((PORTD->PCR[6] &
+217     (~(PORT\_PCR\_DSE\_MASK | PORT\_PCR\_ISF\_MASK)))              \textcolor{comment}{/* Mask bits to zero which are setting */}
+218       | PORT\_PCR\_DSE(\hyperlink{pin__mux_8c_a91f13f97309f3c88c3cd188d2f2997ed}{PCR\_DSE\_HIGH})                           \textcolor{comment}{/* Drive Strength Enable: High
+       drive strength is configured on the corresponding pin, if pin is configured as a digital output. */}
+219     );
+220   PORT\_SetPinMux(PORTD, \hyperlink{pin__mux_8c_aa91e0ac7896fd4816e892df2509110be}{PIN7\_IDX}, kPORT\_MuxAlt4);            \textcolor{comment}{/* PORTD7 (pin 64) is configured as
+       I2C1\_SCL */}
+221   PORTD->PCR[7] = ((PORTD->PCR[7] &
+222     (~(PORT\_PCR\_DSE\_MASK | PORT\_PCR\_ISF\_MASK)))              \textcolor{comment}{/* Mask bits to zero which are setting */}
+223       | PORT\_PCR\_DSE(\hyperlink{pin__mux_8c_a91f13f97309f3c88c3cd188d2f2997ed}{PCR\_DSE\_HIGH})                           \textcolor{comment}{/* Drive Strength Enable: High
+       drive strength is configured on the corresponding pin, if pin is configured as a digital output. */}
+224     );
+225 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{group__pin__mux_gaa63f3828e7f823cef465873563ca99c4_icgraph}
+\end{center}
+\end{figure}
+
+

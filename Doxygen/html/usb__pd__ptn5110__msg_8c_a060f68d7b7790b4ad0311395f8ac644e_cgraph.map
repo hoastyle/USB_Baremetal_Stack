@@ -1,0 +1,8 @@
+<map id="PDPTN5110_MsgHalProtocolLayerResetAndPowerUp" name="PDPTN5110_MsgHalProtocolLayerResetAndPowerUp">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="251,23,467,65"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__msg_8c.html#a14e713eb2da2853a2648e9918cf36ee8" title="PDPTN5110_MsgResetAllMsgId" alt="" coords="251,89,466,116"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="515,31,669,57"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="717,23,907,65"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="962,5,1107,32"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="955,56,1114,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="BOARD_InitBootPins" name="BOARD_InitBootPins">
+<area shape="rect" id="node2" href="$group__pin__mux.html#ga2c9fe54b6b84723fbaa590a6f4576966" title="Configures pin routing and optionally pin electrical features. " alt="" coords="203,5,325,32"/>
+<area shape="rect" id="node3" href="$group__pin__mux.html#gaa63f3828e7f823cef465873563ca99c4" title="Configures pin routing and optionally pin electrical features. " alt="" coords="213,56,315,83"/>
+</map>

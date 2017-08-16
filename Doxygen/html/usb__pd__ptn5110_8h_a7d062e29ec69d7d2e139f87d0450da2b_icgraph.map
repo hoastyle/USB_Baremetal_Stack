@@ -1,0 +1,4 @@
+<map id="PDPTN5110_VbusDisableMonitorAndDetect" name="PDPTN5110_VbusDisableMonitorAndDetect">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#a6626302ba190e99a55b7242f90fd2873" title="Callback when connection is detached or disabled (enter into detach or disable state, so put in the PD_PHY_RESET_CONNECT_DETECTION) " alt="" coords="275,5,483,46"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="531,41,677,68"/>
+</map>

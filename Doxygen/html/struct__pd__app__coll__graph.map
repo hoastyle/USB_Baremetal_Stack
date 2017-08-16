@@ -1,0 +1,23 @@
+<map id="_pd_app" name="_pd_app">
+<area shape="rect" id="node2" href="$struct__pd__source__cap__ext__data__block.html" title="_pd_source_cap_ext\l_data_block" alt="" coords="331,18,474,59"/>
+<area shape="rect" id="node3" href="$struct__pd__structured__vdm__header.html" title="PD structured VDM header. " alt="" coords="21,105,161,146"/>
+<area shape="rect" id="node10" href="$struct__pd__svdm__param.html" title="PD structured vdm command parameter. " alt="" coords="340,84,465,111"/>
+<area shape="rect" id="node4" href="$struct__pd__battery__status__data__object.html" title="_pd_battery_status\l_data_object" alt="" coords="336,198,469,239"/>
+<area shape="rect" id="node5" href="$struct__pd__vdm__identity__data.html" title="_pd_vdm_identity_data" alt="" coords="325,264,481,291"/>
+<area shape="rect" id="node6" href="$struct__pd__id__heaer__vdo.html" title="_pd_id_heaer_vdo" alt="" coords="27,264,154,291"/>
+<area shape="rect" id="node7" href="$struct__pd__unstructured__vdm__header.html" title="PD unstructured VDM header. " alt="" coords="325,315,480,357"/>
+<area shape="rect" id="node8" href="$struct__pd__alert__data__object.html" title="_pd_alert_data_object" alt="" coords="328,381,477,408"/>
+<area shape="rect" id="node9" href="$struct__pd__status__data__block.html" title="_pd_status_data_block" alt="" coords="325,432,481,459"/>
+<area shape="rect" id="node11" href="$struct__pd__sink__pdo.html" title="sink PDO union " alt="" coords="351,483,454,509"/>
+<area shape="rect" id="node12" href="$struct__pd__sink__battery__pdo.html" title="battery sink PDO " alt="" coords="16,457,165,484"/>
+<area shape="rect" id="node13" href="$struct__pd__sink__variable__pdo.html" title="variable sink PDO " alt="" coords="13,356,168,383"/>
+<area shape="rect" id="node14" href="$struct__pd__pdo__common.html" title="common PDO for union " alt="" coords="27,523,155,549"/>
+<area shape="rect" id="node19" href="$struct__pd__source__pdo.html" title="source PDO union " alt="" coords="344,571,461,597"/>
+<area shape="rect" id="node15" href="$struct__pd__sink__fixed__pdo.html" title="fixed sink PDO " alt="" coords="22,407,159,433"/>
+<area shape="rect" id="node16" href="$struct__pd__manufac__info__data__block.html" title="_pd_manufac_info_data\l_block" alt="" coords="323,622,483,663"/>
+<area shape="rect" id="node17" href="$struct__pd__battery__cap__data__block.html" title="_pd_battery_cap_data\l_block" alt="" coords="327,687,478,729"/>
+<area shape="rect" id="node18" href="$struct__pd__rdo.html" title="PD request data object. " alt="" coords="369,753,437,780"/>
+<area shape="rect" id="node20" href="$struct__pd__source__variable__pdo.html" title="variable source PDO " alt="" coords="6,689,175,716"/>
+<area shape="rect" id="node21" href="$struct__pd__source__battery__pdo.html" title="battery source PDO " alt="" coords="9,588,173,615"/>
+<area shape="rect" id="node22" href="$struct__pd__source__fixed__pdo.html" title="fixed source PDO " alt="" coords="15,639,167,665"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="_usb_descriptor_union" name="_usb_descriptor_union">
+<area shape="rect" id="node2" href="$struct__usb__descriptor__endpoint.html" title="_usb_descriptor_endpoint" alt="" coords="17,5,188,32"/>
+<area shape="rect" id="node3" href="$struct__usb__descriptor__common.html" title="_usb_descriptor_common" alt="" coords="17,56,188,83"/>
+<area shape="rect" id="node4" href="$struct__usb__descriptor__device.html" title="_usb_descriptor_device" alt="" coords="23,107,182,133"/>
+<area shape="rect" id="node5" href="$struct__usb__descriptor__configuration.html" title="_usb_descriptor_configuration" alt="" coords="5,157,200,184"/>
+<area shape="rect" id="node6" href="$struct__usb__descriptor__interface.html" title="_usb_descriptor_interface" alt="" coords="17,208,188,235"/>
+</map>

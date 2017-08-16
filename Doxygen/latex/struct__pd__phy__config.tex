@@ -1,0 +1,56 @@
+\hypertarget{struct__pd__phy__config}{\section{\-\_\-pd\-\_\-phy\-\_\-config Struct Reference}
+\label{struct__pd__phy__config}\index{\-\_\-pd\-\_\-phy\-\_\-config@{\-\_\-pd\-\_\-phy\-\_\-config}}
+}
+
+
+Configure P\-D P\-H\-Y.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-phy.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-phy\-\_\-config\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{struct__pd__phy__config__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__phy__config_aa5aa79cabb041cefecc0483c840f75a1}{interface}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}{pd\_i2c\_interface\_config\_t} \hyperlink{struct__pd__phy__config_aa606732850969dd6c9bd06b608e8015c}{i2cConfig}\\
+\>\hyperlink{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}{pd\_spi\_interface\_config\_t} \hyperlink{struct__pd__phy__config_a5e3478079386b40d5b795897396853cb}{spiConfig}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configure P\-D P\-H\-Y. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__phy__config_a1fdfe3a88c0a335fb0b15063fc067d97}{\subsubsection[{"@59}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__phy__config_a1fdfe3a88c0a335fb0b15063fc067d97}
+interface configure structure \hypertarget{struct__pd__phy__config_aa606732850969dd6c9bd06b608e8015c}{\index{\-\_\-pd\-\_\-phy\-\_\-config@{\-\_\-pd\-\_\-phy\-\_\-config}!i2c\-Config@{i2c\-Config}}
+\index{i2c\-Config@{i2c\-Config}!_pd_phy_config@{\-\_\-pd\-\_\-phy\-\_\-config}}
+\subsubsection[{i2c\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t} \-\_\-pd\-\_\-phy\-\_\-config\-::i2c\-Config}}\label{struct__pd__phy__config_aa606732850969dd6c9bd06b608e8015c}
+union, i2c configuration \hypertarget{struct__pd__phy__config_aa5aa79cabb041cefecc0483c840f75a1}{\index{\-\_\-pd\-\_\-phy\-\_\-config@{\-\_\-pd\-\_\-phy\-\_\-config}!interface@{interface}}
+\index{interface@{interface}!_pd_phy_config@{\-\_\-pd\-\_\-phy\-\_\-config}}
+\subsubsection[{interface}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-phy\-\_\-config\-::interface}}\label{struct__pd__phy__config_aa5aa79cabb041cefecc0483c840f75a1}
+interface, it's value is \hyperlink{group__usb__pd__stack_ga0499cb1eb2ad70e8d155ff72b50c7a38}{pd\-\_\-phy\-\_\-interface\-\_\-t} \hypertarget{struct__pd__phy__config_a5e3478079386b40d5b795897396853cb}{\index{\-\_\-pd\-\_\-phy\-\_\-config@{\-\_\-pd\-\_\-phy\-\_\-config}!spi\-Config@{spi\-Config}}
+\index{spi\-Config@{spi\-Config}!_pd_phy_config@{\-\_\-pd\-\_\-phy\-\_\-config}}
+\subsubsection[{spi\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t} \-\_\-pd\-\_\-phy\-\_\-config\-::spi\-Config}}\label{struct__pd__phy__config_a5e3478079386b40d5b795897396853cb}
+union, spi configuration 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd__phy_8h}{usb\-\_\-pd\-\_\-phy.\-h}\end{DoxyCompactItemize}

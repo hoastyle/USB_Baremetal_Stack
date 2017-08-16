@@ -1,0 +1,5 @@
+<map id="PD_PowerSrcTurnOnRequestVbus" name="PD_PowerSrcTurnOnRequestVbus">
+<area shape="rect" id="node2" href="$pd__power__interface_8c.html#a60a654ab41bd0c2eb39370eb865f4f99" title="PD_PowerGetVbusVoltage" alt="" coords="307,5,487,32"/>
+<area shape="rect" id="node3" href="$pd__power__app_8c.html#af642f48c8168af6e5a744cb02fb9e65a" title="PD_PowerBoardGetSelfSourceCaps" alt="" coords="280,56,515,83"/>
+<area shape="rect" id="node4" href="$pd__power__app_8c.html#a877430377afe70b94985c6651ccb867f" title="PD_PowerBoardSourceEnable\lVbusPower" alt="" coords="297,107,497,149"/>
+</map>

@@ -1,0 +1,43 @@
+\hypertarget{struct__pd__unstructured__vdm__param}{\section{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param Struct Reference}
+\label{struct__pd__unstructured__vdm__param}\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}}
+}
+
+
+P\-D unstructured vdm command parameter.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__unstructured__vdm__param_ace459022833c093044261a805aca67ac}{vdm\-Header\-And\-V\-D\-Os\-Data}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__unstructured__vdm__param_a842d85782a56f40375590061c9e2003c}{vdm\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__unstructured__vdm__param_a7efceddd48daf429c447c7c7108c9066}{vdm\-Header\-And\-V\-D\-Os\-Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D unstructured vdm command parameter. 
+
+it is used in P\-D\-\_\-\-Command for P\-D\-\_\-\-D\-P\-M\-\_\-\-S\-E\-N\-D\-\_\-\-U\-N\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M and in callback for P\-D\-\_\-\-D\-P\-M\-\_\-\-U\-N\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-\_\-\-R\-E\-C\-E\-I\-V\-E\-D. For P\-D\-\_\-\-D\-P\-M\-\_\-\-S\-E\-N\-D\-\_\-\-U\-N\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-: it provide vdm command information to P\-D stack, P\-D stack will start the command with the information. For P\-D\-\_\-\-D\-P\-M\-\_\-\-U\-N\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-\_\-\-R\-E\-C\-E\-I\-V\-E\-D\-: it provide information for the received unstructured vdm to A\-P\-P. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__unstructured__vdm__param_a7efceddd48daf429c447c7c7108c9066}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}!vdm\-Header\-And\-V\-D\-Os\-Count@{vdm\-Header\-And\-V\-D\-Os\-Count}}
+\index{vdm\-Header\-And\-V\-D\-Os\-Count@{vdm\-Header\-And\-V\-D\-Os\-Count}!_pd_unstructured_vdm_param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}}
+\subsubsection[{vdm\-Header\-And\-V\-D\-Os\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param\-::vdm\-Header\-And\-V\-D\-Os\-Count}}\label{struct__pd__unstructured__vdm__param_a7efceddd48daf429c447c7c7108c9066}
+message length (unit is 4 bytes) \hypertarget{struct__pd__unstructured__vdm__param_ace459022833c093044261a805aca67ac}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}!vdm\-Header\-And\-V\-D\-Os\-Data@{vdm\-Header\-And\-V\-D\-Os\-Data}}
+\index{vdm\-Header\-And\-V\-D\-Os\-Data@{vdm\-Header\-And\-V\-D\-Os\-Data}!_pd_unstructured_vdm_param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}}
+\subsubsection[{vdm\-Header\-And\-V\-D\-Os\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param\-::vdm\-Header\-And\-V\-D\-Os\-Data}}\label{struct__pd__unstructured__vdm__param_ace459022833c093044261a805aca67ac}
+unstructured vdm message data \hypertarget{struct__pd__unstructured__vdm__param_a842d85782a56f40375590061c9e2003c}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}!vdm\-Sop@{vdm\-Sop}}
+\index{vdm\-Sop@{vdm\-Sop}!_pd_unstructured_vdm_param@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param}}
+\subsubsection[{vdm\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-param\-::vdm\-Sop}}\label{struct__pd__unstructured__vdm__param_a842d85782a56f40375590061c9e2003c}
+message sop 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

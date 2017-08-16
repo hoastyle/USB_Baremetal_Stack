@@ -1,0 +1,6 @@
+<map id="PDPTN5110_ConnectSync" name="PDPTN5110_ConnectSync">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__interface_8c.html#a365742e7fe65b04a258288d01dc787e1" title="USB_RAM_ADDRESS_ALIGNMENT" alt="" coords="237,5,483,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a7ac2368f9c8bd64f0734fb97465cfe97" title="PDPTN5110_DetectDetach" alt="" coords="268,56,452,83"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="531,81,677,108"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="299,157,421,184"/>
+</map>

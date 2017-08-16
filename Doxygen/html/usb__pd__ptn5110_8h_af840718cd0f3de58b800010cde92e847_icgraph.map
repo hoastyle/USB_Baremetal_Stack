@@ -1,0 +1,12 @@
+<map id="PDPTN5110_RegCacheSynC" name="PDPTN5110_RegCacheSynC">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#a4b4cd7c31c2532a3b1b03b7d060c3aff" title="Read the current pin state for a given CC pin. " alt="" coords="551,107,745,133"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="814,132,959,159"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__connect_8c.html#a1136effbc01ddeeb75c6e70077fa1fca" title="Update hardware after a power role swap has completed (e.g. read current advert of new source)..." alt="" coords="257,209,479,250"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__hal_8c.html#af231659d66feb7b47a04d094eafcc74c" title="Enable the Callback for power supply change interrupt, initalize state according to the state at this..." alt="" coords="254,326,482,367"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__hal_8c.html#aea5a6f5ab3adc2c42344845af82218f5" title="Initialise this module. " alt="" coords="265,275,471,301"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110__hal_8c.html#ae5d40eccd3a7c7902b303d44cedb6a42" title="Callback to be called on assertion of INT_N by victoria. " alt="" coords="547,56,749,83"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="267,5,469,32"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__connect_8c.html#a04c93cf6ac2b690c0837b01fc8b37068" title="Inform the Hardware chip that an activity is in progress. " alt="" coords="531,212,765,239"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__hal_8c.html#af673ca9417d66b63412b2d7f0ea9b176" title="Return true if vbus is within loose bounds of VSafe0V. " alt="" coords="577,304,719,331"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="826,304,947,331"/>
+</map>

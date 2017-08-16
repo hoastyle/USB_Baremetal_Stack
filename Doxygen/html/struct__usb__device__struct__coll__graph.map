@@ -1,0 +1,5 @@
+<map id="_usb_device_struct" name="_usb_device_struct">
+<area shape="rect" id="node2" href="$struct__usb__device__endpoint__callback__struct.html" title="Endpoint callback structure. " alt="" coords="18,113,168,154"/>
+<area shape="rect" id="node3" href="$struct__usb__device__endpoint__callback__message__struct.html" title="Endpoint callback message structure. " alt="" coords="5,6,181,47"/>
+<area shape="rect" id="node4" href="$struct__usb__device__controller__interface__struct.html" title="USB device controller interface structure. " alt="" coords="193,113,347,154"/>
+</map>

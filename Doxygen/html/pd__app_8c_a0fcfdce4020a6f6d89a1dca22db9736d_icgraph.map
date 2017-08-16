@@ -1,0 +1,11 @@
+<map id="PD_PowerBoardReset" name="PD_PowerBoardReset">
+<area shape="rect" id="node2" href="$pd__app_8c.html#a76d0496e2aa1a40759b549a23506f14a" title="PD_DpmConnectCallback" alt="" coords="219,5,395,32"/>
+<area shape="rect" id="node4" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="717,31,806,57"/>
+<area shape="rect" id="node5" href="$battery_2pd__app__demo_8c.html#a5a66a0380a323ac58a24d481949aaf05" title="PD_DemoPDReset" alt="" coords="238,107,375,133"/>
+<area shape="rect" id="node7" href="$source__charger_2pd__power__interface_8h.html#afe3b9450467437d5e8a0c25f98bba588" title="PD_PowerSrcTurnOffVbus" alt="" coords="217,157,396,184"/>
+<area shape="rect" id="node10" href="$battery_2pd__power__interface_8h.html#ab35521f9f66edd4734ca6e34ebed903e" title="PD_PowerSnkStopDrawVbus" alt="" coords="209,208,405,235"/>
+<area shape="rect" id="node3" href="$pd__app_8c.html#a648f96eddcd92c89d8908b63ac0f9185" title="PD_DpmDemoAppCallback" alt="" coords="457,5,642,32"/>
+<area shape="rect" id="node6" href="$battery_2pd__app__demo_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="482,107,617,133"/>
+<area shape="rect" id="node8" href="$pd__app__demo_8c.html#a35a5744ceb43d67dc3bf4d2040c39a54" title="USB_PDDemoProcessMenu" alt="" coords="454,157,645,184"/>
+<area shape="rect" id="node9" href="$source__charger_2main_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="694,157,829,184"/>
+</map>

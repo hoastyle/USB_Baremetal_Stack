@@ -1,0 +1,6 @@
+<map id="PDPTN5110_MsgHalSetTxSopMode" name="PDPTN5110_MsgHalSetTxSopMode">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#a36d74aa3b6c70875e850cc202526cdeb" title="Common prefix for all send data and control functions. " alt="" coords="294,34,525,75"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__msg_8c.html#a29dc8db6b2478eca435f22cee25f6a61" title="Common prefix for all send data functions. " alt="" coords="581,5,787,46"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__msg_8c.html#a4c2dd9dfad91380bc2e067e0ae3f5311" title="Send a control message, specify sop. " alt="" coords="574,71,794,97"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a637498f43bc0fed57fc7eb8d6992a042" title="PDPTN5110_Send" alt="" coords="843,71,976,97"/>
+</map>

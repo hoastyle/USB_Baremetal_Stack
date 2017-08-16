@@ -1,0 +1,17 @@
+var searchData=
+[
+  ['vbus_5freq_5f20v',['VBUS_REQ_20V',['../pd__power__interface_8h.html#a4e3942b4ceb65c1c755009bc646d7ee3',1,'VBUS_REQ_20V():&#160;pd_power_interface.h'],['../battery_2pd__power__interface_8h.html#a4e3942b4ceb65c1c755009bc646d7ee3',1,'VBUS_REQ_20V():&#160;pd_power_interface.h'],['../source__charger_2pd__power__interface_8h.html#a4e3942b4ceb65c1c755009bc646d7ee3',1,'VBUS_REQ_20V():&#160;pd_power_interface.h']]],
+  ['vbus_5freq_5f5v',['VBUS_REQ_5V',['../pd__power__interface_8h.html#ad354dedc6b787f12b91fe22d5815df40',1,'VBUS_REQ_5V():&#160;pd_power_interface.h'],['../battery_2pd__power__interface_8h.html#ad354dedc6b787f12b91fe22d5815df40',1,'VBUS_REQ_5V():&#160;pd_power_interface.h'],['../source__charger_2pd__power__interface_8h.html#ad354dedc6b787f12b91fe22d5815df40',1,'VBUS_REQ_5V():&#160;pd_power_interface.h']]],
+  ['vbus_5fvsafe0v_5fmax_5fthreshold',['VBUS_VSAFE0V_MAX_THRESHOLD',['../usb__pd__ptn5110_8h.html#a5399a1778ddebda48e28ba29d82b6ff6',1,'usb_pd_ptn5110.h']]],
+  ['vbus_5fvsafe0v_5fmin_5fthreshold',['VBUS_VSAFE0V_MIN_THRESHOLD',['../usb__pd__ptn5110_8h.html#acedbb1cb17712f5183f3e897d93cce01',1,'usb_pd_ptn5110.h']]],
+  ['vbus_5fvsafe5v_5fmax_5fthreshold',['VBUS_VSAFE5V_MAX_THRESHOLD',['../usb__pd__ptn5110_8h.html#aeb049af566b2b2ddbbc0123442f428d8',1,'usb_pd_ptn5110.h']]],
+  ['vbus_5fvsafe5v_5fmin_5fthreshold',['VBUS_VSAFE5V_MIN_THRESHOLD',['../usb__pd__ptn5110_8h.html#a1a258eb6013a6306527327eca63fbc66',1,'usb_pd_ptn5110.h']]],
+  ['vdm_5fcable_5fvdo_5fcurrent_5fcapability',['VDM_CABLE_VDO_CURRENT_CAPABILITY',['../usb__pd__policy_8c.html#a9d46ce58619ca7eb83acffcb676b509a',1,'usb_pd_policy.c']]],
+  ['vdm_5fdp_5fmode',['VDM_DP_MODE',['../battery_2pd__app_8h.html#a7096f16ea267e425528e5bfe230a8080',1,'VDM_DP_MODE():&#160;pd_app.h'],['../source__charger_2pd__app_8h.html#a7096f16ea267e425528e5bfe230a8080',1,'VDM_DP_MODE():&#160;pd_app.h']]],
+  ['vdm_5fdp_5fsid',['VDM_DP_SID',['../battery_2pd__app_8h.html#a90f4107073a4f89565634cae65e2e8f5',1,'VDM_DP_SID():&#160;pd_app.h'],['../source__charger_2pd__app_8h.html#a90f4107073a4f89565634cae65e2e8f5',1,'VDM_DP_SID():&#160;pd_app.h']]],
+  ['vdm_5fid_5fheader_5fvdo_5factive_5fcable_5fval',['VDM_ID_HEADER_VDO_ACTIVE_CABLE_VAL',['../usb__pd__policy_8c.html#a48b38de5a1d0283eb28b6b681dcfb897',1,'usb_pd_policy.c']]],
+  ['vdm_5fid_5fheader_5fvdo_5fpassive_5fcable_5fval',['VDM_ID_HEADER_VDO_PASSIVE_CABLE_VAL',['../usb__pd__policy_8c.html#a4fcc820cacf5ba9d5d511fe24e451c84',1,'usb_pd_policy.c']]],
+  ['vdm_5fid_5fheader_5fvdo_5fufp_5fcable_5fplug_5ftype_5fmask',['VDM_ID_HEADER_VDO_UFP_CABLE_PLUG_TYPE_MASK',['../usb__pd__policy_8c.html#ab6ea63979d7a148dd6c0a3b4004464cb',1,'usb_pd_policy.c']]],
+  ['vportsvchandler',['vPortSVCHandler',['../FreeRTOSConfig_8h.html#ad43047b3ea0a146673e30637488bf754',1,'vPortSVCHandler():&#160;FreeRTOSConfig.h'],['../battery_2FreeRTOSConfig_8h.html#ad43047b3ea0a146673e30637488bf754',1,'vPortSVCHandler():&#160;FreeRTOSConfig.h'],['../source__charger_2FreeRTOSConfig_8h.html#ad43047b3ea0a146673e30637488bf754',1,'vPortSVCHandler():&#160;FreeRTOSConfig.h']]],
+  ['vsafe5v_5fin_5f50mv',['VSAFE5V_IN_50MV',['../pd__power__interface_8h.html#a4806185481400089d3663d120e4c412d',1,'VSAFE5V_IN_50MV():&#160;pd_power_interface.h'],['../battery_2pd__power__interface_8h.html#a4806185481400089d3663d120e4c412d',1,'VSAFE5V_IN_50MV():&#160;pd_power_interface.h'],['../source__charger_2pd__power__interface_8h.html#a4806185481400089d3663d120e4c412d',1,'VSAFE5V_IN_50MV():&#160;pd_power_interface.h']]]
+];

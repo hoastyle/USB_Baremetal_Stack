@@ -176,6 +176,7 @@ pd_instance_config_t g_PDConfig = {
 };
 
 // 在pd_power_interface.c中定义, pd_power_interface.h中声明, 赋值给pd_instance_t.callbackFns
+// power related function
 pd_power_handle_callback_t callbackFunctions = {
     PD_PowerSrcTurnOnDefaultVbus,  PD_PowerSrcTurnOnRequestVbus,  PD_PowerSrcTurnOffVbus,
     PD_PowerSrcGotoMinReducePower, PD_PowerSnkDrawTypeCVbus,      PD_PowerSnkDrawRequestVbus,
@@ -243,7 +244,6 @@ pd_status_t PD_DpmConnectCallback(void *callbackParam, uint32_t event, void *par
 }
 
 // DPM Event Callback
-// Question: 初步看下来只是为了根据操作情况输出相关信息，提升用户体验而已？
 pd_status_t PD_DpmDemoAppCallback(void *callbackParam, uint32_t event, void *param)
 {
     pd_status_t status = kStatus_PD_Error;

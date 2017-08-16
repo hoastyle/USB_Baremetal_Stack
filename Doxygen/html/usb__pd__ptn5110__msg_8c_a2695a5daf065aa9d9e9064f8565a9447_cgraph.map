@@ -1,0 +1,5 @@
+<map id="PDPTN5110_MsgHalWaitSendResult" name="PDPTN5110_MsgHalWaitSendResult">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#a57a93596569ed29179bb8569b2fdd3b2" title="Query if an external tx done interrupts has been seen. " alt="" coords="259,12,461,39"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__msg_8c.html#af031c2ac982002330a6a98379bd78f2a" title="PDPTN5110_MsgIncrMsgId" alt="" coords="267,63,453,89"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html#a5d3a101dfa4ff56b35bf2006983b9a80" title="Query if an external interrupts has bneen seen. " alt="" coords="510,5,701,46"/>
+</map>

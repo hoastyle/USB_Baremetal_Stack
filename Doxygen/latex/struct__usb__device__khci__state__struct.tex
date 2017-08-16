@@ -1,0 +1,86 @@
+\hypertarget{struct__usb__device__khci__state__struct}{\section{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct Struct Reference}
+\label{struct__usb__device__khci__state__struct}\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+}
+
+
+K\-H\-C\-I state structure.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-device\-\_\-khci.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__usb__device__khci__state__struct__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__device__controller__driver_ga4be463ccd1fe520b377febafb0a06c2f}{usb\-\_\-device\-\_\-struct\-\_\-t} $\ast$ \hyperlink{struct__usb__device__khci__state__struct_ad941a856f8322b5a041028018c6d801f}{device\-Handle}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct__usb__device__khci__state__struct_ae5697fe1b2ccad39c0a166ab56de318a}{bdt}
+\item 
+U\-S\-B\-\_\-\-Type $\ast$ \hyperlink{struct__usb__device__khci__state__struct_a1558f2b2bc52c419b2332497af62e160}{register\-Base}
+\item 
+uint8\-\_\-t \hyperlink{struct__usb__device__khci__state__struct_a1624706ecc6bfd364c81afa987f320bb}{setup\-Packet\-Buffer} \mbox{[}\hyperlink{group__usb__device__driver_gabf1be648722b01577b84e52e1fb3d8f8}{U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E} $\ast$2\mbox{]}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct__usb__device__khci__state__struct_a572451afb27d66cfbcc459e9647c1f20}{dma\-Align\-Buffer}
+\item 
+\hyperlink{group__usb__device__controller__khci__driver_ga78d53188f22fcd0f4058fafea867d1df}{usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-\_\-t} \hyperlink{struct__usb__device__khci__state__struct_a04b55a56698a07b05dcad52cb1a4c766}{endpoint\-State} \mbox{[}U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S $\ast$2\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{struct__usb__device__khci__state__struct_a6df4a75d1ffb3f399e2323d6f14096be}{is\-Dma\-Align\-Buffer\-Inusing}
+\item 
+uint8\-\_\-t \hyperlink{struct__usb__device__khci__state__struct_afd210db81f2a9747019b128b3b49f0b8}{is\-Resetting}
+\item 
+uint8\-\_\-t \hyperlink{struct__usb__device__khci__state__struct_a4301d1c84230578464dc8e625d3db82f}{controller\-Id}
+\item 
+uint8\-\_\-t \hyperlink{struct__usb__device__khci__state__struct_ad0b7c5876d05379cf0d4a28c805c8d5b}{setup\-Buffer\-Index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+K\-H\-C\-I state structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__usb__device__khci__state__struct_ae5697fe1b2ccad39c0a166ab56de318a}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!bdt@{bdt}}
+\index{bdt@{bdt}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{bdt}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::bdt}}\label{struct__usb__device__khci__state__struct_ae5697fe1b2ccad39c0a166ab56de318a}
+B\-D\-T buffer address \hypertarget{struct__usb__device__khci__state__struct_a4301d1c84230578464dc8e625d3db82f}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!controller\-Id@{controller\-Id}}
+\index{controller\-Id@{controller\-Id}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{controller\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::controller\-Id}}\label{struct__usb__device__khci__state__struct_a4301d1c84230578464dc8e625d3db82f}
+Controller I\-D \hypertarget{struct__usb__device__khci__state__struct_ad941a856f8322b5a041028018c6d801f}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!device\-Handle@{device\-Handle}}
+\index{device\-Handle@{device\-Handle}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{device\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf usb\-\_\-device\-\_\-struct\-\_\-t}$\ast$ \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::device\-Handle}}\label{struct__usb__device__khci__state__struct_ad941a856f8322b5a041028018c6d801f}
+Device handle used to identify the device object belongs to \hypertarget{struct__usb__device__khci__state__struct_a572451afb27d66cfbcc459e9647c1f20}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!dma\-Align\-Buffer@{dma\-Align\-Buffer}}
+\index{dma\-Align\-Buffer@{dma\-Align\-Buffer}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{dma\-Align\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::dma\-Align\-Buffer}}\label{struct__usb__device__khci__state__struct_a572451afb27d66cfbcc459e9647c1f20}
+This buffer is used to fix the transfer\-Buffer or transfer\-Length does not align to 4-\/bytes when the function U\-S\-B\-\_\-\-Device\-Khci\-Recv is called. The macro U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-K\-H\-C\-I\-\_\-\-D\-M\-A\-\_\-\-A\-L\-I\-G\-N is used to enable or disable this feature. If the feature is enabled, when the transfer\-Buffer or transfer\-Length does not align to 4-\/bytes, the transfer\-Length is not more than U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-K\-H\-C\-I\-\_\-\-D\-M\-A\-\_\-\-A\-L\-I\-G\-N\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H, and the flag is\-Dma\-Align\-Buffer\-Inusing is zero, the dma\-Align\-Buffer is used to receive data and the flag is\-Dma\-Align\-Buffer\-Inusing is set to 1. When the transfer is done, the received data, kept in dma\-Align\-Buffer, is copied to the transfer\-Buffer, and the flag is\-Dma\-Align\-Buffer\-Inusing is cleared. \hypertarget{struct__usb__device__khci__state__struct_a04b55a56698a07b05dcad52cb1a4c766}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!endpoint\-State@{endpoint\-State}}
+\index{endpoint\-State@{endpoint\-State}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{endpoint\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-\_\-t} \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::endpoint\-State\mbox{[}U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S $\ast$2\mbox{]}}}\label{struct__usb__device__khci__state__struct_a04b55a56698a07b05dcad52cb1a4c766}
+Endpoint state structures \hypertarget{struct__usb__device__khci__state__struct_a6df4a75d1ffb3f399e2323d6f14096be}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!is\-Dma\-Align\-Buffer\-Inusing@{is\-Dma\-Align\-Buffer\-Inusing}}
+\index{is\-Dma\-Align\-Buffer\-Inusing@{is\-Dma\-Align\-Buffer\-Inusing}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{is\-Dma\-Align\-Buffer\-Inusing}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::is\-Dma\-Align\-Buffer\-Inusing}}\label{struct__usb__device__khci__state__struct_a6df4a75d1ffb3f399e2323d6f14096be}
+The dma\-Align\-Buffer is used or not \hypertarget{struct__usb__device__khci__state__struct_afd210db81f2a9747019b128b3b49f0b8}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!is\-Resetting@{is\-Resetting}}
+\index{is\-Resetting@{is\-Resetting}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{is\-Resetting}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::is\-Resetting}}\label{struct__usb__device__khci__state__struct_afd210db81f2a9747019b128b3b49f0b8}
+Is doing device reset or not \hypertarget{struct__usb__device__khci__state__struct_a1558f2b2bc52c419b2332497af62e160}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!register\-Base@{register\-Base}}
+\index{register\-Base@{register\-Base}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{register\-Base}]{\setlength{\rightskip}{0pt plus 5cm}U\-S\-B\-\_\-\-Type$\ast$ \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::register\-Base}}\label{struct__usb__device__khci__state__struct_a1558f2b2bc52c419b2332497af62e160}
+The base address of the register \hypertarget{struct__usb__device__khci__state__struct_ad0b7c5876d05379cf0d4a28c805c8d5b}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!setup\-Buffer\-Index@{setup\-Buffer\-Index}}
+\index{setup\-Buffer\-Index@{setup\-Buffer\-Index}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{setup\-Buffer\-Index}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::setup\-Buffer\-Index}}\label{struct__usb__device__khci__state__struct_ad0b7c5876d05379cf0d4a28c805c8d5b}
+A valid setup buffer flag \hypertarget{struct__usb__device__khci__state__struct_a1624706ecc6bfd364c81afa987f320bb}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}!setup\-Packet\-Buffer@{setup\-Packet\-Buffer}}
+\index{setup\-Packet\-Buffer@{setup\-Packet\-Buffer}!_usb_device_khci_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}}
+\subsubsection[{setup\-Packet\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-::setup\-Packet\-Buffer\mbox{[}{\bf U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E} $\ast$2\mbox{]}}}\label{struct__usb__device__khci__state__struct_a1624706ecc6bfd364c81afa987f320bb}
+The setup request buffer 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+device/\hyperlink{usb__device__khci_8h}{usb\-\_\-device\-\_\-khci.\-h}\end{DoxyCompactItemize}

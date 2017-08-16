@@ -1,0 +1,9 @@
+<map id="USB_OsaMemoryFree" name="USB_OsaMemoryFree">
+<area shape="rect" id="node2" href="$group__usb__os__abstraction.html#gaf38d525580499ff2657303eb807efc61" title="Creates an event object with all flags cleared. " alt="" coords="212,5,367,32"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga3d07a809b1fa8450c1383aa8bbd49b37" title="Destroys a created event object. " alt="" coords="209,56,370,83"/>
+<area shape="rect" id="node3" href="$group__usb__pd__stack.html#ga3ab001290dc934fd6a45ad93916f5140" title="Initialize PD stack instance. " alt="" coords="427,5,543,32"/>
+<area shape="rect" id="node4" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="625,5,714,32"/>
+<area shape="rect" id="node6" href="$group__usb__pd__stack.html#ga2a517af9491514966ad9c806eb998f78" title="de&#45;initialize PD stack instance. " alt="" coords="419,56,551,83"/>
+<area shape="rect" id="node7" href="$battery_2pd__app__demo_8c.html#a5a66a0380a323ac58a24d481949aaf05" title="PD_DemoPDReset" alt="" coords="601,56,738,83"/>
+<area shape="rect" id="node8" href="$battery_2pd__app__demo_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="787,56,922,83"/>
+</map>

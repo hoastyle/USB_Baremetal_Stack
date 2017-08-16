@@ -1,0 +1,7 @@
+<map id="PD_ConnectInitRole" name="PD_ConnectInitRole">
+<area shape="rect" id="node2" href="$usb__pd__policy_8c.html#a602f8622c0ba8d21b5013537dd3dadf9" title="PD_StackStateMachine" alt="" coords="197,5,360,32"/>
+<area shape="rect" id="node3" href="$group__usb__pd__stack.html#ga4227c58a9524464e19ee6efe9615f78e" title="PD stack&#39;s instance task. " alt="" coords="409,5,535,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a616cf54a58f0aad132292f45995c3560" title="pd_port_task" alt="" coords="585,5,682,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a83c983ad37627b3d0f2ba5f1d4d6efaf" title="pd_demo_task" alt="" coords="731,5,837,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="885,5,936,32"/>
+</map>

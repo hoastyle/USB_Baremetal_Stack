@@ -1,0 +1,385 @@
+\hypertarget{battery_2pd__app_8h}{\section{demo/pd\-\_\-battery/pd\-\_\-app.h File Reference}
+\label{battery_2pd__app_8h}\index{demo/pd\-\_\-battery/pd\-\_\-app.\-h@{demo/pd\-\_\-battery/pd\-\_\-app.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__pd__source__cap__ext__data__block}{\-\_\-pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block}
+\item 
+struct \hyperlink{struct__pd__status__data__block}{\-\_\-pd\-\_\-status\-\_\-data\-\_\-block}
+\item 
+struct \hyperlink{struct__pd__alert__data__object}{\-\_\-pd\-\_\-alert\-\_\-data\-\_\-object}
+\item 
+struct \hyperlink{struct__pd__battery__cap__data__block}{\-\_\-pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block}
+\item 
+struct \hyperlink{struct__pd__battery__status__data__object}{\-\_\-pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object}
+\item 
+struct \hyperlink{struct__pd__manufac__info__data__block}{\-\_\-pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block}
+\item 
+struct \hyperlink{struct__pd__id__heaer__vdo}{\-\_\-pd\-\_\-id\-\_\-heaer\-\_\-vdo}
+\item 
+struct \hyperlink{struct__pd__vdm__identity__data}{\-\_\-pd\-\_\-vdm\-\_\-identity\-\_\-data}
+\item 
+struct \hyperlink{struct__pd__app}{\-\_\-pd\-\_\-app}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a90f4107073a4f89565634cae65e2e8f5}{V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D}~0x\-F\-F01
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a7096f16ea267e425528e5bfe230a8080}{V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E}~0x00000001u
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D}~(0x0001u)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D}~(0x1\-F\-C9u)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D}~(0x0001u)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a4ef7179ada3aa804736cd3e353fbb21c}{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R}~(0x01)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a21965bbb0ec86e3646ec403f4dfa9b5c}{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R}~(0x01)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ab9acab64aae126b1f2ac72021d33d77b}{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E}~(0x0001)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a18048c93d49255e049dea54335b4bb76}{P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn}~(I2\-C1\-\_\-\-I\-R\-Qn)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}~(31)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ad99e5c127ff695f7b579400ef1062e76}{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}~(P\-O\-R\-T\-E)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a1fcc7374a2ec203aceb85355f3118f3d}{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O}~(G\-P\-I\-O\-E)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q}~(P\-O\-R\-T\-B\-\_\-\-P\-O\-R\-T\-C\-\_\-\-P\-O\-R\-T\-D\-\_\-\-P\-O\-R\-T\-E\-\_\-\-I\-R\-Qn)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O}~(G\-P\-I\-O\-A)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}~(13)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ad1bc615edc9a083720a4810e104f62b4}{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}~(P\-O\-R\-T\-A)
+\item 
+\#define \hyperlink{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}~(9 $\ast$ 1000) /$\ast$ 9\-V $\ast$/
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ab9cf2aaccdd8a188d08b4cf3c767c72c}{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}~(15 $\ast$ 100) /$\ast$ 1.\-5\-A $\ast$/
+\item 
+\#define \hyperlink{battery_2pd__app_8h_ab5bb973e138eca86f7fef23bfdea61fe}{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}~(5 $\ast$ 1000)   /$\ast$ 5\-V $\ast$/
+\item 
+\#define \hyperlink{battery_2pd__app_8h_a297a46cf34f9e2e2189d97f36a33d739}{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}~(1 $\ast$ 1000)   /$\ast$ 1\-A $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273}{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state} \hyperlink{battery_2pd__app_8h_a0a09e6762a1ba1789127598cdc73b16d}{pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__source__cap__ext__data__block}{\-\_\-pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block} \hyperlink{battery_2pd__app_8h_a48136dc14cb8a1f83b2c425508704d1b}{pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__status__data__block}{\-\_\-pd\-\_\-status\-\_\-data\-\_\-block} \hyperlink{battery_2pd__app_8h_a3c48d8d5b263e585588f5bfe508978c6}{pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__alert__data__object}{\-\_\-pd\-\_\-alert\-\_\-data\-\_\-object} \hyperlink{battery_2pd__app_8h_a4890f2e2b689f24e055912a325a72748}{pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__battery__cap__data__block}{\-\_\-pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block} \hyperlink{battery_2pd__app_8h_aea5fa03c1161f9f964ff0f9d8f0c5dc1}{pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__battery__status__data__object}{\-\_\-pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object} \hyperlink{battery_2pd__app_8h_a85756978e48572ee52a6090ea4a2a400}{pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__manufac__info__data__block}{\-\_\-pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block} \hyperlink{battery_2pd__app_8h_a7ced852e8d03d36a6453dc1a0eccada5}{pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t}
+\item 
+typedef struct \hyperlink{struct__pd__id__heaer__vdo}{\-\_\-pd\-\_\-id\-\_\-heaer\-\_\-vdo} \hyperlink{battery_2pd__app_8h_a7dd83e28d2ebeab4fe2166767ff8befd}{pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__vdm__identity__data}{\-\_\-pd\-\_\-vdm\-\_\-identity\-\_\-data} \hyperlink{battery_2pd__app_8h_ab9dfa9c9b90392b1b3cc1bff4b08e4e9}{pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t}
+\item 
+typedef enum \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43}{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state} \hyperlink{battery_2pd__app_8h_a9545c3089646c3a0a2c7ad96bcf770a9}{pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t}
+\item 
+typedef struct \hyperlink{struct__pd__app}{\-\_\-pd\-\_\-app} \hyperlink{battery_2pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273}{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state} \{ \\*
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{k\-Demo\-State\-\_\-\-Start} = 0, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{k\-Demo\-State\-\_\-\-Idle}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{k\-Demo\-State\-\_\-\-Src\-Reduce\-Power}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}{k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink}, 
+\\*
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}{k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{k\-Demo\-State\-\_\-\-Swap\-As\-Sink}, 
+\\*
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}{k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}{k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273abcba6860bceeee0a7fbc50321d727886}{k\-Demo\-State\-\_\-\-No\-Power}, 
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{k\-Demo\-State\-\_\-\-Request\-Low\-Power}, 
+\\*
+\hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}{k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power}
+ \}
+\item 
+enum \hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43}{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state} \{ \\*
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle} = 0, 
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}, 
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}, 
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}, 
+\\*
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}, 
+\hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}, 
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle} = 0, 
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}, 
+\\*
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}, 
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}, 
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}, 
+\hyperlink{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}, 
+\\*
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle} = 0, 
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}, 
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}, 
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}, 
+\\*
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}, 
+\hyperlink{source__charger_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} \hyperlink{battery_2pd__app_8h_a4c95db98c2e53feffacac68c5c3abd80}{g\-\_\-\-P\-D\-App\-Instance}
+\item 
+\hyperlink{group__usb__pd__stack_ga1897a14a90aea9e4b0e7cf1e5b4ea449}{pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t} \hyperlink{battery_2pd__app_8h_a31ad0b046935918c7fa0fed8885192c8}{g\-\_\-\-Power\-Port\-Config}
+\item 
+\hyperlink{group__usb__pd__stack_gafa6034f9e204836697da1f2fc996cbad}{pd\-\_\-instance\-\_\-config\-\_\-t} \hyperlink{battery_2pd__app_8h_a33272daf4c2c919c757e12106af7ffd5}{g\-\_\-\-P\-D\-Config}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{battery_2pd__app_8h_a1fcc7374a2ec203aceb85355f3118f3d}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O}}
+\index{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O~(G\-P\-I\-O\-E)}}\label{battery_2pd__app_8h_a1fcc7374a2ec203aceb85355f3118f3d}
+\hypertarget{battery_2pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q}}
+\index{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-I\-R\-Q~(P\-O\-R\-T\-B\-\_\-\-P\-O\-R\-T\-C\-\_\-\-P\-O\-R\-T\-D\-\_\-\-P\-O\-R\-T\-E\-\_\-\-I\-R\-Qn)}}\label{battery_2pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}
+\hypertarget{battery_2pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}}
+\index{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N~(31)}}\label{battery_2pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}
+\hypertarget{battery_2pd__app_8h_ad99e5c127ff695f7b579400ef1062e76}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}}
+\index{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T@{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-A\-R\-D\-\_\-\-P\-T\-N5110\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T~(P\-O\-R\-T\-E)}}\label{battery_2pd__app_8h_ad99e5c127ff695f7b579400ef1062e76}
+\hypertarget{battery_2pd__app_8h_ab9acab64aae126b1f2ac72021d33d77b}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E}}
+\index{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-C\-D\-\_\-\-D\-E\-V\-I\-C\-E~(0x0001)}}\label{battery_2pd__app_8h_ab9acab64aae126b1f2ac72021d33d77b}
+\hypertarget{battery_2pd__app_8h_a4ef7179ada3aa804736cd3e353fbb21c}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R}}
+\index{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-W\-\_\-\-V\-E\-R~(0x01)}}\label{battery_2pd__app_8h_a4ef7179ada3aa804736cd3e353fbb21c}
+\hypertarget{battery_2pd__app_8h_a21965bbb0ec86e3646ec403f4dfa9b5c}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R}}
+\index{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-H\-W\-\_\-\-V\-E\-R~(0x01)}}\label{battery_2pd__app_8h_a21965bbb0ec86e3646ec403f4dfa9b5c}
+\hypertarget{battery_2pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D}}
+\index{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-P\-I\-D~(0x0001u)}}\label{battery_2pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}
+\hypertarget{battery_2pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D}}
+\index{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D@{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-X\-I\-D~(0x0001u)}}\label{battery_2pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}
+\hypertarget{battery_2pd__app_8h_ab9cf2aaccdd8a188d08b4cf3c767c72c}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}}
+\index{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T~(15 $\ast$ 100) /$\ast$ 1.\-5\-A $\ast$/}}\label{battery_2pd__app_8h_ab9cf2aaccdd8a188d08b4cf3c767c72c}
+\hypertarget{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}}
+\index{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-H\-A\-R\-G\-E\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E~(9 $\ast$ 1000) /$\ast$ 9\-V $\ast$/}}\label{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}
+\hypertarget{battery_2pd__app_8h_a297a46cf34f9e2e2189d97f36a33d739}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}}
+\index{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T~(1 $\ast$ 1000)   /$\ast$ 1\-A $\ast$/}}\label{battery_2pd__app_8h_a297a46cf34f9e2e2189d97f36a33d739}
+\hypertarget{battery_2pd__app_8h_ab5bb973e138eca86f7fef23bfdea61fe}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}}
+\index{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E@{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-D\-E\-M\-O\-\_\-\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-F\-U\-L\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-V\-O\-L\-T\-A\-G\-E~(5 $\ast$ 1000)   /$\ast$ 5\-V $\ast$/}}\label{battery_2pd__app_8h_ab5bb973e138eca86f7fef23bfdea61fe}
+\hypertarget{battery_2pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O}}
+\index{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O~(G\-P\-I\-O\-A)}}\label{battery_2pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}
+\hypertarget{battery_2pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}}
+\index{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N~(13)}}\label{battery_2pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}
+\hypertarget{battery_2pd__app_8h_ad1bc615edc9a083720a4810e104f62b4}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}}
+\index{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T@{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-E\-X\-T\-R\-A\-\_\-\-E\-N\-\_\-\-S\-R\-C\-\_\-\-G\-P\-I\-O\-\_\-\-P\-O\-R\-T~(P\-O\-R\-T\-A)}}\label{battery_2pd__app_8h_ad1bc615edc9a083720a4810e104f62b4}
+\hypertarget{battery_2pd__app_8h_a18048c93d49255e049dea54335b4bb76}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn@{P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn}}
+\index{P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn@{P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-I\-R\-Qn~(I2\-C1\-\_\-\-I\-R\-Qn)}}\label{battery_2pd__app_8h_a18048c93d49255e049dea54335b4bb76}
+\hypertarget{battery_2pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D@{P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D}}
+\index{P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D@{P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-D\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-V\-I\-D~(0x1\-F\-C9u)}}\label{battery_2pd__app_8h_a91dfd33e2891ead42941df24caa16abe}
+\hypertarget{battery_2pd__app_8h_a7096f16ea267e425528e5bfe230a8080}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E@{V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E}}
+\index{V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E@{V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-D\-M\-\_\-\-D\-P\-\_\-\-M\-O\-D\-E~0x00000001u}}\label{battery_2pd__app_8h_a7096f16ea267e425528e5bfe230a8080}
+\hypertarget{battery_2pd__app_8h_a90f4107073a4f89565634cae65e2e8f5}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D@{V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D}}
+\index{V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D@{V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-D\-M\-\_\-\-D\-P\-\_\-\-S\-I\-D~0x\-F\-F01}}\label{battery_2pd__app_8h_a90f4107073a4f89565634cae65e2e8f5}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{battery_2pd__app_8h_a4890f2e2b689f24e055912a325a72748}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t@{pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t}}
+\index{pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t@{pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-alert\-\_\-data\-\_\-object}  {\bf pd\-\_\-alert\-\_\-data\-\_\-object\-\_\-t}}}\label{battery_2pd__app_8h_a4890f2e2b689f24e055912a325a72748}
+\hypertarget{battery_2pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-app\-\_\-t@{pd\-\_\-app\-\_\-t}}
+\index{pd\-\_\-app\-\_\-t@{pd\-\_\-app\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-app\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-app}  {\bf pd\-\_\-app\-\_\-t}}}\label{battery_2pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}
+\hypertarget{battery_2pd__app_8h_aea5fa03c1161f9f964ff0f9d8f0c5dc1}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t}}
+\index{pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block}  {\bf pd\-\_\-battery\-\_\-cap\-\_\-data\-\_\-block\-\_\-t}}}\label{battery_2pd__app_8h_aea5fa03c1161f9f964ff0f9d8f0c5dc1}
+\hypertarget{battery_2pd__app_8h_a0a09e6762a1ba1789127598cdc73b16d}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t@{pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t}}
+\index{pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t@{pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state}  {\bf pd\-\_\-battery\-\_\-demo\-\_\-state\-\_\-t}}}\label{battery_2pd__app_8h_a0a09e6762a1ba1789127598cdc73b16d}
+\hypertarget{battery_2pd__app_8h_a85756978e48572ee52a6090ea4a2a400}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t@{pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t}}
+\index{pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t@{pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object}  {\bf pd\-\_\-battery\-\_\-status\-\_\-data\-\_\-object\-\_\-t}}}\label{battery_2pd__app_8h_a85756978e48572ee52a6090ea4a2a400}
+\hypertarget{battery_2pd__app_8h_a9545c3089646c3a0a2c7ad96bcf770a9}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t@{pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t}}
+\index{pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t@{pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state}  {\bf pd\-\_\-demo\-\_\-sw\-\_\-state\-\_\-t}}}\label{battery_2pd__app_8h_a9545c3089646c3a0a2c7ad96bcf770a9}
+\hypertarget{battery_2pd__app_8h_a7dd83e28d2ebeab4fe2166767ff8befd}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t@{pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t}}
+\index{pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t@{pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-id\-\_\-heaer\-\_\-vdo}  {\bf pd\-\_\-id\-\_\-header\-\_\-vdo\-\_\-t}}}\label{battery_2pd__app_8h_a7dd83e28d2ebeab4fe2166767ff8befd}
+\hypertarget{battery_2pd__app_8h_a7ced852e8d03d36a6453dc1a0eccada5}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t}}
+\index{pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block}  {\bf pd\-\_\-manufac\-\_\-info\-\_\-data\-\_\-block\-\_\-t}}}\label{battery_2pd__app_8h_a7ced852e8d03d36a6453dc1a0eccada5}
+\hypertarget{battery_2pd__app_8h_a48136dc14cb8a1f83b2c425508704d1b}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t}}
+\index{pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block}  {\bf pd\-\_\-source\-\_\-cap\-\_\-ext\-\_\-data\-\_\-block\-\_\-t}}}\label{battery_2pd__app_8h_a48136dc14cb8a1f83b2c425508704d1b}
+\hypertarget{battery_2pd__app_8h_a3c48d8d5b263e585588f5bfe508978c6}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t}}
+\index{pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t@{pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-status\-\_\-data\-\_\-block}  {\bf pd\-\_\-status\-\_\-data\-\_\-block\-\_\-t}}}\label{battery_2pd__app_8h_a3c48d8d5b263e585588f5bfe508978c6}
+\hypertarget{battery_2pd__app_8h_ab9dfa9c9b90392b1b3cc1bff4b08e4e9}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t@{pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t}}
+\index{pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t@{pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-vdm\-\_\-identity\-\_\-data}  {\bf pd\-\_\-vdm\-\_\-identity\-\_\-data\-\_\-t}}}\label{battery_2pd__app_8h_ab9dfa9c9b90392b1b3cc1bff4b08e4e9}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state@{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state}}
+\index{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state@{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{\-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-pd\-\_\-battery\-\_\-demo\-\_\-state}}}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Demo\-State\-\_\-\-Start@{k\-Demo\-State\-\_\-\-Start}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Start@{k\-Demo\-State\-\_\-\-Start}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{k\-Demo\-State\-\_\-\-Start}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}
+}]\index{k\-Demo\-State\-\_\-\-Idle@{k\-Demo\-State\-\_\-\-Idle}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Idle@{k\-Demo\-State\-\_\-\-Idle}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{k\-Demo\-State\-\_\-\-Idle}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}
+}]\index{k\-Demo\-State\-\_\-\-Src\-Reduce\-Power@{k\-Demo\-State\-\_\-\-Src\-Reduce\-Power}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Src\-Reduce\-Power@{k\-Demo\-State\-\_\-\-Src\-Reduce\-Power}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{k\-Demo\-State\-\_\-\-Src\-Reduce\-Power}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}
+}]\index{k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink@{k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink@{k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}{k\-Demo\-State\-\_\-\-Try\-Change\-As\-Sink}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}
+}]\index{k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink@{k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink@{k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{k\-Demo\-State\-\_\-\-Need\-Change\-As\-Sink}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}
+}]\index{k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap@{k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap@{k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{k\-Demo\-State\-\_\-\-Get\-Partner\-Src\-Cap}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}
+}]\index{k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap@{k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap@{k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}{k\-Demo\-State\-\_\-\-Wait\-Partner\-Src\-Cap}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}
+}]\index{k\-Demo\-State\-\_\-\-Swap\-As\-Sink@{k\-Demo\-State\-\_\-\-Swap\-As\-Sink}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Swap\-As\-Sink@{k\-Demo\-State\-\_\-\-Swap\-As\-Sink}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{k\-Demo\-State\-\_\-\-Swap\-As\-Sink}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}
+}]\index{k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap@{k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap@{k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}{k\-Demo\-State\-\_\-\-Wait\-P\-R\-Swap}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}
+}]\index{k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail@{k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail@{k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}{k\-Demo\-State\-\_\-\-Swap\-Sink\-Fail}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}
+}]\index{k\-Demo\-State\-\_\-\-No\-Power@{k\-Demo\-State\-\_\-\-No\-Power}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-No\-Power@{k\-Demo\-State\-\_\-\-No\-Power}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273abcba6860bceeee0a7fbc50321d727886}{k\-Demo\-State\-\_\-\-No\-Power}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273abcba6860bceeee0a7fbc50321d727886}
+}]\index{k\-Demo\-State\-\_\-\-Request\-Low\-Power@{k\-Demo\-State\-\_\-\-Request\-Low\-Power}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Request\-Low\-Power@{k\-Demo\-State\-\_\-\-Request\-Low\-Power}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{k\-Demo\-State\-\_\-\-Request\-Low\-Power}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}
+}]\index{k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power@{k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power@{k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}{k\-Demo\-State\-\_\-\-Wait\-Request\-Low\-Power}\label{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+63 \{
+64     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start} = 0,
+65     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle},
+66     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower},
+67     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}{kDemoState\_TryChangeAsSink},
+68     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{kDemoState\_NeedChangeAsSink},
+69     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{kDemoState\_GetPartnerSrcCap},
+70     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}{kDemoState\_WaitPartnerSrcCap},
+71     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink},
+72     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}{kDemoState\_WaitPRSwap},
+73     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}{kDemoState\_SwapSinkFail},
+74     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273abcba6860bceeee0a7fbc50321d727886}{kDemoState\_NoPower},
+75 
+76     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{kDemoState\_RequestLowPower},
+77     \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}{kDemoState\_WaitRequestLowPower},
+78 \} \hyperlink{battery_2pd__app_8h_a0a09e6762a1ba1789127598cdc73b16d}{pd\_battery\_demo\_state\_t};
+\end{DoxyCode}
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state@{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state}}
+\index{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state@{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{\-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-pd\-\_\-demo\-\_\-sw\-\_\-state}}}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Idle}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Isr\-Trigger}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Pending}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Short\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Long\-Press}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}
+}]\index{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}!battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}}\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed@{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}}\item[{\em 
+\hypertarget{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{k\-D\-E\-M\-O\-\_\-\-S\-W\-Processed}\label{battery_2pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+171 \{
+172     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle} = 0,
+173     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{kDEMO\_SWIsrTrigger},
+174     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a7eb08783555540e560e684ca8d5a9763}{kDEMO\_SWPending},
+175     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{kDEMO\_SWShortPress},
+176     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{kDEMO\_SWLongPress},
+177     \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed},
+178 \} \hyperlink{pd__app_8h_a9545c3089646c3a0a2c7ad96bcf770a9}{pd\_demo\_sw\_state\_t};
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{battery_2pd__app_8h_a4c95db98c2e53feffacac68c5c3abd80}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!g\-\_\-\-P\-D\-App\-Instance@{g\-\_\-\-P\-D\-App\-Instance}}
+\index{g\-\_\-\-P\-D\-App\-Instance@{g\-\_\-\-P\-D\-App\-Instance}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{g\-\_\-\-P\-D\-App\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-app\-\_\-t} g\-\_\-\-P\-D\-App\-Instance}}\label{battery_2pd__app_8h_a4c95db98c2e53feffacac68c5c3abd80}
+\hypertarget{battery_2pd__app_8h_a33272daf4c2c919c757e12106af7ffd5}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!g\-\_\-\-P\-D\-Config@{g\-\_\-\-P\-D\-Config}}
+\index{g\-\_\-\-P\-D\-Config@{g\-\_\-\-P\-D\-Config}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{g\-\_\-\-P\-D\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-instance\-\_\-config\-\_\-t} g\-\_\-\-P\-D\-Config}}\label{battery_2pd__app_8h_a33272daf4c2c919c757e12106af7ffd5}
+\hypertarget{battery_2pd__app_8h_a31ad0b046935918c7fa0fed8885192c8}{\index{battery/pd\-\_\-app.\-h@{battery/pd\-\_\-app.\-h}!g\-\_\-\-Power\-Port\-Config@{g\-\_\-\-Power\-Port\-Config}}
+\index{g\-\_\-\-Power\-Port\-Config@{g\-\_\-\-Power\-Port\-Config}!battery/pd_app.h@{battery/pd\-\_\-app.\-h}}
+\subsubsection[{g\-\_\-\-Power\-Port\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t} g\-\_\-\-Power\-Port\-Config}}\label{battery_2pd__app_8h_a31ad0b046935918c7fa0fed8885192c8}

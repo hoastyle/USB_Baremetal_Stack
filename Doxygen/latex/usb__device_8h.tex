@@ -1,0 +1,164 @@
+\hypertarget{usb__device_8h}{\section{device/usb\-\_\-device.h File Reference}
+\label{usb__device_8h}\index{device/usb\-\_\-device.\-h@{device/usb\-\_\-device.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__device_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__usb__device__endpoint__callback__message__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-message\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em Endpoint callback message structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__usb__device__endpoint__callback__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em Endpoint callback structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__usb__device__endpoint__init__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-init\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em Endpoint initialization structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__usb__device__endpoint__status__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-status\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em Endpoint status structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__device__driver_gac35db57970e61e674baba9eb53aa7a8c}{U\-S\-B\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T}~(0\-U)
+\begin{DoxyCompactList}\small\item\em Control endpoint index. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__driver_ga206afe1513d3b4fdc64a7064249cb447}{U\-S\-B\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-M\-A\-X\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~(64\-U)
+\begin{DoxyCompactList}\small\item\em Control endpoint max\-Packet\-Size. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__driver_gabf1be648722b01577b84e52e1fb3d8f8}{U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~(8\-U)
+\begin{DoxyCompactList}\small\item\em The setup packet size of U\-S\-B control transfer. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__driver_ga435416dd71e258cfd83be50a991db726}{U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-M\-A\-S\-K}~(0x0\-F\-U)
+\begin{DoxyCompactList}\small\item\em U\-S\-B endpoint mask. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__driver_ga89fb39ed32e04cdb444d6d06831f1d48}{U\-S\-B\-\_\-\-U\-N\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D\-\_\-\-V\-A\-L\-\_\-32}~(0x\-F\-F\-F\-F\-F\-F\-F\-F\-U)
+\begin{DoxyCompactList}\small\item\em Default invalid value or the endpoint callback length of cancelled transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__usb__device__driver_gad091bd3169bf45debbe8b5aba78d6091}{\-\_\-usb\-\_\-device\-\_\-status} \hyperlink{group__usb__device__driver_ga11ab1b56db153ac62eecf01661216bbf}{usb\-\_\-device\-\_\-status\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Defines Get/\-Set status Types. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__device__driver_ga6c3587990ca428244271f14efc909522}{\-\_\-usb\-\_\-device\-\_\-state} \hyperlink{group__usb__device__driver_gadb6af69c6a5a2124b197210e41ed8256}{usb\-\_\-device\-\_\-state\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Defines U\-S\-B 2.\-0 device state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__device__driver_ga58f9c3f9e1aeb5f669a4cb58556ed53f}{\-\_\-usb\-\_\-endpoint\-\_\-status} \hyperlink{group__usb__device__driver_gaaefd48322932e1e70d5c4b4674e19796}{usb\-\_\-device\-\_\-endpoint\-\_\-status\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Defines endpoint state. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__device__driver_gac66a5e6b9c677f9d8d4f782aa62df540}{\-\_\-usb\-\_\-device\-\_\-event} \hyperlink{group__usb__device__driver_ga35623b5263f88037a497e6c6c363b8f1}{usb\-\_\-device\-\_\-event\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Available common E\-V\-E\-N\-T types in device callback. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__endpoint__callback__message__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-message\-\_\-struct} \hyperlink{group__usb__device__driver_ga291e21595b67e07488baad293f707e5f}{usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-message\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Endpoint callback message structure. \end{DoxyCompactList}\item 
+typedef \hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t}($\ast$ \hyperlink{group__usb__device__driver_gac780580992587eb809d445edcba7c3ca}{usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-t} )(\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, \hyperlink{group__usb__device__driver_ga291e21595b67e07488baad293f707e5f}{usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-message\-\_\-struct\-\_\-t} $\ast$message, void $\ast$callback\-Param)
+\begin{DoxyCompactList}\small\item\em Endpoint callback function typedef. \end{DoxyCompactList}\item 
+typedef \hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t}($\ast$ \hyperlink{group__usb__device__driver_gac8ba48f1dea2c0b099092576ad48fb4e}{usb\-\_\-device\-\_\-callback\-\_\-t} )(\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint32\-\_\-t callback\-Event, void $\ast$event\-Param)
+\begin{DoxyCompactList}\small\item\em Device callback function typedef. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__endpoint__callback__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-struct} \hyperlink{group__usb__device__driver_ga0fcee893200ced24dbff370f38c16573}{usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Endpoint callback structure. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__endpoint__init__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-init\-\_\-struct} \hyperlink{group__usb__device__driver_ga5fd6342aa2c5f10ba177604031b38d99}{usb\-\_\-device\-\_\-endpoint\-\_\-init\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Endpoint initialization structure. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__endpoint__status__struct}{\-\_\-usb\-\_\-device\-\_\-endpoint\-\_\-status\-\_\-struct} \hyperlink{group__usb__device__driver_ga7db41d0acd6976fd4016b97f9dac0f51}{usb\-\_\-device\-\_\-endpoint\-\_\-status\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Endpoint status structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__usb__device__driver_gad091bd3169bf45debbe8b5aba78d6091}{\-\_\-usb\-\_\-device\-\_\-status} \{ \\*
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091afa1c47d0cb4c8f751822e6204ceaca68}{k\-U\-S\-B\-\_\-\-Device\-Status\-Test\-Mode} = 1\-U, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a01e79a57be59b44dc12a81a248d19b56}{k\-U\-S\-B\-\_\-\-Device\-Status\-Speed}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a4dc0830399c694c3af0f53eed326ba4d}{k\-U\-S\-B\-\_\-\-Device\-Status\-Otg}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a0c344a179ec60cfef88a020f01390447}{k\-U\-S\-B\-\_\-\-Device\-Status\-Device}, 
+\\*
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091abfe4090beeb636774c9e18897fbffba2}{k\-U\-S\-B\-\_\-\-Device\-Status\-Endpoint}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091ad704e2b6cb73fdbf0e60552a1da06ee3}{k\-U\-S\-B\-\_\-\-Device\-Status\-Device\-State}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a8ce5b187176d33cfb8f263e9c5392e6c}{k\-U\-S\-B\-\_\-\-Device\-Status\-Address}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a57984cab0b6b417c65a766c2772e5792}{k\-U\-S\-B\-\_\-\-Device\-Status\-Synch\-Frame}, 
+\\*
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a851aea79c4cc0cc44ffacf8dbc433017}{k\-U\-S\-B\-\_\-\-Device\-Status\-Bus}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091aa77cc78d4d576415e4e878eedd9e81e5}{k\-U\-S\-B\-\_\-\-Device\-Status\-Bus\-Suspend}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a0ac5bacc26d67cf8f1401cf2804c8748}{k\-U\-S\-B\-\_\-\-Device\-Status\-Bus\-Sleep}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091aca838250308618a1f4210410f81d136e}{k\-U\-S\-B\-\_\-\-Device\-Status\-Bus\-Resume}, 
+\\*
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091a14f036d2f6ae26676a3da34d3d735ea0}{k\-U\-S\-B\-\_\-\-Device\-Status\-Remote\-Wakeup}, 
+\hyperlink{group__usb__device__driver_ggad091bd3169bf45debbe8b5aba78d6091aaf9c05a346d33cb1f2fc4834026dd623}{k\-U\-S\-B\-\_\-\-Device\-Status\-Bus\-Sleep\-Resume}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines Get/\-Set status Types. \end{DoxyCompactList}\item 
+enum \hyperlink{group__usb__device__driver_ga6c3587990ca428244271f14efc909522}{\-\_\-usb\-\_\-device\-\_\-state} \{ \\*
+\hyperlink{group__usb__device__driver_gga6c3587990ca428244271f14efc909522a3cc5b3134e34ce6fc3d9c1ee0217e741}{k\-U\-S\-B\-\_\-\-Device\-State\-Configured} = 0\-U, 
+\hyperlink{group__usb__device__driver_gga6c3587990ca428244271f14efc909522ac0b38e07063e3b0f01a984671e7bc23b}{k\-U\-S\-B\-\_\-\-Device\-State\-Address}, 
+\hyperlink{group__usb__device__driver_gga6c3587990ca428244271f14efc909522a25d25f366cf27a445b19a92fd7d20698}{k\-U\-S\-B\-\_\-\-Device\-State\-Default}, 
+\hyperlink{group__usb__device__driver_gga6c3587990ca428244271f14efc909522a257337842d7b3299efbaa8e1218d6069}{k\-U\-S\-B\-\_\-\-Device\-State\-Addressing}, 
+\\*
+\hyperlink{group__usb__device__driver_gga6c3587990ca428244271f14efc909522ab7ff5567abb58aa097fd8af77df16a8c}{k\-U\-S\-B\-\_\-\-Device\-State\-Test\-Mode}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines U\-S\-B 2.\-0 device state. \end{DoxyCompactList}\item 
+enum \hyperlink{group__usb__device__driver_ga58f9c3f9e1aeb5f669a4cb58556ed53f}{\-\_\-usb\-\_\-endpoint\-\_\-status} \{ \hyperlink{group__usb__device__driver_gga58f9c3f9e1aeb5f669a4cb58556ed53fa9956ef1389d5dad712cda6cf209a4ed5}{k\-U\-S\-B\-\_\-\-Device\-Endpoint\-State\-Idle} = 0\-U, 
+\hyperlink{group__usb__device__driver_gga58f9c3f9e1aeb5f669a4cb58556ed53faad3658477257e2f76ac54a960763043b}{k\-U\-S\-B\-\_\-\-Device\-Endpoint\-State\-Stalled}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines endpoint state. \end{DoxyCompactList}\item 
+enum \hyperlink{group__usb__device__driver_gac66a5e6b9c677f9d8d4f782aa62df540}{\-\_\-usb\-\_\-device\-\_\-event} \{ \\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a9a523a8379ac9ffe266576c3197f1a37}{k\-U\-S\-B\-\_\-\-Device\-Event\-Bus\-Reset} = 1\-U, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a61a3fd60360930f22ebed5ddcdc7e056}{k\-U\-S\-B\-\_\-\-Device\-Event\-Suspend}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a1507b21f410d579b95817f1ee96ee4d3}{k\-U\-S\-B\-\_\-\-Device\-Event\-Resume}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a609202b43c7044bf6ef787ccc08687fa}{k\-U\-S\-B\-\_\-\-Device\-Event\-Sleeped}, 
+\\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a878261b598db4d20ef380b90e34a4fdd}{k\-U\-S\-B\-\_\-\-Device\-Event\-L\-P\-M\-Resume}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a368f053177d0ca682a38b3b8e8b37f5e}{k\-U\-S\-B\-\_\-\-Device\-Event\-Error}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540aaea780c05bac7a34ea2e8771ff15dd4b}{k\-U\-S\-B\-\_\-\-Device\-Event\-Detach}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a1bf226d529ceb9da8f2eeddae8571a0c}{k\-U\-S\-B\-\_\-\-Device\-Event\-Attach}, 
+\\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a601f0b7823762801deda3fc4cb45cb35}{k\-U\-S\-B\-\_\-\-Device\-Event\-Set\-Configuration}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540afc7be18726fd0f90eb52b614c4ee3586}{k\-U\-S\-B\-\_\-\-Device\-Event\-Set\-Interface}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a730ebd8734f0621fbe9cdf680dd0b510}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Device\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540ab40809d63173bca60a7ceb0c3d1336b2}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Configuration\-Descriptor}, 
+\\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a12b45ed6403fb95321735bca3e27723d}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-String\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a29d11372708627c050855b9ba8e4439c}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Hid\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a65449a7fb97a4c87d2ae6a10d23370ae}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Hid\-Report\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a2326252deb48891e7bedc3cbadfe7123}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Hid\-Physical\-Descriptor}, 
+\\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a664780e759bf40aabab5ee5fbf7cb83e}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-B\-O\-S\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540aafad43b8efe4a69fddd2d9989ec941f4}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Device\-Qualifier\-Descriptor}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540aaa48528e07e1f9059b0f079dc7e43dda}{k\-U\-S\-B\-\_\-\-Device\-Event\-Vendor\-Request}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540af95ccd0dea69e67c4ee4b0b1023b1414}{k\-U\-S\-B\-\_\-\-Device\-Event\-Set\-Remote\-Wakeup}, 
+\\*
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a8f8fd6bd0ea5d9c0aade08ea982d181e}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Configuration}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540abfe862150feed0c1bafc94e356c4284a}{k\-U\-S\-B\-\_\-\-Device\-Event\-Get\-Interface}, 
+\hyperlink{group__usb__device__driver_ggac66a5e6b9c677f9d8d4f782aa62df540a778e2f5601392117440d604615fa0a60}{k\-U\-S\-B\-\_\-\-Device\-Event\-Set\-B\-H\-N\-P\-Enable}
+ \}
+\begin{DoxyCompactList}\small\item\em Available common E\-V\-E\-N\-T types in device callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf U\-S\-B device A\-P\-Is}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga8fc2eafa1142f904576bbd697d785184}{U\-S\-B\-\_\-\-Device\-Init} (uint8\-\_\-t controller\-Id, \hyperlink{group__usb__device__driver_gac8ba48f1dea2c0b099092576ad48fb4e}{usb\-\_\-device\-\_\-callback\-\_\-t} device\-Callback, \hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Initializes the U\-S\-B device stack. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gaecab79f44d7c16d5344aef538ddfa40e}{U\-S\-B\-\_\-\-Device\-Run} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Enables the device functionality. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga1000e1b314d75bc51e54953c78dd66f2}{U\-S\-B\-\_\-\-Device\-Stop} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Disables the device functionality. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gafff2a5a6ac37dec01242225516a22024}{U\-S\-B\-\_\-\-Device\-Deinit} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the device controller. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga94f95f6b9e0ba1caba7ea7c889a4b471}{U\-S\-B\-\_\-\-Device\-Send\-Request} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Sends data through a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gaafd44df38db0494a5c7a53c91b08eef7}{U\-S\-B\-\_\-\-Device\-Recv\-Request} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Receives data through a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gaa95120c01a49916790852c8ac8468ec3}{U\-S\-B\-\_\-\-Device\-Cancel} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address)
+\begin{DoxyCompactList}\small\item\em Cancels the pending transfer in a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga3302bb97cb7e4a0a805f8dec3cabd07f}{U\-S\-B\-\_\-\-Device\-Init\-Endpoint} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, \hyperlink{group__usb__device__driver_ga5fd6342aa2c5f10ba177604031b38d99}{usb\-\_\-device\-\_\-endpoint\-\_\-init\-\_\-struct\-\_\-t} $\ast$ep\-Init, \hyperlink{group__usb__device__driver_ga0fcee893200ced24dbff370f38c16573}{usb\-\_\-device\-\_\-endpoint\-\_\-callback\-\_\-struct\-\_\-t} $\ast$endpoint\-Callback)
+\begin{DoxyCompactList}\small\item\em Initializes a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga9bd52faa129ce19404fe65c0b2762533}{U\-S\-B\-\_\-\-Device\-Deinit\-Endpoint} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address)
+\begin{DoxyCompactList}\small\item\em Deinitializes a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga0f2bd121cf9a12906a41502e97bbb0cb}{U\-S\-B\-\_\-\-Device\-Stall\-Endpoint} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address)
+\begin{DoxyCompactList}\small\item\em Stalls a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gaea23e5d203d473e5b671dcffd8195e4e}{U\-S\-B\-\_\-\-Device\-Unstall\-Endpoint} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, uint8\-\_\-t endpoint\-Address)
+\begin{DoxyCompactList}\small\item\em Unstalls a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_ga51519f9172e512afafe55d0b778d4ee3}{U\-S\-B\-\_\-\-Device\-Get\-Status} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, \hyperlink{group__usb__device__driver_ga11ab1b56db153ac62eecf01661216bbf}{usb\-\_\-device\-\_\-status\-\_\-t} type, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Gets the status of the selected item. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__driver_gaa47c9ba949d053208ec3e5d8ad5882af}{U\-S\-B\-\_\-\-Device\-Set\-Status} (\hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, \hyperlink{group__usb__device__driver_ga11ab1b56db153ac62eecf01661216bbf}{usb\-\_\-device\-\_\-status\-\_\-t} type, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Sets the status of the selected item. \end{DoxyCompactList}\item 
+void \hyperlink{group__usb__device__driver_gaceb8a5ec117d2dc22c2d2e2454bd84f7}{U\-S\-B\-\_\-\-Device\-Task\-Function} (void $\ast$device\-Handle)
+\begin{DoxyCompactList}\small\item\em Device task function. \end{DoxyCompactList}\item 
+void \hyperlink{group__usb__device__driver_gac3473781f5ef58f17635183b65e9cf62}{U\-S\-B\-\_\-\-Device\-Get\-Version} (uint32\-\_\-t $\ast$version)
+\begin{DoxyCompactList}\small\item\em Gets the device stack version function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}

@@ -1,0 +1,96 @@
+\hypertarget{struct__pd__rdo}{\section{\-\_\-pd\-\_\-rdo Struct Reference}
+\label{struct__pd__rdo}\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}}
+}
+
+
+P\-D request data object.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_a75142d4da1d2a5049e134f771854ff7b}{maxOrMinOperateValue}: 10\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_ace7bc599e359ab9c6e626b0b0cdb5359}{operateValue}: 10\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_ad10d5e670fae5dd17c3ec06a8e994ea7}{reserved}: 3\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_ab37db01bb9fe1af93aacc97242516364}{unchunkedSupported}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_a85b57e63d9528131d0092a43111b2a98}{noUsbSuspend}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_a3276a3edcd2e5ee3e9f17d9cca8f3ea2}{usbCommunicationsCapable}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_afa835644625bbc35646580cb9bbd9b66}{capabilityMismatch}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_a82acd4a018e44108ae1cb59e1da734b2}{giveBack}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_a593d7f2473f5f2ccd44e7a1a71bd6df5}{objectPosition}: 3\\
+\>\>uint32\_t \hyperlink{struct__pd__rdo_ac02715c88773bd4b67ab4a24aa98a481}{reserved1}: 1\\
+\>\} \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}\\
+\>uint32\_t \hyperlink{struct__pd__rdo_a66cd4e249b3284e7d1acc9714fa0ce0a}{rdoVal}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D request data object. 
+
+It provide the request power information. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__rdo_a2644a485a37f29cec32c4ae304b3a272}{\subsubsection[{"@53}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__rdo_a2644a485a37f29cec32c4ae304b3a272}
+\hypertarget{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!bit\-Fields@{bit\-Fields}}
+\index{bit\-Fields@{bit\-Fields}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{bit\-Fields}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \-\_\-pd\-\_\-rdo\-::bit\-Fields}}\label{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}
+\hypertarget{struct__pd__rdo_afa835644625bbc35646580cb9bbd9b66}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!capability\-Mismatch@{capability\-Mismatch}}
+\index{capability\-Mismatch@{capability\-Mismatch}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{capability\-Mismatch}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::capability\-Mismatch}}\label{struct__pd__rdo_afa835644625bbc35646580cb9bbd9b66}
+capability mismatch \hypertarget{struct__pd__rdo_a82acd4a018e44108ae1cb59e1da734b2}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!give\-Back@{give\-Back}}
+\index{give\-Back@{give\-Back}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{give\-Back}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::give\-Back}}\label{struct__pd__rdo_a82acd4a018e44108ae1cb59e1da734b2}
+give back flag \hypertarget{struct__pd__rdo_a75142d4da1d2a5049e134f771854ff7b}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!max\-Or\-Min\-Operate\-Value@{max\-Or\-Min\-Operate\-Value}}
+\index{max\-Or\-Min\-Operate\-Value@{max\-Or\-Min\-Operate\-Value}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{max\-Or\-Min\-Operate\-Value}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::max\-Or\-Min\-Operate\-Value}}\label{struct__pd__rdo_a75142d4da1d2a5049e134f771854ff7b}
+
+\begin{DoxyItemize}
+\item For fixed and variable request.
+\begin{DoxyItemize}
+\item give\-Back == 0\-: it is max operate current.
+\item give\-Back == 1\-: it is min operate current.
+\end{DoxyItemize}
+\item For battery request.
+\begin{DoxyItemize}
+\item give\-Back == 0\-: it is max operate power.
+\item give\-Back == 1\-: it is min operate power. 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{struct__pd__rdo_a85b57e63d9528131d0092a43111b2a98}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!no\-Usb\-Suspend@{no\-Usb\-Suspend}}
+\index{no\-Usb\-Suspend@{no\-Usb\-Suspend}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{no\-Usb\-Suspend}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::no\-Usb\-Suspend}}\label{struct__pd__rdo_a85b57e63d9528131d0092a43111b2a98}
+usb suspend supported or not \hypertarget{struct__pd__rdo_a593d7f2473f5f2ccd44e7a1a71bd6df5}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!object\-Position@{object\-Position}}
+\index{object\-Position@{object\-Position}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{object\-Position}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::object\-Position}}\label{struct__pd__rdo_a593d7f2473f5f2ccd44e7a1a71bd6df5}
+object position \hypertarget{struct__pd__rdo_ace7bc599e359ab9c6e626b0b0cdb5359}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!operate\-Value@{operate\-Value}}
+\index{operate\-Value@{operate\-Value}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{operate\-Value}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::operate\-Value}}\label{struct__pd__rdo_ace7bc599e359ab9c6e626b0b0cdb5359}
+For fixed and variable request\-: it is current value; For battery request\-: it is power value. \hypertarget{struct__pd__rdo_a66cd4e249b3284e7d1acc9714fa0ce0a}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!rdo\-Val@{rdo\-Val}}
+\index{rdo\-Val@{rdo\-Val}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{rdo\-Val}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::rdo\-Val}}\label{struct__pd__rdo_a66cd4e249b3284e7d1acc9714fa0ce0a}
+\hypertarget{struct__pd__rdo_ad10d5e670fae5dd17c3ec06a8e994ea7}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!reserved@{reserved}}
+\index{reserved@{reserved}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::reserved}}\label{struct__pd__rdo_ad10d5e670fae5dd17c3ec06a8e994ea7}
+reserved \hypertarget{struct__pd__rdo_ac02715c88773bd4b67ab4a24aa98a481}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{reserved1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::reserved1}}\label{struct__pd__rdo_ac02715c88773bd4b67ab4a24aa98a481}
+reserved \hypertarget{struct__pd__rdo_ab37db01bb9fe1af93aacc97242516364}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!unchunked\-Supported@{unchunked\-Supported}}
+\index{unchunked\-Supported@{unchunked\-Supported}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{unchunked\-Supported}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::unchunked\-Supported}}\label{struct__pd__rdo_ab37db01bb9fe1af93aacc97242516364}
+unchunked supported or not \hypertarget{struct__pd__rdo_a3276a3edcd2e5ee3e9f17d9cca8f3ea2}{\index{\-\_\-pd\-\_\-rdo@{\-\_\-pd\-\_\-rdo}!usb\-Communications\-Capable@{usb\-Communications\-Capable}}
+\index{usb\-Communications\-Capable@{usb\-Communications\-Capable}!_pd_rdo@{\-\_\-pd\-\_\-rdo}}
+\subsubsection[{usb\-Communications\-Capable}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-rdo\-::usb\-Communications\-Capable}}\label{struct__pd__rdo_a3276a3edcd2e5ee3e9f17d9cca8f3ea2}
+usb communications capable 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

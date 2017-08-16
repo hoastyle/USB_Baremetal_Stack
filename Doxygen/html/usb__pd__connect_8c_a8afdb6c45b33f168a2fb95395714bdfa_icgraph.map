@@ -1,0 +1,12 @@
+<map id="PD_DpmDischargeVbus" name="PD_DpmDischargeVbus">
+<area shape="rect" id="node2" href="$usb__pd__connect_8c.html#a6147b33e99b7812c8de585d73af2f2c4" title="PD_ConnectStateMachine" alt="" coords="219,5,397,32"/>
+<area shape="rect" id="node9" href="$usb__pd__policy_8c.html#ac46d497d9fc03b0096c2977f6a203e02" title="PD_PsmProcessState" alt="" coords="231,56,385,83"/>
+<area shape="rect" id="node11" href="$usb__pd__policy_8c.html#afbd2eb3bceb62f29229f0bff6eed6844" title="PD_PsmEnterState" alt="" coords="239,107,377,133"/>
+<area shape="rect" id="node3" href="$usb__pd__policy_8c.html#a25116c60801fe4f4def90e3e42614b54" title="PD_ConnectCheck" alt="" coords="455,5,590,32"/>
+<area shape="rect" id="node4" href="$usb__pd__policy_8c.html#a602f8622c0ba8d21b5013537dd3dadf9" title="PD_StackStateMachine" alt="" coords="648,31,811,57"/>
+<area shape="rect" id="node5" href="$group__usb__pd__stack.html#ga4227c58a9524464e19ee6efe9615f78e" title="PD stack&#39;s instance task. " alt="" coords="859,31,986,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a616cf54a58f0aad132292f45995c3560" title="pd_port_task" alt="" coords="1035,31,1133,57"/>
+<area shape="rect" id="node7" href="$main_8c.html#a83c983ad37627b3d0f2ba5f1d4d6efaf" title="pd_demo_task" alt="" coords="1181,31,1288,57"/>
+<area shape="rect" id="node8" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1336,31,1387,57"/>
+<area shape="rect" id="node10" href="$usb__pd__policy_8c.html#ac6e31fa3949c6ca1288f96b6c5252bba" title="PD_PsmStateMachine" alt="" coords="445,56,600,83"/>
+</map>

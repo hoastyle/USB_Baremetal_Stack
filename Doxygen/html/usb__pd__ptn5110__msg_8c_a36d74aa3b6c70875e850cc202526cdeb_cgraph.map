@@ -1,0 +1,11 @@
+<map id="PDPTN5110_MsgHalSendCommonPrefix" name="PDPTN5110_MsgHalSendCommonPrefix">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#ac9f3925eba2900e298ebeaa8d87c9699" title="Change the SOP used for transmit. " alt="" coords="286,5,525,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__msg_8c.html#ae070d3966d31951eabb91ba346cde8ce" title="Change the SOP mask used for receive. " alt="" coords="301,57,509,98"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110_8h.html#a57a93596569ed29179bb8569b2fdd3b2" title="Query if an external tx done interrupts has been seen. " alt="" coords="305,124,506,151"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="573,54,789,95"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="837,61,992,88"/>
+<area shape="rect" id="node6" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="1040,54,1229,95"/>
+<area shape="rect" id="node7" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1285,36,1430,63"/>
+<area shape="rect" id="node8" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1278,87,1437,113"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110__hal_8c.html#a5d3a101dfa4ff56b35bf2006983b9a80" title="Query if an external interrupts has bneen seen. " alt="" coords="586,119,777,161"/>
+</map>

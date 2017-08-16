@@ -1,0 +1,5 @@
+<map id="USB_OsaMemoryAllocate" name="USB_OsaMemoryAllocate">
+<area shape="rect" id="node2" href="$group__usb__os__abstraction.html#gaf38d525580499ff2657303eb807efc61" title="Creates an event object with all flags cleared. " alt="" coords="229,5,384,32"/>
+<area shape="rect" id="node3" href="$group__usb__pd__stack.html#ga3ab001290dc934fd6a45ad93916f5140" title="Initialize PD stack instance. " alt="" coords="433,5,549,32"/>
+<area shape="rect" id="node4" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="598,5,687,32"/>
+</map>

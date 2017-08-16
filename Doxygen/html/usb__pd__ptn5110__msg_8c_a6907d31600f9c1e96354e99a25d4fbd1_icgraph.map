@@ -1,0 +1,5 @@
+<map id="PDPTN5110_MsgHalSetTxDataReq" name="PDPTN5110_MsgHalSetTxDataReq">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#a4c2dd9dfad91380bc2e067e0ae3f5311" title="Send a control message, specify sop. " alt="" coords="289,5,509,32"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__msg_8c.html#a43147a12f80189c0e1d13933d3be8cfe" title="Send a data message. The data object must be loaded to the PDPTN5110_MsgHalGetTxPayloadPtr() buffer b..." alt="" coords="295,56,502,83"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a637498f43bc0fed57fc7eb8d6992a042" title="PDPTN5110_Send" alt="" coords="557,31,691,57"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="i2c_release_bus_delay" name="i2c_release_bus_delay">
+<area shape="rect" id="node2" href="$source__charger_2main_8c.html#a30721ec44aabc66bf54f35369009cd7e" title="BOARD_I2C0_ReleaseBus" alt="" coords="209,5,391,32"/>
+<area shape="rect" id="node3" href="$source__charger_2main_8c.html#a17aeb1479aebf017a3ed96ca31d3ab47" title="BOARD_I2C1_ReleaseBus" alt="" coords="209,56,391,83"/>
+</map>

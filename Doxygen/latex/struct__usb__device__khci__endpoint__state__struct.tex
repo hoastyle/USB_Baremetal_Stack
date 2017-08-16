@@ -1,0 +1,87 @@
+\hypertarget{struct__usb__device__khci__endpoint__state__struct}{\section{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct Struct Reference}
+\label{struct__usb__device__khci__endpoint__state__struct}\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+}
+
+
+Endpoint state structure.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-device\-\_\-khci.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct__usb__device__khci__endpoint__state__struct_a861e4344f4c4d0b6d8c8f445d658fcca}{transfer\-Buffer}
+\item 
+uint32\-\_\-t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a68c3c4b6c6b3b57a22bbd10cc160dba4}{transfer\-Length}
+\item 
+uint32\-\_\-t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a3efa2b63b740c832f14175350d98fa43}{transfer\-Done}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_af702fd79b2f9e9335d762a7225e6471d}{state}\\
+\>struct \{\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_aa9228ee70dadeb0584e652e3b6e8dcb2}{maxPacketSize}: 10U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a4f07e1c2d1643df7641cda546131d526}{stalled}: 1U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a9a85c9cd4a8e3098175dfe388b9525dc}{data0}: 1U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a3b5b3ac12e175bf0f4b8a8cc90e1b940}{bdtOdd}: 1U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a13dda1c5564abaf1cbd523f10b5b99ef}{dmaAlign}: 1U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_aef586b878d7ac44fd3e0b3bafc3a4f61}{transferring}: 1U\\
+\>\>uint32\_t \hyperlink{struct__usb__device__khci__endpoint__state__struct_a98ab62a59c29d678cb1a0b61412326bd}{zlt}: 1U\\
+\>\} \hyperlink{struct__usb__device__khci__endpoint__state__struct_ac2cf56f2c032027242e5699b766d5308}{stateBitField}\\
+\} \hyperlink{struct__usb__device__khci__endpoint__state__struct_afe429abb16982c9ea5042df293ba4fe0}{stateUnion}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Endpoint state structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__usb__device__khci__endpoint__state__struct_a3b5b3ac12e175bf0f4b8a8cc90e1b940}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!bdt\-Odd@{bdt\-Odd}}
+\index{bdt\-Odd@{bdt\-Odd}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{bdt\-Odd}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::bdt\-Odd}}\label{struct__usb__device__khci__endpoint__state__struct_a3b5b3ac12e175bf0f4b8a8cc90e1b940}
+The B\-D\-T toggle of the endpoint \hypertarget{struct__usb__device__khci__endpoint__state__struct_a9a85c9cd4a8e3098175dfe388b9525dc}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!data0@{data0}}
+\index{data0@{data0}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{data0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::data0}}\label{struct__usb__device__khci__endpoint__state__struct_a9a85c9cd4a8e3098175dfe388b9525dc}
+The data toggle of the transaction \hypertarget{struct__usb__device__khci__endpoint__state__struct_a13dda1c5564abaf1cbd523f10b5b99ef}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!dma\-Align@{dma\-Align}}
+\index{dma\-Align@{dma\-Align}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{dma\-Align}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::dma\-Align}}\label{struct__usb__device__khci__endpoint__state__struct_a13dda1c5564abaf1cbd523f10b5b99ef}
+Whether the transfer\-Buffer is D\-M\-A aligned or not \hypertarget{struct__usb__device__khci__endpoint__state__struct_aa9228ee70dadeb0584e652e3b6e8dcb2}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!max\-Packet\-Size@{max\-Packet\-Size}}
+\index{max\-Packet\-Size@{max\-Packet\-Size}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{max\-Packet\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::max\-Packet\-Size}}\label{struct__usb__device__khci__endpoint__state__struct_aa9228ee70dadeb0584e652e3b6e8dcb2}
+The maximum packet size of the endpoint \hypertarget{struct__usb__device__khci__endpoint__state__struct_a4f07e1c2d1643df7641cda546131d526}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!stalled@{stalled}}
+\index{stalled@{stalled}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{stalled}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::stalled}}\label{struct__usb__device__khci__endpoint__state__struct_a4f07e1c2d1643df7641cda546131d526}
+The endpoint is stalled or not \hypertarget{struct__usb__device__khci__endpoint__state__struct_af702fd79b2f9e9335d762a7225e6471d}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!state@{state}}
+\index{state@{state}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::state}}\label{struct__usb__device__khci__endpoint__state__struct_af702fd79b2f9e9335d762a7225e6471d}
+The state of the endpoint \hypertarget{struct__usb__device__khci__endpoint__state__struct_ac2cf56f2c032027242e5699b766d5308}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!state\-Bit\-Field@{state\-Bit\-Field}}
+\index{state\-Bit\-Field@{state\-Bit\-Field}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{state\-Bit\-Field}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::state\-Bit\-Field}}\label{struct__usb__device__khci__endpoint__state__struct_ac2cf56f2c032027242e5699b766d5308}
+\hypertarget{struct__usb__device__khci__endpoint__state__struct_afe429abb16982c9ea5042df293ba4fe0}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!state\-Union@{state\-Union}}
+\index{state\-Union@{state\-Union}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{state\-Union}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::state\-Union}}\label{struct__usb__device__khci__endpoint__state__struct_afe429abb16982c9ea5042df293ba4fe0}
+\hypertarget{struct__usb__device__khci__endpoint__state__struct_a861e4344f4c4d0b6d8c8f445d658fcca}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!transfer\-Buffer@{transfer\-Buffer}}
+\index{transfer\-Buffer@{transfer\-Buffer}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{transfer\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::transfer\-Buffer}}\label{struct__usb__device__khci__endpoint__state__struct_a861e4344f4c4d0b6d8c8f445d658fcca}
+Address of buffer containing the data to be transmitted \hypertarget{struct__usb__device__khci__endpoint__state__struct_a3efa2b63b740c832f14175350d98fa43}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!transfer\-Done@{transfer\-Done}}
+\index{transfer\-Done@{transfer\-Done}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{transfer\-Done}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::transfer\-Done}}\label{struct__usb__device__khci__endpoint__state__struct_a3efa2b63b740c832f14175350d98fa43}
+The data length has been transferred \hypertarget{struct__usb__device__khci__endpoint__state__struct_a68c3c4b6c6b3b57a22bbd10cc160dba4}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!transfer\-Length@{transfer\-Length}}
+\index{transfer\-Length@{transfer\-Length}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{transfer\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::transfer\-Length}}\label{struct__usb__device__khci__endpoint__state__struct_a68c3c4b6c6b3b57a22bbd10cc160dba4}
+Length of data to transmit. \hypertarget{struct__usb__device__khci__endpoint__state__struct_aef586b878d7ac44fd3e0b3bafc3a4f61}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!transferring@{transferring}}
+\index{transferring@{transferring}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{transferring}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::transferring}}\label{struct__usb__device__khci__endpoint__state__struct_aef586b878d7ac44fd3e0b3bafc3a4f61}
+The endpoint is transferring \hypertarget{struct__usb__device__khci__endpoint__state__struct_a98ab62a59c29d678cb1a0b61412326bd}{\index{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}!zlt@{zlt}}
+\index{zlt@{zlt}!_usb_device_khci_endpoint_state_struct@{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}}
+\subsubsection[{zlt}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-::zlt}}\label{struct__usb__device__khci__endpoint__state__struct_a98ab62a59c29d678cb1a0b61412326bd}
+zlt flag 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+device/\hyperlink{usb__device__khci_8h}{usb\-\_\-device\-\_\-khci.\-h}\end{DoxyCompactItemize}

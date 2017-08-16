@@ -1,0 +1,63 @@
+\hypertarget{struct__pd__svdm__request}{\section{\-\_\-pd\-\_\-svdm\-\_\-request Struct Reference}
+\label{struct__pd__svdm__request}\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+}
+
+
+P\-D structured vdm command request (negotiation)  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-svdm\-\_\-request\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{struct__pd__svdm__request__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__svdm__request_ac674930499f5462b363cb7890746888e}{vdo\-Data}
+\item 
+\hyperlink{group__usb__pd__stack_ga245b8bec3f3b7771e73016ac98595570}{pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \hyperlink{struct__pd__svdm__request_a502097a71d336575e7c64feded3fc3d1}{vdm\-Header}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__request_a447ad7fabf845dde656f32b7ba306582}{vdo\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__request_a7cc54e0d5070eeec62c3686c716cff28}{vdo\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__request_a234e68f92801246ea761e56aa163c3e6}{request\-Result\-Status}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D structured vdm command request (negotiation) 
+
+it is used in P\-D\-\_\-\-D\-P\-M\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-\_\-\-R\-E\-Q\-U\-E\-S\-T event callback. it provide vdm message information to application, application need reply A\-C\-K (contain data), N\-A\-K or B\-U\-S\-Y. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__svdm__request_a234e68f92801246ea761e56aa163c3e6}{\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}!request\-Result\-Status@{request\-Result\-Status}}
+\index{request\-Result\-Status@{request\-Result\-Status}!_pd_svdm_request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+\subsubsection[{request\-Result\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-request\-::request\-Result\-Status}}\label{struct__pd__svdm__request_a234e68f92801246ea761e56aa163c3e6}
+application need return the negotiation result to P\-D stack, the value is \hyperlink{group__usb__pd__stack_ga59917b1485caba4dd8d9b65ca5a5fd92}{pd\-\_\-command\-\_\-result\-\_\-t} \hypertarget{struct__pd__svdm__request_a502097a71d336575e7c64feded3fc3d1}{\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}!vdm\-Header@{vdm\-Header}}
+\index{vdm\-Header@{vdm\-Header}!_pd_svdm_request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+\subsubsection[{vdm\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \-\_\-pd\-\_\-svdm\-\_\-request\-::vdm\-Header}}\label{struct__pd__svdm__request_a502097a71d336575e7c64feded3fc3d1}
+vdm header \hypertarget{struct__pd__svdm__request_a447ad7fabf845dde656f32b7ba306582}{\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}!vdo\-Count@{vdo\-Count}}
+\index{vdo\-Count@{vdo\-Count}!_pd_svdm_request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+\subsubsection[{vdo\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-request\-::vdo\-Count}}\label{struct__pd__svdm__request_a447ad7fabf845dde656f32b7ba306582}
+vdm data length (unit is 4 bytes) \hypertarget{struct__pd__svdm__request_ac674930499f5462b363cb7890746888e}{\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}!vdo\-Data@{vdo\-Data}}
+\index{vdo\-Data@{vdo\-Data}!_pd_svdm_request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+\subsubsection[{vdo\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-svdm\-\_\-request\-::vdo\-Data}}\label{struct__pd__svdm__request_ac674930499f5462b363cb7890746888e}
+vdm data buffer address \hypertarget{struct__pd__svdm__request_a7cc54e0d5070eeec62c3686c716cff28}{\index{\-\_\-pd\-\_\-svdm\-\_\-request@{\-\_\-pd\-\_\-svdm\-\_\-request}!vdo\-Sop@{vdo\-Sop}}
+\index{vdo\-Sop@{vdo\-Sop}!_pd_svdm_request@{\-\_\-pd\-\_\-svdm\-\_\-request}}
+\subsubsection[{vdo\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-request\-::vdo\-Sop}}\label{struct__pd__svdm__request_a7cc54e0d5070eeec62c3686c716cff28}
+vdm message's sop type 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

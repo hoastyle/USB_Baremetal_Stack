@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['else',['else',['../usb__pd__ptn5110__connect_8c.html#a0544c3fe466e421738dae463968b70ba',1,'usb_pd_ptn5110_connect.c']]],
+  ['enablereceive',['enableReceive',['../struct__pd__instance.html#a7ac775fb724d971003420ee22adc0fbe',1,'_pd_instance']]],
+  ['endpoint',['endpoint',['../union__usb__descriptor__union.html#a0898c3f96511e958256c2e9d501df555',1,'_usb_descriptor_union']]],
+  ['endpointaddress',['endpointAddress',['../struct__usb__device__endpoint__init__struct.html#abcdb8047c5cde8b05cf95f1fc6334d4f',1,'_usb_device_endpoint_init_struct::endpointAddress()'],['../struct__usb__device__endpoint__status__struct.html#afada98f49022f451e7d682513e92993f',1,'_usb_device_endpoint_status_struct::endpointAddress()']]],
+  ['endpointcallback',['endpointCallback',['../struct__usb__device__struct.html#a29eda36612811852d13e534b86ac927d',1,'_usb_device_struct']]],
+  ['endpointstate',['endpointState',['../struct__usb__device__khci__state__struct.html#a04b55a56698a07b05dcad52cb1a4c766',1,'_usb_device_khci_state_struct']]],
+  ['endpointstatus',['endpointStatus',['../struct__usb__device__endpoint__status__struct.html#a5b41ac50b0851879961061170630dc88',1,'_usb_device_endpoint_status_struct']]],
+  ['ensnk1',['enSNK1',['../struct__pd__ptn5110__ctrl__pin.html#aa46e27b5322119661fe8081a042478f7',1,'_pd_ptn5110_ctrl_pin']]],
+  ['ensrc',['enSRC',['../struct__pd__ptn5110__ctrl__pin.html#ace741c1da1ba78c0e1068f69a4a8f9d5',1,'_pd_ptn5110_ctrl_pin']]],
+  ['enterattachedsrcfromattachwaitsnk',['enterAttachedSrcFromAttachWaitSNK',['../struct__pd__instance.html#aea1b390f81517cb7ef24eacda944f4ec',1,'_pd_instance']]],
+  ['entersrcfromswap',['enterSrcFromSwap',['../struct__pd__instance.html#a3b09927227c17d95712a2af3d5f921f2',1,'_pd_instance']]],
+  ['entertrysnkfrompoweredacc',['enterTrySNKFromPoweredAcc',['../struct__pd__instance.html#a83ce4a62d8bb8f280b4fb7fdbcdc8d5a',1,'_pd_instance']]],
+  ['ext_5falert',['ext_alert',['../structpd__phy__TCPC__reg__cache__t.html#aae2a1595a6b584d5097e5578a49cf98d',1,'pd_phy_TCPC_reg_cache_t']]],
+  ['ext_5falert_5fmask',['ext_alert_mask',['../structpd__phy__TCPC__reg__cache__t.html#aa27641032a12a746e571f4cdb6f64897',1,'pd_phy_TCPC_reg_cache_t']]],
+  ['ext_5fconfig',['ext_config',['../structpd__phy__TCPC__reg__cache__t.html#adeec58b66e622f403301a4996e9e3157',1,'pd_phy_TCPC_reg_cache_t']]],
+  ['ext_5fcontrol',['ext_control',['../structpd__phy__TCPC__reg__cache__t.html#ad776feb48742cfe1be66850000367e2e',1,'pd_phy_TCPC_reg_cache_t::ext_control()'],['../structpd__phy__TCPC__reg__cache__t.html#a3b1495d18f8ed0bb88c5acffa1a031b2',1,'pd_phy_TCPC_reg_cache_t::EXT_CONTROL()']]],
+  ['ext_5fintc',['EXT_INTC',['../structpd__phy__TCPC__reg__cache__t.html#a49c7828fdaf6c466e630a48ce616dd5b',1,'pd_phy_TCPC_reg_cache_t']]],
+  ['ext_5fstatus',['ext_status',['../structpd__phy__TCPC__reg__cache__t.html#ae8546f1fc28db9e0b79df7dea7cf902b',1,'pd_phy_TCPC_reg_cache_t::ext_status()'],['../structpd__phy__TCPC__reg__cache__t.html#aaedc9164647071c46cde97df5e92b769',1,'pd_phy_TCPC_reg_cache_t::EXT_STATUS()']]],
+  ['extended',['extended',['../struct__pd__msg__header.html#a29b5707169e4c8d770aa0a80aecc77c5',1,'_pd_msg_header']]],
+  ['extendedmsgheaderval',['extendedMsgHeaderVal',['../struct__pd__extended__msg__header.html#a1d247099ea671c66798b32e603697c5d',1,'_pd_extended_msg_header']]],
+  ['externalpowered',['externalPowered',['../struct__pd__source__fixed__pdo.html#aa1715617698b348913227183195ae8f5',1,'_pd_source_fixed_pdo::externalPowered()'],['../struct__pd__sink__fixed__pdo.html#a44e4b2e4bc2b34929036acee6ff6ae34',1,'_pd_sink_fixed_pdo::externalPowered()']]]
+];

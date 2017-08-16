@@ -1,0 +1,24 @@
+<map id="PD_DemoPrint" name="PD_DemoPrint">
+<area shape="rect" id="node2" href="$source__charger_2pd__command__interface_8h.html#a63e11d65be179b0c3ea84ee51a290ca0" title="PD_DpmSoftResetCallback" alt="" coords="197,5,384,32"/>
+<area shape="rect" id="node4" href="$source__charger_2pd__command__interface_8h.html#a7523d2f7cd121a431b2f1b231118405f" title="PD_DpmHardResetCallback" alt="" coords="195,56,386,83"/>
+<area shape="rect" id="node5" href="$battery_2pd__command__interface_8h.html#a56366de8b1a258b7a5f5fc7169613daa" title="PD_DpmPowerRoleSwapResult\lCallback" alt="" coords="185,107,396,149"/>
+<area shape="rect" id="node6" href="$pd__command__interface_8h.html#a76fb531d4b8bdecc111981b065ed4669" title="PD_DpmDataRoleSwapResult\lCallback" alt="" coords="189,173,392,214"/>
+<area shape="rect" id="node7" href="$battery_2pd__command__interface_8h.html#ac453a89bad337b7eb4deb9c0bc908a97" title="PD_DpmVconnSwapResultCallback" alt="" coords="173,239,408,265"/>
+<area shape="rect" id="node8" href="$source__charger_2pd__command__interface_8h.html#ad56c171cb7901fdd7ec757f0dbab837e" title="PD_DpmSrcRDOResultCallback" alt="" coords="183,289,398,316"/>
+<area shape="rect" id="node9" href="$battery_2pd__command__interface_8h.html#a3509f68783a50ccb13eced390382d21e" title="PD_DpmReceivePartnerSrcCaps\lCallback" alt="" coords="182,341,399,382"/>
+<area shape="rect" id="node10" href="$battery_2pd__command__interface_8h.html#ad0607e5a1bc3856ed44d231f228c3a6c" title="PD_DpmGetPartnerSrcCapsFail\lCallback" alt="" coords="185,406,396,447"/>
+<area shape="rect" id="node11" href="$battery_2pd__command__interface_8h.html#a9c6f8ee8675ca1b8b719fdfa8604d0d3" title="PD_DpmSnkGetRequestRDOCallback" alt="" coords="165,472,416,499"/>
+<area shape="rect" id="node12" href="$battery_2pd__command__interface_8h.html#aa4ea02fe41b426d7df32b9abfcff9476" title="PD_DpmSnkRDOResultCallback" alt="" coords="181,523,400,549"/>
+<area shape="rect" id="node13" href="$source__charger_2pd__command__interface_8h.html#a1114dbba92c3b0995c8617a2edf4d6a1" title="PD_DpmSrcGotoMinResultCallback" alt="" coords="173,573,408,600"/>
+<area shape="rect" id="node14" href="$battery_2pd__command__interface_8h.html#a2329d8a8bc7463d1c21290d6173d1c8c" title="PD_DpmSnkGotoMinResultCallback" alt="" coords="172,624,409,651"/>
+<area shape="rect" id="node15" href="$source__charger_2pd__command__interface_8h.html#aff54b1d04cd4e2ee1042ef9f109c50d3" title="PD_DpmReceivePartnerSnkCaps\lCallback" alt="" coords="181,675,401,717"/>
+<area shape="rect" id="node16" href="$source__charger_2pd__command__interface_8h.html#a81dcfb65765130049e03f396ca962375" title="PD_DpmGetPartnerSnkCapsFail\lCallback" alt="" coords="183,741,398,782"/>
+<area shape="rect" id="node17" href="$pd__command__interface_8h.html#ab41a0c34d9f0d4eb2a54b8278f6e7122" title="PD_DpmSVDMRequestCallback" alt="" coords="183,807,398,833"/>
+<area shape="rect" id="node18" href="$pd__command__interface_8h.html#aac5d271607893f2f71fa4d9388575fb6" title="PD_DpmSVDMResultCallback" alt="" coords="189,857,393,884"/>
+<area shape="rect" id="node19" href="$pd__command__interface_8h.html#afa61df791f16fe69719fa5d2a2b28668" title="PD_DpmUnstructuredVDMReceived\lCallback" alt="" coords="173,909,409,950"/>
+<area shape="rect" id="node20" href="$pd__command__interface_8h.html#aff259732f35dedb5eb2042291d7bbfa1" title="PD_DpmUnstructuredVDMSend\lResultCallback" alt="" coords="185,974,396,1015"/>
+<area shape="rect" id="node21" href="$pd__command__interface_8h.html#a2245c3444f30cc071f51efb0fc188756" title="PD_DpmGetInfoResultCallback" alt="" coords="187,1040,395,1067"/>
+<area shape="rect" id="node22" href="$pd__command__interface_8h.html#a5adc076144a387892c254f6155d31e5a" title="PD_DpmReceiveAlertCallback" alt="" coords="189,1091,392,1117"/>
+<area shape="rect" id="node23" href="$pd__command__interface_8h.html#a74eee4a140006a9030b0ad0db9608a87" title="PD_DpmSendAlertCallback" alt="" coords="199,1141,383,1168"/>
+<area shape="rect" id="node3" href="$source__charger_2pd__app_8c.html#a336eb892659ecb2d1392ebf1839a0b18" title="PD_DpmAppCommandCallback" alt="" coords="464,573,675,600"/>
+</map>

@@ -1,0 +1,161 @@
+\hypertarget{struct__pd__phy__api__interface}{\section{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface Struct Reference}
+\label{struct__pd__phy__api__interface}\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+}
+
+
+P\-D P\-H\-Y interface table structure.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-phy.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__phy__api__interface_a8f9666a7543d431aec266710dbc8d78c}{pd\-Phy\-Init} )(\hyperlink{group__usb__pd__stack_ga9397835347d48ef48b6b0ecba6312213}{pd\-\_\-handle} upper\-Layer\-Handle, \hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} $\ast$pd\-Phy\-Handle, \hyperlink{group__usb__pd__phy__drv_gab1d9a93a90c056727dcf364d6a5749e4}{pd\-\_\-phy\-\_\-config\-\_\-t} $\ast$phy\-Config)
+\begin{DoxyCompactList}\small\item\em Initializes P\-D P\-H\-Y module. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__phy__api__interface_a9e36ebe547c2ed82866597b2afc54bd0}{pd\-Phy\-Deinit} )(\hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle)
+\begin{DoxyCompactList}\small\item\em de-\/initialize phy instance \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__phy__api__interface_ab9b74f09035836be811dc6aae682074f}{pd\-Phy\-Send} )(\hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint8\-\_\-t start\-Of\-Packet, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em send message \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__phy__api__interface_a3c8508914afbcb4f55578a0d61cd90e3}{pd\-Phy\-Receive} )(\hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint8\-\_\-t start\-Of\-Packet\-Mask, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em receive message \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__phy__api__interface_a5e422dbfd66fca34934e39b451f17094}{pd\-Phy\-Control} )(\hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint32\-\_\-t control, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em control phy \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D P\-H\-Y interface table structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__phy__api__interface_a5e422dbfd66fca34934e39b451f17094}{\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}!pd\-Phy\-Control@{pd\-Phy\-Control}}
+\index{pd\-Phy\-Control@{pd\-Phy\-Control}!_pd_phy_api_interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+\subsubsection[{pd\-Phy\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface\-::pd\-Phy\-Control)({\bf pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint32\-\_\-t control, void $\ast$param)}}\label{struct__pd__phy__api__interface_a5e422dbfd66fca34934e39b451f17094}
+
+
+control phy 
+
+This function control P\-H\-Y operatin. The control codes are defined at enumeration \hyperlink{group__usb__pd__phy__drv_ga5e3d7eb2cdbc2e45efca5e3e63d14baf}{pd\-\_\-phy\-\_\-control\-\_\-t}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pd\-Phy\-Handle} & P\-D phy instance handle. \\
+\hline
+\mbox{\tt in}  & {\em control} & The control code. \\
+\hline
+\mbox{\tt in}  & {\em param} & The control parameter.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__phy__api__interface_a9e36ebe547c2ed82866597b2afc54bd0}{\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}!pd\-Phy\-Deinit@{pd\-Phy\-Deinit}}
+\index{pd\-Phy\-Deinit@{pd\-Phy\-Deinit}!_pd_phy_api_interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+\subsubsection[{pd\-Phy\-Deinit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface\-::pd\-Phy\-Deinit)({\bf pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle)}}\label{struct__pd__phy__api__interface_a9e36ebe547c2ed82866597b2afc54bd0}
+
+
+de-\/initialize phy instance 
+
+This function de-\/initializes the P\-D P\-H\-Y module specified by the pd\-Phy\-Handle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pd\-Phy\-Handle} & P\-D phy instance handle.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__phy__api__interface_a8f9666a7543d431aec266710dbc8d78c}{\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}!pd\-Phy\-Init@{pd\-Phy\-Init}}
+\index{pd\-Phy\-Init@{pd\-Phy\-Init}!_pd_phy_api_interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+\subsubsection[{pd\-Phy\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface\-::pd\-Phy\-Init)({\bf pd\-\_\-handle} upper\-Layer\-Handle, {\bf pd\-\_\-phy\-\_\-handle} $\ast$pd\-Phy\-Handle, {\bf pd\-\_\-phy\-\_\-config\-\_\-t} $\ast$phy\-Config)}}\label{struct__pd__phy__api__interface_a8f9666a7543d431aec266710dbc8d78c}
+
+
+Initializes P\-D P\-H\-Y module. 
+
+This function initializes one P\-D P\-H\-Y module instance specified by the parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em upper\-Layer\-Handle} & P\-D stack instance handle \\
+\hline
+\mbox{\tt out}  & {\em pd\-Phy\-Handle} & return the P\-D phy instance handle. \\
+\hline
+\mbox{\tt in}  & {\em phy\-Config} & configure struct, see the struct \hyperlink{group__usb__pd__phy__drv_gab1d9a93a90c056727dcf364d6a5749e4}{pd\-\_\-phy\-\_\-config\-\_\-t}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__phy__api__interface_a3c8508914afbcb4f55578a0d61cd90e3}{\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}!pd\-Phy\-Receive@{pd\-Phy\-Receive}}
+\index{pd\-Phy\-Receive@{pd\-Phy\-Receive}!_pd_phy_api_interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+\subsubsection[{pd\-Phy\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface\-::pd\-Phy\-Receive)({\bf pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint8\-\_\-t start\-Of\-Packet\-Mask, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)}}\label{struct__pd__phy__api__interface_a3c8508914afbcb4f55578a0d61cd90e3}
+
+
+receive message 
+
+This function pend to receive message, this function is asynchronous, the message receive result return to P\-D stack by the P\-D\-\_\-\-Notify(\-P\-D\-\_\-\-P\-H\-Y\-\_\-\-E\-V\-E\-N\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pd\-Phy\-Handle} & P\-D phy instance handle. \\
+\hline
+\mbox{\tt in}  & {\em start\-Of\-Packet\-Mask} & message's S\-O\-Ps that will receive. \\
+\hline
+\mbox{\tt in}  & {\em buffer} & data buffer. \\
+\hline
+\mbox{\tt in}  & {\em length} & data length.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__phy__api__interface_ab9b74f09035836be811dc6aae682074f}{\index{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}!pd\-Phy\-Send@{pd\-Phy\-Send}}
+\index{pd\-Phy\-Send@{pd\-Phy\-Send}!_pd_phy_api_interface@{\-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface}}
+\subsubsection[{pd\-Phy\-Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-phy\-\_\-api\-\_\-interface\-::pd\-Phy\-Send)({\bf pd\-\_\-phy\-\_\-handle} pd\-Phy\-Handle, uint8\-\_\-t start\-Of\-Packet, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)}}\label{struct__pd__phy__api__interface_ab9b74f09035836be811dc6aae682074f}
+
+
+send message 
+
+This function send one message, this function is asynchronous, the message send result return to P\-D stack by the P\-D\-\_\-\-Notify(\-P\-D\-\_\-\-P\-H\-Y\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-E\-N\-D\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pd\-Phy\-Handle} & P\-D phy instance handle. \\
+\hline
+\mbox{\tt in}  & {\em start\-Of\-Packet} & message's sop \\
+\hline
+\mbox{\tt in}  & {\em buffer} & data buffer. \\
+\hline
+\mbox{\tt in}  & {\em length} & data length.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd__phy_8h}{usb\-\_\-pd\-\_\-phy.\-h}\end{DoxyCompactItemize}

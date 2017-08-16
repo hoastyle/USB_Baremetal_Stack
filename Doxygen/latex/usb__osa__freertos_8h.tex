@@ -1,0 +1,115 @@
+\hypertarget{usb__osa__freertos_8h}{\section{osa/usb\-\_\-osa\-\_\-freertos.h File Reference}
+\label{usb__osa__freertos_8h}\index{osa/usb\-\_\-osa\-\_\-freertos.\-h@{osa/usb\-\_\-osa\-\_\-freertos.\-h}}
+}
+{\ttfamily \#include \char`\"{}Free\-R\-T\-O\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}semphr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}event\-\_\-groups.\-h\char`\"{}}\\*
+Include dependency graph for usb\-\_\-osa\-\_\-freertos.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{usb__osa__freertos_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__osa__freertos_8h_ade9da294046678a8884e765f08259967}{M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E}
+\item 
+\#define \hyperlink{usb__osa__freertos_8h_a914e7ec948916d96d382746634bdedf7}{M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E}
+\item 
+\#define \hyperlink{usb__osa__freertos_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}()~uint8\-\_\-t usb\-Osa\-Current\-Sr;
+\item 
+\#define \hyperlink{usb__osa__freertos_8h_a0485f70bf9c9a22f0340f014bc567362}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}()~\hyperlink{usb__osa__freertos_8h_a02e3681f4d617bc573b8345f65b153a2}{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}(\&usb\-Osa\-Current\-Sr)
+\item 
+\#define \hyperlink{usb__osa__freertos_8h_a5b8053eca19b6df666a26fad3b07f953}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}()~\hyperlink{usb__osa__freertos_8h_af96b90699740b15e8494df08a83c39b1}{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}(usb\-Osa\-Current\-Sr)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usb__osa__freertos_8h_a02e3681f4d617bc573b8345f65b153a2}{U\-S\-B\-\_\-\-Osa\-Enter\-Critical} (uint8\-\_\-t $\ast$sr)
+\item 
+void \hyperlink{usb__osa__freertos_8h_af96b90699740b15e8494df08a83c39b1}{U\-S\-B\-\_\-\-Osa\-Exit\-Critical} (uint8\-\_\-t sr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__osa__freertos_8h_ade9da294046678a8884e765f08259967}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E@{M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E}}
+\index{M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E@{M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-S\-R\-A\-C\-\_\-\-D\-I\-S\-A\-B\-L\-E}}\label{usb__osa__freertos_8h_ade9da294046678a8884e765f08259967}
+\hypertarget{usb__osa__freertos_8h_a914e7ec948916d96d382746634bdedf7}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E@{M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E}}
+\index{M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E@{M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-S\-R\-A\-C\-\_\-\-E\-N\-A\-B\-L\-E}}\label{usb__osa__freertos_8h_a914e7ec948916d96d382746634bdedf7}
+\hypertarget{usb__osa__freertos_8h_a0485f70bf9c9a22f0340f014bc567362}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf U\-S\-B\-\_\-\-Osa\-Enter\-Critical}(\&usb\-Osa\-Current\-Sr)}}\label{usb__osa__freertos_8h_a0485f70bf9c9a22f0340f014bc567362}
+\hypertarget{usb__osa__freertos_8h_a5b8053eca19b6df666a26fad3b07f953}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf U\-S\-B\-\_\-\-Osa\-Exit\-Critical}(usb\-Osa\-Current\-Sr)}}\label{usb__osa__freertos_8h_a5b8053eca19b6df666a26fad3b07f953}
+\hypertarget{usb__osa__freertos_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~uint8\-\_\-t usb\-Osa\-Current\-Sr;}}\label{usb__osa__freertos_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__osa__freertos_8h_a02e3681f4d617bc573b8345f65b153a2}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Enter\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__freertos_8h_a02e3681f4d617bc573b8345f65b153a2}
+
+\begin{DoxyCode}
+136 \{
+137 \textcolor{preprocessor}{#if defined(\_\_GIC\_PRIO\_BITS)}
+138 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} ((\_\_get\_CPSR() & CPSR\_M\_Msk) == 0x13)
+139 \textcolor{preprocessor}{#else}
+140 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\_\_get\_IPSR())
+141 \textcolor{preprocessor}{#endif}
+142 \textcolor{preprocessor}{}    \{
+143         *sr = portSET\_INTERRUPT\_MASK\_FROM\_ISR();
+144     \}
+145     \textcolor{keywordflow}{else}
+146     \{
+147         portENTER\_CRITICAL();
+148     \}
+149 \}
+\end{DoxyCode}
+\hypertarget{usb__osa__freertos_8h_af96b90699740b15e8494df08a83c39b1}{\index{usb\-\_\-osa\-\_\-freertos.\-h@{usb\-\_\-osa\-\_\-freertos.\-h}!U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}!usb_osa_freertos.h@{usb\-\_\-osa\-\_\-freertos.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Exit\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__freertos_8h_af96b90699740b15e8494df08a83c39b1}
+
+\begin{DoxyCode}
+152 \{
+153 \textcolor{preprocessor}{#if defined(\_\_GIC\_PRIO\_BITS)}
+154 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} ((\_\_get\_CPSR() & CPSR\_M\_Msk) == 0x13)
+155 \textcolor{preprocessor}{#else}
+156 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\_\_get\_IPSR())
+157 \textcolor{preprocessor}{#endif}
+158 \textcolor{preprocessor}{}    \{
+159         portCLEAR\_INTERRUPT\_MASK\_FROM\_ISR(sr);
+160     \}
+161     \textcolor{keywordflow}{else}
+162     \{
+163         portEXIT\_CRITICAL();
+164     \}
+165 \}
+\end{DoxyCode}

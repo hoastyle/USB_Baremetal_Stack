@@ -1,0 +1,4 @@
+<map id="PD_MsgStartReceive" name="PD_MsgStartReceive">
+<area shape="rect" id="node2" href="$usb__pd__msg_8c.html#aadc2d7bd93e2f244a0b4aefb26d5d5ad" title="PD_MsgReceive" alt="" coords="203,5,325,32"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#gaa83073c31cced5742027d4046bd633db" title="Sets an event flag. " alt="" coords="374,5,509,32"/>
+</map>

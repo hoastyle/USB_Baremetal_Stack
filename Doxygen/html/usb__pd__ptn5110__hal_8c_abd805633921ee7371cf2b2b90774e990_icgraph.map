@@ -1,0 +1,10 @@
+<map id="PDPTN5110_IntcIrqClearAndEnable" name="PDPTN5110_IntcIrqClearAndEnable">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#a34b274ef814628d8ab8d9a7f1070360e" title="Enable interrupts for connection. " alt="" coords="532,5,753,46"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__connect_8c.html#a6626302ba190e99a55b7242f90fd2873" title="Callback when connection is detached or disabled (enter into detach or disable state, so put in the PD_PHY_RESET_CONNECT_DETECTION) " alt="" coords="259,194,467,235"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__connect_8c.html#a1136effbc01ddeeb75c6e70077fa1fca" title="Update hardware after a power role swap has completed (e.g. read current advert of new source)..." alt="" coords="251,129,474,170"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__hal_8c.html#af231659d66feb7b47a04d094eafcc74c" title="Enable the Callback for power supply change interrupt, initalize state according to the state at this..." alt="" coords="249,63,477,105"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="821,41,942,68"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="809,165,954,192"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__connect_8c.html#a04c93cf6ac2b690c0837b01fc8b37068" title="Inform the Hardware chip that an activity is in progress. " alt="" coords="525,140,760,167"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__hal_8c.html#af673ca9417d66b63412b2d7f0ea9b176" title="Return true if vbus is within loose bounds of VSafe0V. " alt="" coords="572,71,713,97"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="USB_OsaEventCreate" name="USB_OsaEventCreate">
+<area shape="rect" id="node2" href="$group__usb__os__abstraction.html#gab17b3446bbcfb6207dc230fcdd4c9f99" title="Reserves the requested amount of memory in bytes. " alt="" coords="209,5,383,32"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#ga3d4a16dd11d39ce340299876f92d9366" title="Frees the memory previously reserved. " alt="" coords="219,56,373,83"/>
+</map>

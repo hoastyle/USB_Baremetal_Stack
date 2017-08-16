@@ -1,0 +1,139 @@
+\hypertarget{source__charger_2pd__command__interface_8c}{\section{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-interface.c File Reference}
+\label{source__charger_2pd__command__interface_8c}\index{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-interface.\-c@{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-interface.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Free\-R\-T\-O\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}queue.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-device\-\_\-registers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-lptmr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-command\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-command\-\_\-interface.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__interface_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__interface_8c_a336eb892659ecb2d1392ebf1839a0b18}{P\-D\-\_\-\-Dpm\-App\-Command\-Callback} (void $\ast$callback\-Param, uint32\-\_\-t event, void $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{source__charger_2pd__command__interface_8c_a336eb892659ecb2d1392ebf1839a0b18}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-interface.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-interface.\-c}!P\-D\-\_\-\-Dpm\-App\-Command\-Callback@{P\-D\-\_\-\-Dpm\-App\-Command\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-App\-Command\-Callback@{P\-D\-\_\-\-Dpm\-App\-Command\-Callback}!source_charger/pd_command_interface.c@{source\-\_\-charger/pd\-\_\-command\-\_\-interface.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-App\-Command\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-App\-Command\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{uint32\-\_\-t}]{event, }
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__interface_8c_a336eb892659ecb2d1392ebf1839a0b18}
+
+\begin{DoxyCode}
+65 \{
+66     \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\_status\_t} status = \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+67 
+68     \textcolor{keywordflow}{switch} (event)
+69     \{
+70         \textcolor{comment}{/* hard reset */}
+71         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a65ddff38ff9b959107bdabc53a1d1713}{PD\_DPM\_SNK\_HARD\_RESET\_REQUEST}:
+72         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a64e92f523589e05e41df27ce310855ae}{PD\_DPM\_SRC\_HARD\_RESET\_REQUEST}:
+73             status = \hyperlink{pd__command__app_8c_a34306bb735461e522c573f87e8a4049b}{PD\_DpmHardResetCallback}(callbackParam);
+74             \textcolor{keywordflow}{break};
+75 
+76         \textcolor{comment}{/* rdo request and power negotiation */}
+77         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a49dbf9ff2b5fba3ef05e0bf4da9ee7f6}{PD\_DPM\_SRC\_RDO\_REQUEST}:
+78             status = \hyperlink{pd__command__app_8c_a0012931c6c686dd4bdab89e0b3c6414d}{PD\_DpmSrcRDORequestCallback}(callbackParam, ((
+      \hyperlink{struct__pd__negotiate__power__request}{pd\_negotiate\_power\_request\_t} *)param)->rdo,
+79                                                  &(((
+      \hyperlink{struct__pd__negotiate__power__request}{pd\_negotiate\_power\_request\_t} *)param)->negotiateResult));
+80             \textcolor{keywordflow}{break};
+81         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a2ec99737c513a5308eaf1dabf39b7486}{PD\_DPM\_SRC\_CONTRACT\_STILL\_VALID}:
+82             status = \hyperlink{pd__command__app_8c_a098ead626f2b20fb29afb3e8b9d5350b}{PD\_DpmSrcPreContractStillValidCallback}(
+      callbackParam, (uint8\_t *)param);
+83             \textcolor{keywordflow}{break};
+84         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a1811ccedaf6c42290ef3311d01d3be92}{PD\_DPM\_SRC\_SEND\_SRC\_CAP\_FAIL}:
+85             status = \hyperlink{pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}{PD\_DpmSrcRDOResultCallback}(callbackParam, 0, 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error});
+86             \textcolor{keywordflow}{break};
+87         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a212a13db5a2a86d25d5e4e9bd9bd9d40}{PD\_DPM\_SRC\_RDO\_SUCCESS}:
+88             status = \hyperlink{pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}{PD\_DpmSrcRDOResultCallback}(callbackParam, 1, 0);
+89             \textcolor{keywordflow}{break};
+90         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a83108cfc7a063655541fa36c59b8ace8}{PD\_DPM\_SRC\_RDO\_FAIL}:
+91             status = \hyperlink{pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}{PD\_DpmSrcRDOResultCallback}(callbackParam, 0, *((uint8\_t *)
+      param));
+92             \textcolor{keywordflow}{break};
+93 
+94         \textcolor{comment}{/* goto min */}
+95         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8af4df2566f7dfb5614eab4183fd49d3bb}{PD\_DPM\_SRC\_GOTOMIN\_FAIL}:
+96             status = \hyperlink{pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f}{PD\_DpmSrcGotoMinResultCallback}(callbackParam, 0, *((
+      uint8\_t *)param));
+97             \textcolor{keywordflow}{break};
+98         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a818c91e1b20cc978318777720f2c7a3b}{PD\_DPM\_SRC\_GOTOMIN\_SUCCESS}:
+99             status = \hyperlink{pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f}{PD\_DpmSrcGotoMinResultCallback}(callbackParam, 1, 0);
+100             \textcolor{keywordflow}{break};
+101 
+102         \textcolor{comment}{/* get sink cap */}
+103         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8acf7e85712657f05298823cf3cbb530dd}{PD\_DPM\_GET\_PARTNER\_SNK\_CAP\_SUCCESS}:
+104             status = \hyperlink{pd__command__app_8c_adfab2b7d8a3ba6b4a8e138ac138d2398}{PD\_DpmReceivePartnerSnkCapsCallback}(callbackParam, 
+      (\hyperlink{struct__pd__capabilities}{pd\_capabilities\_t} *)param);
+105             \textcolor{keywordflow}{break};
+106         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a2b5e3e788da63ca93c05e4723fbd6046}{PD\_DPM\_GET\_PARTNER\_SNK\_CAP\_FAIL}:
+107             status = \hyperlink{pd__command__app_8c_ac82c79e04c70ce07454c8549666b7d5f}{PD\_DpmGetPartnerSnkCapsFailCallback}(callbackParam, 
+      *((uint8\_t *)param));
+108             \textcolor{keywordflow}{break};
+109 
+110         \textcolor{comment}{/* soft reset */}
+111         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8ad1d3a3dd48dcbb93d29eee4e09093770}{PD\_DPM\_SOFT\_RESET\_SUCCESS}:
+112         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a55e5b428b44bfbcef61a8fc137370c60}{PD\_DPM\_SOFT\_RESET\_REQUEST}:
+113             status = \hyperlink{pd__command__app_8c_a9a594323bf987df556436495d9d6dd2a}{PD\_DpmSoftResetCallback}(callbackParam);
+114             \textcolor{keywordflow}{break};
+115         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga6e10571af6af1a42760ea442ab580eb8a0c22065d3fb71fbfef9abe1a385dd661}{PD\_DPM\_SOFT\_RESET\_FAIL}:
+116             \textcolor{comment}{/* in normal situation, app don't need process it PD stack will do hard\_reset if soft\_reset
+       fail. */}
+117             \textcolor{keywordflow}{break};
+118 
+119         \textcolor{keywordflow}{default}:
+120             \textcolor{keywordflow}{break};
+121     \}
+122     \textcolor{keywordflow}{return} status;
+123 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__interface_8c_a336eb892659ecb2d1392ebf1839a0b18_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__interface_8c_a336eb892659ecb2d1392ebf1839a0b18_icgraph}
+\end{center}
+\end{figure}
+
+

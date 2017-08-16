@@ -1,0 +1,70 @@
+\hypertarget{struct__pd__msg__header}{\section{\-\_\-pd\-\_\-msg\-\_\-header Struct Reference}
+\label{struct__pd__msg__header}\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+}
+
+
+P\-D message header.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_a8f988edb3c2320265a31f058551383de}{messageType}: 5\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_a61dc0107cc94695c5225a034732acc25}{portDataRole}: 1\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_a037df5a4b49f0a0e035aaa28201ae20e}{specRevision}: 2\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_ac52d867212ad7dd16b5202a1fee17866}{portPowerRoleOrCablePlug}: 1\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_a2007d25305ee31d9ab6aa01ee6025255}{messageID}: 3\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_af835bee782d843ce60f85c5734a628b4}{NumOfDataObjs}: 3\\
+\>\>uint16\_t \hyperlink{struct__pd__msg__header_a29b5707169e4c8d770aa0a80aecc77c5}{extended}: 1\\
+\>\} \hyperlink{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{bitFields}\\
+\>uint16\_t \hyperlink{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}{msgHeaderVal}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D message header. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__msg__header_aef15a7651ceb3891522886252d8ce9f8}{\subsubsection[{"@50}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__msg__header_aef15a7651ceb3891522886252d8ce9f8}
+\hypertarget{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!bit\-Fields@{bit\-Fields}}
+\index{bit\-Fields@{bit\-Fields}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{bit\-Fields}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \-\_\-pd\-\_\-msg\-\_\-header\-::bit\-Fields}}\label{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}
+union message header structure \hypertarget{struct__pd__msg__header_a29b5707169e4c8d770aa0a80aecc77c5}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!extended@{extended}}
+\index{extended@{extended}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{extended}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::extended}}\label{struct__pd__msg__header_a29b5707169e4c8d770aa0a80aecc77c5}
+extended or not \hypertarget{struct__pd__msg__header_a2007d25305ee31d9ab6aa01ee6025255}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!message\-I\-D@{message\-I\-D}}
+\index{message\-I\-D@{message\-I\-D}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{message\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::message\-I\-D}}\label{struct__pd__msg__header_a2007d25305ee31d9ab6aa01ee6025255}
+message id \hypertarget{struct__pd__msg__header_a8f988edb3c2320265a31f058551383de}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!message\-Type@{message\-Type}}
+\index{message\-Type@{message\-Type}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::message\-Type}}\label{struct__pd__msg__header_a8f988edb3c2320265a31f058551383de}
+message type \hypertarget{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!msg\-Header\-Val@{msg\-Header\-Val}}
+\index{msg\-Header\-Val@{msg\-Header\-Val}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{msg\-Header\-Val}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::msg\-Header\-Val}}\label{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}
+union 16bits value \hypertarget{struct__pd__msg__header_af835bee782d843ce60f85c5734a628b4}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!Num\-Of\-Data\-Objs@{Num\-Of\-Data\-Objs}}
+\index{Num\-Of\-Data\-Objs@{Num\-Of\-Data\-Objs}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{Num\-Of\-Data\-Objs}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::\-Num\-Of\-Data\-Objs}}\label{struct__pd__msg__header_af835bee782d843ce60f85c5734a628b4}
+number of data objects \hypertarget{struct__pd__msg__header_a61dc0107cc94695c5225a034732acc25}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!port\-Data\-Role@{port\-Data\-Role}}
+\index{port\-Data\-Role@{port\-Data\-Role}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{port\-Data\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::port\-Data\-Role}}\label{struct__pd__msg__header_a61dc0107cc94695c5225a034732acc25}
+port data role \hypertarget{struct__pd__msg__header_ac52d867212ad7dd16b5202a1fee17866}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!port\-Power\-Role\-Or\-Cable\-Plug@{port\-Power\-Role\-Or\-Cable\-Plug}}
+\index{port\-Power\-Role\-Or\-Cable\-Plug@{port\-Power\-Role\-Or\-Cable\-Plug}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{port\-Power\-Role\-Or\-Cable\-Plug}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::port\-Power\-Role\-Or\-Cable\-Plug}}\label{struct__pd__msg__header_ac52d867212ad7dd16b5202a1fee17866}
+port power role or cable plug \hypertarget{struct__pd__msg__header_a037df5a4b49f0a0e035aaa28201ae20e}{\index{\-\_\-pd\-\_\-msg\-\_\-header@{\-\_\-pd\-\_\-msg\-\_\-header}!spec\-Revision@{spec\-Revision}}
+\index{spec\-Revision@{spec\-Revision}!_pd_msg_header@{\-\_\-pd\-\_\-msg\-\_\-header}}
+\subsubsection[{spec\-Revision}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-msg\-\_\-header\-::spec\-Revision}}\label{struct__pd__msg__header_a037df5a4b49f0a0e035aaa28201ae20e}
+spec revision 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

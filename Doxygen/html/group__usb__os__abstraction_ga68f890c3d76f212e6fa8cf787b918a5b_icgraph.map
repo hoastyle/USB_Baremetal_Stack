@@ -1,0 +1,4 @@
+<map id="USB_OsaMutexDestroy" name="USB_OsaMutexDestroy">
+<area shape="rect" id="node2" href="$group__usb__pd__cmsis__wrapper.html#ga5ae4fe326851bb5374399212012e22f9" title="De&#45;initialize CMSIS driver adapter instance. " alt="" coords="216,5,405,46"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a65b4686da5657cab505daea433331082" title="PDPTN5110_Deinit" alt="" coords="454,12,591,39"/>
+</map>

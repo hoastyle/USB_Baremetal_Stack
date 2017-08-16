@@ -1,0 +1,4 @@
+<map id="PD_PowerSrcTurnOffVbus" name="PD_PowerSrcTurnOffVbus">
+<area shape="rect" id="node2" href="$pd__app__demo_8c.html#a35a5744ceb43d67dc3bf4d2040c39a54" title="USB_PDDemoProcessMenu" alt="" coords="233,5,423,32"/>
+<area shape="rect" id="node3" href="$source__charger_2main_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="473,5,607,32"/>
+</map>

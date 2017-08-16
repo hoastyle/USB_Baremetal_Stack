@@ -1,0 +1,5 @@
+<map id="PDPTN5110_MsgHalSendAbortIsrProcess" name="PDPTN5110_MsgHalSendAbortIsrProcess">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="264,12,467,39"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html#ae5d40eccd3a7c7902b303d44cedb6a42" title="Callback to be called on assertion of INT_N by victoria. " alt="" coords="515,12,717,39"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="766,12,911,39"/>
+</map>

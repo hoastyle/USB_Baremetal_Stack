@@ -1,0 +1,24 @@
+<map id="PD_Control" name="PD_Control">
+<area shape="rect" id="node2" href="$pd__app_8c.html#a76d0496e2aa1a40759b549a23506f14a" title="PD_DpmConnectCallback" alt="" coords="173,5,349,32"/>
+<area shape="rect" id="node5" href="$pd__app__demo_8c.html#a34a9fa6c23ab02f6d4f13f1bea381478" title="USB_PDDemoPrintMenu" alt="" coords="176,56,347,83"/>
+<area shape="rect" id="node6" href="$pd__app__demo_8c.html#a35a5744ceb43d67dc3bf4d2040c39a54" title="USB_PDDemoProcessMenu" alt="" coords="445,107,635,133"/>
+<area shape="rect" id="node8" href="$pd__app__demo_8c.html#a3a3ac214fb23b3b22492e93cff16ab6e" title="USB_PDDemoProcessSW" alt="" coords="449,157,631,184"/>
+<area shape="rect" id="node9" href="$battery_2pd__command__interface_8h.html#a5132db16a33567cd42087c3721dd4ae2" title="PD_DpmPowerRoleSwapRequest\lCallback" alt="" coords="150,209,373,250"/>
+<area shape="rect" id="node11" href="$battery_2pd__command__interface_8h.html#a56366de8b1a258b7a5f5fc7169613daa" title="PD_DpmPowerRoleSwapResult\lCallback" alt="" coords="156,274,367,315"/>
+<area shape="rect" id="node12" href="$pd__command__interface_8h.html#a76fb531d4b8bdecc111981b065ed4669" title="PD_DpmDataRoleSwapResult\lCallback" alt="" coords="160,339,363,381"/>
+<area shape="rect" id="node13" href="$battery_2pd__command__interface_8h.html#ac453a89bad337b7eb4deb9c0bc908a97" title="PD_DpmVconnSwapResultCallback" alt="" coords="144,405,379,432"/>
+<area shape="rect" id="node14" href="$pd__command__interface_8h.html#aac5d271607893f2f71fa4d9388575fb6" title="PD_DpmSVDMResultCallback" alt="" coords="159,456,363,483"/>
+<area shape="rect" id="node15" href="$source__charger_2pd__power__interface_8h.html#a0fcfdce4020a6f6d89a1dca22db9736d" title="PD_PowerBoardReset" alt="" coords="184,507,339,533"/>
+<area shape="rect" id="node16" href="$source__charger_2pd__power__interface_8h.html#a877430377afe70b94985c6651ccb867f" title="PD_PowerBoardSourceEnable\lVbusPower" alt="" coords="161,558,361,599"/>
+<area shape="rect" id="node19" href="$battery_2pd__power__interface_8h.html#a3f5abe7fe812ca7f2a9a6721468e6159" title="PD_PowerBoardSinkEnableVbus\lPower" alt="" coords="154,623,369,665"/>
+<area shape="rect" id="node22" href="$source__charger_2pd__power__interface_8h.html#ad7654314734595cdfdcd7e1081d17fe1" title="PD_PowerBoardControlVconn" alt="" coords="162,703,361,729"/>
+<area shape="rect" id="node3" href="$pd__app_8c.html#a648f96eddcd92c89d8908b63ac0f9185" title="PD_DpmDemoAppCallback" alt="" coords="447,5,633,32"/>
+<area shape="rect" id="node4" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="725,5,814,32"/>
+<area shape="rect" id="node7" href="$source__charger_2main_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="702,132,837,159"/>
+<area shape="rect" id="node10" href="$source__charger_2pd__app_8c.html#a336eb892659ecb2d1392ebf1839a0b18" title="PD_DpmAppCommandCallback" alt="" coords="435,347,645,373"/>
+<area shape="rect" id="node17" href="$source__charger_2pd__power__interface_8h.html#a9f8cada612c26ee29a2eaf595f412284" title="PD_PowerSrcTurnOnDefaultVbus" alt="" coords="430,515,650,541"/>
+<area shape="rect" id="node18" href="$source__charger_2pd__power__interface_8h.html#a19f863f127ba9c21cacaa20e050ce6c7" title="PD_PowerSrcTurnOnRequestVbus" alt="" coords="427,565,653,592"/>
+<area shape="rect" id="node20" href="$battery_2pd__power__interface_8h.html#aa3793dc2feee87d4774fcb62eb69a65e" title="PD_PowerSnkDrawTypeCVbus" alt="" coords="436,616,644,643"/>
+<area shape="rect" id="node21" href="$battery_2pd__power__interface_8h.html#ab758e7331b2908377e1eee984c7a18ec" title="PD_PowerSnkDrawRequestVbus" alt="" coords="431,667,649,693"/>
+<area shape="rect" id="node23" href="$source__charger_2pd__power__interface_8h.html#a289ac80f85e197e355f467df8a726640" title="PD_PowerControlVconn" alt="" coords="458,717,622,744"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PD_PowerBoardSinkEnableVbusPower" name="PD_PowerBoardSinkEnableVbusPower">
+<area shape="rect" id="node2" href="$battery_2pd__power__interface_8h.html#aa3793dc2feee87d4774fcb62eb69a65e" title="PD_PowerSnkDrawTypeCVbus" alt="" coords="275,5,483,32"/>
+<area shape="rect" id="node3" href="$battery_2pd__power__interface_8h.html#ab758e7331b2908377e1eee984c7a18ec" title="PD_PowerSnkDrawRequestVbus" alt="" coords="269,56,488,83"/>
+</map>

@@ -1,0 +1,26 @@
+\hypertarget{usb__cmsis__wrapper_8c}{\section{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.c File Reference}
+\label{usb__cmsis__wrapper_8c}\index{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.\-c@{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Driver\-\_\-\-Common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-osa.\-h\char`\"{}}\\*
+Include dependency graph for usb\-\_\-cmsis\-\_\-wrapper.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__cmsis__wrapper_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$$\ast$cmsis\-Driver, uint8\-\_\-t interface, void $\ast$interface\-Config)
+\begin{DoxyCompactList}\small\item\em Initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver)
+\begin{DoxyCompactList}\small\item\em De-\/initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, const uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Write data to slave. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Read data from slave. \end{DoxyCompactList}\end{DoxyCompactItemize}

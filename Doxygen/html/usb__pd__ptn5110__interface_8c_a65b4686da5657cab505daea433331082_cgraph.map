@@ -1,0 +1,5 @@
+<map id="PDPTN5110_Deinit" name="PDPTN5110_Deinit">
+<area shape="rect" id="node2" href="$group__usb__pd__cmsis__wrapper.html#ga5ae4fe326851bb5374399212012e22f9" title="De&#45;initialize CMSIS driver adapter instance. " alt="" coords="199,5,388,46"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#ab5d1f5558b9fe57e063090af4837bbf6" title="PDPTN5110_ReleaseInstance" alt="" coords="193,71,394,97"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#ga68f890c3d76f212e6fa8cf787b918a5b" title="Destroys a mutex. " alt="" coords="443,12,605,39"/>
+</map>

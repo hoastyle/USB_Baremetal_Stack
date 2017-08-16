@@ -1,0 +1,17 @@
+<map id="PDPTN5110_MsgHalSendReset" name="PDPTN5110_MsgHalSendReset">
+<area shape="rect" id="node2" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="323,5,432,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a57a93596569ed29179bb8569b2fdd3b2" title="Query if an external tx done interrupts has been seen. " alt="" coords="543,136,745,163"/>
+<area shape="rect" id="node5" href="$usb__pd__timer_8c.html#a3d4072fbbc7b10a05c795eaf9ed33f5f" title="PD_TimerCheckInvalidOrTimeOut" alt="" coords="267,107,488,133"/>
+<area shape="rect" id="node6" href="$usb__pd__timer_8c.html#a453ba4a7609afd86d5e6b9fb8759b6b5" title="PD_TimerClear" alt="" coords="321,157,433,184"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__msg_8c.html#a14e713eb2da2853a2648e9918cf36ee8" title="PDPTN5110_MsgResetAllMsgId" alt="" coords="270,208,485,235"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__msg_8c.html#aa2e4ba085b2b97dcb443e5714967f155" title="After any reset we need to re&#45;enable the message RX. " alt="" coords="271,325,484,366"/>
+<area shape="rect" id="node14" href="$usb__pd__ptn5110__msg_8c.html#a2695a5daf065aa9d9e9064f8565a9447" title="Wait the result of the send after the tx_done interrupt has been received. " alt="" coords="275,259,480,301"/>
+<area shape="rect" id="node16" href="$usb__pd__ptn5110__msg_8c.html#a8eb6e370f609bad660887fbf1c6bb6a1" title="PDPTN5110_MsgResetMsgId" alt="" coords="278,391,477,417"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__hal_8c.html#a5d3a101dfa4ff56b35bf2006983b9a80" title="Query if an external interrupts has bneen seen. " alt="" coords="801,129,991,170"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="536,325,752,366"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="819,332,973,359"/>
+<area shape="rect" id="node11" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="1040,325,1229,366"/>
+<area shape="rect" id="node12" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1285,307,1430,333"/>
+<area shape="rect" id="node13" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1278,357,1437,384"/>
+<area shape="rect" id="node15" href="$usb__pd__ptn5110__msg_8c.html#af031c2ac982002330a6a98379bd78f2a" title="PDPTN5110_MsgIncrMsgId" alt="" coords="551,267,737,293"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="pd/ptn5110/usb_pd_ptn5110_interface.c" name="pd/ptn5110/usb_pd_ptn5110_interface.c">
+<area shape="rect" id="node5" href="$usb__pd_8h.html" title="usb_pd.h" alt="" coords="492,96,565,123"/>
+<area shape="rect" id="node9" href="$usb__pd__phy_8h.html" title="usb_pd_phy.h" alt="" coords="591,96,693,123"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html" title="usb_pd_ptn5110.h" alt="" coords="719,96,847,123"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__register_8h.html" title="usb_pd_ptn5110_register.h" alt="" coords="871,96,1049,123"/>
+<area shape="rect" id="node12" href="$usb__pd__interface_8h.html" title="usb_pd_interface.h" alt="" coords="335,96,467,123"/>
+<area shape="rect" id="node6" href="$usb__osa_8h.html" title="usb_osa.h" alt="" coords="353,171,435,197"/>
+<area shape="rect" id="node7" href="$usb__misc_8h.html" title="usb_misc.h" alt="" coords="634,171,723,197"/>
+<area shape="rect" id="node8" href="$usb__cmsis__wrapper_8h.html" title="usb_cmsis_wrapper.h" alt="" coords="460,171,608,197"/>
+<area shape="rect" id="node13" href="$usb__pd__spec_8h.html" title="usb_pd_spec.h" alt="" coords="218,171,328,197"/>
+</map>

@@ -988,17 +988,19 @@ static void PD_ConnectStateDrpToggleSrcOrSnkFirstProcess(pd_instance_t *pdInstan
 {
     uint8_t preState = pdInstance->curConnectState;
     /* looking for looking 4 connection */
-    /* note: TCPC will stop toggling when some bogus connection are found, TCPM will transit to attach_wait status and
+    /* note: TCPC will stop toggling when some bogus(伪造的) connection are found, TCPM will transit to attach_wait status and
      */
     /* use cc_debounce to filter these bogus connection */
     /* If the connection is bogus, TCPM will transit back to TYPEC_TOGGLE_SRC_FIRST/TYPEC_TOGGLE_SNK_FIRST and restart
      */
     /* DRP toggling */
+	// as source, detect Rd or Ra 
     if ((cc1State == kCCState_SrcRd) || (cc2State == kCCState_SrcRd) ||
         ((cc1State == kCCState_SrcRa) && (cc2State == kCCState_SrcRa)))
     {
         pdInstance->curConnectState = TYPEC_ATTACH_WAIT_SRC;
     }
+	// as sink, detect Rp
     else if ((cc1State == kCCState_SnkRp) || (cc2State == kCCState_SnkRp))
     {
         pdInstance->curConnectState = TYPEC_ATTACH_WAIT_SNK;
@@ -1007,6 +1009,7 @@ static void PD_ConnectStateDrpToggleSrcOrSnkFirstProcess(pd_instance_t *pdInstan
     {
     }
 
+	// work around
 #if (defined PD_CONFIG_COMPLIANCE_TEST_ENABLE) && (PD_CONFIG_COMPLIANCE_TEST_ENABLE)
     /* If the TCPC has incorrectly entered AttachWait.SRC with VBus not at VSafe0V, */
     /* then move to Unattached.SRC instead. */
@@ -1400,6 +1403,7 @@ static void PD_ConnectStateSrcUnsupportedAccProcess(pd_instance_t *pdInstance, u
 }
 #endif
 
+// 将TypeC state分成三种状态类型，并返回
 static uint8_t PD_ConnectState(pd_instance_t *pdInstance)
 {
     switch (pdInstance->curConnectState)

@@ -1,0 +1,451 @@
+\hypertarget{group__usb__pd__cmsis__wrapper}{\section{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}
+\label{group__usb__pd__cmsis__wrapper}\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__pd__i2c__interface__config}{\-\_\-pd\-\_\-i2c\-\_\-interface\-\_\-config}
+\begin{DoxyCompactList}\small\item\em I2\-C interface configure parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__pd__spi__interface__config}{\-\_\-pd\-\_\-spi\-\_\-interface\-\_\-config}
+\begin{DoxyCompactList}\small\item\em S\-P\-I interface configure parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__cmsis__drier__adapter}{\-\_\-cmsis\-\_\-drier\-\_\-adapter}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__pd__cmsis__wrapper_ga38c9923b4a5ea65a306222e1250ee94a}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T}~(10)
+\begin{DoxyCompactList}\small\item\em C\-M\-S\-I\-S I2\-C/\-S\-P\-I transfer retry count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__i2c__interface__config}{\-\_\-pd\-\_\-i2c\-\_\-interface\-\_\-config} \hyperlink{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em I2\-C interface configure parameter. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__pd__spi__interface__config}{\-\_\-pd\-\_\-spi\-\_\-interface\-\_\-config} \hyperlink{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em S\-P\-I interface configure parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__cmsis__drier__adapter}{\-\_\-cmsis\-\_\-drier\-\_\-adapter} \hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$$\ast$cmsis\-Driver, uint8\-\_\-t interface, void $\ast$interface\-Config)
+\begin{DoxyCompactList}\small\item\em Initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver)
+\begin{DoxyCompactList}\small\item\em De-\/initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, const uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Write data to slave. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Read data from slave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__usb__pd__cmsis__wrapper_ga38c9923b4a5ea65a306222e1250ee94a}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T}}
+\index{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T~(10)}}\label{group__usb__pd__cmsis__wrapper_ga38c9923b4a5ea65a306222e1250ee94a}
+
+
+C\-M\-S\-I\-S I2\-C/\-S\-P\-I transfer retry count. 
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!cmsis\-\_\-driver\-\_\-adapter\-\_\-t@{cmsis\-\_\-driver\-\_\-adapter\-\_\-t}}
+\index{cmsis\-\_\-driver\-\_\-adapter\-\_\-t@{cmsis\-\_\-driver\-\_\-adapter\-\_\-t}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{cmsis\-\_\-driver\-\_\-adapter\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-cmsis\-\_\-drier\-\_\-adapter}  {\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t}}}\label{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}
+\hypertarget{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t@{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}}
+\index{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t@{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-i2c\-\_\-interface\-\_\-config}  {\bf pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}}}\label{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}
+
+
+I2\-C interface configure parameter. 
+
+\hypertarget{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t@{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}}
+\index{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t@{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-pd\-\_\-spi\-\_\-interface\-\_\-config}  {\bf pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}}}\label{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}
+
+
+S\-P\-I interface configure parameter. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit}}
+\index{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit (
+\begin{DoxyParamCaption}
+\item[{{\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$}]{cmsis\-Driver}
+\end{DoxyParamCaption}
+)}}\label{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9}
+
+
+De-\/initialize C\-M\-S\-I\-S driver adapter instance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmsis\-Driver} & The instance from C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A\-R\-M\-\_\-\-D\-R\-I\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+99 \{
+100     int32\_t status = ARM\_DRIVER\_ERROR;
+101 
+102     \textcolor{keywordflow}{switch} (cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a51a572fa7a648387cf481b45b862457c}{interface})
+103     \{
+104 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_I2C\_INTERFACE) && (PD\_CONFIG\_CMSIS\_I2C\_INTERFACE)}
+105 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0e6fc11f3fbc9732619f2083042e7e17}{kInterface\_i2c0}:
+106         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1eaf78fb0f4bdd4db6e8a2e5dab05ba59d2}{kInterface\_i2c1}:
+107         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea7e08032b6509673dc643a7d01a5baec4}{kInterface\_i2c2}:
+108         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea369545de00e8d0fb91e9f065d725c16c}{kInterface\_i2c3}:
+109             status = CMSIS\_I2CInterfaceDeinit(cmsisDriver);
+110             \textcolor{keywordflow}{break};
+111 \textcolor{preprocessor}{#endif}
+112 \textcolor{preprocessor}{}
+113 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_SPI\_INTERFACE) && (PD\_CONFIG\_CMSIS\_SPI\_INTERFACE)}
+114 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea48b48a50986d3b6fd9e7640cbea852ef}{kInterface\_spi0}:
+115         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea178b943373d02f27c53232f7e31e62a6}{kInterface\_spi1}:
+116         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea1a8206ebb4a5aa81b0401b26d239ad9d}{kInterface\_spi2}:
+117         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0842cd2e8c57954daf912b6d7b648e9f}{kInterface\_spi3}:
+118             status = CMSIS\_SPIInterfaceDeinit(cmsisDriver);
+119             \textcolor{keywordflow}{break};
+120 \textcolor{preprocessor}{#endif}
+121 \textcolor{preprocessor}{}    \}
+122 
+123     \textcolor{keywordflow}{if} (cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex} != NULL)
+124     \{
+125         \hyperlink{group__usb__os__abstraction_ga68f890c3d76f212e6fa8cf787b918a5b}{USB\_OsaMutexDestroy}(cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex});
+126         cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex} = NULL;
+127     \}
+128 
+129     \textcolor{keywordflow}{return} status;
+130 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init}}
+\index{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$$\ast$}]{cmsis\-Driver, }
+\item[{uint8\-\_\-t}]{interface, }
+\item[{void $\ast$}]{interface\-Config}
+\end{DoxyParamCaption}
+)}}\label{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd}
+
+
+Initialize C\-M\-S\-I\-S driver adapter instance. 
+
+This function return the \hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} instance, the other A\-P\-I use this as the parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em cmsis\-Driver} & Return the instance. \\
+\hline
+\mbox{\tt in}  & {\em interface} & the I2\-C/\-S\-P\-I interface, see \hyperlink{group__usb__pd__stack_ga0499cb1eb2ad70e8d155ff72b50c7a38}{pd\-\_\-phy\-\_\-interface\-\_\-t} \\
+\hline
+\mbox{\tt in}  & {\em interface\-Config} & it is \hyperlink{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t} or \hyperlink{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A\-R\-M\-\_\-\-D\-R\-I\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+62 \{
+63     int32\_t status = ARM\_DRIVER\_ERROR;
+64 
+65     \textcolor{keywordflow}{switch} (interface)
+66     \{
+67 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_I2C\_INTERFACE) && (PD\_CONFIG\_CMSIS\_I2C\_INTERFACE)}
+68 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0e6fc11f3fbc9732619f2083042e7e17}{kInterface\_i2c0}:
+69         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1eaf78fb0f4bdd4db6e8a2e5dab05ba59d2}{kInterface\_i2c1}:
+70         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea7e08032b6509673dc643a7d01a5baec4}{kInterface\_i2c2}:
+71         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea369545de00e8d0fb91e9f065d725c16c}{kInterface\_i2c3}:
+72             status = CMSIS\_I2CInterfaceInit(cmsisDriver, interface, interfaceConfig);
+73             \textcolor{keywordflow}{break};
+74 \textcolor{preprocessor}{#endif}
+75 \textcolor{preprocessor}{}
+76 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_SPI\_INTERFACE) && (PD\_CONFIG\_CMSIS\_SPI\_INTERFACE)}
+77 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea48b48a50986d3b6fd9e7640cbea852ef}{kInterface\_spi0}:
+78         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea178b943373d02f27c53232f7e31e62a6}{kInterface\_spi1}:
+79         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea1a8206ebb4a5aa81b0401b26d239ad9d}{kInterface\_spi2}:
+80         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0842cd2e8c57954daf912b6d7b648e9f}{kInterface\_spi3}:
+81             status = CMSIS\_SPIInterfaceInit(cmsisDriver, interface, interfaceConfig);
+82             \textcolor{keywordflow}{break};
+83 \textcolor{preprocessor}{#endif}
+84 \textcolor{preprocessor}{}    \}
+85 
+86     \textcolor{keywordflow}{if} ((status == ARM\_DRIVER\_OK) && (*cmsisDriver != NULL))
+87     \{
+88         \textcolor{keywordflow}{if} (\hyperlink{group__usb__os__abstraction_gaf36ecc5a6c3359a6587750b17800f49d}{USB\_OsaMutexCreate}(&((*cmsisDriver)->cmsisMutex)) != 
+      \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success})
+89         \{
+90             (*cmsisDriver)->cmsisMutex = NULL;
+91             status = ARM\_DRIVER\_ERROR;
+92         \}
+93     \}
+94 
+95     \textcolor{keywordflow}{return} status;
+96 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register}}
+\index{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register (
+\begin{DoxyParamCaption}
+\item[{{\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$}]{cmsis\-Driver, }
+\item[{uint32\-\_\-t}]{register\-Addr, }
+\item[{uint8\-\_\-t}]{register\-Len, }
+\item[{uint8\-\_\-t $\ast$}]{data, }
+\item[{uint32\-\_\-t}]{num}
+\end{DoxyParamCaption}
+)}}\label{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c}
+
+
+Read data from slave. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmsis\-Driver} & Return the instance. \\
+\hline
+\mbox{\tt in}  & {\em register\-Addr} & The access register address. \\
+\hline
+\mbox{\tt in}  & {\em register\-Len} & The register addreess's length, normally it is one byte or two bytes. \\
+\hline
+\mbox{\tt in}  & {\em data} & The data buffer. \\
+\hline
+\mbox{\tt in}  & {\em num} & The data length.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A\-R\-M\-\_\-\-D\-R\-I\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+173 \{
+174     int32\_t status = ARM\_DRIVER\_ERROR;
+175 
+176     \textcolor{keywordflow}{if} (\hyperlink{group__usb__os__abstraction_ga1fed31c4b683c5f652b4e2e8b23c34fd}{USB\_OsaMutexLock}(cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex}) != 
+      \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success})
+177     \{
+178         \textcolor{keywordflow}{return} status;
+179     \}
+180 
+181     \textcolor{keywordflow}{switch} (cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a51a572fa7a648387cf481b45b862457c}{interface})
+182     \{
+183 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_I2C\_INTERFACE) && (PD\_CONFIG\_CMSIS\_I2C\_INTERFACE)}
+184 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0e6fc11f3fbc9732619f2083042e7e17}{kInterface\_i2c0}:
+185         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1eaf78fb0f4bdd4db6e8a2e5dab05ba59d2}{kInterface\_i2c1}:
+186         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea7e08032b6509673dc643a7d01a5baec4}{kInterface\_i2c2}:
+187         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea369545de00e8d0fb91e9f065d725c16c}{kInterface\_i2c3}:
+188             status = CMSIS\_I2CInterfaceReadRegister(cmsisDriver, registerAddr, registerLen, data, num);
+189             \textcolor{keywordflow}{break};
+190 \textcolor{preprocessor}{#endif}
+191 \textcolor{preprocessor}{}
+192 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_SPI\_INTERFACE) && (PD\_CONFIG\_CMSIS\_SPI\_INTERFACE)}
+193 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea48b48a50986d3b6fd9e7640cbea852ef}{kInterface\_spi0}:
+194         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea178b943373d02f27c53232f7e31e62a6}{kInterface\_spi1}:
+195         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea1a8206ebb4a5aa81b0401b26d239ad9d}{kInterface\_spi2}:
+196         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0842cd2e8c57954daf912b6d7b648e9f}{kInterface\_spi3}:
+197             status = CMSIS\_SPIInterfaceReadRegister(cmsisDriver, registerAddr, registerLen, data, num);
+198             \textcolor{keywordflow}{break};
+199 \textcolor{preprocessor}{#endif}
+200 \textcolor{preprocessor}{}    \}
+201 
+202     \textcolor{keywordflow}{if} (\hyperlink{group__usb__os__abstraction_gaad3249273d566eae00e2cea81192315a}{USB\_OsaMutexUnlock}(cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex}) != 
+      \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success})
+203     \{
+204         \textcolor{keywordflow}{return} ARM\_DRIVER\_ERROR;
+205     \}
+206 
+207     \textcolor{keywordflow}{return} status;
+208 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757}{\index{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}!C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register}}
+\index{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register@{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register}!Usb_pd_cmsis_wrapper@{Usb\-\_\-pd\-\_\-cmsis\-\_\-wrapper}}
+\subsubsection[{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register (
+\begin{DoxyParamCaption}
+\item[{{\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$}]{cmsis\-Driver, }
+\item[{uint32\-\_\-t}]{register\-Addr, }
+\item[{uint8\-\_\-t}]{register\-Len, }
+\item[{const uint8\-\_\-t $\ast$}]{data, }
+\item[{uint32\-\_\-t}]{num}
+\end{DoxyParamCaption}
+)}}\label{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757}
+
+
+Write data to slave. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmsis\-Driver} & Return the instance. \\
+\hline
+\mbox{\tt in}  & {\em register\-Addr} & The access register address. \\
+\hline
+\mbox{\tt in}  & {\em register\-Len} & The register addreess's length, normally it is one byte or two bytes. \\
+\hline
+\mbox{\tt in}  & {\em data} & The data buffer. \\
+\hline
+\mbox{\tt in}  & {\em num} & The data length.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A\-R\-M\-\_\-\-D\-R\-I\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R} & initialization success. \\
+\hline
+{\em other} & value error code. \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+134 \{
+135     int32\_t status = ARM\_DRIVER\_ERROR;
+136 
+137     \textcolor{keywordflow}{if} (\hyperlink{group__usb__os__abstraction_ga1fed31c4b683c5f652b4e2e8b23c34fd}{USB\_OsaMutexLock}(cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex}) != 
+      \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success})
+138     \{
+139         \textcolor{keywordflow}{return} status;
+140     \}
+141 
+142     \textcolor{keywordflow}{switch} (cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a51a572fa7a648387cf481b45b862457c}{interface})
+143     \{
+144 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_I2C\_INTERFACE) && (PD\_CONFIG\_CMSIS\_I2C\_INTERFACE)}
+145 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0e6fc11f3fbc9732619f2083042e7e17}{kInterface\_i2c0}:
+146         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1eaf78fb0f4bdd4db6e8a2e5dab05ba59d2}{kInterface\_i2c1}:
+147         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea7e08032b6509673dc643a7d01a5baec4}{kInterface\_i2c2}:
+148         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea369545de00e8d0fb91e9f065d725c16c}{kInterface\_i2c3}:
+149             status = CMSIS\_I2CInterfaceWriteRegister(cmsisDriver, registerAddr, registerLen, data, num);
+150             \textcolor{keywordflow}{break};
+151 \textcolor{preprocessor}{#endif}
+152 \textcolor{preprocessor}{}
+153 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_CMSIS\_SPI\_INTERFACE) && (PD\_CONFIG\_CMSIS\_SPI\_INTERFACE)}
+154 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea48b48a50986d3b6fd9e7640cbea852ef}{kInterface\_spi0}:
+155         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea178b943373d02f27c53232f7e31e62a6}{kInterface\_spi1}:
+156         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea1a8206ebb4a5aa81b0401b26d239ad9d}{kInterface\_spi2}:
+157         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_gga4aed694f998da91dea8d218596d65c1ea0842cd2e8c57954daf912b6d7b648e9f}{kInterface\_spi3}:
+158             status = CMSIS\_SPIInterfaceWriteRegister(cmsisDriver, registerAddr, registerLen, data, num);
+159             \textcolor{keywordflow}{break};
+160 \textcolor{preprocessor}{#endif}
+161 \textcolor{preprocessor}{}    \}
+162 
+163     \textcolor{keywordflow}{if} (\hyperlink{group__usb__os__abstraction_gaad3249273d566eae00e2cea81192315a}{USB\_OsaMutexUnlock}(cmsisDriver->\hyperlink{struct__cmsis__drier__adapter_a952d05d8262ef9aebfa6ca9c4d62fe46}{cmsisMutex}) != 
+      \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success})
+164     \{
+165         \textcolor{keywordflow}{return} ARM\_DRIVER\_ERROR;
+166     \}
+167 
+168     \textcolor{keywordflow}{return} status;
+169 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757_icgraph}
+\end{center}
+\end{figure}
+
+

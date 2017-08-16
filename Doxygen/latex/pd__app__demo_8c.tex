@@ -1,0 +1,1075 @@
+\hypertarget{pd__app__demo_8c}{\section{demo/pd/pd\-\_\-app\-\_\-demo.c File Reference}
+\label{pd__app__demo_8c}\index{demo/pd/pd\-\_\-app\-\_\-demo.\-c@{demo/pd/pd\-\_\-app\-\_\-demo.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-app\-\_\-demo.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478}{U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+static \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f}{P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char} (char $\ast$value)
+\item 
+static void \hyperlink{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244}{P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache} (void)
+\item 
+static void \hyperlink{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54}{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance, char ch)
+\item 
+void \hyperlink{pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}{P\-D\-\_\-\-Demo\-Init} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{pd__app__demo_8c_aadbe1a95532f9f9a686da83f3ada24b0}{P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e}{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}{P\-D\-\_\-\-Demo\-Find\-P\-D\-O} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance, \hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} $\ast$rdo, uint32\-\_\-t $\ast$voltage)
+\item 
+uint32\-\_\-t \hyperlink{pd__app__demo_8c_adf0d4d7f816d9d87fa663abcfc292ab7}{P\-D\-\_\-\-Demo\-Print} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance, const char $\ast$format,...)
+\item 
+void \hyperlink{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b}{P\-D\-\_\-\-Demo\-Process\-Print} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{P\-D\-\_\-\-Demo\-Task\-Fun} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{pd__app__demo_8c_aadbe1a95532f9f9a686da83f3ada24b0}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W@{P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W}}
+\index{P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W@{P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo1ms\-Isr\-Process\-S\-W (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_aadbe1a95532f9f9a686da83f3ada24b0}
+
+\begin{DoxyCode}
+470 \{
+471     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{kDEMO\_SWIsrTrigger})
+472     \{
+473         \textcolor{comment}{/* 10ms as short press, 700ms as long press */}
+474         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_aa25baa3a8fa4609c02da92fa8f4b302f}{BOARD\_SW1\_GPIO}, \hyperlink{board_8h_aad97021fdd34ec8ce0ed8db741294a26}{BOARD\_SW1\_GPIO\_PIN}) == 0)
+475         \{
+476             pdAppInstance->\hyperlink{struct__pd__app_a494ab24cc582fc7368f16a047a21a9fe}{sw1Time}++;
+477             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a494ab24cc582fc7368f16a047a21a9fe}{sw1Time} > 700)
+478             \{
+479                 pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{kDEMO\_SWLongPress};
+480             \}
+481         \}
+482         \textcolor{keywordflow}{else}
+483         \{
+484             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a494ab24cc582fc7368f16a047a21a9fe}{sw1Time} > 10)
+485             \{
+486                 pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{kDEMO\_SWShortPress};
+487             \}
+488             \textcolor{keywordflow}{else}
+489             \{
+490                 pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+491             \}
+492         \}
+493     \}
+494     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed})
+495     \{
+496         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_aa25baa3a8fa4609c02da92fa8f4b302f}{BOARD\_SW1\_GPIO}, \hyperlink{board_8h_aad97021fdd34ec8ce0ed8db741294a26}{BOARD\_SW1\_GPIO\_PIN}) == 1)
+497         \{
+498             pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+499         \}
+500     \}
+501     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle})
+502     \{
+503         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_aa25baa3a8fa4609c02da92fa8f4b302f}{BOARD\_SW1\_GPIO}, \hyperlink{board_8h_aad97021fdd34ec8ce0ed8db741294a26}{BOARD\_SW1\_GPIO\_PIN}) == 0)
+504         \{
+505             pdAppInstance->\hyperlink{struct__pd__app_a494ab24cc582fc7368f16a047a21a9fe}{sw1Time} = 0u;
+506             pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{kDEMO\_SWIsrTrigger};
+507         \}
+508     \}
+509     \textcolor{keywordflow}{else}
+510     \{
+511     \}
+512 
+513     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{kDEMO\_SWIsrTrigger})
+514     \{
+515         \textcolor{comment}{/* 10ms as short press, 700ms as long press */}
+516         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_a2c77deecd8804a5c2ad03696e98afbc7}{BOARD\_SW3\_GPIO}, \hyperlink{board_8h_ac0ca71ebe7376087f8b894b96e80b318}{BOARD\_SW3\_GPIO\_PIN}) == 0)
+517         \{
+518             pdAppInstance->\hyperlink{struct__pd__app_a61108d939110e1c95e4dd8cb001a5559}{sw3Time}++;
+519             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a61108d939110e1c95e4dd8cb001a5559}{sw3Time} > 700)
+520             \{
+521                 pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{kDEMO\_SWLongPress};
+522             \}
+523         \}
+524         \textcolor{keywordflow}{else}
+525         \{
+526             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a61108d939110e1c95e4dd8cb001a5559}{sw3Time} > 10)
+527             \{
+528                 pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{kDEMO\_SWShortPress};
+529             \}
+530             \textcolor{keywordflow}{else}
+531             \{
+532                 pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+533             \}
+534         \}
+535     \}
+536     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed})
+537     \{
+538         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_a2c77deecd8804a5c2ad03696e98afbc7}{BOARD\_SW3\_GPIO}, \hyperlink{board_8h_ac0ca71ebe7376087f8b894b96e80b318}{BOARD\_SW3\_GPIO\_PIN}) == 1)
+539         \{
+540             pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+541         \}
+542     \}
+543     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle})
+544     \{
+545         \textcolor{keywordflow}{if} (GPIO\_ReadPinInput(\hyperlink{board_8h_a2c77deecd8804a5c2ad03696e98afbc7}{BOARD\_SW3\_GPIO}, \hyperlink{board_8h_ac0ca71ebe7376087f8b894b96e80b318}{BOARD\_SW3\_GPIO\_PIN}) == 0)
+546         \{
+547             pdAppInstance->\hyperlink{struct__pd__app_a61108d939110e1c95e4dd8cb001a5559}{sw3Time} = 0u;
+548             pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a94536ceb17fee5b6ef06e6ca404b8074}{kDEMO\_SWIsrTrigger};
+549         \}
+550     \}
+551     \textcolor{keywordflow}{else}
+552     \{
+553     \}
+554 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_aadbe1a95532f9f9a686da83f3ada24b0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache@{P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache}}
+\index{P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache@{P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}static void P\-D\-\_\-\-Demo\-Console\-Clear\-Input\-Cache (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244}
+
+\begin{DoxyCode}
+164 \{
+165     \textcolor{keyword}{volatile} uint8\_t discardValue;
+166 
+167 \textcolor{preprocessor}{#if (BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART)}
+168 \textcolor{preprocessor}{}    UART\_Type *base = (UART\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+169 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_UART\_HAS\_FIFO) && FSL\_FEATURE\_UART\_HAS\_FIFO}
+170 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} (base->RCFIFO)
+171 \textcolor{preprocessor}{#else}
+172 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} (base->S1 & UART\_S1\_RDRF\_MASK)
+173 \textcolor{preprocessor}{#endif}
+174 \textcolor{preprocessor}{}    \{
+175         discardValue = base->D;
+176     \}
+177 
+178 \textcolor{preprocessor}{#elif(BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART)}
+179 \textcolor{preprocessor}{}    LPUART\_Type *base = (LPUART\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+180 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_LPUART\_HAS\_FIFO) && FSL\_FEATURE\_LPUART\_HAS\_FIFO}
+181 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} ((base->WATER & LPUART\_WATER\_RXCOUNT\_MASK) >> LPUART\_WATER\_RXCOUNT\_SHIFT)
+182 #\textcolor{keywordflow}{else}
+183     \textcolor{keywordflow}{while} (base->STAT & LPUART\_STAT\_RDRF\_MASK)
+184 \textcolor{preprocessor}{#endif}
+185 \textcolor{preprocessor}{}    \{
+186         discardValue = base->DATA;
+187     \}
+188 
+189 \textcolor{preprocessor}{#elif(BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI)}
+190 \textcolor{preprocessor}{}    UART0\_Type *base = (UART0\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+191 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_LPSCI\_HAS\_FIFO) && FSL\_FEATURE\_LPSCI\_HAS\_FIFO}
+192 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} (base->RCFIFO)
+193 \textcolor{preprocessor}{#else}
+194 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} (base->S1 & UART0\_S1\_RDRF\_MASK)
+195 \textcolor{preprocessor}{#endif}
+196 \textcolor{preprocessor}{}    \{
+197         discardValue = base->DATA;
+198     \}
+199 \textcolor{preprocessor}{#endif}
+200 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char@{P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char}}
+\index{P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char@{P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Demo\-Console\-Try\-Read\-Char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f}
+
+\begin{DoxyCode}
+108 \{
+109 \textcolor{preprocessor}{#if (BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART)}
+110 \textcolor{preprocessor}{}    UART\_Type *base = (UART\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+111 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_UART\_HAS\_FIFO) && FSL\_FEATURE\_UART\_HAS\_FIFO}
+112 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (base->RCFIFO)
+113 \textcolor{preprocessor}{#else}
+114 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (base->S1 & UART\_S1\_RDRF\_MASK)
+115 \textcolor{preprocessor}{#endif}
+116 \textcolor{preprocessor}{}    \{
+117         *value = (char)base->D;
+118         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+119     \}
+120     \textcolor{keywordflow}{else}
+121     \{
+122         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+123     \}
+124 
+125 \textcolor{preprocessor}{#elif(BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART)}
+126 \textcolor{preprocessor}{}    LPUART\_Type *base = (LPUART\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+127 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_LPUART\_HAS\_FIFO) && FSL\_FEATURE\_LPUART\_HAS\_FIFO}
+128 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} ((base->WATER & LPUART\_WATER\_RXCOUNT\_MASK) >> LPUART\_WATER\_RXCOUNT\_SHIFT)
+129 #\textcolor{keywordflow}{else}
+130     \textcolor{keywordflow}{if} (base->STAT & LPUART\_STAT\_RDRF\_MASK)
+131 \textcolor{preprocessor}{#endif}
+132 \textcolor{preprocessor}{}    \{
+133         *value = (char)base->DATA;
+134         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+135     \}
+136     \textcolor{keywordflow}{else}
+137     \{
+138         \textcolor{keywordflow}{if} (base->STAT & LPUART\_STAT\_OR\_MASK)
+139         \{
+140             base->STAT &= LPUART\_STAT\_OR\_MASK;
+141         \}
+142         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+143     \}
+144 
+145 \textcolor{preprocessor}{#elif(BOARD\_DEBUG\_UART\_TYPE == DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI)}
+146 \textcolor{preprocessor}{}    UART0\_Type *base = (UART0\_Type *)\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR};
+147 \textcolor{preprocessor}{#if defined(FSL\_FEATURE\_LPSCI\_HAS\_FIFO) && FSL\_FEATURE\_LPSCI\_HAS\_FIFO}
+148 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (base->RCFIFO)
+149 \textcolor{preprocessor}{#else}
+150 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (base->S1 & UART0\_S1\_RDRF\_MASK)
+151 \textcolor{preprocessor}{#endif}
+152 \textcolor{preprocessor}{}    \{
+153         *value = (char)base->DATA;
+154         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+155     \}
+156     \textcolor{keywordflow}{else}
+157     \{
+158         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+159     \}
+160 \textcolor{preprocessor}{#endif}
+161 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Find\-P\-D\-O@{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}}
+\index{P\-D\-\_\-\-Demo\-Find\-P\-D\-O@{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Demo\-Find\-P\-D\-O (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance, }
+\item[{{\bf pd\-\_\-rdo\-\_\-t} $\ast$}]{rdo, }
+\item[{uint32\-\_\-t $\ast$}]{voltage}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}
+
+\begin{DoxyCode}
+644 \{
+645     uint32\_t index;
+646     \hyperlink{struct__pd__source__pdo}{pd\_source\_pdo\_t} sourcePDO;
+647     \textcolor{keyword}{volatile} uint32\_t requestVoltage;
+648     \textcolor{keyword}{volatile} uint32\_t requestCurrent;
+649     uint8\_t findSourceCap = 0;
+650 
+651     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} == 0)
+652     \{
+653         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+654     \}
+655 
+656     \textcolor{comment}{/* default rdo as 5V - 0.5A or less */}
+657     *voltage = 5000;
+658     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 1;
+659     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack = 0;
+660     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.capabilityMismatch = 0;
+661     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.usbCommunicationsCapable = 0;
+662     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.noUsbSuspend = 1;
+663     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = 500 / \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+664     \textcolor{keywordflow}{if} (rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue > pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[0].
+      \hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent})
+665     \{
+666         rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[0].
+      \hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent};
+667     \}
+668     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+669 
+670     requestVoltage = \hyperlink{pd__app_8h_a82e13f4a1a5efe1195e2ef07def0113b}{PD\_DEMO\_EXPECTED\_VOLTAGE};
+671     requestCurrent = \hyperlink{pd__app_8h_a3c0b76dbecdec400c32f77c6af78a98f}{PD\_DEMO\_EXPECTED\_CURRENT};
+672 
+673     \textcolor{keywordflow}{for} (index = 0; index < pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber}; ++index)
+674     \{
+675         sourcePDO.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[index].
+      \hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue};
+676         \textcolor{keywordflow}{switch} (sourcePDO.\hyperlink{struct__pd__source__pdo_ad1af05b25c2dfc8f72eea50707536c10}{commonPDO}.\hyperlink{struct__pd__pdo__common_a5a1a819ee8e548be9b972852c75aa597}{pdoType})
+677         \{
+678             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed}:
+679             \{
+680                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} == requestVoltage) &&
+681                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT} >= requestCurrent))
+682                 \{
+683                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+684                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+685                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = requestCurrent / 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+686                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+687                     findSourceCap = 1;
+688                 \}
+689                 \textcolor{keywordflow}{break};
+690             \}
+691 
+692             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9ab2765d7b98d6e0922c4937be6d2ab618}{kPDO\_Variable}:
+693             \{
+694                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a713018c825f51d1a6a7186582b40a106}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} <= requestVoltage) &&
+695                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a493ced8078579d68ade7dfbce819b4d1}{maxVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} >= requestVoltage) &&
+696                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a8a24367204d3381f0670311a88c0b2e6}{maxCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT} >= requestCurrent))
+697                 \{
+698                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a713018c825f51d1a6a7186582b40a106}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+699                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+700                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = requestCurrent / 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+701                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+702                     findSourceCap = 1;
+703                 \}
+704                 \textcolor{keywordflow}{break};
+705             \}
+706 
+707             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a42f5a5c21d0523dca99c8e14b2ec23a0}{kPDO\_Battery}:
+708             \{
+709                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_a5c799cc37ea460e9bfeea8a05242cf54}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} <= requestVoltage) &&
+710                     (sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_af818fd645542287499a65f559ef6d571}{maxVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} >= requestVoltage) &&
+711                     (sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_ae4498258205f03a10afdb32e445a57ef}{maxAllowPower} * 
+      \hyperlink{group__usb__pd__stack_ga18642aa62f457d8501be4bddf6608e80}{PD\_PDO\_POWER\_UNIT} >=
+712                      (requestVoltage * requestCurrent / 1000)))
+713                 \{
+714                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_a5c799cc37ea460e9bfeea8a05242cf54}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+715                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+716                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = (requestVoltage * requestCurrent) / 1000 / 
+      \hyperlink{group__usb__pd__stack_ga18642aa62f457d8501be4bddf6608e80}{PD\_PDO\_POWER\_UNIT};
+717                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+718                     findSourceCap = 1;
+719                 \}
+720                 \textcolor{keywordflow}{break};
+721             \}
+722 
+723             \textcolor{keywordflow}{default}:
+724                 \textcolor{keywordflow}{break};
+725         \}
+726 
+727         \textcolor{keywordflow}{if} (findSourceCap)
+728         \{
+729             \textcolor{keywordflow}{break};
+730         \}
+731     \}
+732 
+733     \textcolor{keywordflow}{if} (findSourceCap)
+734     \{
+735         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+736     \}
+737     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+738 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}}
+\index{P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}
+
+\begin{DoxyCode}
+448 \{
+449     \textcolor{comment}{//sw1 & sw3 默认状态都是idle}
+450     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+451     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+452     \textcolor{comment}{/* button */}
+453     gpio\_pin\_config\_t sw\_config = \{
+454         kGPIO\_DigitalInput, 0,
+455     \};
+456     \textcolor{comment}{/* Init input switch GPIO. 初始化Demo需要用到的button */}
+457     GPIO\_PinInit(\hyperlink{board_8h_a2c77deecd8804a5c2ad03696e98afbc7}{BOARD\_SW3\_GPIO}, \hyperlink{board_8h_ac0ca71ebe7376087f8b894b96e80b318}{BOARD\_SW3\_GPIO\_PIN}, &sw\_config);
+458 
+459     GPIO\_PinInit(\hyperlink{board_8h_aa25baa3a8fa4609c02da92fa8f4b302f}{BOARD\_SW1\_GPIO}, \hyperlink{board_8h_aad97021fdd34ec8ce0ed8db741294a26}{BOARD\_SW1\_GPIO\_PIN}, &sw\_config);
+460 
+461     \textcolor{comment}{/* clear debug console input cache */}
+462     \hyperlink{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244}{PD\_DemoConsoleClearInputCache}();
+463 
+464     pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} = 0;
+465     pdAppInstance->\hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer} = 0;
+466     pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull} = 0;
+467 \}
+\end{DoxyCode}
+\hypertarget{pd__app__demo_8c_adf0d4d7f816d9d87fa663abcfc292ab7}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Print@{P\-D\-\_\-\-Demo\-Print}}
+\index{P\-D\-\_\-\-Demo\-Print@{P\-D\-\_\-\-Demo\-Print}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Print}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t P\-D\-\_\-\-Demo\-Print (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_adf0d4d7f816d9d87fa663abcfc292ab7}
+
+\begin{DoxyCode}
+741 \{
+742     va\_list arg;
+743     uint32\_t cnt;
+744 
+745     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull})
+746     \{
+747         \textcolor{keywordflow}{return} 0;
+748     \}
+749     va\_start(arg, format);
+750     cnt = (uint32\_t)vsprintf(pdAppInstance->\hyperlink{struct__pd__app_acae5bdb8d3a1a7624d440d766596a062}{printBuffers}[pdAppInstance->
+      \hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider}], format, arg);
+751     va\_end(arg);
+752 
+753     pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} = (pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} + 1) % 
+      \hyperlink{pd__app_8h_a521a768b4f33e6978fd649b8c538d170}{PD\_DEMO\_PRINT\_BUFFER\_COUNT};
+754     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} == pdAppInstance->
+      \hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer})
+755     \{
+756         pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull} = 1;
+757     \}
+758 
+759     \textcolor{keywordflow}{return} cnt;
+760 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{pd__app__demo_8c_adf0d4d7f816d9d87fa663abcfc292ab7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Process\-Print@{P\-D\-\_\-\-Demo\-Process\-Print}}
+\index{P\-D\-\_\-\-Demo\-Process\-Print@{P\-D\-\_\-\-Demo\-Process\-Print}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Process\-Print}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Process\-Print (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b}
+
+\begin{DoxyCode}
+763 \{
+764     \textcolor{keywordflow}{if} ((pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} != pdAppInstance->
+      \hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer}) || (pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull}))
+765     \{
+766         pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull} = 0;
+767         PRINTF(\textcolor{stringliteral}{"%s"}, pdAppInstance->\hyperlink{struct__pd__app_acae5bdb8d3a1a7624d440d766596a062}{printBuffers}[pdAppInstance->
+      \hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer}]);
+768         pdAppInstance->\hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer} = (pdAppInstance->
+      \hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer} + 1) % \hyperlink{pd__app_8h_a521a768b4f33e6978fd649b8c538d170}{PD\_DEMO\_PRINT\_BUFFER\_COUNT};
+769     \}
+770 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}}
+\index{P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Task\-Fun}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Task\-Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}
+
+\begin{DoxyCode}
+774 \{
+775     \textcolor{keywordtype}{char} uartData;
+776 
+777     \hyperlink{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b}{PD\_DemoProcessPrint}(pdAppInstance);
+778     \hyperlink{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e}{USB\_PDDemoProcessSW}(pdAppInstance);
+779     \textcolor{keywordflow}{if} (\hyperlink{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f}{PD\_DemoConsoleTryReadChar}(&uartData) == 
+      \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+780     \{
+781         \hyperlink{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54}{USB\_PDDemoProcessMenu}(pdAppInstance, uartData);
+782     \}
+783 \}
+\end{DoxyCode}
+\hypertarget{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu@{U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu}}
+\index{U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu@{U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}static void U\-S\-B\-\_\-\-P\-D\-Demo\-Print\-Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478}
+
+\begin{DoxyCode}
+58 \{
+59     uint8\_t powerRole;
+60     uint8\_t dataRole;
+61 
+62     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a04f2cae987c5f93bcd07bcffd679548e}{PD\_CONTROL\_GET\_POWER\_ROLE}, &powerRole);
+63     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a06f4d2e5460a98f33e36db26ee0576cf}{PD\_CONTROL\_GET\_DATA\_ROLE}, &dataRole);
+64 
+65     \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+66     \{
+67         \textcolor{comment}{/* source role */}
+68         PRINTF(\textcolor{stringliteral}{"The menu is as follow for source:\(\backslash\)r\(\backslash\)n"});
+69         PRINTF(\textcolor{stringliteral}{"0. print menu\(\backslash\)r\(\backslash\)n"});
+70         PRINTF(\textcolor{stringliteral}{"a. source power change\(\backslash\)r\(\backslash\)n"});
+71         PRINTF(\textcolor{stringliteral}{"b. goto min\(\backslash\)r\(\backslash\)n"});
+72 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_FAST\_ROLE\_SWAP\_ENABLE) && (PD\_CONFIG\_PD3\_FAST\_ROLE\_SWAP\_ENABLE)}
+73 \textcolor{preprocessor}{}        PRINTF(\textcolor{stringliteral}{"c. fast role swap\(\backslash\)r\(\backslash\)n"});
+74 \textcolor{preprocessor}{#endif}
+75 \textcolor{preprocessor}{}    \}
+76     \textcolor{keywordflow}{else}
+77     \{
+78         \textcolor{comment}{/* sink role */}
+79         PRINTF(\textcolor{stringliteral}{"The menu is as follow for sink:\(\backslash\)r\(\backslash\)n"});
+80         PRINTF(\textcolor{stringliteral}{"0. print menu\(\backslash\)r\(\backslash\)n"});
+81         PRINTF(\textcolor{stringliteral}{"a. get partner source capabilities\(\backslash\)r\(\backslash\)n"});
+82     \}
+83 
+84     PRINTF(\textcolor{stringliteral}{"e. soft reset\(\backslash\)r\(\backslash\)n"});
+85     PRINTF(\textcolor{stringliteral}{"f. data role swap\(\backslash\)r\(\backslash\)n"});
+86     PRINTF(\textcolor{stringliteral}{"g. vconn swap\(\backslash\)r\(\backslash\)n"});
+87     PRINTF(\textcolor{stringliteral}{"h. get partner sink capabilities\(\backslash\)r\(\backslash\)n"});
+88     PRINTF(\textcolor{stringliteral}{"i. standard structured VDM test (only DFP can send enter mode)\(\backslash\)r\(\backslash\)n"});
+89     \textcolor{keywordflow}{if} (dataRole == \hyperlink{group__usb__pd__stack_gga25760887aa95821023cc0ab5e151f828ad5849c6d513a7161652bf49bf5096e61}{kPD\_DataRoleDFP})
+90     \{
+91         PRINTF(\textcolor{stringliteral}{"j. exit mode (only DFP)\(\backslash\)r\(\backslash\)n"});
+92     \}
+93     PRINTF(\textcolor{stringliteral}{"k. send attention\(\backslash\)r\(\backslash\)n"});
+94     PRINTF(\textcolor{stringliteral}{"l. test vendor structured VDM\(\backslash\)r\(\backslash\)n"});
+95     PRINTF(\textcolor{stringliteral}{"m. test unstructured VDM\(\backslash\)r\(\backslash\)n"});
+96 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+97 \textcolor{preprocessor}{}    PRINTF(\textcolor{stringliteral}{"n. get source extended capabilities\(\backslash\)r\(\backslash\)n"});
+98     PRINTF(\textcolor{stringliteral}{"o. get status\(\backslash\)r\(\backslash\)n"});
+99     PRINTF(\textcolor{stringliteral}{"p. alert\(\backslash\)r\(\backslash\)n"});
+100     PRINTF(\textcolor{stringliteral}{"q. get battery capabilities\(\backslash\)r\(\backslash\)n"});
+101     PRINTF(\textcolor{stringliteral}{"r. get battery status\(\backslash\)r\(\backslash\)n"});
+102     PRINTF(\textcolor{stringliteral}{"s. get manufacturer info\(\backslash\)r\(\backslash\)n"});
+103 \textcolor{preprocessor}{#endif}
+104 \textcolor{preprocessor}{}    PRINTF(\textcolor{stringliteral}{"t. cable reset  (not supported yet)\(\backslash\)r\(\backslash\)n"});
+105 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu@{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu}}
+\index{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu@{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}static void U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance, }
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54}
+
+\begin{DoxyCode}
+203 \{
+204     uint8\_t powerRole;
+205     uint8\_t dataRole;
+206     uint32\_t commandValid;
+207     \textcolor{keywordtype}{void} *commandParam;
+208     \hyperlink{struct__pd__unstructured__vdm__param}{pd\_unstructured\_vdm\_command\_param\_t} unstructuredVDMCommandParam;
+209 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+210 \textcolor{preprocessor}{}    \hyperlink{struct__pd__command__data__param}{pd\_command\_data\_param\_t} extCommandParam;
+211 \textcolor{preprocessor}{#endif}
+212 \textcolor{preprocessor}{}
+213     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a04f2cae987c5f93bcd07bcffd679548e}{PD\_CONTROL\_GET\_POWER\_ROLE}, &powerRole);
+214     \textcolor{comment}{/* function codes */}
+215     \textcolor{keywordflow}{if} ((ch >= \textcolor{charliteral}{'0'}) && (ch <= \textcolor{charliteral}{'9'}))
+216     \{
+217         commandValid = 0;
+218         \textcolor{keywordflow}{switch} (ch)
+219         \{
+220             \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:
+221                 \hyperlink{pd__app__demo_8c_a34a9fa6c23ab02f6d4f13f1bea381478}{USB\_PDDemoPrintMenu}(pdAppInstance);
+222                 \textcolor{keywordflow}{break};
+223 
+224             \textcolor{keywordflow}{default}:
+225                 \textcolor{keywordflow}{break};
+226         \}
+227     \}
+228     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((ch >= \textcolor{charliteral}{'a'}) && (ch <= \textcolor{charliteral}{'z'}))
+229     \{
+230         \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a06f4d2e5460a98f33e36db26ee0576cf}{PD\_CONTROL\_GET\_DATA\_ROLE}, &dataRole);
+231         commandValid = 0;
+232 
+233         \textcolor{keywordflow}{switch} (ch)
+234         \{
+235             \textcolor{keywordflow}{case} \textcolor{charliteral}{'a'}:
+236                 \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+237                 \{
+238                     PRINTF(\textcolor{stringliteral}{"a. source power change\(\backslash\)r\(\backslash\)n"});
+239                     commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa30530dc299e85a527d236c16e68bff36}{PD\_DPM\_CONTROL\_POWER\_NEGOTIATION};
+240                     commandParam = NULL;
+241                 \}
+242                 \textcolor{keywordflow}{else}
+243                 \{
+244                     PRINTF(\textcolor{stringliteral}{"a. get partner source capabilities\(\backslash\)r\(\backslash\)n"});
+245                     commandValid = 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aae21522a20dc98bf1e6a27fd41104158a}{PD\_DPM\_CONTROL\_GET\_PARTNER\_SOURCE\_CAPABILITIES};
+246                     commandParam = NULL;
+247                 \}
+248                 \textcolor{keywordflow}{break};
+249 
+250             \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:
+251                 \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+252                 \{
+253                     PRINTF(\textcolor{stringliteral}{"b. goto min\(\backslash\)r\(\backslash\)n"});
+254                     \textcolor{keywordflow}{if} (!(pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack))
+255                     \{
+256                         PRINTF(\textcolor{stringliteral}{"warning: the GiveBack flag is not set\(\backslash\)r\(\backslash\)n"});
+257                     \}
+258                     commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa489f1c5b0996d8e8c13ba13bc89da9f8}{PD\_DPM\_CONTROL\_GOTO\_MIN};
+259                     commandParam = NULL;
+260                 \}
+261                 \textcolor{keywordflow}{break};
+262 
+263 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_FAST\_ROLE\_SWAP\_ENABLE) && (PD\_CONFIG\_PD3\_FAST\_ROLE\_SWAP\_ENABLE)}
+264 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \textcolor{charliteral}{'c'}:
+265                 \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+266                 \{
+267                     PRINTF(\textcolor{stringliteral}{"c. fast role swap\(\backslash\)r\(\backslash\)n"});
+268                     commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa1af15d89c350437f5f4e8a95ea841f5b}{PD\_DPM\_FAST\_ROLE\_SWAP};
+269                     commandParam = NULL;
+270                 \}
+271                 \textcolor{keywordflow}{break};
+272 \textcolor{preprocessor}{#endif}
+273 \textcolor{preprocessor}{}
+274             \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:
+275                 PRINTF(\textcolor{stringliteral}{"e. soft reset\(\backslash\)r\(\backslash\)n"});
+276                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa047c61de46f8d33e6944b8c6971ae5f6}{PD\_DPM\_CONTROL\_SOFT\_RESET};
+277                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+278                 \textcolor{keywordflow}{break};
+279 
+280             \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'}:
+281                 PRINTF(\textcolor{stringliteral}{"f. data role swap\(\backslash\)r\(\backslash\)n"});
+282                 PRINTF(\textcolor{stringliteral}{"warning: hard reset will occur if in alternate mode (menu 'i')\(\backslash\)r\(\backslash\)n"});
+283                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa7baf188a71537ab45cc32ff871765ef0}{PD\_DPM\_CONTROL\_DR\_SWAP};
+284                 commandParam = NULL;
+285                 \textcolor{keywordflow}{break};
+286 
+287             \textcolor{keywordflow}{case} \textcolor{charliteral}{'g'}:
+288                 PRINTF(\textcolor{stringliteral}{"g. vconn swap\(\backslash\)r\(\backslash\)n"});
+289                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa9be0b6c27f6eb87d6466b9697915f460}{PD\_DPM\_CONTROL\_VCONN\_SWAP};
+290                 commandParam = NULL;
+291                 \textcolor{keywordflow}{break};
+292 
+293             \textcolor{keywordflow}{case} \textcolor{charliteral}{'h'}:
+294                 PRINTF(\textcolor{stringliteral}{"h. get partner sink capabilities\(\backslash\)r\(\backslash\)n"});
+295                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa4ea4864194875bf84ea3b2cf923a6f14}{PD\_DPM\_CONTROL\_GET\_PARTNER\_SINK\_CAPABILITIES}
+      ;
+296                 commandParam = NULL;
+297                 \textcolor{keywordflow}{break};
+298 
+299             \textcolor{keywordflow}{case} \textcolor{charliteral}{'i'}:
+300                 PRINTF(\textcolor{stringliteral}{"i. standard structured VDM test (only DFP can send enter mode)\(\backslash\)r\(\backslash\)n"});
+301                 PRINTF(\textcolor{stringliteral}{"(1) discovery identity\(\backslash\)r\(\backslash\)n"});
+302                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa9db050ca92168863b9d0d02111a62d1f}{PD\_DPM\_CONTROL\_DISCOVERY\_IDENTITY};
+303                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{vdmSop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+304                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam};
+305                 \textcolor{keywordflow}{break};
+306 
+307             \textcolor{keywordflow}{case} \textcolor{charliteral}{'j'}:
+308                 \textcolor{keywordflow}{if} (dataRole == \hyperlink{group__usb__pd__stack_gga25760887aa95821023cc0ab5e151f828ad5849c6d513a7161652bf49bf5096e61}{kPD\_DataRoleDFP})
+309                 \{
+310                     PRINTF(\textcolor{stringliteral}{"j. exit mode (only DFP)\(\backslash\)r\(\backslash\)n"});
+311                     commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa979f0d2508a56e60739866d338599f73}{PD\_DPM\_CONTROL\_EXIT\_MODE};
+312                     pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{vdmSop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+313                     pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.objPos = 1;
+314                     pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.SVID = pdAppInstance->\hyperlink{struct__pd__app_a595e9d8b83e3ba15e9eaa30252ea865f}{partnerSVIDs}[0];
+315                     commandParam = &pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam};
+316                 \}
+317                 \textcolor{keywordflow}{break};
+318 
+319             \textcolor{keywordflow}{case} \textcolor{charliteral}{'k'}:
+320                 PRINTF(\textcolor{stringliteral}{"k. send attention\(\backslash\)r\(\backslash\)n"});
+321                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaa667bfb403fe6661d8f5719edd81a281}{PD\_DPM\_CONTROL\_SEND\_ATTENTION};
+322                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{vdmSop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+323                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a153be4aa8e8fa9e41ac83eb41e513060}{vdoCount} = 0;
+324                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a1da6696ea0b07e0173cc469094639e99}{vdoData} = NULL;
+325                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.objPos = 1;
+326                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.SVID = pdAppInstance->\hyperlink{struct__pd__app_a595e9d8b83e3ba15e9eaa30252ea865f}{partnerSVIDs}[0];
+327                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam};
+328                 \textcolor{keywordflow}{break};
+329 
+330             \textcolor{keywordflow}{case} \textcolor{charliteral}{'l'}:
+331                 PRINTF(\textcolor{stringliteral}{"l. test vendor structured VDM\(\backslash\)r\(\backslash\)n"});
+332                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa436be299ae6338153908ef5b59d5f84e}{PD\_DPM\_SEND\_VENDOR\_STRUCTURED\_VDM};
+333                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{vdmSop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+334                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a153be4aa8e8fa9e41ac83eb41e513060}{vdoCount} = 0;
+335                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a1da6696ea0b07e0173cc469094639e99}{vdoData} = NULL;
+336                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.SVID = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+337                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdmHeader}.\hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.command = 16;
+338                 pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam}.
+      \hyperlink{struct__pd__svdm__param_a2a41729be5b45c14a61c39498b0f43be}{vendorVDMNeedResponse} = 1;
+339                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_afd1d474adb3bfefdb1ca2a55d36a6428}{structuredVDMCommandParam};
+340                 \textcolor{keywordflow}{break};
+341 
+342             \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}:
+343             \{
+344                 PRINTF(\textcolor{stringliteral}{"m. test unstructured VDM\(\backslash\)r\(\backslash\)n"});
+345                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaa91f5407fe2e9e626a11c16f151dced1}{PD\_DPM\_SEND\_UNSTRUCTURED\_VDM};
+346                 pdAppInstance->\hyperlink{struct__pd__app_a32b118d435397c3f4bbe690c4e30d354}{unstructuredVDMCommandHeader}.
+      \hyperlink{struct__pd__unstructured__vdm__header_aebbb7159bc0e5a41e886be38105a0415}{bitFields}.SVID = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+347                 pdAppInstance->\hyperlink{struct__pd__app_a32b118d435397c3f4bbe690c4e30d354}{unstructuredVDMCommandHeader}.
+      \hyperlink{struct__pd__unstructured__vdm__header_aebbb7159bc0e5a41e886be38105a0415}{bitFields}.vdmType = 0;
+348                 unstructuredVDMCommandParam.\hyperlink{struct__pd__unstructured__vdm__param_a842d85782a56f40375590061c9e2003c}{vdmSop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+349                 unstructuredVDMCommandParam.\hyperlink{struct__pd__unstructured__vdm__param_a7efceddd48daf429c447c7c7108c9066}{vdmHeaderAndVDOsCount} = 1;
+350                 unstructuredVDMCommandParam.\hyperlink{struct__pd__unstructured__vdm__param_ace459022833c093044261a805aca67ac}{vdmHeaderAndVDOsData} =
+351                     (uint32\_t *)&pdAppInstance->\hyperlink{struct__pd__app_a32b118d435397c3f4bbe690c4e30d354}{unstructuredVDMCommandHeader};
+352                 commandParam = &unstructuredVDMCommandParam;
+353                 \textcolor{keywordflow}{break};
+354             \}
+355 
+356 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+357 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \textcolor{charliteral}{'n'}:
+358             \{
+359                 PRINTF(\textcolor{stringliteral}{"n. get source extended capabilities\(\backslash\)r\(\backslash\)n"});
+360                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa878ef19e6ac385bd02876ceb23629865}{PD\_DPM\_GET\_SRC\_EXT\_CAP};
+361                 commandParam = NULL;
+362                 \textcolor{keywordflow}{break};
+363             \}
+364 
+365             \textcolor{keywordflow}{case} \textcolor{charliteral}{'o'}:
+366             \{
+367                 PRINTF(\textcolor{stringliteral}{"o. get status\(\backslash\)r\(\backslash\)n"});
+368                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aad86c8e205d8307f0e9891f594f801fd3}{PD\_DPM\_GET\_STATUS};
+369                 commandParam = NULL;
+370                 \textcolor{keywordflow}{break};
+371             \}
+372 
+373             \textcolor{keywordflow}{case} \textcolor{charliteral}{'p'}:
+374             \{
+375                 PRINTF(\textcolor{stringliteral}{"p. alert\(\backslash\)r\(\backslash\)n"});
+376                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa8c3275bb19f98d5824b531743b7777a8}{PD\_DPM\_ALERT};
+377                 pdAppInstance->\hyperlink{struct__pd__app_a4461b57a4d3ff16523050f987b0dd53e}{selfAlert}.\hyperlink{struct__pd__alert__data__object_a2cd260346b89e8818ac9a0fe06a69297}{bitFields}.typeOfAlert = 0x02u; \textcolor{comment}{/* battery status
+       change */}
+378                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_a4461b57a4d3ff16523050f987b0dd53e}{selfAlert};
+379                 \textcolor{keywordflow}{break};
+380             \}
+381 
+382             \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}:
+383             \{
+384                 PRINTF(\textcolor{stringliteral}{"q. get battery capabilities\(\backslash\)r\(\backslash\)n"});
+385                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aac2fe93d0e29fa39cef8bd57f45ee5a05}{PD\_DPM\_GET\_BATTERY\_CAP};
+386                 pdAppInstance->\hyperlink{struct__pd__app_a19d055bbc32fed273953f9dc02346c94}{getBatteryCapDataBlock} = 0x01u; \textcolor{comment}{/* get battery 1 cap 
+      */}
+387                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_a19d055bbc32fed273953f9dc02346c94}{getBatteryCapDataBlock};
+388                 \textcolor{keywordflow}{break};
+389             \}
+390 
+391             \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+392             \{
+393                 PRINTF(\textcolor{stringliteral}{"r. get battery status\(\backslash\)r\(\backslash\)n"});
+394                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaf908c79595be0dd645a1edd222cfa471}{PD\_DPM\_GET\_BATTERY\_STATUS};
+395                 pdAppInstance->\hyperlink{struct__pd__app_a19d055bbc32fed273953f9dc02346c94}{getBatteryCapDataBlock} = 0x01u; \textcolor{comment}{/* get battery 1 cap 
+      */}
+396                 commandParam = &pdAppInstance->\hyperlink{struct__pd__app_a19d055bbc32fed273953f9dc02346c94}{getBatteryCapDataBlock};
+397                 \textcolor{keywordflow}{break};
+398             \}
+399 
+400             \textcolor{keywordflow}{case} \textcolor{charliteral}{'s'}:
+401             \{
+402                 PRINTF(\textcolor{stringliteral}{"s. get manufacturer info\(\backslash\)r\(\backslash\)n"});
+403                 pdAppInstance->\hyperlink{struct__pd__app_a50a27918c703e893aab653aef204e744}{commonData}[0] = 1;
+404                 pdAppInstance->\hyperlink{struct__pd__app_a50a27918c703e893aab653aef204e744}{commonData}[1] = 0; \textcolor{comment}{/* battery zero */}
+405                 extCommandParam.\hyperlink{struct__pd__command__data__param_a208a0a5b69c2c44eaa616e4e1d6b77ee}{dataBuffer} = &pdAppInstance->
+      \hyperlink{struct__pd__app_a50a27918c703e893aab653aef204e744}{commonData}[0];
+406                 extCommandParam.\hyperlink{struct__pd__command__data__param_a1ebd3619e990184cbc131f98137e3447}{dataLength} = 2;
+407                 extCommandParam.\hyperlink{struct__pd__command__data__param_abc162486c37792c444d2ea46da2c27ed}{sop} = pdAppInstance->\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop};
+408                 commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa59afaaae85a74936ea0cc5f66b9fb4ae}{PD\_DPM\_GET\_MANUFACTURER\_INFO};
+409                 commandParam = &extCommandParam;
+410                 \textcolor{keywordflow}{break};
+411             \}
+412 \textcolor{preprocessor}{#endif}
+413 \textcolor{preprocessor}{}
+414 \textcolor{preprocessor}{#if 0}
+415 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \textcolor{charliteral}{'t'}:
+416             PRINTF(\textcolor{stringliteral}{"t. cable reset\(\backslash\)r\(\backslash\)n"});
+417             commandValid = \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aae13452ea340b015ac0aee25132562737}{PD\_DPM\_CONTROL\_CABLE\_RESET};
+418             commandParam = NULL;
+419             \textcolor{keywordflow}{break};
+420 \textcolor{preprocessor}{#endif}
+421 \textcolor{preprocessor}{}
+422             \textcolor{keywordflow}{default}:
+423                 \textcolor{keywordflow}{break};
+424         \}
+425 
+426         \textcolor{keywordflow}{if} (commandValid)
+427         \{
+428             \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, commandValid, commandParam) != 
+      \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+429             \{
+430                 PRINTF(\textcolor{stringliteral}{"command fail\(\backslash\)r\(\backslash\)n"});
+431             \}
+432             \textcolor{keywordflow}{else}
+433             \{
+434                 \textcolor{keywordflow}{if} (commandValid == \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa1af15d89c350437f5f4e8a95ea841f5b}{PD\_DPM\_FAST\_ROLE\_SWAP})
+435                 \{
+436                     \hyperlink{pd__power__interface_8c_afe3b9450467437d5e8a0c25f98bba588}{PD\_PowerSrcTurnOffVbus}(pdAppInstance, 
+      \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771badc5ad96f1d56cc3354757de9aea78896}{kVbusPower\_Stable});
+437                 \}
+438             \}
+439         \}
+440     \}
+441     \textcolor{keywordflow}{else}
+442     \{
+443     \}
+444 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e}{\index{pd\-\_\-app\-\_\-demo.\-c@{pd\-\_\-app\-\_\-demo.\-c}!U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W@{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W}}
+\index{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W@{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W}!pd_app_demo.c@{pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-P\-D\-Demo\-Process\-S\-W (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e}
+
+\begin{DoxyCode}
+557 \{
+558     uint8\_t powerRole;
+559 
+560     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a04f2cae987c5f93bcd07bcffd679548e}{PD\_CONTROL\_GET\_POWER\_ROLE}, &powerRole);
+561 
+562     \textcolor{comment}{/* sw1State通过中断函数PD\_Demo1msIsrProcessSW处理}
+563 \textcolor{comment}{       sw1 短按，request 5V@2.7A}
+564 \textcolor{comment}{           长按，request 9V@1.5A}
+565 \textcolor{comment}{    */}
+566     \textcolor{comment}{/* 短按 */}
+567     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{kDEMO\_SWShortPress})
+568     \{
+569         \textcolor{comment}{// 表示已经处理过了}
+570         pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed};
+571         \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8bafca465150c227ef579c7a2bfc47b4072}{kPD\_PowerRoleSink})
+572         \{
+573             PRINTF(\textcolor{stringliteral}{"request 5V\(\backslash\)r\(\backslash\)n"});
+574 
+575             pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} = 5000;
+576             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 1;
+577             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack = 0;
+578             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.capabilityMismatch = 0;
+579             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.usbCommunicationsCapable = 0;
+580             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.noUsbSuspend = 1;
+581             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = 270; \textcolor{comment}{/* 2.7A */}
+582             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = 270;
+583 
+584             \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaba6e4b2d7dedd71db8266ca2c496af71}{PD\_DPM\_CONTROL\_REQUEST}, &pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}) !=
+585                 \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+586             \{
+587                 PRINTF(\textcolor{stringliteral}{"request call fail\(\backslash\)r\(\backslash\)n"});
+588             \}
+589         \}
+590     \}
+591     \textcolor{comment}{/* 长按 */}
+592     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{kDEMO\_SWLongPress})
+593     \{
+594         pdAppInstance->\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed};
+595         \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8bafca465150c227ef579c7a2bfc47b4072}{kPD\_PowerRoleSink})
+596         \{
+597             PRINTF(\textcolor{stringliteral}{"request 9V\(\backslash\)r\(\backslash\)n"});
+598 
+599             pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} = 9000;
+600             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 2;
+601             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack = 1;
+602             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.capabilityMismatch = 0;
+603             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.usbCommunicationsCapable = 0;
+604             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.noUsbSuspend = 1;
+605             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = 150;         \textcolor{comment}{/*
+       1.5A */}
+606             pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = 100; \textcolor{comment}{/*
+       1A */}
+607 
+608             \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaba6e4b2d7dedd71db8266ca2c496af71}{PD\_DPM\_CONTROL\_REQUEST}, &pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}) !=
+609                 \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+610             \{
+611                 PRINTF(\textcolor{stringliteral}{"request call fail\(\backslash\)r\(\backslash\)n"});
+612             \}
+613         \}
+614     \}
+615     \textcolor{keywordflow}{else}
+616     \{
+617     \}
+618 
+619     \textcolor{comment}{//sw3: 短按 power role swap, 长按hard reset}
+620     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a1a6c029e02adf9ed059e667410514961}{kDEMO\_SWShortPress})
+621     \{
+622         PRINTF(\textcolor{stringliteral}{"request power role swap\(\backslash\)r\(\backslash\)n"});
+623         pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed};
+624         \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa5bf96cb3d2c1316e33303794e70be8a4}{PD\_DPM\_CONTROL\_PR\_SWAP}, NULL) != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+625         \{
+626             PRINTF(\textcolor{stringliteral}{"request call fail\(\backslash\)r\(\backslash\)n"});
+627         \}
+628     \}
+629     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} == \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43abd5cb7acea6a0366aea4b170a26cc3e5}{kDEMO\_SWLongPress})
+630     \{
+631         PRINTF(\textcolor{stringliteral}{"hard reset\(\backslash\)r\(\backslash\)n"});
+632         pdAppInstance->\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43ab13ce0efdee475104ac5b93f742eca5c}{kDEMO\_SWProcessed};
+633         \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aabd4e605546d67fb4bbfad35ea77f5589}{PD\_DPM\_CONTROL\_HARD\_RESET}, NULL) != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+634         \{
+635             PRINTF(\textcolor{stringliteral}{"request call fail\(\backslash\)r\(\backslash\)n"});
+636         \}
+637     \}
+638     \textcolor{keywordflow}{else}
+639     \{
+640     \}
+641 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e_icgraph}
+\end{center}
+\end{figure}
+
+

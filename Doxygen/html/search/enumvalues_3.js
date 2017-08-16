@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['dchrg_5fdisabled',['DCHRG_DISABLED',['../usb__pd__ptn5110__connect_8c.html#a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67',1,'usb_pd_ptn5110_connect.c']]],
+  ['dchrg_5fenabled',['DCHRG_ENABLED',['../usb__pd__ptn5110__connect_8c.html#a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252',1,'usb_pd_ptn5110_connect.c']]],
+  ['dep_5fpe_5fdfp_5fcbl_5fvdm_5fidentity_5facked',['DEP_PE_DFP_CBL_VDM_IDENTITY_ACKED',['../usb__pd__spec_8h.html#a745958437dde25902f704348772cec53ac2e0b0e6d7d660998bd2e95796317272',1,'usb_pd_spec.h']]],
+  ['dep_5fpe_5fdfp_5fcbl_5fvdm_5fidentity_5fnaked',['DEP_PE_DFP_CBL_VDM_IDENTITY_NAKED',['../usb__pd__spec_8h.html#a745958437dde25902f704348772cec53a1e90d9ca9d42cccb33546aeb9c1c0364',1,'usb_pd_spec.h']]],
+  ['device_5fcapabilities_5f1_5fsource_5fresistor_5fsupported_5frp_5f1',['DEVICE_CAPABILITIES_1_SOURCE_RESISTOR_SUPPORTED_RP_1',['../usb__pd__ptn5110__register_8h.html#a0f4e75a35ad07c2b55339bb96bef64bda5c60844cfa1cdeed807bf0a1de18362d',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f1_5fsource_5fresistor_5fsupported_5frp_5f3',['DEVICE_CAPABILITIES_1_SOURCE_RESISTOR_SUPPORTED_RP_3',['../usb__pd__ptn5110__register_8h.html#a0f4e75a35ad07c2b55339bb96bef64bda12842086e65722ae13bef1fb646270cd',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f1_5fsource_5fresistor_5fsupported_5frp_5fdefault_5fonly',['DEVICE_CAPABILITIES_1_SOURCE_RESISTOR_SUPPORTED_RP_DEFAULT_ONLY',['../usb__pd__ptn5110__register_8h.html#a0f4e75a35ad07c2b55339bb96bef64bda55983778c8fa4cf2644cd76eac0eb6e9',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f0',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_0',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fafda2a92a36677ebec83b0e7d6e61ad05',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f1',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_1',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa883b33ee4d9912f485ac36a742f6dbe0',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f2',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_2',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa8a99dbe99774139b8c776a7e105e8d4e',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f3w',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_3W',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa5f6940e5e9e7f605f9bef4f937fcc69b',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f4w',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_4W',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa43da3ad34a9c5281109312379a5073fb',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f5w',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_5W',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fad9a6cde955c911c39fc7c17dc98edf9d',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5f6w',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_6W',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa7f5b6468583dcfb5b603b5f225ed4708',1,'usb_pd_ptn5110_register.h']]],
+  ['device_5fcapabilities_5f2_5fvconn_5fpower_5fsupported_5fexternal',['DEVICE_CAPABILITIES_2_VCONN_POWER_SUPPORTED_EXTERNAL',['../usb__pd__ptn5110__register_8h.html#a7670d3856173ff705330120db079054fa0b2c566b73525d125532e0bd85318e3b',1,'usb_pd_ptn5110_register.h']]],
+  ['disable_5fclock_5fstretching',['DISABLE_CLOCK_STRETCHING',['../usb__pd__ptn5110__register_8h.html#a1c206f5710220137ce43440a4c3a6590a7d430c13eca2b19c5c359ccd77f684f7',1,'usb_pd_ptn5110_register.h']]],
+  ['disable_5fdetection_5fof_5ffast_5frole_5fswap',['DISABLE_DETECTION_OF_FAST_ROLE_SWAP',['../usb__pd__ptn5110__register_8h.html#a476f6eec22485844a79e194fa436f6f9a3a934a2193b79f9086964ae55d51388e',1,'usb_pd_ptn5110_register.h']]],
+  ['drp_5fonly',['DRP_ONLY',['../usb__pd__ptn5110__register_8h.html#aa68978d348e038b3ce45edb5d618d6b2a7bf06fa550281d4878eeb8c392e9f9e7',1,'usb_pd_ptn5110_register.h']]]
+];

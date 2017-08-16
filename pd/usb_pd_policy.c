@@ -354,6 +354,7 @@ static void PD_PsmReset(pd_instance_t *pdInstance)
 #endif
 
     uint8Tmp = 0;
+	// disable FR_SWAP
     PD_PhyControl(pdInstance, PD_PHY_CONTROL_FR_SWAP, &uint8Tmp);
     PD_TimerCancelAllTimers(pdInstance, tSenderResponseTimer, _tMaxPSMTimer);
 }
@@ -657,16 +658,17 @@ static uint8_t PD_PsmPrimaryStateProcessPdMsg(pd_instance_t *pdInstance,
     return didNothing;
 }
 
-// event handler
+// event handler, process phy state change/other
 void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
 {
 	// 如果phy state change, 则通过call back调用alert handler
-	// alert interrupt handler will set PD_TASK_EVENT_PHY_STATE_CHAGNE and PD_TASK_EVENT_TYPEC_STATE_PROCESS
+	// alert interrupt handler will set PD_TASK_EVENT_PHY_STATE_CHAGNE and PD_TASK_EVENT_TYPEC_STATE_PROCESS, 中断只是设置flag，而不做处理
     if (eventSet & PD_TASK_EVENT_PHY_STATE_CHAGNE)
     {
         PD_PhyControl(pdInstance, PD_PHY_UPDATE_STATE, NULL);
     }
 
+	// Question: other event 的作用
     if (eventSet & PD_TASK_EVENT_OTHER)
     {
         USB_OsaEventClear(pdInstance->taskEventHandle, PD_TASK_EVENT_OTHER);
@@ -685,6 +687,7 @@ void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
     /* clear the events that aren't processed in this condition */
     if (eventSet)
     {
+		// 如果dpm state machine不存在
         if (!((pdInstance->dpmStateMachine == 1) && (pdInstance->isConnected)))
         {
             USB_OsaEventClear(pdInstance->taskEventHandle, eventSet);
@@ -6763,6 +6766,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
                         break;
                 }
 
+				// call PD_DpmDemoAppCallback in pd_app.c
                 PD_DpmAppCallback(pdInstance, PD_CONNECTED, NULL, 0);
                 PD_DpmConnect(pdInstance);
             }

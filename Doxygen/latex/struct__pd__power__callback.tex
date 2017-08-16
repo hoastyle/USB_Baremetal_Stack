@@ -1,0 +1,233 @@
+\hypertarget{struct__pd__power__callback}{\section{\-\_\-pd\-\_\-power\-\_\-callback Struct Reference}
+\label{struct__pd__power__callback}\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+}
+
+
+power control interface.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a81922cf6a4f22bcee69123e95fac7758}{P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus} )(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)
+\begin{DoxyCompactList}\small\item\em source provide default typec vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_ab7d47b7b6babdf2f74c6d1344c685168}{P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus} )(void $\ast$callback\-Param, \hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} rdo)
+\begin{DoxyCompactList}\small\item\em source provide rdo request vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a1afed4126bcbe1ba278eb27f31e99c9c}{P\-D\-\_\-\-Src\-Turn\-Off\-Vbus} )(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)
+\begin{DoxyCompactList}\small\item\em source turn off vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a50891e9bf6ceb5d45b27ec49e46b11fc}{P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power} )(void $\ast$callback\-Param)
+\begin{DoxyCompactList}\small\item\em source reduce power for goto min. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a2a64b10db4e1644e17ee04e0a19cc412}{P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus} )(void $\ast$callback\-Param, uint8\-\_\-t typec\-Current\-Level, uint8\-\_\-t power\-Progress)
+\begin{DoxyCompactList}\small\item\em sink can draw the default type-\/c vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_ac1b908d8a0b3cad5c449cde3e7b169b4}{P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus} )(void $\ast$callback\-Param, \hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} rdo)
+\begin{DoxyCompactList}\small\item\em sink can draw the request rdo vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a18806d06567f385463bba77f8202da49}{P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus} )(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)
+\begin{DoxyCompactList}\small\item\em sink stop draw vbus power. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a6db9643def50ef309e1d66abd6943e1d}{P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power} )(void $\ast$callback\-Param)
+\begin{DoxyCompactList}\small\item\em sink reduce power for goto min. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t}($\ast$ \hyperlink{struct__pd__power__callback_a406d88fa8818ca8257f005c5097859e9}{P\-D\-\_\-\-Control\-Vconn} )(void $\ast$callback\-Param, uint8\-\_\-t on)
+\begin{DoxyCompactList}\small\item\em control vconn \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+power control interface. 
+
+Application need implement this interface and pass to P\-D\-\_\-\-Instance\-Init 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__power__callback_a406d88fa8818ca8257f005c5097859e9}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Control\-Vconn@{P\-D\-\_\-\-Control\-Vconn}}
+\index{P\-D\-\_\-\-Control\-Vconn@{P\-D\-\_\-\-Control\-Vconn}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Control\-Vconn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Control\-Vconn)(void $\ast$callback\-Param, uint8\-\_\-t on)}}\label{struct__pd__power__callback_a406d88fa8818ca8257f005c5097859e9}
+
+
+control vconn 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em on} & 0 -\/ turn off vconn; 1 -\/ turn on vconn.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_ac1b908d8a0b3cad5c449cde3e7b169b4}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus@{P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus}}
+\index{P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus@{P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Snk\-Draw\-Request\-Vbus)(void $\ast$callback\-Param, {\bf pd\-\_\-rdo\-\_\-t} rdo)}}\label{struct__pd__power__callback_ac1b908d8a0b3cad5c449cde3e7b169b4}
+
+
+sink can draw the request rdo vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em rdo} & request rdo from partner\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a2a64b10db4e1644e17ee04e0a19cc412}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus@{P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus}}
+\index{P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus@{P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Snk\-Draw\-Type\-C\-Vbus)(void $\ast$callback\-Param, uint8\-\_\-t typec\-Current\-Level, uint8\-\_\-t power\-Progress)}}\label{struct__pd__power__callback_a2a64b10db4e1644e17ee04e0a19cc412}
+
+
+sink can draw the default type-\/c vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em typec\-Current\-Level} & the value is \hyperlink{group__usb__pd__stack_ga875b585c994b83a1c1fd1e81bac28f7a}{typec\-\_\-current\-\_\-val\-\_\-t} \\
+\hline
+{\em power\-Progress} & hard\-\_\-reset, pr\-\_\-swap or fr\-\_\-swap. Normally it is useless, just in case application need this info to provide power.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a6db9643def50ef309e1d66abd6943e1d}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power@{P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power}}
+\index{P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power@{P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Snk\-Goto\-Min\-Reduce\-Power)(void $\ast$callback\-Param)}}\label{struct__pd__power__callback_a6db9643def50ef309e1d66abd6943e1d}
+
+
+sink reduce power for goto min. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a18806d06567f385463bba77f8202da49}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus@{P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus}}
+\index{P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus@{P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Snk\-Stop\-Draw\-Vbus)(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)}}\label{struct__pd__power__callback_a18806d06567f385463bba77f8202da49}
+
+
+sink stop draw vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em power\-Progress} & hard\-\_\-reset, pr\-\_\-swap or fr\-\_\-swap. Normally it is useless, just in case application need this info to provide power.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a50891e9bf6ceb5d45b27ec49e46b11fc}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power@{P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power}}
+\index{P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power@{P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Src\-Goto\-Min\-Reduce\-Power)(void $\ast$callback\-Param)}}\label{struct__pd__power__callback_a50891e9bf6ceb5d45b27ec49e46b11fc}
+
+
+source reduce power for goto min. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a1afed4126bcbe1ba278eb27f31e99c9c}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Src\-Turn\-Off\-Vbus@{P\-D\-\_\-\-Src\-Turn\-Off\-Vbus}}
+\index{P\-D\-\_\-\-Src\-Turn\-Off\-Vbus@{P\-D\-\_\-\-Src\-Turn\-Off\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Src\-Turn\-Off\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Src\-Turn\-Off\-Vbus)(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)}}\label{struct__pd__power__callback_a1afed4126bcbe1ba278eb27f31e99c9c}
+
+
+source turn off vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em power\-Progress} & hard\-\_\-reset, pr\-\_\-swap or fr\-\_\-swap. Normally it is useless, just in case application need this info to provide power.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_ab7d47b7b6babdf2f74c6d1344c685168}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus@{P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus}}
+\index{P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus@{P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Src\-Turn\-On\-Request\-Vbus)(void $\ast$callback\-Param, {\bf pd\-\_\-rdo\-\_\-t} rdo)}}\label{struct__pd__power__callback_ab7d47b7b6babdf2f74c6d1344c685168}
+
+
+source provide rdo request vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em rdo} & request rdo from partner\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{struct__pd__power__callback_a81922cf6a4f22bcee69123e95fac7758}{\index{\-\_\-pd\-\_\-power\-\_\-callback@{\-\_\-pd\-\_\-power\-\_\-callback}!P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus@{P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus}}
+\index{P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus@{P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus}!_pd_power_callback@{\-\_\-pd\-\_\-power\-\_\-callback}}
+\subsubsection[{P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t}($\ast$ \-\_\-pd\-\_\-power\-\_\-callback\-::\-P\-D\-\_\-\-Src\-Turn\-On\-Type\-C\-Vbus)(void $\ast$callback\-Param, uint8\-\_\-t power\-Progress)}}\label{struct__pd__power__callback_a81922cf6a4f22bcee69123e95fac7758}
+
+
+source provide default typec vbus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback\-Param} & \\
+\hline
+{\em power\-Progress} & hard\-\_\-reset, pr\-\_\-swap or fr\-\_\-swap. Normally it is useless, just in case application need this info to provide power.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Success} & success \\
+\hline
+{\em k\-Status\-\_\-\-P\-D\-\_\-\-Error} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="PD_PowerSnkDrawRequestVbus" name="PD_PowerSnkDrawRequestVbus">
+<area shape="rect" id="node2" href="$pd__power__interface_8c.html#a60a654ab41bd0c2eb39370eb865f4f99" title="PD_PowerGetVbusVoltage" alt="" coords="310,5,490,32"/>
+<area shape="rect" id="node3" href="$pd__power__app_8c.html#a62850a40a6b346bded92241c798d202a" title="PD_PowerBoardGetPartnerSourceCaps" alt="" coords="273,56,527,83"/>
+<area shape="rect" id="node4" href="$pd__power__app_8c.html#a3f5abe7fe812ca7f2a9a6721468e6159" title="PD_PowerBoardSinkEnableVbus\lPower" alt="" coords="293,107,507,149"/>
+</map>

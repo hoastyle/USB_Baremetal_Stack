@@ -1,0 +1,4 @@
+<map id="PD_PhyControl" name="PD_PhyControl">
+<area shape="rect" id="node2" href="$group__usb__os__abstraction.html#gab25fb5d93d3b665ca8eadf2a670d3361" title="Checks an event flag. " alt="" coords="169,5,322,32"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#ga90357f04d40469dc07104033b3c8581c" title="Clears an event flag. " alt="" coords="172,56,319,83"/>
+</map>

@@ -1,0 +1,216 @@
+\hypertarget{source__charger_2pd__power__app_8c}{\section{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-power\-\_\-app.c File Reference}
+\label{source__charger_2pd__power__app_8c}\index{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-power\-\_\-app.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{source__charger_2pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps} (void $\ast$callback\-Param)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{P\-D\-\_\-\-Power\-Board\-Reset} (void)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__power__app_8c_a877430377afe70b94985c6651ccb867f}{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power} (\hyperlink{pd__power__interface_8h_a996b4f357eab1a3ea5f512fc3013759b}{pd\-\_\-vbus\-\_\-power\-\_\-t} vbus\-Power)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power} (\hyperlink{pd__power__interface_8h_a996b4f357eab1a3ea5f512fc3013759b}{pd\-\_\-vbus\-\_\-power\-\_\-t} vbus\-Power)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}{P\-D\-\_\-\-Power\-Board\-Control\-Vconn} (uint8\-\_\-t on)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{source__charger_2pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}{\index{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Control\-Vconn@{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}}
+\index{P\-D\-\_\-\-Power\-Board\-Control\-Vconn@{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}!source_charger/pd_power_app.c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Control\-Vconn (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{on}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}
+
+\begin{DoxyCode}
+126 \{
+127     uint8\_t controlVal;
+128     controlVal = (on ? 1 : 0);
+129     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a62e8479d23bf1208d5735aa76ff2aef6}{PD\_CONTROL\_VCONN}, &controlVal);
+130     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+131 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}{\index{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}}
+\index{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}!source_charger/pd_power_app.c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}
+
+\begin{DoxyCode}
+54 \{
+55     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+56 
+57     \textcolor{keywordflow}{return} (uint32\_t *)&(pdAppInstance->\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1});
+58 \}
+\end{DoxyCode}
+\hypertarget{source__charger_2pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{\index{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Reset@{P\-D\-\_\-\-Power\-Board\-Reset}}
+\index{P\-D\-\_\-\-Power\-Board\-Reset@{P\-D\-\_\-\-Power\-Board\-Reset}!source_charger/pd_power_app.c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}
+
+\begin{DoxyCode}
+61 \{
+62     \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+63 
+64     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} = 0u;
+65     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+66     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 0;
+67     GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 0);
+68     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+69     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1ab4baaafc5cca20f365d103a948261b1f}{PD\_CONTROL\_DISCHARGE\_VBUS}, NULL);
+70     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+71 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}{\index{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}}
+\index{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}!source_charger/pd_power_app.c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-vbus\-\_\-power\-\_\-t}}]{vbus\-Power}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}
+
+\begin{DoxyCode}
+115 \{
+116     \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+117 
+118     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+119     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 1;
+120     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+121     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+122 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__power__app_8c_a877430377afe70b94985c6651ccb867f}{\index{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}}
+\index{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}!source_charger/pd_power_app.c@{source\-\_\-charger/pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-vbus\-\_\-power\-\_\-t}}]{vbus\-Power}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__power__app_8c_a877430377afe70b94985c6651ccb867f}
+
+\begin{DoxyCode}
+77 \{
+78     uint32\_t delay = 1000000;
+79 
+80     \textcolor{keywordflow}{if} (\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} != vbusPower.
+      \hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage})
+81     \{
+82         \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+83 
+84         \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} = vbusPower.
+      \hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage};
+85         phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 0;
+86         \textcolor{keywordflow}{if} (vbusPower.\hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage} >= \hyperlink{pd__power__interface_8h_a4806185481400089d3663d120e4c412d}{VSAFE5V\_IN\_50MV})
+87         \{
+88             phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 1;
+89         \}
+90         \textcolor{keywordflow}{else}
+91         \{
+92             phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+93         \}
+94         \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+95 
+96         \textcolor{keywordflow}{if} (vbusPower.\hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage} > \hyperlink{pd__power__interface_8h_a4806185481400089d3663d120e4c412d}{VSAFE5V\_IN\_50MV})
+97         \{
+98             GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 1);
+99         \}
+100         \textcolor{keywordflow}{else}
+101         \{
+102             GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 0);
+103         \}
+104 
+105         \textcolor{comment}{/* when return, the power is ready. */}
+106         \textcolor{keywordflow}{while} (--delay)
+107             ;
+108     \}
+109     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+110 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__power__app_8c_a877430377afe70b94985c6651ccb867f_cgraph}
+\end{center}
+\end{figure}
+
+

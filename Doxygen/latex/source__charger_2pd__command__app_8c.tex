@@ -1,0 +1,329 @@
+\hypertarget{source__charger_2pd__command__app_8c}{\section{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-app.c File Reference}
+\label{source__charger_2pd__command__app_8c}\index{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{demo/pd\-\_\-source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-phy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-command\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-command\-\_\-app.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__app_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_a9a594323bf987df556436495d9d6dd2a}{P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback} (void $\ast$callback\-Param)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_a34306bb735461e522c573f87e8a4049b}{P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback} (void $\ast$callback\-Param)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_a0012931c6c686dd4bdab89e0b3c6414d}{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback} (void $\ast$callback\-Param, \hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} rdo, uint8\-\_\-t $\ast$negotiate\-Result)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_a098ead626f2b20fb29afb3e8b9d5350b}{P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback} (void $\ast$callback\-Param, uint8\-\_\-t $\ast$is\-Still\-Valid)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback} (void $\ast$callback\-Param, uint8\-\_\-t success, uint8\-\_\-t fail\-Result\-Type)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f}{P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback} (void $\ast$callback\-Param, uint8\-\_\-t success, uint8\-\_\-t fail\-Result\-Type)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_adfab2b7d8a3ba6b4a8e138ac138d2398}{P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback} (void $\ast$callback\-Param, \hyperlink{group__usb__pd__stack_ga1f893b05affdc0ac42173f4dfdfaa258}{pd\-\_\-capabilities\-\_\-t} $\ast$caps)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{source__charger_2pd__command__app_8c_ac82c79e04c70ce07454c8549666b7d5f}{P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback} (void $\ast$callback\-Param, uint8\-\_\-t fail\-Result\-Type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{source__charger_2pd__command__app_8c_ac82c79e04c70ce07454c8549666b7d5f}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback@{P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback@{P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Get\-Partner\-Snk\-Caps\-Fail\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{uint8\-\_\-t}]{fail\-Result\-Type}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_ac82c79e04c70ce07454c8549666b7d5f}
+
+\begin{DoxyCode}
+173 \{
+174     \textcolor{keywordflow}{switch} (failResultType)
+175     \{
+176         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error}:
+177             PRINTF(\textcolor{stringliteral}{"get snk cap fail"});
+178             \textcolor{keywordflow}{break};
+179 
+180         \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045caa7d52b6983bc63b06da53587776a1664}{kCommandResult\_NotSupported}:
+181             PRINTF(\textcolor{stringliteral}{"get snk cap replying not supported"});
+182             \textcolor{keywordflow}{break};
+183     \}
+184 
+185     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+186 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__app_8c_ac82c79e04c70ce07454c8549666b7d5f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__command__app_8c_a34306bb735461e522c573f87e8a4049b}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback@{P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback@{P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Hard\-Reset\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_a34306bb735461e522c573f87e8a4049b}
+
+\begin{DoxyCode}
+65 \{
+66     \textcolor{comment}{/* reset state, The Sink shall not draw more than iSafe0mA when VBUS is driven to vSafe0V. */}
+67     PRINTF(\textcolor{stringliteral}{"hard reset request\(\backslash\)r\(\backslash\)n"});
+68     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+69 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{source__charger_2pd__command__app_8c_a34306bb735461e522c573f87e8a4049b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__command__app_8c_adfab2b7d8a3ba6b4a8e138ac138d2398}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback@{P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback@{P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Receive\-Partner\-Snk\-Caps\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{{\bf pd\-\_\-capabilities\-\_\-t} $\ast$}]{caps}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_adfab2b7d8a3ba6b4a8e138ac138d2398}
+
+\begin{DoxyCode}
+129 \{
+130     uint32\_t index;
+131     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+132     \hyperlink{struct__pd__sink__pdo}{pd\_sink\_pdo\_t} sinkPDO;
+133     pdAppInstance->\hyperlink{struct__pd__app_a927a55034c0beae071c028b60cd36290}{partnerSinkCapNumber} = caps->
+      \hyperlink{struct__pd__capabilities_a240b859a2ffe7e634479a22c3f3e4feb}{capabilitiesCount};
+134     \textcolor{keywordflow}{for} (index = 0; index < pdAppInstance->\hyperlink{struct__pd__app_a927a55034c0beae071c028b60cd36290}{partnerSinkCapNumber}; ++index)
+135     \{
+136         sinkPDO.\hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue} = pdAppInstance->\hyperlink{struct__pd__app_acc42dfe2943d15788312733c25a20073}{partnerSinkCaps}[index].
+      \hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = caps->\hyperlink{struct__pd__capabilities_a559fdae7ddb5376491caf869366e7e71}{capabilities}[index];
+137         \textcolor{keywordflow}{switch} (sinkPDO.\hyperlink{struct__pd__sink__pdo_a8f6789929499a63a1326708206e016c5}{commonPDO}.\hyperlink{struct__pd__pdo__common_a5a1a819ee8e548be9b972852c75aa597}{pdoType})
+138         \{
+139             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed}:
+140             \{
+141                 PRINTF(\textcolor{stringliteral}{"%d: fixed PDO; "}, index + 1);
+142                 PRINTF(\textcolor{stringliteral}{"vol:%dmV, current:%dmA\(\backslash\)r\(\backslash\)n"}, sinkPDO.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a5e095a725455f85faa43a1573e62b798}{voltage} * \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT},
+143                        sinkPDO.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.\hyperlink{struct__pd__sink__fixed__pdo_a264499e662c6bb82e0e25fc3d296b88b}{operateCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT});
+144                 \textcolor{keywordflow}{break};
+145             \}
+146 
+147             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9ab2765d7b98d6e0922c4937be6d2ab618}{kPDO\_Variable}:
+148             \{
+149                 PRINTF(\textcolor{stringliteral}{"%d: variable PDO; "}, index + 1);
+150                 PRINTF(\textcolor{stringliteral}{"vol:%dmV ~ %dmV, current:%dmA\(\backslash\)r\(\backslash\)n"}, sinkPDO.\hyperlink{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}{variablePDO}.
+      \hyperlink{struct__pd__sink__variable__pdo_adc5d6a90b282fc222e180b79aef74e65}{maxVoltage} * \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT},
+151                        sinkPDO.\hyperlink{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}{variablePDO}.\hyperlink{struct__pd__sink__variable__pdo_a0ee666a778180c34bc4e0119ee3f51a3}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT},
+152                        sinkPDO.\hyperlink{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}{variablePDO}.\hyperlink{struct__pd__sink__variable__pdo_a145ba35b4f033f771ae9b72c018181d5}{operateCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT});
+153                 \textcolor{keywordflow}{break};
+154             \}
+155 
+156             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a42f5a5c21d0523dca99c8e14b2ec23a0}{kPDO\_Battery}:
+157             \{
+158                 PRINTF(\textcolor{stringliteral}{"%d: battery PDO; "}, index + 1);
+159                 PRINTF(\textcolor{stringliteral}{"vol:%dmV ~ %dmV, power:%dmW\(\backslash\)r\(\backslash\)n"}, sinkPDO.\hyperlink{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}{batteryPDO}.
+      \hyperlink{struct__pd__sink__battery__pdo_a5fe153e249c105e6b8414233ae216710}{maxVoltage} * \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT},
+160                        sinkPDO.\hyperlink{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}{batteryPDO}.\hyperlink{struct__pd__sink__battery__pdo_a473824d26b81e000486844b83e32b09d}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT},
+161                        sinkPDO.\hyperlink{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}{batteryPDO}.\hyperlink{struct__pd__sink__battery__pdo_aede06aa3716908a68c90828fbfe5cebe}{operatePower} * 
+      \hyperlink{group__usb__pd__stack_ga18642aa62f457d8501be4bddf6608e80}{PD\_PDO\_POWER\_UNIT});
+162             \}
+163 
+164             \textcolor{keywordflow}{default}:
+165                 \textcolor{keywordflow}{break};
+166         \}
+167     \}
+168 
+169     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+170 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__app_8c_adfab2b7d8a3ba6b4a8e138ac138d2398_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__command__app_8c_a9a594323bf987df556436495d9d6dd2a}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback@{P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback@{P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Soft\-Reset\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_a9a594323bf987df556436495d9d6dd2a}
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{comment}{/* reset soft status */}
+60     PRINTF(\textcolor{stringliteral}{"app soft reset\(\backslash\)r\(\backslash\)n"});
+61     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+62 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{source__charger_2pd__command__app_8c_a9a594323bf987df556436495d9d6dd2a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback@{P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback@{P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Src\-Goto\-Min\-Result\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{uint8\-\_\-t}]{success, }
+\item[{uint8\-\_\-t}]{fail\-Result\-Type}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f}
+
+\begin{DoxyCode}
+124 \{
+125     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+126 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__app_8c_afcdd95ee527ae1405c5d816317badd5f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2pd__command__app_8c_a098ead626f2b20fb29afb3e8b9d5350b}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback@{P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback@{P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Src\-Pre\-Contract\-Still\-Valid\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{uint8\-\_\-t $\ast$}]{is\-Still\-Valid}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_a098ead626f2b20fb29afb3e8b9d5350b}
+
+\begin{DoxyCode}
+83 \{
+84     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+85 
+86     \textcolor{comment}{/* if pre contract exist, return true */}
+87     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition != 0)
+88     \{
+89         *isStillValid = 1;
+90     \}
+91     \textcolor{keywordflow}{else}
+92     \{
+93         *isStillValid = 0;
+94     \}
+95     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+96 \}
+\end{DoxyCode}
+\hypertarget{source__charger_2pd__command__app_8c_a0012931c6c686dd4bdab89e0b3c6414d}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback@{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback@{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Request\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{{\bf pd\-\_\-rdo\-\_\-t}}]{rdo, }
+\item[{uint8\-\_\-t $\ast$}]{negotiate\-Result}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_a0012931c6c686dd4bdab89e0b3c6414d}
+
+\begin{DoxyCode}
+72 \{
+73     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+74 
+75     \textcolor{comment}{/* prepare for power supply, The power supply shall be ready to operate at the new power level within}
+76 \textcolor{comment}{     * tSrcReady */}
+77     pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO} = rdo;
+78     *negotiateResult = \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca5cbc28129fbc8ef711e9af7a9400d858}{kCommandResult\_Accept};
+79     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+80 \}
+\end{DoxyCode}
+\hypertarget{source__charger_2pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}{\index{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}!P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback@{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback}}
+\index{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback@{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback}!source_charger/pd_command_app.c@{source\-\_\-charger/pd\-\_\-command\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Dpm\-Src\-R\-D\-O\-Result\-Callback (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param, }
+\item[{uint8\-\_\-t}]{success, }
+\item[{uint8\-\_\-t}]{fail\-Result\-Type}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e}
+
+\begin{DoxyCode}
+99 \{
+100     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+101 
+102     \textcolor{keywordflow}{if} (success)
+103     \{
+104         pdAppInstance->\hyperlink{struct__pd__app_aa51e69529584a27879d6822e64f6c1c1}{contractValid} = 1;
+105         PRINTF(\textcolor{stringliteral}{"start charge voltage:%dV\(\backslash\)r\(\backslash\)n"}, pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition == 1 ? 5 : 9);
+106     \}
+107     \textcolor{keywordflow}{else}
+108     \{
+109         \textcolor{keywordflow}{switch} (failResultType)
+110         \{
+111             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error}:
+112                 PRINTF(\textcolor{stringliteral}{"source has error in power negotiation\(\backslash\)r\(\backslash\)n"});
+113                 \textcolor{keywordflow}{break};
+114 
+115             \textcolor{keywordflow}{default}:
+116                 \textcolor{keywordflow}{break};
+117         \}
+118     \}
+119 
+120     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+121 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2pd__command__app_8c_a67ae7c023946ebdcdb306e1e96b3f45e_cgraph}
+\end{center}
+\end{figure}
+
+

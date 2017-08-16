@@ -1,0 +1,6 @@
+<map id="pd/ptn5110/usb_pd_ptn5110_register.h" name="pd/ptn5110/usb_pd_ptn5110_register.h">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_connect.c" alt="" coords="5,97,189,138"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_hal.c" alt="" coords="214,97,399,138"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_interface.c" alt="" coords="423,97,608,138"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__msg_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_msg.c" alt="" coords="633,97,817,138"/>
+</map>

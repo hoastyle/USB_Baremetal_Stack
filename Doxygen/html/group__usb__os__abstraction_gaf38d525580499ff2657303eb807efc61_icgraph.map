@@ -1,0 +1,4 @@
+<map id="USB_OsaEventCreate" name="USB_OsaEventCreate">
+<area shape="rect" id="node2" href="$group__usb__pd__stack.html#ga3ab001290dc934fd6a45ad93916f5140" title="Initialize PD stack instance. " alt="" coords="209,5,325,32"/>
+<area shape="rect" id="node3" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="374,5,463,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PDPTN5110_MsgHalWaitSendResult" name="PDPTN5110_MsgHalWaitSendResult">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#a197ab289f188adce834d460f882e7955" title="Send a hard reset or cable reset, and perform the associated reset of our state. hardResetOrCableRese..." alt="" coords="259,12,472,39"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="521,12,666,39"/>
+</map>

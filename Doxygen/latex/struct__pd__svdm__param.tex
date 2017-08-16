@@ -1,0 +1,63 @@
+\hypertarget{struct__pd__svdm__param}{\section{\-\_\-pd\-\_\-svdm\-\_\-param Struct Reference}
+\label{struct__pd__svdm__param}\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+}
+
+
+P\-D structured vdm command parameter.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-svdm\-\_\-param\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{struct__pd__svdm__param__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__svdm__param_a1da6696ea0b07e0173cc469094639e99}{vdo\-Data}
+\item 
+\hyperlink{group__usb__pd__stack_ga245b8bec3f3b7771e73016ac98595570}{pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \hyperlink{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{vdm\-Header}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__param_a153be4aa8e8fa9e41ac83eb41e513060}{vdo\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{vdm\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__param_a2a41729be5b45c14a61c39498b0f43be}{vendor\-V\-D\-M\-Need\-Response}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D structured vdm command parameter. 
+
+it is used in P\-D\-\_\-\-Command for P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-D\-I\-S\-C\-O\-V\-E\-R\-Y\-\_\-\-I\-D\-E\-N\-T\-I\-T\-Y, P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-D\-I\-S\-C\-O\-V\-E\-R\-Y\-\_\-\-S\-V\-I\-D\-S, P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-D\-I\-S\-C\-O\-V\-E\-R\-Y\-\_\-\-M\-O\-D\-E\-S, P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-E\-N\-T\-E\-R\-\_\-\-M\-O\-D\-E, P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-E\-X\-I\-T\-\_\-\-M\-O\-D\-E or P\-D\-\_\-\-D\-P\-M\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-E\-N\-D\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N. it provide vdm command information to P\-D stack, P\-D stack will start the command with the information. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}{\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}!vdm\-Header@{vdm\-Header}}
+\index{vdm\-Header@{vdm\-Header}!_pd_svdm_param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+\subsubsection[{vdm\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \-\_\-pd\-\_\-svdm\-\_\-param\-::vdm\-Header}}\label{struct__pd__svdm__param_aaebc50d834d15e862f264a4e4d8421b4}
+vdm header \hypertarget{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}{\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}!vdm\-Sop@{vdm\-Sop}}
+\index{vdm\-Sop@{vdm\-Sop}!_pd_svdm_param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+\subsubsection[{vdm\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-param\-::vdm\-Sop}}\label{struct__pd__svdm__param_a8047c38bf19593f6d467256b1696587e}
+vdm message's sop type \hypertarget{struct__pd__svdm__param_a153be4aa8e8fa9e41ac83eb41e513060}{\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}!vdo\-Count@{vdo\-Count}}
+\index{vdo\-Count@{vdo\-Count}!_pd_svdm_param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+\subsubsection[{vdo\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-param\-::vdo\-Count}}\label{struct__pd__svdm__param_a153be4aa8e8fa9e41ac83eb41e513060}
+vdm data length (unit is 4 bytes) \hypertarget{struct__pd__svdm__param_a1da6696ea0b07e0173cc469094639e99}{\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}!vdo\-Data@{vdo\-Data}}
+\index{vdo\-Data@{vdo\-Data}!_pd_svdm_param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+\subsubsection[{vdo\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-svdm\-\_\-param\-::vdo\-Data}}\label{struct__pd__svdm__param_a1da6696ea0b07e0173cc469094639e99}
+vdm data buffer address \hypertarget{struct__pd__svdm__param_a2a41729be5b45c14a61c39498b0f43be}{\index{\-\_\-pd\-\_\-svdm\-\_\-param@{\-\_\-pd\-\_\-svdm\-\_\-param}!vendor\-V\-D\-M\-Need\-Response@{vendor\-V\-D\-M\-Need\-Response}}
+\index{vendor\-V\-D\-M\-Need\-Response@{vendor\-V\-D\-M\-Need\-Response}!_pd_svdm_param@{\-\_\-pd\-\_\-svdm\-\_\-param}}
+\subsubsection[{vendor\-V\-D\-M\-Need\-Response}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-param\-::vendor\-V\-D\-M\-Need\-Response}}\label{struct__pd__svdm__param_a2a41729be5b45c14a61c39498b0f43be}
+discovery\-\_\-identity need response, but attention don't need. vendor defined structured V\-D\-M may need or not. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

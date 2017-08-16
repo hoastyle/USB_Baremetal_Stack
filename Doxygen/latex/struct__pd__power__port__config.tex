@@ -1,0 +1,83 @@
+\hypertarget{struct__pd__power__port__config}{\section{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config Struct Reference}
+\label{struct__pd__power__port__config}\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+}
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{source\-Caps}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__power__port__config_ab247068e26ad76b2670eb96da39969e1}{sink\-Caps}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{source\-Cap\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_aa1d58bf75fbebad4b8c7e29b0cc4c64e}{sink\-Cap\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_a649079672f270a65578bd41e0e624e16}{typec\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_aaec71cee54cf853e332a4b4ed1ef17ae}{typec\-Src\-Current}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_a6e72ee6532ef61497b162a28b4500433}{drp\-Try\-Function}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_a5a3c023210ceec3faac6d13b0de58f75}{data\-Function}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_aa552a27c5747ea789ad185fefac44194}{vconn\-Supported}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__power__port__config_ae6a55ddacda35e342d72b9ee6f7fadba}{reserved1}
+\item 
+void $\ast$ \hyperlink{struct__pd__power__port__config_a8e04f0c0092776ec0f354cf23ce48057}{source\-Config}
+\item 
+void $\ast$ \hyperlink{struct__pd__power__port__config_ab0b7a0e266e429764b5af0dd6a57a303}{sink\-Config}
+\item 
+void $\ast$ \hyperlink{struct__pd__power__port__config_a95dc4dc28941f3a624bac60addc27b20}{drp\-Config}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__power__port__config_a5a3c023210ceec3faac6d13b0de58f75}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!data\-Function@{data\-Function}}
+\index{data\-Function@{data\-Function}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{data\-Function}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::data\-Function}}\label{struct__pd__power__port__config_a5a3c023210ceec3faac6d13b0de58f75}
+It configure data role function of the device, it is D\-F\-P, U\-F\-P, D\-R\-D. For U\-S\-B function, D\-F\-P correspond to Host; U\-F\-P correspond to Device; D\-R\-D correspond to O\-T\-G. it's value is \hyperlink{group__usb__pd__stack_ga92476c6b5b34316ccb766c9d2cadd29e}{typec\-\_\-data\-\_\-function\-\_\-config\-\_\-t} \hypertarget{struct__pd__power__port__config_a95dc4dc28941f3a624bac60addc27b20}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!drp\-Config@{drp\-Config}}
+\index{drp\-Config@{drp\-Config}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{drp\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::drp\-Config}}\label{struct__pd__power__port__config_a95dc4dc28941f3a624bac60addc27b20}
+(For feature extension) D\-R\-P config \hypertarget{struct__pd__power__port__config_a6e72ee6532ef61497b162a28b4500433}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!drp\-Try\-Function@{drp\-Try\-Function}}
+\index{drp\-Try\-Function@{drp\-Try\-Function}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{drp\-Try\-Function}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::drp\-Try\-Function}}\label{struct__pd__power__port__config_a6e72ee6532ef61497b162a28b4500433}
+(not supported yet) It only is valid for D\-R\-P, this value configure try-\/sink, try-\/source or no try function. it's value is \hyperlink{group__usb__pd__stack_ga86c3c8c95607b75c0c75cd2714487497}{typec\-\_\-try\-\_\-t} \hypertarget{struct__pd__power__port__config_ae6a55ddacda35e342d72b9ee6f7fadba}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{reserved1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::reserved1}}\label{struct__pd__power__port__config_ae6a55ddacda35e342d72b9ee6f7fadba}
+\hypertarget{struct__pd__power__port__config_aa1d58bf75fbebad4b8c7e29b0cc4c64e}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!sink\-Cap\-Count@{sink\-Cap\-Count}}
+\index{sink\-Cap\-Count@{sink\-Cap\-Count}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{sink\-Cap\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::sink\-Cap\-Count}}\label{struct__pd__power__port__config_aa1d58bf75fbebad4b8c7e29b0cc4c64e}
+sink caps count, if don't support set as 0 \hypertarget{struct__pd__power__port__config_ab247068e26ad76b2670eb96da39969e1}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!sink\-Caps@{sink\-Caps}}
+\index{sink\-Caps@{sink\-Caps}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{sink\-Caps}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::sink\-Caps}}\label{struct__pd__power__port__config_ab247068e26ad76b2670eb96da39969e1}
+sink caps, if don't support set as N\-U\-L\-L \hypertarget{struct__pd__power__port__config_ab0b7a0e266e429764b5af0dd6a57a303}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!sink\-Config@{sink\-Config}}
+\index{sink\-Config@{sink\-Config}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{sink\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::sink\-Config}}\label{struct__pd__power__port__config_ab0b7a0e266e429764b5af0dd6a57a303}
+(For feature extension) sink config \hypertarget{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!source\-Cap\-Count@{source\-Cap\-Count}}
+\index{source\-Cap\-Count@{source\-Cap\-Count}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{source\-Cap\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::source\-Cap\-Count}}\label{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}
+source caps count, if don't support set as 0 \hypertarget{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!source\-Caps@{source\-Caps}}
+\index{source\-Caps@{source\-Caps}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{source\-Caps}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::source\-Caps}}\label{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}
+source caps, if don't support set as N\-U\-L\-L \hypertarget{struct__pd__power__port__config_a8e04f0c0092776ec0f354cf23ce48057}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!source\-Config@{source\-Config}}
+\index{source\-Config@{source\-Config}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{source\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::source\-Config}}\label{struct__pd__power__port__config_a8e04f0c0092776ec0f354cf23ce48057}
+(For feature extension) source config \hypertarget{struct__pd__power__port__config_a649079672f270a65578bd41e0e624e16}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!typec\-Role@{typec\-Role}}
+\index{typec\-Role@{typec\-Role}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{typec\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::typec\-Role}}\label{struct__pd__power__port__config_a649079672f270a65578bd41e0e624e16}
+device's typec role, for example\-: sink, source or D\-R\-P. it's value is \hyperlink{group__usb__pd__stack_ga8522facb45d87054c87e6d6fb32d9dd1}{typec\-\_\-power\-\_\-role\-\_\-config\-\_\-t} \hypertarget{struct__pd__power__port__config_aaec71cee54cf853e332a4b4ed1ef17ae}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!typec\-Src\-Current@{typec\-Src\-Current}}
+\index{typec\-Src\-Current@{typec\-Src\-Current}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{typec\-Src\-Current}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::typec\-Src\-Current}}\label{struct__pd__power__port__config_aaec71cee54cf853e332a4b4ed1ef17ae}
+It only is valid for source, this value set the Type\-C Rp current level it's value is \hyperlink{group__usb__pd__stack_ga875b585c994b83a1c1fd1e81bac28f7a}{typec\-\_\-current\-\_\-val\-\_\-t} \hypertarget{struct__pd__power__port__config_aa552a27c5747ea789ad185fefac44194}{\index{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}!vconn\-Supported@{vconn\-Supported}}
+\index{vconn\-Supported@{vconn\-Supported}!_pd_power_port_config@{\-\_\-pd\-\_\-power\-\_\-port\-\_\-config}}
+\subsubsection[{vconn\-Supported}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-power\-\_\-port\-\_\-config\-::vconn\-Supported}}\label{struct__pd__power__port__config_aa552a27c5747ea789ad185fefac44194}
+value is 1\-: support vconn swap and vconn power; value is 0\-: don't support vconn swap or vconn power. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

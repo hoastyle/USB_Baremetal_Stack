@@ -1,0 +1,6 @@
+<map id="_pd_source_pdo" name="_pd_source_pdo">
+<area shape="rect" id="node2" href="$struct__pd__pdo__common.html" title="common PDO for union " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node3" href="$struct__pd__source__variable__pdo.html" title="variable source PDO " alt="" coords="158,5,327,32"/>
+<area shape="rect" id="node4" href="$struct__pd__source__battery__pdo.html" title="battery source PDO " alt="" coords="351,5,515,32"/>
+<area shape="rect" id="node5" href="$struct__pd__source__fixed__pdo.html" title="fixed source PDO " alt="" coords="540,5,692,32"/>
+</map>

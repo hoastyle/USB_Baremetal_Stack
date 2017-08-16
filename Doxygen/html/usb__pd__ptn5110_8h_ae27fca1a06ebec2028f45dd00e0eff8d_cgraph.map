@@ -1,0 +1,8 @@
+<map id="PDPTN5110_ConnectSync" name="PDPTN5110_ConnectSync">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="238,5,466,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="275,56,429,83"/>
+<area shape="rect" id="node7" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="297,107,407,133"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="515,49,704,90"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="759,31,905,57"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="753,81,911,108"/>
+</map>

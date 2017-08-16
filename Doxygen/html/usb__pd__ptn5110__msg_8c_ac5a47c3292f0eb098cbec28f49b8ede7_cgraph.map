@@ -1,0 +1,18 @@
+<map id="PDPTN5110_MsgReceiveCompLete" name="PDPTN5110_MsgReceiveCompLete">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#ae070d3966d31951eabb91ba346cde8ce" title="Change the SOP mask used for receive. " alt="" coords="293,29,501,70"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__msg_8c.html#a25aae9743a9817b28950047458226913" title="Read the device receive buffer to our intermediate buffer. " alt="" coords="291,103,504,145"/>
+<area shape="rect" id="node9" href="$group__usb__pd__phy__drv.html#ga7f7f94758771b173653d27c508c8b33f" title="Notify PD stack the PHY status. " alt="" coords="356,187,439,213"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="563,23,779,65"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="837,31,992,57"/>
+<area shape="rect" id="node5" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="1040,23,1229,65"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1285,5,1430,32"/>
+<area shape="rect" id="node7" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1278,56,1437,83"/>
+<area shape="rect" id="node10" href="$group__usb__os__abstraction.html#gaa83073c31cced5742027d4046bd633db" title="Sets an event flag. " alt="" coords="847,140,982,167"/>
+<area shape="rect" id="node11" href="$usb__pd__interface_8c.html#a6ad144a0e0d32b011f83156c3edd30a8" title="PD_MsgSendDone" alt="" coords="603,140,738,167"/>
+<area shape="rect" id="node12" href="$usb__pd__interface_8c.html#a83de99272e34bf7bad5146401157ccff" title="PD_ConnectSetPowerProgress" alt="" coords="567,191,774,217"/>
+<area shape="rect" id="node13" href="$usb__pd__policy_8c.html#abdde9b20d8e38e68b6de66b1e9ece3eb" title="PD_DpmCheckLessOrEqualVsafe5v" alt="" coords="552,292,789,319"/>
+<area shape="rect" id="node17" href="$usb__pd__interface_8c.html#a81174001cad1ad0a3978c41a4e21daa0" title="PD_MsgReceived" alt="" coords="607,241,735,268"/>
+<area shape="rect" id="node14" href="$usb__pd__policy_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="858,292,971,319"/>
+<area shape="rect" id="node15" href="$group__usb__os__abstraction.html#gab25fb5d93d3b665ca8eadf2a670d3361" title="Checks an event flag. " alt="" coords="1058,267,1211,293"/>
+<area shape="rect" id="node16" href="$group__usb__os__abstraction.html#ga90357f04d40469dc07104033b3c8581c" title="Clears an event flag. " alt="" coords="1061,317,1208,344"/>
+</map>

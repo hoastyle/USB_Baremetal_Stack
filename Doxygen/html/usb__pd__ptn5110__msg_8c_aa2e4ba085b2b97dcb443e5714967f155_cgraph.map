@@ -1,0 +1,7 @@
+<map id="PDPTN5110_MsgEnableRxAfterReset" name="PDPTN5110_MsgEnableRxAfterReset">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="267,23,483,65"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="531,31,685,57"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="733,23,923,65"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="978,5,1123,32"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="971,56,1130,83"/>
+</map>

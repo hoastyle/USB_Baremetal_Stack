@@ -1,0 +1,54 @@
+\hypertarget{struct__pd__unstructured__vdm__header}{\section{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header Struct Reference}
+\label{struct__pd__unstructured__vdm__header}\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+}
+
+
+P\-D unstructured V\-D\-M header.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint32\_t \hyperlink{struct__pd__unstructured__vdm__header_a2375bdcd908496f368cb35324d43912d}{vendorUse}: 15\\
+\>\>uint32\_t \hyperlink{struct__pd__unstructured__vdm__header_a09d6bd908ac54c019051d53e2b12ab11}{vdmType}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__unstructured__vdm__header_a9d9868b9f35518f7b5517340182095b9}{SVID}: 16\\
+\>\} \hyperlink{struct__pd__unstructured__vdm__header_aebbb7159bc0e5a41e886be38105a0415}{bitFields}\\
+\>uint32\_t \hyperlink{struct__pd__unstructured__vdm__header_aa0c6093c5429761509c65ae29a61e0a7}{unstructuredVdmHeaderVal}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D unstructured V\-D\-M header. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__unstructured__vdm__header_ad8448cf2b2b7e316fd5ba3db007e8c0c}{\subsubsection[{"@44}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__unstructured__vdm__header_ad8448cf2b2b7e316fd5ba3db007e8c0c}
+\hypertarget{struct__pd__unstructured__vdm__header_aebbb7159bc0e5a41e886be38105a0415}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}!bit\-Fields@{bit\-Fields}}
+\index{bit\-Fields@{bit\-Fields}!_pd_unstructured_vdm_header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+\subsubsection[{bit\-Fields}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header\-::bit\-Fields}}\label{struct__pd__unstructured__vdm__header_aebbb7159bc0e5a41e886be38105a0415}
+union unstructured vdm header structure \hypertarget{struct__pd__unstructured__vdm__header_a9d9868b9f35518f7b5517340182095b9}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}!S\-V\-I\-D@{S\-V\-I\-D}}
+\index{S\-V\-I\-D@{S\-V\-I\-D}!_pd_unstructured_vdm_header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+\subsubsection[{S\-V\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header\-::\-S\-V\-I\-D}}\label{struct__pd__unstructured__vdm__header_a9d9868b9f35518f7b5517340182095b9}
+S\-V\-I\-D \hypertarget{struct__pd__unstructured__vdm__header_aa0c6093c5429761509c65ae29a61e0a7}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}!unstructured\-Vdm\-Header\-Val@{unstructured\-Vdm\-Header\-Val}}
+\index{unstructured\-Vdm\-Header\-Val@{unstructured\-Vdm\-Header\-Val}!_pd_unstructured_vdm_header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+\subsubsection[{unstructured\-Vdm\-Header\-Val}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header\-::unstructured\-Vdm\-Header\-Val}}\label{struct__pd__unstructured__vdm__header_aa0c6093c5429761509c65ae29a61e0a7}
+union 32bits value \hypertarget{struct__pd__unstructured__vdm__header_a09d6bd908ac54c019051d53e2b12ab11}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}!vdm\-Type@{vdm\-Type}}
+\index{vdm\-Type@{vdm\-Type}!_pd_unstructured_vdm_header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+\subsubsection[{vdm\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header\-::vdm\-Type}}\label{struct__pd__unstructured__vdm__header_a09d6bd908ac54c019051d53e2b12ab11}
+vdm type, unstructured vdm \hypertarget{struct__pd__unstructured__vdm__header_a2375bdcd908496f368cb35324d43912d}{\index{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}!vendor\-Use@{vendor\-Use}}
+\index{vendor\-Use@{vendor\-Use}!_pd_unstructured_vdm_header@{\-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header}}
+\subsubsection[{vendor\-Use}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-unstructured\-\_\-vdm\-\_\-header\-::vendor\-Use}}\label{struct__pd__unstructured__vdm__header_a2375bdcd908496f368cb35324d43912d}
+vendor use fields 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

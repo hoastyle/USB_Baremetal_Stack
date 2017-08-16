@@ -1,0 +1,58 @@
+\hypertarget{struct__pd__attach__detection__param}{\section{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param Struct Reference}
+\label{struct__pd__attach__detection__param}\index{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}}
+}
+
+
+detect attach parameter used in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-A\-T\-T\-A\-C\-H\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N control.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-phy.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__attach__detection__param_aa28f1c14440b918b0e10ed04c7483095}{is\-D\-R\-P}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__attach__detection__param_a004647edd5c7e75ce9bd0cc218caf8b1}{power\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__attach__detection__param_a935484922f134dd28059b0888fbd416e}{device\-Type}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__attach__detection__param_a9745c17522adaa5e1e8372df1a57f233}{src\-Rp\-Current}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+detect attach parameter used in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-A\-T\-T\-A\-C\-H\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N control. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__attach__detection__param_a935484922f134dd28059b0888fbd416e}{\index{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}!device\-Type@{device\-Type}}
+\index{device\-Type@{device\-Type}!_pd_attach_detection_param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}}
+\subsubsection[{device\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param\-::device\-Type}}\label{struct__pd__attach__detection__param_a935484922f134dd28059b0888fbd416e}
+device type, it's value is \hyperlink{group__usb__pd__stack_gac70b6cd09eeb45ce1aeaa279f44adbc7}{pd\-\_\-device\-\_\-type\-\_\-t}. \hypertarget{struct__pd__attach__detection__param_aa28f1c14440b918b0e10ed04c7483095}{\index{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}!is\-D\-R\-P@{is\-D\-R\-P}}
+\index{is\-D\-R\-P@{is\-D\-R\-P}!_pd_attach_detection_param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}}
+\subsubsection[{is\-D\-R\-P}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param\-::is\-D\-R\-P}}\label{struct__pd__attach__detection__param_aa28f1c14440b918b0e10ed04c7483095}
+if True\-: D\-R\-P; if False\-: normal source, sink or accessory \hypertarget{struct__pd__attach__detection__param_a004647edd5c7e75ce9bd0cc218caf8b1}{\index{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}!power\-Role@{power\-Role}}
+\index{power\-Role@{power\-Role}!_pd_attach_detection_param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}}
+\subsubsection[{power\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param\-::power\-Role}}\label{struct__pd__attach__detection__param_a004647edd5c7e75ce9bd0cc218caf8b1}
+
+\begin{DoxyItemize}
+\item is\-D\-R\-P is True\-:
+\begin{DoxyItemize}
+\item source\-: the initial power role is source and toggling between source with sink.
+\item sink\-: the initial power role is sink and toggling between source with sink.
+\end{DoxyItemize}
+\item is\-D\-R\-P is False\-:
+\begin{DoxyItemize}
+\item source\-: it is source role.
+\item sink\-: it is sink role or accessory. 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{struct__pd__attach__detection__param_a9745c17522adaa5e1e8372df1a57f233}{\index{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}!src\-Rp\-Current@{src\-Rp\-Current}}
+\index{src\-Rp\-Current@{src\-Rp\-Current}!_pd_attach_detection_param@{\-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param}}
+\subsubsection[{src\-Rp\-Current}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-attach\-\_\-detection\-\_\-param\-::src\-Rp\-Current}}\label{struct__pd__attach__detection__param_a9745c17522adaa5e1e8372df1a57f233}
+if it is source, it configure Rp current level 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd__phy_8h}{usb\-\_\-pd\-\_\-phy.\-h}\end{DoxyCompactItemize}

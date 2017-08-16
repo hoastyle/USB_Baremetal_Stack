@@ -1,0 +1,1144 @@
+\hypertarget{usb__pd__msg_8c}{\section{pd/usb\-\_\-pd\-\_\-msg.c File Reference}
+\label{usb__pd__msg_8c}\index{pd/usb\-\_\-pd\-\_\-msg.\-c@{pd/usb\-\_\-pd\-\_\-msg.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-phy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-interface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-timer.\-h\char`\"{}}\\*
+Include dependency graph for usb\-\_\-pd\-\_\-msg.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{usb__pd__msg_8c_a25116c60801fe4f4def90e3e42614b54}{P\-D\-\_\-\-Connect\-Check} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768}{P\-D\-\_\-\-Port\-Task\-Event\-Process} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, uint32\-\_\-t event\-Set)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{P\-D\-\_\-\-Phy\-Control} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, uint32\-\_\-t control, void $\ast$param)
+\item 
+void \hyperlink{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad}{P\-D\-\_\-\-Msg\-Receive} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96}{P\-D\-\_\-\-Msg\-Init} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a82812de846825e22cc625886aa4ed653}{P\-D\-\_\-\-Msg\-Reset} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a4c31fc7951e54e4e153f64d3a8e229ef}{P\-D\-\_\-\-Msg\-Disable} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a1ae8632e71437586ae348c78f1518772}{P\-D\-\_\-\-Msg\-Set\-Port\-Role} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, uint8\-\_\-t power\-Role, uint8\-\_\-t data\-Role)
+\item 
+void \hyperlink{usb__pd__msg_8c_a6ad144a0e0d32b011f83156c3edd30a8}{P\-D\-\_\-\-Msg\-Send\-Done} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} result)
+\item 
+uint8\-\_\-t \hyperlink{usb__pd__msg_8c_a31725b2a47c3137de52deb06cfb27e56}{P\-D\-\_\-\-Msg\-Wait\-Send\-Result} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{usb__pd__msg_8c_a3020cc9ec6198c8c996b4c0dbdba937d}{P\-D\-\_\-\-Msg\-Send} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, \hyperlink{group__usb__pd__stack_ga59170ea474bbce078de8ffb3eea617aa}{start\-\_\-of\-\_\-packet\-\_\-t} sop, \hyperlink{usb__pd__spec_8h_ad25fc6470288b79ee9d2fb8e94ba998f}{message\-\_\-type\-\_\-t} msg\-Type, uint32\-\_\-t data\-Length, uint8\-\_\-t $\ast$data\-Buffer)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{usb__pd__msg_8c_ab97edd8ad822d84ac4c3c60716d949e6}{P\-D\-\_\-\-Msg\-Send\-Hard\-Reset} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a81174001cad1ad0a3978c41a4e21daa0}{P\-D\-\_\-\-Msg\-Received} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance, uint32\-\_\-t msg\-Length, \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} result)
+\item 
+void \hyperlink{usb__pd__msg_8c_a76b0f4cfb65f3523c10e8e472f42d9c4}{P\-D\-\_\-\-Msg\-Stop\-Receive} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a6ab430500b707d49e6f44a32e91d1aa9}{P\-D\-\_\-\-Msg\-Start\-Receive} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+uint8\-\_\-t \hyperlink{usb__pd__msg_8c_a19c2d2c30e1d818cf1b730f60f866f44}{P\-D\-\_\-\-Msg\-Get\-Receive\-Result} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+uint8\-\_\-t \hyperlink{usb__pd__msg_8c_a4a1258c0505ff43986e259a96d0bccf4}{P\-D\-\_\-\-Msg\-Recv\-Pending} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a0f4c4b5235e5789a5b705a458ff97bfe}{P\-D\-\_\-\-Msg\-Src\-Start\-Command} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+void \hyperlink{usb__pd__msg_8c_a90012fae056618ce9b4431bd004a852a}{P\-D\-\_\-\-Msg\-Src\-End\-Command} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\item 
+uint8\-\_\-t \hyperlink{usb__pd__msg_8c_a5181f0cdc3342fe4e3898f08f5cf73b6}{P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command} (\hyperlink{usb__pd__interface_8h_a1deb7ee8a70201e41a45bef369b5d692}{pd\-\_\-instance\-\_\-t} $\ast$pd\-Instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__pd__msg_8c_a25116c60801fe4f4def90e3e42614b54}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Connect\-Check@{P\-D\-\_\-\-Connect\-Check}}
+\index{P\-D\-\_\-\-Connect\-Check@{P\-D\-\_\-\-Connect\-Check}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Connect\-Check}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-\_\-\-Connect\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a25116c60801fe4f4def90e3e42614b54}
+
+\begin{DoxyCode}
+1786 \{
+1787     \hyperlink{usb__pd__connect_8c_a6147b33e99b7812c8de585d73af2f2c4}{PD\_ConnectStateMachine}(pdInstance);
+1788     \textcolor{keywordflow}{return} \hyperlink{usb__pd__connect_8c_ab61b3d8329ec92553e670b6b0997fa81}{PD\_ConnectState}(pdInstance);
+1789 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a25116c60801fe4f4def90e3e42614b54_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a4c31fc7951e54e4e153f64d3a8e229ef}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Disable@{P\-D\-\_\-\-Msg\-Disable}}
+\index{P\-D\-\_\-\-Msg\-Disable@{P\-D\-\_\-\-Msg\-Disable}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a4c31fc7951e54e4e153f64d3a8e229ef}
+
+\begin{DoxyCode}
+81 \{
+82     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda0c9ed5435eeaf83461a852f4180a9c3e}{PD\_PHY\_DISABLE\_MSG\_TX}, NULL);
+83     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda82e2f7a81ec4b132e98ed42740a4f7ec}{PD\_PHY\_DISABLE\_MSG\_RX}, NULL);
+84 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{usb__pd__msg_8c_a4c31fc7951e54e4e153f64d3a8e229ef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a4c31fc7951e54e4e153f64d3a8e229ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a19c2d2c30e1d818cf1b730f60f866f44}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Get\-Receive\-Result@{P\-D\-\_\-\-Msg\-Get\-Receive\-Result}}
+\index{P\-D\-\_\-\-Msg\-Get\-Receive\-Result@{P\-D\-\_\-\-Msg\-Get\-Receive\-Result}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Get\-Receive\-Result}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-\_\-\-Msg\-Get\-Receive\-Result (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a19c2d2c30e1d818cf1b730f60f866f44}
+
+\begin{DoxyCode}
+472 \{
+473     uint8\_t retVal = 0;
+474     uint32\_t receiveLength;
+475 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT) && (PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT)}
+476 \textcolor{preprocessor}{}    uint32\_t index;
+477     uint8\_t *destBuffer;
+478     uint8\_t *sourceBuffer;
+479     uint8\_t needCopy = 0;
+480     \hyperlink{struct__pd__msg__header}{pd\_msg\_header\_t} msgHeader;
+481     \hyperlink{struct__pd__extended__msg__header}{pd\_extended\_msg\_header\_t} extHeader;
+482 \textcolor{preprocessor}{#endif}
+483 \textcolor{preprocessor}{}
+484     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} == 2)
+485     \{
+486         pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 0;
+487         receiveLength = pdInstance->\hyperlink{struct__pd__instance_a0d570b6b188a0e6756df839f35f346b5}{receivedLength};
+488 
+489 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT) && (PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT)}
+490 \textcolor{preprocessor}{}        sourceBuffer = (uint8\_t *)pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer};
+491         sourceBuffer += 2;
+492         msgHeader.\hyperlink{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}{msgHeaderVal} = (uint16\_t)(
+      \hyperlink{usb__misc_8h_ad653e9416e47d6669d5b8e57c48e2d6f}{USB\_SHORT\_FROM\_LITTLE\_ENDIAN\_ADDRESS}(sourceBuffer));
+493         \textcolor{keywordflow}{if} (msgHeader.\hyperlink{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{bitFields}.extended)
+494         \{
+495             sourceBuffer += 2;
+496             extHeader.\hyperlink{struct__pd__extended__msg__header_a1d247099ea671c66798b32e603697c5d}{extendedMsgHeaderVal} = (uint32\_t)(
+      \hyperlink{usb__misc_8h_ad653e9416e47d6669d5b8e57c48e2d6f}{USB\_SHORT\_FROM\_LITTLE\_ENDIAN\_ADDRESS}(sourceBuffer));
+497 
+498             \textcolor{comment}{/* chunked ext msg need copy, because it may be larger than 28 bytes and are chunked */}
+499             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{void} *)pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} == (\textcolor{keywordtype}{void} *)pdInstance->
+      receivingChunkedData)
+500             \{
+501                 needCopy = 1;
+502 
+503                 destBuffer = (uint8\_t *)pdInstance->\hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receivingData};
+504                 destBuffer += 4;
+505                 sourceBuffer = (uint8\_t *)pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer};
+506                 sourceBuffer += 4;
+507 
+508                 destBuffer[0] = sourceBuffer[0]; \textcolor{comment}{/* ext header */}
+509                 destBuffer[1] = sourceBuffer[1];
+510                 destBuffer += 2;
+511                 sourceBuffer += 2; \textcolor{comment}{/* ext header */}
+512             \}
+513             \textcolor{keywordflow}{else}
+514             \{
+515                 needCopy = 0;
+516             \}
+517 
+518             \textcolor{keywordflow}{if} ((!extHeader.\hyperlink{struct__pd__extended__msg__header_aac756f1b65823f59184919281e17c0ce}{bitFields}.chunked))
+519             \{
+520                 \textcolor{comment}{/* unchunked ext msg */}
+521                 \textcolor{keywordflow}{if} (receiveLength > 260)
+522                 \{
+523                     receiveLength = 260;
+524                 \}
+525             \}
+526             \textcolor{keywordflow}{else}
+527             \{
+528                 \textcolor{comment}{/* chunked ext msg */}
+529                 \textcolor{keywordflow}{if} (receiveLength > 32)
+530                 \{
+531                     receiveLength = 32;
+532                 \}
+533 
+534                 \textcolor{keywordflow}{if} (needCopy)
+535                 \{
+536                     destBuffer += (extHeader.\hyperlink{struct__pd__extended__msg__header_aac756f1b65823f59184919281e17c0ce}{bitFields}.chunkNumber * 26);
+537                 \}
+538             \}
+539         \}
+540         \textcolor{keywordflow}{else}
+541 \textcolor{preprocessor}{#endif}
+542 \textcolor{preprocessor}{}        \{
+543             \textcolor{keywordflow}{if} (receiveLength > 32)
+544             \{
+545                 receiveLength = 32;
+546             \}
+547         \}
+548 
+549         \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}{receiveResult} == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+550         \{
+551 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT) && (PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT)}
+552 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if} (needCopy)
+553             \{
+554                 pdInstance->\hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receivingData}[0] = ((uint32\_t *)pdInstance->
+      \hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer})[0]; \textcolor{comment}{/* msg header */}
+555                 receiveLength -= 4; \textcolor{comment}{/* reduce the normal header and ext header */}
+556                 \textcolor{keywordflow}{for} (index = 0; index < (receiveLength); ++index)
+557                 \{
+558                     destBuffer[index] = sourceBuffer[index];
+559                 \}
+560                 pdInstance->\hyperlink{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}{receivedData} = (uint32\_t *)&(pdInstance->
+      \hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receivingData}[0]);
+561             \}
+562             \textcolor{keywordflow}{else}
+563 \textcolor{preprocessor}{#endif}
+564 \textcolor{preprocessor}{}            \{
+565                 pdInstance->\hyperlink{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}{receivedData} = (uint32\_t *)pdInstance->
+      \hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer};
+566             \}
+567         \}
+568 
+569         retVal = (pdInstance->\hyperlink{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}{receiveResult} == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success} ? 1 : 0);
+570     \}
+571 
+572     \textcolor{keywordflow}{return} retVal;
+573 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a19c2d2c30e1d818cf1b730f60f866f44_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Init@{P\-D\-\_\-\-Msg\-Init}}
+\index{P\-D\-\_\-\-Msg\-Init@{P\-D\-\_\-\-Msg\-Init}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96}
+
+\begin{DoxyCode}
+58 \{
+59     pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 0;
+60     pdInstance->\hyperlink{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}{receivedData} = NULL;
+61     pdInstance->\hyperlink{struct__pd__instance_af70b04cd5c8187c6a0424dea57205e8c}{hardResetReceived} = 0;
+62     pdInstance->\hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sendingMsgHeader}.\hyperlink{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}{msgHeaderVal} = 0;
+63 
+64     \textcolor{comment}{// call phy control function, control code is PD\_PHY\_RESET\_MSG\_FUNCTION}
+65     \textcolor{comment}{// PDPTN5110\_Control, usb\_pd\_ptn5110\_interface.c}
+66     \textcolor{comment}{// reset message related in phy layer}
+67     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda12e5c95c04532128d54f63e4e76d2c6e}{PD\_PHY\_RESET\_MSG\_FUNCTION}, NULL);
+68 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Receive@{P\-D\-\_\-\-Msg\-Receive}}
+\index{P\-D\-\_\-\-Msg\-Receive@{P\-D\-\_\-\-Msg\-Receive}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad}
+
+\begin{DoxyCode}
+428 \{
+429     uint32\_t receiveLength;
+430 
+431     \textcolor{keywordflow}{if} (!(pdInstance->\hyperlink{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}{enableReceive}))
+432     \{
+433         \textcolor{keywordflow}{return};
+434     \}
+435 
+436     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} == 0)
+437     \{
+438 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT) && (PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT)}
+439 \textcolor{preprocessor}{}        receiveLength = 260;
+440 \textcolor{preprocessor}{#else}
+441 \textcolor{preprocessor}{}        receiveLength = 32;
+442 \textcolor{preprocessor}{#endif}
+443 \textcolor{preprocessor}{}        \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} == NULL)
+444         \{
+445 \textcolor{preprocessor}{#if (defined PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT) && (PD\_CONFIG\_EXTENDED\_MSG\_SUPPORT)}
+446 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_af61039550d3e5b4f070ac74ed3e711a3}{unchunkedFeature})
+447             \{
+448                 pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} = (uint8\_t *)pdInstance->
+      \hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receivingData};
+449             \}
+450             \textcolor{keywordflow}{else}
+451             \{
+452                 pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} = (uint8\_t *)pdInstance->
+      receivingChunkedData;
+453             \}
+454 \textcolor{preprocessor}{#else}
+455 \textcolor{preprocessor}{}            pdInstance->\hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} = (uint8\_t *)pdInstance->
+      \hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receivingData};
+456 #endif
+457         \}
+458         \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{phyInterface}->\hyperlink{struct__pd__phy__api__interface_a3c8508914afbcb4f55578a0d61cd90e3}{pdPhyReceive}(pdInstance->
+      \hyperlink{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{pdPhyHandle}, pdInstance->\hyperlink{struct__pd__instance_a007de2aa1ac9ae814d10d26a949dd61d}{pendingSOP},
+459                                                    pdInstance->
+      \hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receivingDataBuffer} + 2,
+460                                                    receiveLength) == 
+      \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+461         \{
+462             pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 1;
+463         \}
+464         \textcolor{keywordflow}{else}
+465         \{
+466             \hyperlink{group__usb__os__abstraction_gaa83073c31cced5742027d4046bd633db}{USB\_OsaEventSet}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ab7866880ca831b0f650c837287bbd60f}{PD\_TASK\_EVENT\_PD\_MSG});
+467         \}
+468     \}
+469 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a81174001cad1ad0a3978c41a4e21daa0}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Received@{P\-D\-\_\-\-Msg\-Received}}
+\index{P\-D\-\_\-\-Msg\-Received@{P\-D\-\_\-\-Msg\-Received}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Received}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Received (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{uint32\-\_\-t}]{msg\-Length, }
+\item[{{\bf pd\-\_\-status\-\_\-t}}]{result}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a81174001cad1ad0a3978c41a4e21daa0}
+
+\begin{DoxyCode}
+391 \{
+392     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} == 1)
+393     \{
+394         pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 2;
+395         pdInstance->\hyperlink{struct__pd__instance_a0d570b6b188a0e6756df839f35f346b5}{receivedLength} = msgLength;
+396         pdInstance->\hyperlink{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}{receiveResult} = result;
+397         \hyperlink{group__usb__os__abstraction_gaa83073c31cced5742027d4046bd633db}{USB\_OsaEventSet}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ab7866880ca831b0f650c837287bbd60f}{PD\_TASK\_EVENT\_PD\_MSG});
+398     \}
+399 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{usb__pd__msg_8c_a81174001cad1ad0a3978c41a4e21daa0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a81174001cad1ad0a3978c41a4e21daa0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a4a1258c0505ff43986e259a96d0bccf4}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Recv\-Pending@{P\-D\-\_\-\-Msg\-Recv\-Pending}}
+\index{P\-D\-\_\-\-Msg\-Recv\-Pending@{P\-D\-\_\-\-Msg\-Recv\-Pending}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Recv\-Pending}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-\_\-\-Msg\-Recv\-Pending (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a4a1258c0505ff43986e259a96d0bccf4}
+
+\begin{DoxyCode}
+576 \{
+577     \textcolor{keywordflow}{return} (pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} == 2);
+578 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a4a1258c0505ff43986e259a96d0bccf4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a82812de846825e22cc625886aa4ed653}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Reset@{P\-D\-\_\-\-Msg\-Reset}}
+\index{P\-D\-\_\-\-Msg\-Reset@{P\-D\-\_\-\-Msg\-Reset}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a82812de846825e22cc625886aa4ed653}
+
+\begin{DoxyCode}
+71 \{
+72     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda05d1be67ea7a2972c165dd67a0196839}{PD\_PHY\_CANCEL\_MSG\_TX}, NULL);
+73     pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} = 0;
+74     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edad29607158e8977b9bb140b407b9e6cc4}{PD\_PHY\_CANCEL\_MSG\_RX}, NULL);
+75     pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 0;
+76 
+77     \hyperlink{usb__pd__msg_8c_a8efd2af273b221ad6fe948153b704c96}{PD\_MsgInit}(pdInstance);
+78 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a82812de846825e22cc625886aa4ed653_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a82812de846825e22cc625886aa4ed653_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a3020cc9ec6198c8c996b4c0dbdba937d}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Send@{P\-D\-\_\-\-Msg\-Send}}
+\index{P\-D\-\_\-\-Msg\-Send@{P\-D\-\_\-\-Msg\-Send}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Msg\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{{\bf start\-\_\-of\-\_\-packet\-\_\-t}}]{sop, }
+\item[{{\bf message\-\_\-type\-\_\-t}}]{msg\-Type, }
+\item[{uint32\-\_\-t}]{data\-Length, }
+\item[{uint8\-\_\-t $\ast$}]{data\-Buffer}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a3020cc9ec6198c8c996b4c0dbdba937d}
+
+\begin{DoxyCode}
+143 \{
+144     uint8\_t index;
+145     \hyperlink{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{USB\_OSA\_SR\_ALLOC}();
+146 
+147     \hyperlink{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}{USB\_OSA\_ENTER\_CRITICAL}();
+148     \textcolor{keywordflow}{if} ((pdInstance->\hyperlink{struct__pd__instance_af70b04cd5c8187c6a0424dea57205e8c}{hardResetReceived}) || (pdInstance->
+      \hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} == 1))
+149     \{
+150         \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{USB\_OSA\_EXIT\_CRITICAL}();
+151         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+152     \}
+153 
+154     pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} = 1;
+155     \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{USB\_OSA\_EXIT\_CRITICAL}();
+156 
+157     \textcolor{comment}{/* set msg header */}
+158     pdInstance->\hyperlink{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}{sendingData}[0] = (pdInstance->\hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sendingMsgHeader}.
+      \hyperlink{struct__pd__msg__header_a3be91c1e7084d53533ddf706f450c28b}{msgHeaderVal} | (msgType & \hyperlink{usb__pd__spec_8h_afbe845f7ee998a739bae14cf4b2d36b8}{PD\_MSG\_TYPE\_VALUE\_MASK}) |
+159                                   (((dataLength - 2) >> 2) << 
+      \hyperlink{usb__pd__spec_8h_a1cf3acbacd01a46bb61d2418ccadb292}{PD\_MSG\_HEADER\_NUMBER\_OF\_DATA\_OBJECTS\_POS}))
+160                                  << 16;
+161     \textcolor{comment}{/* copy msg data */}
+162     \textcolor{keywordflow}{if} (msgType != \hyperlink{usb__pd__spec_8h_a5dd447708699386a010c1e71e0f9368ba398e213caf8239ca95470df3bb2cdbf8}{kPD\_MsgSourceCapabilities})
+163     \{
+164         \textcolor{keywordflow}{for} (index = 0; index < ((dataLength - 2 + 3) >> 2); ++index)
+165         \{
+166             pdInstance->\hyperlink{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}{sendingData}[index + 1] = 
+      \hyperlink{usb__misc_8h_ab94871389a0730a311e19a217b223d4d}{USB\_LONG\_FROM\_LITTLE\_ENDIAN\_ADDRESS}((dataBuffer + index * 4));
+167         \}
+168     \}
+169 
+170     \hyperlink{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad}{PD\_MsgReceive}(pdInstance);
+171     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{phyInterface}->\hyperlink{struct__pd__phy__api__interface_ab9b74f09035836be811dc6aae682074f}{pdPhySend}(pdInstance->
+      \hyperlink{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{pdPhyHandle}, sop,
+172                                             ((uint8\_t *)&(pdInstance->
+      \hyperlink{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}{sendingData}[0])) + 2,
+173                                             (dataLength)) == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+174     \{
+175         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+176     \}
+177     \textcolor{keywordflow}{else}
+178     \{
+179         pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} = 0;
+180     \}
+181 
+182     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+183 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a3020cc9ec6198c8c996b4c0dbdba937d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a3020cc9ec6198c8c996b4c0dbdba937d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a6ad144a0e0d32b011f83156c3edd30a8}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Send\-Done@{P\-D\-\_\-\-Msg\-Send\-Done}}
+\index{P\-D\-\_\-\-Msg\-Send\-Done@{P\-D\-\_\-\-Msg\-Send\-Done}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Send\-Done}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Send\-Done (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{{\bf pd\-\_\-status\-\_\-t}}]{result}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a6ad144a0e0d32b011f83156c3edd30a8}
+
+\begin{DoxyCode}
+102 \{
+103     \textcolor{comment}{// 1: sending}
+104     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} == 1)
+105     \{
+106         \textcolor{comment}{// 2: send call back done}
+107         pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} = 2;
+108         \textcolor{comment}{// 设置为特定result}
+109         pdInstance->\hyperlink{struct__pd__instance_ac02af68a4c0e36f39a1b3203c5638c2b}{sendingResult} = result;
+110         \textcolor{comment}{// 采用freertos中的event group，进行通知}
+111         \hyperlink{group__usb__os__abstraction_gaa83073c31cced5742027d4046bd633db}{USB\_OsaEventSet}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981a01e917815dd3d2d16283e6ff86f9b1c6}{PD\_TASK\_EVENT\_SEND\_DONE});
+112     \}
+113 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{usb__pd__msg_8c_a6ad144a0e0d32b011f83156c3edd30a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a6ad144a0e0d32b011f83156c3edd30a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_ab97edd8ad822d84ac4c3c60716d949e6}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Send\-Hard\-Reset@{P\-D\-\_\-\-Msg\-Send\-Hard\-Reset}}
+\index{P\-D\-\_\-\-Msg\-Send\-Hard\-Reset@{P\-D\-\_\-\-Msg\-Send\-Hard\-Reset}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Send\-Hard\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Msg\-Send\-Hard\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_ab97edd8ad822d84ac4c3c60716d949e6}
+
+\begin{DoxyCode}
+386 \{
+387     \textcolor{keywordflow}{return} \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda1d45b97b5d29cbce1117fa4c77202cbf}{PD\_PHY\_SEND\_HARD\_RESET}, NULL);
+388 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{usb__pd__msg_8c_ab97edd8ad822d84ac4c3c60716d949e6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_ab97edd8ad822d84ac4c3c60716d949e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a1ae8632e71437586ae348c78f1518772}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Set\-Port\-Role@{P\-D\-\_\-\-Msg\-Set\-Port\-Role}}
+\index{P\-D\-\_\-\-Msg\-Set\-Port\-Role@{P\-D\-\_\-\-Msg\-Set\-Port\-Role}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Set\-Port\-Role}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Set\-Port\-Role (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{uint8\-\_\-t}]{power\-Role, }
+\item[{uint8\-\_\-t}]{data\-Role}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a1ae8632e71437586ae348c78f1518772}
+
+\begin{DoxyCode}
+87 \{
+88     \hyperlink{struct__pd__phy__msg__header__info}{pd\_phy\_msg\_header\_info\_t} headerInfo;
+89     pdInstance->\hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sendingMsgHeader}.\hyperlink{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{bitFields}.portPowerRoleOrCablePlug = powerRole;
+90     pdInstance->\hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sendingMsgHeader}.\hyperlink{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{bitFields}.portDataRole = dataRole;
+91     pdInstance->\hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sendingMsgHeader}.\hyperlink{struct__pd__msg__header_a6dc4609c23d8d9e5d8830177d959fe17}{bitFields}.specRevision = pdInstance->
+      \hyperlink{struct__pd__instance_af7c28b72771ce442ee733892186c4e6c}{revision};
+92 
+93     headerInfo.\hyperlink{struct__pd__phy__msg__header__info_a7f921ee0d685a1f6818dce56ee1ef8f2}{dataRole} = dataRole;
+94     headerInfo.\hyperlink{struct__pd__phy__msg__header__info_a11c74e61a0e7ab66caf6c73321d9d016}{powerRole} = powerRole;
+95     headerInfo.\hyperlink{struct__pd__phy__msg__header__info_a068ae6e534efaaa108dbd0aa75256a63}{cablePlug} = 0;
+96     headerInfo.\hyperlink{struct__pd__phy__msg__header__info_a64122118bd2c482eea1b178b459e1aae}{revision} = pdInstance->\hyperlink{struct__pd__instance_af7c28b72771ce442ee733892186c4e6c}{revision};
+97     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edab459c8f89653d73a0d318cd30c0a1fc5}{PD\_PHY\_SET\_MSG\_HEADER\_INFO}, &
+      headerInfo);
+98 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{usb__pd__msg_8c_a1ae8632e71437586ae348c78f1518772_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a1ae8632e71437586ae348c78f1518772_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a5181f0cdc3342fe4e3898f08f5cf73b6}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command@{P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command}}
+\index{P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command@{P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-\_\-\-Msg\-Snk\-Check\-Start\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a5181f0cdc3342fe4e3898f08f5cf73b6}
+
+\begin{DoxyCode}
+619 \{
+620 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE) && (PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE)}
+621 \textcolor{preprocessor}{}    uint8\_t typecCurrent;
+622 
+623     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edae1406149d183dba960809596aa525528}{PD\_PHY\_SNK\_GET\_TYPEC\_CURRENT\_CAP}
+      , &typecCurrent);
+624     \textcolor{keywordflow}{return} (typecCurrent == \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ead97ab9ef94b70e7dfca45f9aa0883299}{kCurrent\_3A});
+625 \textcolor{preprocessor}{#else}
+626 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} 1;
+627 \textcolor{preprocessor}{#endif}
+628 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a5181f0cdc3342fe4e3898f08f5cf73b6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a5181f0cdc3342fe4e3898f08f5cf73b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a90012fae056618ce9b4431bd004a852a}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Src\-End\-Command@{P\-D\-\_\-\-Msg\-Src\-End\-Command}}
+\index{P\-D\-\_\-\-Msg\-Src\-End\-Command@{P\-D\-\_\-\-Msg\-Src\-End\-Command}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Src\-End\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Src\-End\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a90012fae056618ce9b4431bd004a852a}
+
+\begin{DoxyCode}
+608 \{
+609 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE) && (PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE)}
+610 \textcolor{preprocessor}{}    \textcolor{comment}{//3A means SinkTxOK}
+611     uint8\_t rpVal = \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ead97ab9ef94b70e7dfca45f9aa0883299}{kCurrent\_3A};
+612     pdInstance->\hyperlink{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}{commandSrcOwner} = 0;
+613     \textcolor{comment}{// control phy to change rp value by rpVal}
+614     \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda47b31ad92865627f7e074f52e8532854}{PD\_PHY\_SRC\_SET\_TYPEC\_CURRENT\_CAP}
+      , &rpVal);
+615 \textcolor{preprocessor}{#endif}
+616 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{usb__pd__msg_8c_a90012fae056618ce9b4431bd004a852a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a90012fae056618ce9b4431bd004a852a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a0f4c4b5235e5789a5b705a458ff97bfe}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Src\-Start\-Command@{P\-D\-\_\-\-Msg\-Src\-Start\-Command}}
+\index{P\-D\-\_\-\-Msg\-Src\-Start\-Command@{P\-D\-\_\-\-Msg\-Src\-Start\-Command}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Src\-Start\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Src\-Start\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a0f4c4b5235e5789a5b705a458ff97bfe}
+
+\begin{DoxyCode}
+582 \{
+583 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE) && (PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE)}
+584 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}{commandSrcOwner})
+585     \{
+586         \textcolor{keywordflow}{if} (!\hyperlink{usb__pd__timer_8c_a3d4072fbbc7b10a05c795eaf9ed33f5f}{PD\_TimerCheckInvalidOrTimeOut}(pdInstance, 
+      \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fa6b4302f0f8c2579ee02b4442799b0879}{tSinkTxTimer}))
+587         \{
+588             \textcolor{keywordflow}{while} (!\hyperlink{usb__pd__timer_8c_a3d4072fbbc7b10a05c795eaf9ed33f5f}{PD\_TimerCheckInvalidOrTimeOut}(pdInstance, 
+      \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fa6b4302f0f8c2579ee02b4442799b0879}{tSinkTxTimer}))
+589             \{
+590             \}
+591         \}
+592     \}
+593     \textcolor{keywordflow}{else}
+594     \{
+595         uint8\_t rpVal = \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ead84bbcae527b6cfc2e9a5fd96648af74}{kCurrent\_1A5};
+596         pdInstance->\hyperlink{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}{commandSrcOwner} = 1;
+597         \textcolor{comment}{// set SinkTxNG}
+598         \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda47b31ad92865627f7e074f52e8532854}{PD\_PHY\_SRC\_SET\_TYPEC\_CURRENT\_CAP}
+      , &rpVal);
+599         \hyperlink{usb__pd__timer_8c_afa3b5394c429c185ea93be16ddb1545f}{PD\_TimerStart}(pdInstance, \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fa6b4302f0f8c2579ee02b4442799b0879}{tSinkTxTimer}, 
+      \hyperlink{usb__pd__timer_8h_a3e76d38a847f33daae69958ace811cfd}{T\_SINK\_TX});
+600         \textcolor{keywordflow}{while} (!\hyperlink{usb__pd__timer_8c_a3d4072fbbc7b10a05c795eaf9ed33f5f}{PD\_TimerCheckInvalidOrTimeOut}(pdInstance, 
+      \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fa6b4302f0f8c2579ee02b4442799b0879}{tSinkTxTimer}))
+601         \{
+602         \}
+603     \}
+604 \textcolor{preprocessor}{#endif}
+605 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a0f4c4b5235e5789a5b705a458ff97bfe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a0f4c4b5235e5789a5b705a458ff97bfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a6ab430500b707d49e6f44a32e91d1aa9}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Start\-Receive@{P\-D\-\_\-\-Msg\-Start\-Receive}}
+\index{P\-D\-\_\-\-Msg\-Start\-Receive@{P\-D\-\_\-\-Msg\-Start\-Receive}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Start\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Start\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a6ab430500b707d49e6f44a32e91d1aa9}
+
+\begin{DoxyCode}
+419 \{
+420     \hyperlink{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{USB\_OSA\_SR\_ALLOC}();
+421     \hyperlink{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}{USB\_OSA\_ENTER\_CRITICAL}();
+422     pdInstance->\hyperlink{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}{enableReceive} = 1;
+423     \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{USB\_OSA\_EXIT\_CRITICAL}();
+424     \hyperlink{usb__pd__msg_8c_aadc2d7bd93e2f244a0b4aefb26d5d5ad}{PD\_MsgReceive}(pdInstance);
+425 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a6ab430500b707d49e6f44a32e91d1aa9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a6ab430500b707d49e6f44a32e91d1aa9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a76b0f4cfb65f3523c10e8e472f42d9c4}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Stop\-Receive@{P\-D\-\_\-\-Msg\-Stop\-Receive}}
+\index{P\-D\-\_\-\-Msg\-Stop\-Receive@{P\-D\-\_\-\-Msg\-Stop\-Receive}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Stop\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Msg\-Stop\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a76b0f4cfb65f3523c10e8e472f42d9c4}
+
+\begin{DoxyCode}
+402 \{
+403     \hyperlink{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{USB\_OSA\_SR\_ALLOC}();
+404     \hyperlink{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}{USB\_OSA\_ENTER\_CRITICAL}();
+405     pdInstance->\hyperlink{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}{enableReceive} = 0;
+406     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} == 1)
+407     \{
+408         pdInstance->\hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receiveState} = 0;
+409         \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{USB\_OSA\_EXIT\_CRITICAL}();
+410         \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edad29607158e8977b9bb140b407b9e6cc4}{PD\_PHY\_CANCEL\_MSG\_RX}, NULL);
+411     \}
+412     \textcolor{keywordflow}{else}
+413     \{
+414         \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{USB\_OSA\_EXIT\_CRITICAL}();
+415     \}
+416 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{usb__pd__msg_8c_a76b0f4cfb65f3523c10e8e472f42d9c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a76b0f4cfb65f3523c10e8e472f42d9c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a31725b2a47c3137de52deb06cfb27e56}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Msg\-Wait\-Send\-Result@{P\-D\-\_\-\-Msg\-Wait\-Send\-Result}}
+\index{P\-D\-\_\-\-Msg\-Wait\-Send\-Result@{P\-D\-\_\-\-Msg\-Wait\-Send\-Result}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Msg\-Wait\-Send\-Result}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-\_\-\-Msg\-Wait\-Send\-Result (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a31725b2a47c3137de52deb06cfb27e56}
+
+\begin{DoxyCode}
+116 \{
+117     uint32\_t eventSet;
+118     \textcolor{keywordflow}{do}
+119     \{
+120         eventSet = 0u;
+121         \hyperlink{group__usb__os__abstraction_ga5ce587209d676871f3ec62900054febd}{USB\_OsaEventWait}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 0xffu, 0, 5, &eventSet
+      );
+122         \hyperlink{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768}{PD\_PortTaskEventProcess}(pdInstance, eventSet);
+123         \textcolor{keywordflow}{if} (eventSet & \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981a01e917815dd3d2d16283e6ff86f9b1c6}{PD\_TASK\_EVENT\_SEND\_DONE})
+124         \{
+125             \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{USB\_OsaEventClear}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      PD\_TASK\_EVENT\_SEND\_DONE);
+126             \textcolor{keywordflow}{break};
+127         \}
+128 
+129         \textcolor{comment}{/* Disconnected */}
+130         \textcolor{keywordflow}{if} (\hyperlink{usb__pd__msg_8c_a25116c60801fe4f4def90e3e42614b54}{PD\_ConnectCheck}(pdInstance) == (uint8\_t)
+      \hyperlink{usb__pd__interface_8h_a924ee365c422092460915bc8cd8b9cbbaea13843a3c8cfb639d76fc9a4e387b53}{kConnectState\_Disconnected})
+131         \{
+132             \hyperlink{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3eda05d1be67ea7a2972c165dd67a0196839}{PD\_PHY\_CANCEL\_MSG\_TX}, NULL);
+133             pdInstance->\hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sendingState} = 0;
+134             \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+135         \}
+136     \} \textcolor{keywordflow}{while} (1);
+137 
+138     \textcolor{keywordflow}{return} ((pdInstance->\hyperlink{struct__pd__instance_ac02af68a4c0e36f39a1b3203c5638c2b}{sendingResult} == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success}) ? 1 : 0);
+139 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a31725b2a47c3137de52deb06cfb27e56_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a31725b2a47c3137de52deb06cfb27e56_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Phy\-Control@{P\-D\-\_\-\-Phy\-Control}}
+\index{P\-D\-\_\-\-Phy\-Control@{P\-D\-\_\-\-Phy\-Control}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Phy\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Phy\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{uint32\-\_\-t}]{control, }
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2}
+
+\begin{DoxyCode}
+123 \{
+124     \textcolor{comment}{// usb\_pd\_phy.h: pd\_phy\_control\_t enum}
+125     \textcolor{keywordflow}{if} ((control == \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edadd7a49b2857f7cc9b4708cb899950eec}{PD\_PHY\_UPDATE\_STATE}) ||
+126         (\hyperlink{group__usb__os__abstraction_gab25fb5d93d3b665ca8eadf2a670d3361}{USB\_OsaEventCheck}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ac05d4679325cb8c3a8491b9812e28924}{PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE}, NULL) ==
+127          \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{kStatus\_USB\_OSA\_Success}))
+128     \{
+129         \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{USB\_OsaEventClear}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ac05d4679325cb8c3a8491b9812e28924}{PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE});
+130         \textcolor{comment}{// pd/usb\_pd\_interface.c中初始化，对应phy中的control函数}
+131         pdInstance->\hyperlink{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{phyInterface}->\hyperlink{struct__pd__phy__api__interface_a5e422dbfd66fca34934e39b451f17094}{pdPhyControl}(pdInstance->
+      \hyperlink{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{pdPhyHandle}, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edadd7a49b2857f7cc9b4708cb899950eec}{PD\_PHY\_UPDATE\_STATE}, NULL);
+132         NVIC\_EnableIRQ((IRQn\_Type)pdInstance->\hyperlink{struct__pd__instance_a2d9a457d63da9c4cb5e3feece0cbf3ec}{pdConfig}->\hyperlink{struct__pd__instance__config_a131f930f58f1a9bfe1488acb62aa2725}{phyInterruptNum});
+133     \}
+134 
+135     \textcolor{comment}{// call PDPTN5110\_Control}
+136     \textcolor{keywordflow}{if} (control != \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edadd7a49b2857f7cc9b4708cb899950eec}{PD\_PHY\_UPDATE\_STATE})
+137     \{
+138         \textcolor{keywordflow}{return} pdInstance->\hyperlink{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{phyInterface}->\hyperlink{struct__pd__phy__api__interface_a5e422dbfd66fca34934e39b451f17094}{pdPhyControl}(pdInstance->
+      \hyperlink{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{pdPhyHandle}, control, param);
+139     \}
+140     \textcolor{keywordflow}{else}
+141     \{
+142         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+143     \}
+144 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a555b1880b5b259c3fdcd3da821e06cf2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768}{\index{usb\-\_\-pd\-\_\-msg.\-c@{usb\-\_\-pd\-\_\-msg.\-c}!P\-D\-\_\-\-Port\-Task\-Event\-Process@{P\-D\-\_\-\-Port\-Task\-Event\-Process}}
+\index{P\-D\-\_\-\-Port\-Task\-Event\-Process@{P\-D\-\_\-\-Port\-Task\-Event\-Process}!usb_pd_msg.c@{usb\-\_\-pd\-\_\-msg.\-c}}
+\subsubsection[{P\-D\-\_\-\-Port\-Task\-Event\-Process}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Port\-Task\-Event\-Process (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-instance\-\_\-t} $\ast$}]{pd\-Instance, }
+\item[{uint32\-\_\-t}]{event\-Set}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768}
+
+\begin{DoxyCode}
+663 \{
+664     \textcolor{comment}{// 如果phy state change, 则通过call back调用alert handler}
+665     \textcolor{comment}{// alert interrupt handler will set PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE and
+       PD\_TASK\_EVENT\_TYPEC\_STATE\_PROCESS, 中断只是设置flag，而不做处理}
+666     \textcolor{keywordflow}{if} (eventSet & \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ac05d4679325cb8c3a8491b9812e28924}{PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE})
+667     \{
+668         \hyperlink{usb__pd__policy_8c_a555b1880b5b259c3fdcd3da821e06cf2}{PD\_PhyControl}(pdInstance, \hyperlink{group__usb__pd__phy__drv_ggab8bfca50e2ac042b47a697c88f84c3edadd7a49b2857f7cc9b4708cb899950eec}{PD\_PHY\_UPDATE\_STATE}, NULL);
+669     \}
+670 
+671     \textcolor{comment}{// Question: other event 的作用}
+672     \textcolor{keywordflow}{if} (eventSet & \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981acf345f0b57466940ab6b574ee9c3c2bc}{PD\_TASK\_EVENT\_OTHER})
+673     \{
+674         \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{USB\_OsaEventClear}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, PD\_TASK\_EVENT\_OTHER)
+      ;
+675     \}
+676 
+677     \textcolor{keywordflow}{if} (pdInstance->\hyperlink{struct__pd__instance_aefbe7a5da39f65fa52efdc9cbae4d9cc}{isConnected})
+678     \{
+679         eventSet &= (~(PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE | PD\_TASK\_EVENT\_OTHER | 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ace1c61e1c2c9768ffea7e4ed3552dabd}{PD\_TASK\_EVENT\_FR\_SWAP\_SINGAL} |
+680                        \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981a8d7dadfaeb7942924ec2e0b32f654c35}{PD\_TASK\_EVENT\_DPM\_MSG}));
+681     \}
+682     \textcolor{keywordflow}{else}
+683     \{
+684         eventSet &= (~(PD\_TASK\_EVENT\_PHY\_STATE\_CHAGNE | PD\_TASK\_EVENT\_OTHER | 
+      \hyperlink{usb__pd__interface_8h_a08a5013301d9587b47017854a2ee5981ace1c61e1c2c9768ffea7e4ed3552dabd}{PD\_TASK\_EVENT\_FR\_SWAP\_SINGAL}));
+685     \}
+686 
+687     \textcolor{comment}{/* clear the events that aren't processed in this condition */}
+688     \textcolor{keywordflow}{if} (eventSet)
+689     \{
+690         \textcolor{comment}{// 如果dpm state machine不存在}
+691         \textcolor{keywordflow}{if} (!((pdInstance->\hyperlink{struct__pd__instance_a6e12cc53d94812cf2a28973fae7c6a7e}{dpmStateMachine} == 1) && (pdInstance->
+      \hyperlink{struct__pd__instance_aefbe7a5da39f65fa52efdc9cbae4d9cc}{isConnected})))
+692         \{
+693             \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{USB\_OsaEventClear}(pdInstance->\hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{taskEventHandle}, eventSet);
+694         \}
+695     \}
+696 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__msg_8c_a39aa541f6a8e3843b3ab18fdcf533768_icgraph}
+\end{center}
+\end{figure}
+
+

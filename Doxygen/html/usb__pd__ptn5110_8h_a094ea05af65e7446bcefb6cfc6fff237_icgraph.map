@@ -1,0 +1,40 @@
+<map id="REG_SET_REG_REF" name="REG_SET_REG_REF">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#ae176a3f90e065c327a147a07c4b05885" title="Callback when connection is detached or disabled (unused, I think the original code use this error) ..." alt="" coords="220,135,420,177"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__connect_8c.html#a21ff53f5b949eac37e29c4942c51a315" title="Set register when dbg acc sink is attached. " alt="" coords="209,5,431,46"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__connect_8c.html#ac845e3e6c969e18371e948c8190123d2" title="Set register when dbg acc source is attached. " alt="" coords="211,70,429,111"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110__connect_8c.html#ae7cdb7377bb383beaa0bbe287d3f3405" title="Select the CC line to route to the VCONN source. " alt="" coords="1624,272,1856,299"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__connect_8c.html#ae27fca1a06ebec2028f45dd00e0eff8d" title="Syncronize hardware to CC state (roleControl, tcpc_control, fault_control, power_control) ..." alt="" coords="229,201,411,228"/>
+<area shape="rect" id="node12" href="$usb__pd__ptn5110__hal_8c.html#a098156851ebead92f113cf66d5a9fb4c" title="PDPTN5110_RegCacheModIfy\lField" alt="" coords="217,306,423,347"/>
+<area shape="rect" id="node13" href="$usb__pd__ptn5110__hal_8c.html#a757f338baf242d9a0f6878bf36f4a6c3" title="Enable Vbus monitor and detect put in the attach detecion, the original code enable this when TYPEC_A..." alt="" coords="1357,330,1573,371"/>
+<area shape="rect" id="node14" href="$usb__pd__ptn5110__hal_8c.html#a7d062e29ec69d7d2e139f87d0450da2b" title="Disable Vbus monitor and detect. " alt="" coords="1355,407,1575,449"/>
+<area shape="rect" id="node16" href="$usb__pd__ptn5110__hal_8c.html#a67a3e2c7b4ac0267b2ba8092bb99ee04" title="PDPTN5110_SetFetControl" alt="" coords="819,1092,1003,1119"/>
+<area shape="rect" id="node20" href="$usb__pd__ptn5110__msg_8c.html#a15cb31a257208e3f659c0a53c384d97a" title="Set/Change the port role, must be called before any messages are sent. " alt="" coords="1631,541,1849,568"/>
+<area shape="rect" id="node21" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="212,601,428,642"/>
+<area shape="rect" id="node39" href="$usb__pd__ptn5110__msg_8c.html#acbe7dd640a7b81c7c218015127d001ba" title="Control the HW bist mode This will send a test frame, continuous pattern or setup the hardware to rec..." alt="" coords="1363,1244,1568,1271"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__connect_8c.html#ae08e54c5c0945d6f40e0dde03d9cca41" title="Set CC to Z and disable comparators. " alt="" coords="507,69,717,96"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__interface_8c.html#a365742e7fe65b04a258288d01dc787e1" title="USB_RAM_ADDRESS_ALIGNMENT" alt="" coords="489,120,735,147"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="850,171,971,197"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="1905,516,2050,543"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__interface_8c.html#a7ac2368f9c8bd64f0734fb97465cfe97" title="PDPTN5110_DetectDetach" alt="" coords="520,19,704,45"/>
+<area shape="rect" id="node15" href="$usb__pd__ptn5110__connect_8c.html#a6626302ba190e99a55b7242f90fd2873" title="Callback when connection is detached or disabled (enter into detach or disable state, so put in the PD_PHY_RESET_CONNECT_DETECTION) " alt="" coords="1636,425,1844,466"/>
+<area shape="rect" id="node17" href="$usb__pd__ptn5110__hal_8c.html#a0ea09f30fc9f060c429b16eb7f7662d3" title="PDPTN5110_ResetFetControl" alt="" coords="1093,1092,1291,1119"/>
+<area shape="rect" id="node18" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="1364,968,1567,995"/>
+<area shape="rect" id="node19" href="$usb__pd__ptn5110__hal_8c.html#ae5d40eccd3a7c7902b303d44cedb6a42" title="Callback to be called on assertion of INT_N by victoria. " alt="" coords="1639,844,1841,871"/>
+<area shape="rect" id="node22" href="$usb__pd__ptn5110__msg_8c.html#a060f68d7b7790b4ad0311395f8ac644e" title="Reset the protcol layer hardware. " alt="" coords="1642,593,1838,634"/>
+<area shape="rect" id="node23" href="$usb__pd__ptn5110__msg_8c.html#aa2e4ba085b2b97dcb443e5714967f155" title="After any reset we need to re&#45;enable the message RX. " alt="" coords="505,691,719,733"/>
+<area shape="rect" id="node26" href="$usb__pd__ptn5110__msg_8c.html#a3819bfc3718e5d6fa754f9a402455aa5" title="Setup passive PD monitoring (unused, low power related) " alt="" coords="495,626,729,667"/>
+<area shape="rect" id="node27" href="$usb__pd__ptn5110__msg_8c.html#a1f7aba9e8c5eef7018b18c617fdc27b1" title="Disable message RX and reset the protocol layer (for SOURCE_DISABLE state) (unused, low power related) " alt="" coords="481,473,743,500"/>
+<area shape="rect" id="node28" href="$usb__pd__ptn5110__msg_8c.html#ae070d3966d31951eabb91ba346cde8ce" title="Change the SOP mask used for receive. " alt="" coords="508,826,716,867"/>
+<area shape="rect" id="node24" href="$usb__pd__ptn5110__msg_8c.html#a197ab289f188adce834d460f882e7955" title="Send a hard reset or cable reset, and perform the associated reset of our state. hardResetOrCableRese..." alt="" coords="1359,641,1572,668"/>
+<area shape="rect" id="node25" href="$usb__pd__ptn5110__msg_8c.html#a9cdfc7b9850cbc7252c4aeb05447f6fd" title="After all S/W processing of a hard reset is complete, flag the hardware (unused) " alt="" coords="807,677,1014,718"/>
+<area shape="rect" id="node29" href="$usb__pd__ptn5110__interface_8c.html#a9bd17dd5e461a91ba93e8452b66820fa" title="PDPTN5110_Receive" alt="" coords="835,808,986,835"/>
+<area shape="rect" id="node30" href="$usb__pd__ptn5110__msg_8c.html#a36d74aa3b6c70875e850cc202526cdeb" title="Common prefix for all send data and control functions. " alt="" coords="795,742,1026,783"/>
+<area shape="rect" id="node34" href="$usb__pd__ptn5110__msg_8c.html#aeab1126bfe7625c8fba3cb342eb6aa99" title="PDPTN5110_MsgSendCompLete" alt="" coords="801,1000,1020,1027"/>
+<area shape="rect" id="node37" href="$usb__pd__ptn5110__msg_8c.html#ac5a47c3292f0eb098cbec28f49b8ede7" title="PDPTN5110_MsgReceiveCompLete" alt="" coords="793,859,1029,885"/>
+<area shape="rect" id="node31" href="$usb__pd__ptn5110__msg_8c.html#a29dc8db6b2478eca435f22cee25f6a61" title="Common prefix for all send data functions. " alt="" coords="1089,677,1295,718"/>
+<area shape="rect" id="node32" href="$usb__pd__ptn5110__msg_8c.html#a4c2dd9dfad91380bc2e067e0ae3f5311" title="Send a control message, specify sop. " alt="" coords="1082,743,1302,769"/>
+<area shape="rect" id="node33" href="$usb__pd__ptn5110__interface_8c.html#a637498f43bc0fed57fc7eb8d6992a042" title="PDPTN5110_Send" alt="" coords="1399,743,1532,769"/>
+<area shape="rect" id="node35" href="$usb__pd__ptn5110__msg_8c.html#a9917c53219ae71793f1543d8433eae4e" title="PDPTN5110_MsgHalSendAbort\lIsrProcess" alt="" coords="1087,961,1297,1002"/>
+<area shape="rect" id="node36" href="$usb__pd__ptn5110__msg_8c.html#a6ac6dd7f29e5cefa92f6b94392ea74b6" title="PDPTN5110_MsgHalSendSuccess\lIsrProcess" alt="" coords="1077,1026,1307,1067"/>
+<area shape="rect" id="node38" href="$usb__pd__ptn5110__msg_8c.html#aa9f537f03af07588daf3ee11e48f9f20" title="This is called by the interrupt controller when we receive a message. " alt="" coords="1079,895,1305,937"/>
+</map>

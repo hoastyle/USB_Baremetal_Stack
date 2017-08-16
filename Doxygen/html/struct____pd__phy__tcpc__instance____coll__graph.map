@@ -1,0 +1,5 @@
+<map id="__pd_phy_tcpc_instance_" name="__pd_phy_tcpc_instance_">
+<area shape="rect" id="node2" href="$struct__pd__phy__rx__result.html" title="PD PHY receive result information. PD_PHY_EVENT_RECEIVE_COMPLETE event use this structure as paramete..." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node3" href="$struct__cmsis__drier__adapter.html" title="_cmsis_drier_adapter" alt="" coords="157,5,304,32"/>
+<area shape="rect" id="node4" href="$structpd__phy__TCPC__reg__cache__t.html" title="pd_phy_TCPC_reg_cache_t" alt="" coords="328,5,515,32"/>
+</map>

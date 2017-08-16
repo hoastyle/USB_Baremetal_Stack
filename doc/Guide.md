@@ -1,5 +1,7 @@
 # Code Process
+
 ## function in main.c
+
 * Board Initialization
 * PD_AppInit()
 * task pd_port_task
@@ -26,7 +28,9 @@
 
 pd_app_t: for application or demo
 pd_instance_t: for pd
+
 * 每个instance对应什么？
+
 pd_ptn5110_ctrl_pin_t
 pd_instance_config_t, 包含power config, interface config, phy type config, irq config, product type config, 该config在PD_InstanceInit()中被使用。
 pd_power_port_config_t, 表示power的配置，使用宏控制选择不同的power config, 如DRP...
@@ -34,7 +38,9 @@ pd_power_port_config_t, 表示power的配置，使用宏控制选择不同的pow
 ## Layer
 
 # PHY Driver
+
 两个部分
+
 * 公共
 * 特定type phy
 	* hal
@@ -62,5 +68,20 @@ struct pd_phy_api_interface_t {
 ## Question
 * What's the role of hal?
 * Why use register cache?
+
+# State Machine
+## Stack State Machine
+
+## Connect State Machine
+核心变量：
+* TypeCState_t pdInstance->curConnectState
+* connected: pd_connect_state_t not stable, connected, disconnected
+* connectStatus:
+* pdInstance->connectResult:
+
+PD_ConnectStateMachine
+PD_ConnectSetupNewState
+
+## Policy Engine State Machine
 
 Shield's alert pin will connect to PORTE-31 (J2-2) of FL27 board, J2-2 of FL27 board is connect with PORTE-31 of FL27 MCU, this pin was 使用PORT E 31(对应NVIC 31中断)作为shield board的中断。

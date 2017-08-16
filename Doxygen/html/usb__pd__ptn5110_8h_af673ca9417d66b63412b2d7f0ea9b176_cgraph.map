@@ -1,0 +1,12 @@
+<map id="PDPTN5110_HalInit" name="PDPTN5110_HalInit">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#af231659d66feb7b47a04d094eafcc74c" title="Enable the Callback for power supply change interrupt, initalize state according to the state at this..." alt="" coords="195,57,423,98"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__hal_8c.html#a8e4f6113bbacda70cdd2023d29a73e02" title="Disable FR Swap. " alt="" coords="210,123,409,149"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110_8h.html#a1cec78afbffeb91ccd0fcf72d021d139" title="REG_SET_FIELD" alt="" coords="245,173,374,200"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__hal_8c.html#aea5a6f5ab3adc2c42344845af82218f5" title="Initialise this module. " alt="" coords="206,5,413,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html#af840718cd0f3de58b800010cde92e847" title="Read the remote registers to local buffer. " alt="" coords="473,5,671,32"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__hal_8c.html#abd805633921ee7371cf2b2b90774e990" title="Clear and enable external interrupt. " alt="" coords="475,57,669,98"/>
+<area shape="rect" id="node7" href="$group__usb__pd__cmsis__wrapper.html#ga190a521ef01279662f71d4e33e51aa4c" title="Read data from slave. " alt="" coords="477,143,667,185"/>
+<area shape="rect" id="node10" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="477,209,667,250"/>
+<area shape="rect" id="node8" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="727,155,873,181"/>
+<area shape="rect" id="node9" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="721,209,879,236"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="_pd_sink_pdo" name="_pd_sink_pdo">
+<area shape="rect" id="node2" href="$struct__pd__sink__battery__pdo.html" title="battery sink PDO " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node3" href="$struct__pd__sink__variable__pdo.html" title="variable sink PDO " alt="" coords="179,5,332,32"/>
+<area shape="rect" id="node4" href="$struct__pd__pdo__common.html" title="common PDO for union " alt="" coords="357,5,485,32"/>
+<area shape="rect" id="node5" href="$struct__pd__sink__fixed__pdo.html" title="fixed sink PDO " alt="" coords="510,5,647,32"/>
+</map>

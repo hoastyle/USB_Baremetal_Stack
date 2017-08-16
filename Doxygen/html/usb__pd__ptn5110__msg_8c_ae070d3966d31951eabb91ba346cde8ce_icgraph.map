@@ -1,0 +1,15 @@
+<map id="PDPTN5110_MsgHalSetRxSopEnable" name="PDPTN5110_MsgHalSetRxSopEnable">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#ae5d40eccd3a7c7902b303d44cedb6a42" title="Callback to be called on assertion of INT_N by victoria. " alt="" coords="1075,148,1277,175"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a9bd17dd5e461a91ba93e8452b66820fa" title="PDPTN5110_Receive" alt="" coords="305,323,455,350"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__msg_8c.html#a36d74aa3b6c70875e850cc202526cdeb" title="Common prefix for all send data and control functions. " alt="" coords="265,374,495,416"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__msg_8c.html#aeab1126bfe7625c8fba3cb342eb6aa99" title="PDPTN5110_MsgSendCompLete" alt="" coords="271,182,489,208"/>
+<area shape="rect" id="node13" href="$usb__pd__ptn5110__msg_8c.html#ac5a47c3292f0eb098cbec28f49b8ede7" title="PDPTN5110_MsgReceiveCompLete" alt="" coords="262,31,498,58"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="1326,90,1471,116"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__msg_8c.html#a29dc8db6b2478eca435f22cee25f6a61" title="Common prefix for all send data functions. " alt="" coords="558,349,765,390"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__msg_8c.html#a4c2dd9dfad91380bc2e067e0ae3f5311" title="Send a control message, specify sop. " alt="" coords="551,415,771,442"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__interface_8c.html#a637498f43bc0fed57fc7eb8d6992a042" title="PDPTN5110_Send" alt="" coords="859,415,992,442"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110__msg_8c.html#a9917c53219ae71793f1543d8433eae4e" title="PDPTN5110_MsgHalSendAbort\lIsrProcess" alt="" coords="557,141,766,182"/>
+<area shape="rect" id="node12" href="$usb__pd__ptn5110__msg_8c.html#a6ac6dd7f29e5cefa92f6b94392ea74b6" title="PDPTN5110_MsgHalSendSuccess\lIsrProcess" alt="" coords="547,206,776,248"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="824,148,1027,175"/>
+<area shape="rect" id="node14" href="$usb__pd__ptn5110__msg_8c.html#aa9f537f03af07588daf3ee11e48f9f20" title="This is called by the interrupt controller when we receive a message. " alt="" coords="548,24,775,65"/>
+</map>

@@ -1,0 +1,1708 @@
+\hypertarget{usb__pd__ptn5110__connect_8c}{\section{pd/ptn5110/usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.c File Reference}
+\label{usb__pd__ptn5110__connect_8c}\index{pd/ptn5110/usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{pd/ptn5110/usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-phy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-ptn5110.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-ptn5110\-\_\-register.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-timer.\-h\char`\"{}}\\*
+Include dependency graph for usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2c}{discharge\-\_\-mode\-\_\-t} \{ \hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67}{D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D} = 0, 
+\hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252}{D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Callback when connection is detached or disabled (unused, I think the original code use this error) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a0dd9eaa05d32525cd38a9c5e94d11ea3}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Initialise the hardware for bypass state machine. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a4b4cd7c31c2532a3b1b03b7d060c3aff}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, \hyperlink{group__usb__pd__phy__drv_gaad64c8a6c58f68d58feedd48b49778bd}{pd\-\_\-phy\-\_\-get\-\_\-cc\-\_\-state\-\_\-t} $\ast$cc\-States)
+\begin{DoxyCompactList}\small\item\em Read the current pin state for a given C\-C pin. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a34b274ef814628d8ab8d9a7f1070360e}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Enable interrupts for connection. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a6626302ba190e99a55b7242f90fd2873}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Callback when connection is detached or disabled (enter into detach or disable state, so put in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_aca1a6719003c681f4cf906b31fdfd1cc}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t enable)
+\begin{DoxyCompactList}\small\item\em Update victoria register and internal state (call through control A\-P\-I interface) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a2a4db861a676fce36fbfe7019f83212f}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em disble C\-C monitor temoporarily after disconnection (put in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N, original codes call this in T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-S\-R\-C, T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-S\-N\-K, T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-W\-A\-I\-T\-\_\-\-S\-R\-C too) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ac0f5a2e19ad75f706660e4037af19233}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t used\-C\-C)
+\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a0679fd98bbeb52b3046805a304939aaa}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t used\-C\-C, uint8\-\_\-t rp\-Cfg)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rp. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a04e4e22845301da2fa5e7555f9f59ba0}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t src\-Rp)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rp in unattached state. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a6d7f033cf50fdc8a29caff893219629a}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rp as D\-T\-S source. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a50ff250867f55687d57baa1c76315239}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rd as D\-T\-S sink. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ab94dc6e083ed76c5ff0dda5e184ee592}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t used\-C\-C, uint8\-\_\-t detect\-Way)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rd in unattached state. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a8c56e52ddbb1fbb4d9fc09d36fe49a73}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Assert and monitor Rd in unattached state. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ad55a4f79062b33d94bd7284e08a73ba3}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t start\-Src, uint8\-\_\-t src\-Rp)
+\begin{DoxyCompactList}\small\item\em Toggle and monitor Rp/\-Rd in unattached state. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a21ff53f5b949eac37e29c4942c51a315}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Set register when dbg acc sink is attached. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ac845e3e6c969e18371e948c8190123d2}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Set register when dbg acc source is attached. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_af57d909893f710a05924c70ee0a4d1a5}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t cc)
+\begin{DoxyCompactList}\small\item\em Set C\-C to monitor for accessory disconnection on C\-C1. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t enable, uint8\-\_\-t cc)
+\begin{DoxyCompactList}\small\item\em Select the C\-C line to route to the P\-H\-Y. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ae7cdb7377bb383beaa0bbe287d3f3405}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t enable)
+\begin{DoxyCompactList}\small\item\em Select the C\-C line to route to the V\-C\-O\-N\-N source. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ae27fca1a06ebec2028f45dd00e0eff8d}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Syncronize hardware to C\-C state (role\-Control, tcpc\-\_\-control, fault\-\_\-control, power\-\_\-control) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ae08e54c5c0945d6f40e0dde03d9cca41}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Set C\-C to Z and disable comparators. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t power\-Role)
+\begin{DoxyCompactList}\small\item\em Update hardware after a power role swap has completed (e.\-g. read current advert of new source). \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{usb__pd__ptn5110__connect_8c_a93f18c15d8ac2bccfec8a5b0dde20bd6}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t used\-C\-C)
+\begin{DoxyCompactList}\small\item\em Read the current current limit. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a719232873c71eb8c1ae556668d842007}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Callback to be called when Type\-C current sense is stable. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_ac096caab4176c744ae773ca2e079ada3}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Callback to check for detach during hard reset The C\-C state change as O\-P\-E\-N when doing hard\-\_\-reset, set the in\-Progress as normal state so the normal detach can be detected.  Called from I\-S\-R context (do not implement it) \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a04c93cf6ac2b690c0837b01fc8b37068}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t state)
+\begin{DoxyCompactList}\small\item\em Inform the Hardware chip that an activity is in progress. \end{DoxyCompactList}\item 
+int8\-\_\-t \hyperlink{usb__pd__ptn5110__connect_8c_a45f7e996505f2487f22397d4f18b70fe}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance)
+\begin{DoxyCompactList}\small\item\em Compare the C\-C line voltage to determine the orientation. \end{DoxyCompactList}\item 
+void \hyperlink{usb__pd__ptn5110__connect_8c_a4363da28058199bf22cacb67e5824518}{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current} (\hyperlink{usb__pd__ptn5110_8h_a4c30a11f85c4578ce0974b2812bc9734}{pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$ptn5110\-Instance, uint8\-\_\-t used\-C\-C, uint8\-\_\-t val)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__pd__ptn5110__connect_8c_a0544c3fe466e421738dae463968b70ba}{else}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2c}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!discharge\-\_\-mode\-\_\-t@{discharge\-\_\-mode\-\_\-t}}
+\index{discharge\-\_\-mode\-\_\-t@{discharge\-\_\-mode\-\_\-t}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{discharge\-\_\-mode\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf discharge\-\_\-mode\-\_\-t}}}\label{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}\item[{\em 
+\hypertarget{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67}{D\-C\-H\-R\-G\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}\label{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67}
+}]\index{D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D@{D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D}!usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D@{D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D}}\item[{\em 
+\hypertarget{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252}{D\-C\-H\-R\-G\-\_\-\-E\-N\-A\-B\-L\-E\-D}\label{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+47 \{
+48     \hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67}{DCHRG\_DISABLED} = 0,
+49     \hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252}{DCHRG\_ENABLED} = 1,
+50 \} \hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2c}{discharge\_mode\_t};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__pd__ptn5110__connect_8c_ad55a4f79062b33d94bd7284e08a73ba3}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Drp\-Unattached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{start\-Src, }
+\item[{uint8\-\_\-t}]{src\-Rp}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ad55a4f79062b33d94bd7284e08a73ba3}
+
+
+Toggle and monitor Rp/\-Rd in unattached state. 
+
+
+
+ 
+\begin{DoxyCode}
+426 \{
+427     \textcolor{keywordflow}{if} (startSrc)
+428     \{
+429         \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a1cf8f4ed850df9a6b08e2031c094e16e}{TCPC\_ROLE\_CONTROL\_DRP\_MASK} | \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP} |
+430                                                                   
+      \hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} |
+431                                                                   (srcRp << 
+      \hyperlink{usb__pd__ptn5110__register_8h_af1326986d5bf1439be095b2964d64b57}{TCPC\_ROLE\_CONTROL\_RP\_VALUE\_LSB}));
+432     \}
+433     \textcolor{keywordflow}{else}
+434     \{
+435         \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a1cf8f4ed850df9a6b08e2031c094e16e}{TCPC\_ROLE\_CONTROL\_DRP\_MASK} | \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea789822d846e607cdfaebdbd1f18d1a4b}{ROLE\_CONTROL\_CC2\_RD} |
+436                                                                   
+      \hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6ad1971cd6098f4e7f699ba5bbf0b522e2}{ROLE\_CONTROL\_CC1\_RD} |
+437                                                                   (srcRp << 
+      \hyperlink{usb__pd__ptn5110__register_8h_af1326986d5bf1439be095b2964d64b57}{TCPC\_ROLE\_CONTROL\_RP\_VALUE\_LSB}));
+438     \}
+439     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+440 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ad55a4f79062b33d94bd7284e08a73ba3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ab94dc6e083ed76c5ff0dda5e184ee592}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Attached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{used\-C\-C, }
+\item[{uint8\-\_\-t}]{detect\-Way}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ab94dc6e083ed76c5ff0dda5e184ee592}
+
+
+Assert and monitor Rd in unattached state. 
+
+
+
+ 
+\begin{DoxyCode}
+391 \{
+392     \textcolor{comment}{/* Disable CC\_Status change alert when sinking */}
+393     \textcolor{comment}{/* note: Current Advertisement comes from CC\_STATUS alert, So we cannot disable the CC\_STATUS alert if
+       we need to */}
+394     \textcolor{comment}{/* detect the current advertisement change when sinking VBUS */}
+395     \textcolor{comment}{/* PDPTN5110\_IntcIrqDisable(ptn5110Instance, TCPC\_ALERT\_MASK\_CC\_STATUS\_INTERRUPT\_MASK\_MASK); */}
+396 
+397     \textcolor{comment}{/* Just the connected pull down */}
+398     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+399                   (usedCC == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2}) ? ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN} | (
+      uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea789822d846e607cdfaebdbd1f18d1a4b}{ROLE\_CONTROL\_CC2\_RD}) :
+400                                         ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6ad1971cd6098f4e7f699ba5bbf0b522e2}{ROLE\_CONTROL\_CC1\_RD} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN}));
+401     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+402 
+403     \textcolor{comment}{/* Enable AutoDischarge after connection */}
+404     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} == \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771badc5ad96f1d56cc3354757de9aea78896}{kVbusPower\_Stable})
+405     \{
+406         \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK},
+407                            (1 << 
+      \hyperlink{usb__pd__ptn5110__register_8h_ad83d6cafaf5aec3f51d02467064096e9}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_LSB}));
+408     \}
+409 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ab94dc6e083ed76c5ff0dda5e184ee592_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a50ff250867f55687d57baa1c76315239}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Dbg\-Acc\-Snk (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a50ff250867f55687d57baa1c76315239}
+
+
+Assert and monitor Rd as D\-T\-S sink. 
+
+
+
+ 
+\begin{DoxyCode}
+380 \{
+381     \textcolor{comment}{/* pull down both pins, one to Rd and the other to Ra (except TCPC cannot pull down to Ra) */}
+382     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+383                   ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6ad1971cd6098f4e7f699ba5bbf0b522e2}{ROLE\_CONTROL\_CC1\_RD} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea789822d846e607cdfaebdbd1f18d1a4b}{ROLE\_CONTROL\_CC2\_RD}));
+384     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+385 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a50ff250867f55687d57baa1c76315239_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a8c56e52ddbb1fbb4d9fc09d36fe49a73}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rd\-Unattached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a8c56e52ddbb1fbb4d9fc09d36fe49a73}
+
+
+Assert and monitor Rd in unattached state. 
+
+
+
+ 
+\begin{DoxyCode}
+415 \{
+416     \textcolor{comment}{/* pull down both pins */}
+417     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+418                   ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6ad1971cd6098f4e7f699ba5bbf0b522e2}{ROLE\_CONTROL\_CC1\_RD} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea789822d846e607cdfaebdbd1f18d1a4b}{ROLE\_CONTROL\_CC2\_RD}));
+419     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+420 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a8c56e52ddbb1fbb4d9fc09d36fe49a73_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a0679fd98bbeb52b3046805a304939aaa}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Attached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{used\-C\-C, }
+\item[{uint8\-\_\-t}]{rp\-Cfg}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a0679fd98bbeb52b3046805a304939aaa}
+
+
+Assert and monitor Rp. 
+
+
+
+ \begin{DoxyNote}{Note}
+Called from both E\-C and C\-L\-P task contexts 
+\end{DoxyNote}
+
+\begin{DoxyCode}
+313 \{
+314     uint8\_t powerControl = 0;
+315     \textcolor{comment}{/* Map from configuiration table values to Rp\_Value\_t value in roleControl */}
+316     uint8\_t cfgRpMap[3] = \{
+317         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805ceda2c21b21cb1f3495b95b672e49d917827}{ROLE\_CONTROL\_RP\_DEFAULT},    \textcolor{comment}{/*USBPD\_CURLIM\_STD\_USB*/}
+318         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805ceda20ed779255b1efa331f40861592ac627}{ROLE\_CONTROL\_RP\_VALUE\_RP\_1}, \textcolor{comment}{/*USBPD\_CURLIM\_1A5*/}
+319         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805cedaaec4ee49c6ff871850886150f5706001}{ROLE\_CONTROL\_RP\_VALUE\_RP\_3}, \textcolor{comment}{/*USBPD\_CURLIM\_3A*/}
+320     \};
+321 
+322     \textcolor{comment}{/* Set Rp & Rp current value */}
+323     \{
+324         uint8\_t rpSel = cfgRpMap[rpCfg - 1];
+325         \textcolor{keywordflow}{if} (usedCC == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2})
+326         \{
+327             \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+328                           (uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP} | rpSel);
+329         \}
+330         \textcolor{keywordflow}{else}
+331         \{
+332             \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+333                           (uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN} | rpSel);
+334         \}
+335 
+336         ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+337     \}
+338 
+339     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} != \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771badc5ad96f1d56cc3354757de9aea78896}{kVbusPower\_Stable})
+340     \{
+341         powerControl = \hyperlink{usb__pd__ptn5110__register_8h_aa13de5eedb2ee0fd09b72c543268ec9e}{TCPC\_POWER\_CONTROL\_DISABLE\_VOLTAGE\_ALARMS\_MASK}
+      ;
+342     \}
+343     \textcolor{keywordflow}{else}
+344     \{
+345         powerControl =
+346             (\hyperlink{usb__pd__ptn5110__register_8h_aa13de5eedb2ee0fd09b72c543268ec9e}{TCPC\_POWER\_CONTROL\_DISABLE\_VOLTAGE\_ALARMS\_MASK} |
+       \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK});
+347     \}
+348     \textcolor{comment}{/* Enable DisableVoltageAlarms and AutoDischarge after connection */}
+349     \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control, powerControl, 
+      powerControl);
+350 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a0679fd98bbeb52b3046805a304939aaa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a6d7f033cf50fdc8a29caff893219629a}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Dbg\-Acc\-Src (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a6d7f033cf50fdc8a29caff893219629a}
+
+
+Assert and monitor Rp as D\-T\-S source. 
+
+
+
+ 
+\begin{DoxyCode}
+368 \{
+369     \textcolor{comment}{/* Both Rp pull ups, one at Rp3.0 and one at Rp1.5 */}
+370     \textcolor{comment}{/* (but there is no way in TCPC to set different RP strengths) */}
+371     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+372                   ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP}));
+373     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+374 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a6d7f033cf50fdc8a29caff893219629a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a04e4e22845301da2fa5e7555f9f59ba0}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Assert\-Rp\-Unattached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{src\-Rp}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a04e4e22845301da2fa5e7555f9f59ba0}
+
+
+Assert and monitor Rp in unattached state. 
+
+
+
+ 
+\begin{DoxyCode}
+356 \{
+357     \textcolor{comment}{/* Both Rp pull ups */}
+358     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(
+359         ptn5110Instance, CONTROL, role\_control,
+360         ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP}) | (srcRp << 
+      \hyperlink{usb__pd__ptn5110__register_8h_af1326986d5bf1439be095b2964d64b57}{TCPC\_ROLE\_CONTROL\_RP\_VALUE\_LSB}));
+361     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+362 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a04e4e22845301da2fa5e7555f9f59ba0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_af57d909893f710a05924c70ee0a4d1a5}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Audio\-Accessory\-Attached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{cc}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_af57d909893f710a05924c70ee0a4d1a5}
+
+
+Set C\-C to monitor for accessory disconnection on C\-C1. 
+
+
+
+ 
+\begin{DoxyCode}
+472 \{
+473     uint8\_t cc1Orcc2 = (cc == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2}) ? ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP} | (uint8\_t
+      )\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN}) :
+474                                          ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN});
+475     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control, cc1Orcc2);
+476     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+477 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_af57d909893f710a05924c70ee0a4d1a5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a45f7e996505f2487f22397d4f18b70fe}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}int8\-\_\-t P\-D\-P\-T\-N5110\-\_\-\-Connect\-Compare\-Cc\-Voltage (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a45f7e996505f2487f22397d4f18b70fe}
+
+
+Compare the C\-C line voltage to determine the orientation. 
+
+
+
+ \begin{DoxyNote}{Note}
+only for Debug\-Acc\-Snk 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+$>$0 cc1 voltage $>$ cc2 voltage =0 (cc1 voltage == cc2 voltage) or (any of the cc1 is not connected) $<$0 cc1 voltage $<$ cc2 voltage For D\-B\-G accessory. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+753 \{
+754     uint8\_t ccStatus = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CC\_STATUS, cc\_status);
+755     uint8\_t cc2State = \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, CC2\_STATE);
+756     uint8\_t cc1State = \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, CC1\_STATE);
+757 
+758     \textcolor{keywordflow}{if} ((cc1State != \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ea6a78d430fc49679cceb7e12ca7a8c960}{kCurrent\_Invalid}) && (cc2State != 
+      \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ea6a78d430fc49679cceb7e12ca7a8c960}{kCurrent\_Invalid}))
+759     \{
+760         \textcolor{keywordflow}{return} cc1State - cc2State;
+761     \}
+762     \textcolor{keywordflow}{else}
+763     \{
+764         \textcolor{keywordflow}{return} 0;
+765     \}
+766 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a45f7e996505f2487f22397d4f18b70fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a21ff53f5b949eac37e29c4942c51a315}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Snk\-Attached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a21ff53f5b949eac37e29c4942c51a315}
+
+
+Set register when dbg acc sink is attached. 
+
+
+
+ 
+\begin{DoxyCode}
+446 \{
+447     \textcolor{comment}{/* Note: Don't change Role Control, CC line should be kept as Rd/Rd when working at Dbg Acc sink state 
+      */}
+448 
+449     \textcolor{comment}{/* Enable AutoDischarge after connection */}
+450     \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK},
+451                        (1 << \hyperlink{usb__pd__ptn5110__register_8h_ad83d6cafaf5aec3f51d02467064096e9}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_LSB}
+      ));
+452     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a44780576115e54b36970c33d085ff76d}{ADDR\_power\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, power\_control));
+453 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a21ff53f5b949eac37e29c4942c51a315_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a21ff53f5b949eac37e29c4942c51a315_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ac845e3e6c969e18371e948c8190123d2}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Dbg\-Acc\-Src\-Attached (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ac845e3e6c969e18371e948c8190123d2}
+
+
+Set register when dbg acc source is attached. 
+
+
+
+ 
+\begin{DoxyCode}
+459 \{
+460     \textcolor{comment}{/* Note: Don't change Role Control, CC line should be kept as Rp/Rp when working at Dbg Acc source
+       state */}
+461 
+462     \textcolor{comment}{/* Enable AutoDischarge after connection */}
+463     \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK},
+464                        (1 << \hyperlink{usb__pd__ptn5110__register_8h_ad83d6cafaf5aec3f51d02467064096e9}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_LSB}
+      ));
+465     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a44780576115e54b36970c33d085ff76d}{ADDR\_power\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, power\_control));
+466 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ac845e3e6c969e18371e948c8190123d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ac845e3e6c969e18371e948c8190123d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a6626302ba190e99a55b7242f90fd2873}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Detach\-Or\-Disable\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a6626302ba190e99a55b7242f90fd2873}
+
+
+Callback when connection is detached or disabled (enter into detach or disable state, so put in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N) 
+
+
+
+ 
+\begin{DoxyCode}
+256 \{
+257     \textcolor{comment}{/* need to disable Vbus monitor when detached */}
+258     \hyperlink{usb__pd__ptn5110_8h_a7d062e29ec69d7d2e139f87d0450da2b}{PDPTN5110\_VbusDisableMonitorAndDetect}(ptn5110Instance);
+259 
+260     \textcolor{comment}{/* Disable AutoDischarge before waiting for connection */}
+261     \hyperlink{usb__pd__ptn5110_8h_a90e68fcc68e250295e83aa79a79ffe10}{REG\_CACHE\_MODIFY\_FIELD}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK},
+262                            0);
+263 
+264     \textcolor{comment}{/* need to stop BIST Test Data mode when detached */}
+265     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aad3c9ce4cbeb9feae002869320f59c43}{tcpcRegCache}.\hyperlink{structpd__phy__TCPC__reg__cache__t_a62952ade18c2ee72f74d53efa4f99378}{CONTROL}.\hyperlink{structpd__phy__TCPC__reg__cache__t_a8271f0587de98c5504df7e2bc489835d}{tcpc\_control} &= ~(
+      \hyperlink{usb__pd__ptn5110__register_8h_a246e6a17444329c822ca5d5996119184}{TCPC\_TCPC\_CONTROL\_BIST\_TEST\_MODE\_MASK});
+266     \hyperlink{usb__pd__ptn5110_8h_ae3ccca921b7e3aeb0f01c1f69581c3a3}{REG\_CLR\_BIT}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a89aac5fc25777f43c58415e411e818b1}{ADDR\_tcpc\_control}, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a246e6a17444329c822ca5d5996119184}{TCPC\_TCPC\_CONTROL\_BIST\_TEST\_MODE\_MASK});
+267 
+268     \textcolor{comment}{/* reenable CC\_Status change alert */}
+269     \hyperlink{usb__pd__ptn5110_8h_abd805633921ee7371cf2b2b90774e990}{PDPTN5110\_IntcIrqClearAndEnable}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a6024dac3160698c7e906e3ced36c0c14}{TCPC\_ALERT\_MASK\_CC\_STATUS\_INTERRUPT\_MASK\_MASK});
+270 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a6626302ba190e99a55b7242f90fd2873_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a6626302ba190e99a55b7242f90fd2873_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ae08e54c5c0945d6f40e0dde03d9cca41}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-All (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ae08e54c5c0945d6f40e0dde03d9cca41}
+
+
+Set C\-C to Z and disable comparators. 
+
+
+
+ 
+\begin{DoxyCode}
+604 \{
+605     \textcolor{comment}{/* Clear terminations */}
+606     \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+607                   ((uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN}));
+608     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+609 
+610     \textcolor{comment}{// Disable AutoDischarge before waiting for connection}
+611     \hyperlink{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885}{PDPTN5110\_ConnectReleasePowerControl}(ptn5110Instance);
+612 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae08e54c5c0945d6f40e0dde03d9cca41_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae08e54c5c0945d6f40e0dde03d9cca41_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a2a4db861a676fce36fbfe7019f83212f}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Disable\-Comparators (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a2a4db861a676fce36fbfe7019f83212f}
+
+
+disble C\-C monitor temoporarily after disconnection (put in the P\-D\-\_\-\-P\-H\-Y\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T\-\_\-\-D\-E\-T\-E\-C\-T\-I\-O\-N, original codes call this in T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-S\-R\-C, T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-S\-N\-K, T\-Y\-P\-E\-C\-\_\-\-T\-R\-Y\-\_\-\-W\-A\-I\-T\-\_\-\-S\-R\-C too) 
+
+
+
+ 
+\begin{DoxyCode}
+290 \{
+291     \textcolor{comment}{/* TODO */}
+292 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a2a4db861a676fce36fbfe7019f83212f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a34b274ef814628d8ab8d9a7f1070360e}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Enable\-Type\-C\-Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a34b274ef814628d8ab8d9a7f1070360e}
+
+
+Enable interrupts for connection. 
+
+
+
+ \begin{DoxyNote}{Note}
+Only called from C\-L\-P task context (call one time in the task, so put in the init function) 
+\end{DoxyNote}
+
+\begin{DoxyCode}
+246 \{
+247     \textcolor{comment}{/* reenable CC\_Status change alert */}
+248     \hyperlink{usb__pd__ptn5110_8h_abd805633921ee7371cf2b2b90774e990}{PDPTN5110\_IntcIrqClearAndEnable}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a6024dac3160698c7e906e3ced36c0c14}{TCPC\_ALERT\_MASK\_CC\_STATUS\_INTERRUPT\_MASK\_MASK});
+249 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a34b274ef814628d8ab8d9a7f1070360e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a34b274ef814628d8ab8d9a7f1070360e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a4b4cd7c31c2532a3b1b03b7d060c3aff}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-C\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{{\bf pd\-\_\-phy\-\_\-get\-\_\-cc\-\_\-state\-\_\-t} $\ast$}]{cc\-States}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a4b4cd7c31c2532a3b1b03b7d060c3aff}
+
+
+Read the current pin state for a given C\-C pin. 
+
+
+
+ \begin{DoxyNote}{Note}
+Only called from C\-L\-P task 
+\end{DoxyNote}
+
+\begin{DoxyCode}
+90 \{
+91     uint8\_t cc1Status;
+92     uint8\_t cc2Status;
+93     uint8\_t roleControl = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, role\_control);
+94     uint8\_t rawStatus = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CC\_STATUS, cc\_status);
+95     ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+96     ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+97 
+98     \textcolor{comment}{// Question: check cc filter timer是否在工作, cc filter的作用是什么？}
+99     \textcolor{comment}{// 用来保证CC status被正确获取，是最新的status？}
+100     \textcolor{keywordflow}{if} (\hyperlink{usb__pd__timer_8c_a3d4072fbbc7b10a05c795eaf9ed33f5f}{PD\_TimerCheckInvalidOrTimeOut}(ptn5110Instance->
+      \hyperlink{struct____pd__phy__tcpc__instance___ac32468695e40e122402f73f58e2b2883}{pdHandle}, \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fac01b412f395a7e02591756ce3d743ade}{timrCCFilter}))
+101     \{
+102         \textcolor{keywordflow}{if} (rawStatus == 0xFFu)
+103         \{
+104             \hyperlink{usb__pd__ptn5110_8h_af840718cd0f3de58b800010cde92e847}{PDPTN5110\_RegCacheSynC}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110_8h_a3c2e8f0da8d2b0a16922bcd0c6c05474aa9ee7ab0f8e7ce950b5431b27427f5d3}{kRegModule\_CCStatus});
+105             \textcolor{comment}{/* ptn5110Instance->ccStatusNoChangeTime = 0; */}
+106         \}
+107     \}
+108 \textcolor{preprocessor}{#if 0}
+109 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (rawStatus != ptn5110Instance->ccPrevStatus)
+110     \{
+111         ptn5110Instance->ccPrevStatus = rawStatus;
+112         ptn5110Instance->ccStatusNoChangeTime = 0;
+113     \}
+114     \textcolor{keywordflow}{else}
+115     \{
+116         ptn5110Instance->ccStatusNoChangeTime++;
+117     \}
+118     \textcolor{keywordflow}{if} (ptn5110Instance->ccStatusNoChangeTime >= 50)
+119     \{
+120         ptn5110Instance->ccStatusNoChangeTime = 0;
+121         \hyperlink{usb__pd__ptn5110_8h_af840718cd0f3de58b800010cde92e847}{PDPTN5110\_RegCacheSynC}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110_8h_a3c2e8f0da8d2b0a16922bcd0c6c05474aa9ee7ab0f8e7ce950b5431b27427f5d3}{kRegModule\_CCStatus});
+122     \}
+123 \textcolor{preprocessor}{#endif}
+124 \textcolor{preprocessor}{}
+125     rawStatus = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CC\_STATUS, cc\_status);
+126     cc1Status = rawStatus & \hyperlink{usb__pd__ptn5110__register_8h_a635d8d080b381b13439565e61ea106ee}{TCPC\_CC\_STATUS\_CC1\_STATE\_MASK};
+127     cc2Status = rawStatus & \hyperlink{usb__pd__ptn5110__register_8h_ac388ecb31db15cb050911f8d7ae14a81}{TCPC\_CC\_STATUS\_CC2\_STATE\_MASK};
+128 
+129     \textcolor{comment}{/* If we are still looking, then just use the previous value */}
+130     \textcolor{keywordflow}{if} (rawStatus & \hyperlink{usb__pd__ptn5110__register_8h_af1b0ebc02da1abca4208d91a13934e12}{TCPC\_CC\_STATUS\_LOOKING4\_CONNECTION\_MASK})
+131     \{
+132         \textcolor{keywordflow}{if} (rawStatus == 0xFFu)
+133         \{
+134             ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaab679c126401ef34d37b0807109669dcf}{kCCState\_Unstable};
+135             ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaab679c126401ef34d37b0807109669dcf}{kCCState\_Unstable};
+136         \}
+137         \textcolor{keywordflow}{return};
+138     \}
+139 
+140     \textcolor{comment}{// 0 -> Rp, 1 -> Rd}
+141     \textcolor{keywordflow}{if} (!(rawStatus & \hyperlink{usb__pd__ptn5110__register_8h_ab004c0d3bb1f6f6ade40ef649dcd6999}{TCPC\_CC\_STATUS\_CONNECT\_RESULT\_MASK})) \textcolor{comment}{/* Rp for
+       Source */}
+142     \{
+143         \textcolor{comment}{// cc1 disconnect or don't care}
+144         \textcolor{keywordflow}{if} ((roleControl & \hyperlink{usb__pd__ptn5110__register_8h_a1ad26aaaf48668f390e6a651dd4920d4}{TCPC\_ROLE\_CONTROL\_CC1\_MASK}) == 
+      \hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN})
+145         \{
+146             ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+147         \}
+148         \textcolor{keywordflow}{else}
+149         
+150             \textcolor{keywordflow}{switch} (cc1Status)
+151             \{
+152                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_a751518215f843f27341f3ba60f792a3fa225be0330fc54716895751c3bccd9cc3}{CC\_STATUS\_CC1\_STATE\_SRC\_OPEN}:
+153                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaac26b04a9aef09cf82b2b01c5d775ad40}{kCCState\_SrcOpen};
+154                     \textcolor{keywordflow}{break};
+155                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_a751518215f843f27341f3ba60f792a3fa5854f31101d3d453b3c883923585b585}{CC\_STATUS\_CC1\_STATE\_SRC\_RA}:
+156                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaab1f4f45b18f4f5729a23ef05ba9c741d}{kCCState\_SrcRa};
+157                     \textcolor{keywordflow}{break};
+158                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_a751518215f843f27341f3ba60f792a3fadd92a9baea71a3bd84a4e9db7c3486eb}{CC\_STATUS\_CC1\_STATE\_SRC\_RD}:
+159                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaaa412476134fd446143c0e7275b5c329f}{kCCState\_SrcRd};
+160                     \textcolor{keywordflow}{break};
+161                 \textcolor{keywordflow}{default}:
+162                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_a551804e47b7f897e9e4ca61e0af9caf3}{cc1State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+163                     \textcolor{keywordflow}{break};
+164             \}
+165         \}
+166 
+167         \textcolor{keywordflow}{if} ((roleControl & \hyperlink{usb__pd__ptn5110__register_8h_ae2705a7862594049fc1f95639ab6dc14}{TCPC\_ROLE\_CONTROL\_CC2\_MASK}) == 
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN})
+168         \{
+169             ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+170         \}
+171         \textcolor{keywordflow}{else}
+172         \{
+173             \textcolor{keywordflow}{switch} (cc2Status)
+174             \{
+175                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_aecef9d9f19116420b1e2828d78d7ca3da958ec69df304e3d774b48d9f63f0eb7c}{CC\_STATUS\_CC2\_STATE\_SRC\_OPEN}:
+176                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaac26b04a9aef09cf82b2b01c5d775ad40}{kCCState\_SrcOpen};
+177                     \textcolor{keywordflow}{break};
+178                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_aecef9d9f19116420b1e2828d78d7ca3daa3f8b1fb4feb7422e32932c21c82cf52}{CC\_STATUS\_CC2\_STATE\_SRC\_RA}:
+179                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaab1f4f45b18f4f5729a23ef05ba9c741d}{kCCState\_SrcRa};
+180                     \textcolor{keywordflow}{break};
+181                 \textcolor{keywordflow}{case} \hyperlink{usb__pd__ptn5110__register_8h_aecef9d9f19116420b1e2828d78d7ca3da58b888f9975aa22a1c947cbe5fe5a79e}{CC\_STATUS\_CC2\_STATE\_SRC\_RD}:
+182                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaaa412476134fd446143c0e7275b5c329f}{kCCState\_SrcRd};
+183                     \textcolor{keywordflow}{break};
+184                 \textcolor{keywordflow}{default}:
+185                     ccStates->\hyperlink{struct__pd__phy__get__cc__state_af32a14cc7bbfad052b927f765176aac8}{cc2State} = \hyperlink{group__usb__pd__phy__drv_gga09172da56b484f99a2ee891e75882faaad9c10479d9b8c3ead23386b15c857458}{kCCState\_Unknown};
+186                     \textcolor{keywordflow}{break};
+187             \}
+188         \}
+189     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a4b4cd7c31c2532a3b1b03b7d060c3aff_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a4b4cd7c31c2532a3b1b03b7d060c3aff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a93f18c15d8ac2bccfec8a5b0dde20bd6}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t P\-D\-P\-T\-N5110\-\_\-\-Connect\-Get\-Type\-C\-Current (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{used\-C\-C}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a93f18c15d8ac2bccfec8a5b0dde20bd6}
+
+
+Read the current current limit. 
+
+
+
+ 
+\begin{DoxyCode}
+636 \{
+637     uint8\_t typecCurrent = \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ea6a78d430fc49679cceb7e12ca7a8c960}{kCurrent\_Invalid};
+638     uint8\_t ccStatus = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CC\_STATUS, cc\_status);
+639 
+640     \textcolor{comment}{/* Update Typec Current status only when connectionresult shows we're presenting Rd */}
+641     \textcolor{keywordflow}{if} (ccStatus & \hyperlink{usb__pd__ptn5110__register_8h_ab004c0d3bb1f6f6ade40ef649dcd6999}{TCPC\_CC\_STATUS\_CONNECT\_RESULT\_MASK})
+642     \{
+643         typecCurrent = (usedCC == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2}) ? \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, 
+      CC2\_STATE) :
+644                                              \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, CC1\_STATE);
+645     \}
+646 \textcolor{preprocessor}{#if defined(PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE) && (PD\_CONFIG\_PD3\_AMS\_COLLISION\_AVOID\_ENABLE)}
+647 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (typecCurrent == \hyperlink{group__usb__pd__stack_ggaf956bb4d3d27df52fb694311b8219b0ead84bbcae527b6cfc2e9a5fd96648af74}{kCurrent\_1A5})
+648     \{
+649         ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a68e310d1771e6f32f6d1b1b9f5c00aa8}{amsSinkTxOK} = \textcolor{keyword}{false};
+650     \}
+651     \textcolor{keywordflow}{else}
+652     \{
+653         ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a68e310d1771e6f32f6d1b1b9f5c00aa8}{amsSinkTxOK} = \textcolor{keyword}{true};
+654     \}
+655 \textcolor{preprocessor}{#endif}
+656 \textcolor{preprocessor}{}
+657     \textcolor{keywordflow}{return} typecCurrent;
+658 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a93f18c15d8ac2bccfec8a5b0dde20bd6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a0dd9eaa05d32525cd38a9c5e94d11ea3}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a0dd9eaa05d32525cd38a9c5e94d11ea3}
+
+
+Initialise the hardware for bypass state machine. 
+
+
+
+ 
+\begin{DoxyCode}
+81 \{
+82     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} = \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771babd57680a848fb2ffdfcb7ce62b380348}{kVbusPower\_Invalid};
+83 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{usb__pd__ptn5110__connect_8c_a0dd9eaa05d32525cd38a9c5e94d11ea3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ac096caab4176c744ae773ca2e079ada3}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-In\-Tc\-Chec\-K\-Detac\-H\-Dur\-Ing\-Hard\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ac096caab4176c744ae773ca2e079ada3}
+
+
+Callback to check for detach during hard reset The C\-C state change as O\-P\-E\-N when doing hard\-\_\-reset, set the in\-Progress as normal state so the normal detach can be detected.  Called from I\-S\-R context (do not implement it) 
+
+
+
+ 
+\begin{DoxyCode}
+682 \{
+683     \textcolor{comment}{/* If we see a detach condition during a hard reset, then exit the hard reset condition */}
+684     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} == \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771ba08bcf27d29365689235f1a3f6b683a09}{kVbusPower\_InHardReset})
+685     \{
+686         uint8\_t ccStatus = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CC\_STATUS, cc\_status);
+687         \textcolor{keywordtype}{bool} orientReverse = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONF\_STD\_OUT, config\_standard\_output
+      ) &
+688                              
+      \hyperlink{usb__pd__ptn5110__register_8h_a58f12313252d1e2624f672322fdf3d11}{TCPC\_CONFIGURE\_STANDARD\_OUTPUT\_CONNECTOR\_ORIENTATION\_GPIO0\_MASK}
+      ;
+689         \textcolor{comment}{/* Check for open condition on the attached CC line */}
+690         \textcolor{keywordflow}{if} ((orientReverse ? \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, CC2\_STATE) :
+691                              \hyperlink{usb__pd__ptn5110_8h_a4c72b463345eebcb1c15dc920386d4fe}{TcpcReadField}(ccStatus, CC\_STATUS, CC1\_STATE)) == 0)
+692         \{
+693             \textcolor{comment}{/* ConnectClpSetInProgress(ptn5110Instance, kVbusPower\_Stable); */}
+694         \}
+695     \}
+696 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ac096caab4176c744ae773ca2e079ada3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a719232873c71eb8c1ae556668d842007}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-I\-N\-Tc\-Type\-C\-Current\-Stable (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a719232873c71eb8c1ae556668d842007}
+
+
+Callback to be called when Type\-C current sense is stable. 
+
+
+
+ 
+\begin{DoxyCode}
+664 \{
+665     \textcolor{comment}{/* uint8\_t typecCurrent = kCurrent\_Invalid; */}
+666 
+667     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}{currentStable} = 1;
+668     \textcolor{comment}{/*}
+669 \textcolor{comment}{    typecCurrent = PDPTN5110\_ConnectGetTypeCCurrent(ptn5110Instance, ptn5110Instance->usedCC);}
+670 \textcolor{comment}{    PD\_Notify(ptn5110Instance->pdHandle, PD\_PHY\_EVENT\_SINK\_TYPEC\_CURRENT\_VALUE, &typecCurrent);}
+671 \textcolor{comment}{    */}
+672 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a719232873c71eb8c1ae556668d842007_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_aca1a6719003c681f4cf906b31fdfd1cc}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Raw\-Vbus\-Discharge (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{enable}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_aca1a6719003c681f4cf906b31fdfd1cc}
+
+
+Update victoria register and internal state (call through control A\-P\-I interface) 
+
+
+
+ 
+\begin{DoxyCode}
+277 \{
+278     \hyperlink{usb__pd__ptn5110_8h_a1e9aed7bc7941100ecbb9c1d96075df0}{PDPTN5110\_EnableVSafe0VComparator}(ptn5110Instance, (enable));
+279     \hyperlink{usb__pd__ptn5110_8h_a90e68fcc68e250295e83aa79a79ffe10}{REG\_CACHE\_MODIFY\_FIELD}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a97617deb77f781915fdf23ce42b421cc}{TCPC\_POWER\_CONTROL\_FORCE\_DISCHARGE\_MASK},
+280                            (enable == 0) ? (\hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67}{DCHRG\_DISABLED} << 
+      \hyperlink{usb__pd__ptn5110__register_8h_a6011d294a8340d37a7c3db92ccc450eb}{TCPC\_POWER\_CONTROL\_FORCE\_DISCHARGE\_LSB}) :
+281                                            (\hyperlink{usb__pd__ptn5110__connect_8c_a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252}{DCHRG\_ENABLED} << 
+      \hyperlink{usb__pd__ptn5110__register_8h_a6011d294a8340d37a7c3db92ccc450eb}{TCPC\_POWER\_CONTROL\_FORCE\_DISCHARGE\_LSB}));
+282 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_aca1a6719003c681f4cf906b31fdfd1cc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_aca1a6719003c681f4cf906b31fdfd1cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Release\-Power\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885}
+
+
+Callback when connection is detached or disabled (unused, I think the original code use this error) 
+
+
+
+ 
+\begin{DoxyCode}
+68 \{
+69     \textcolor{comment}{/* Disable AutoDischarge before PR Swap, which ensure that the Typec connection state is updated to
+       correct state as}
+70 \textcolor{comment}{     */}
+71     \textcolor{comment}{/* well */}
+72     \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK}, 0);
+73     \textcolor{comment}{/* Update POWER\_CONTROL immediately when disconnection */}
+74     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a44780576115e54b36970c33d085ff76d}{ADDR\_power\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, power\_control));
+75 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae176a3f90e065c327a147a07c4b05885_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ac0f5a2e19ad75f706660e4037af19233}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-C\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{used\-C\-C}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ac0f5a2e19ad75f706660e4037af19233}
+
+\begin{DoxyCode}
+295 \{
+296     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a411ad2f7bc90a10a62a5ec1f466a4a97}{usedCC} = usedCC;
+297 
+298     \textcolor{keywordflow}{if} (usedCC != \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da38c70fd9b523ca5666dea46ae65119ce}{kPD\_CCInvalid})
+299     \{
+300         \hyperlink{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767}{PDPTN5110\_ConnectSWitchCCComms}(ptn5110Instance, 1, usedCC);
+301     \}
+302     \textcolor{keywordflow}{else}
+303     \{
+304         \hyperlink{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767}{PDPTN5110\_ConnectSWitchCCComms}(ptn5110Instance, 0, usedCC);
+305     \}
+306 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ac0f5a2e19ad75f706660e4037af19233_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ac0f5a2e19ad75f706660e4037af19233_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a04c93cf6ac2b690c0837b01fc8b37068}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Set\-In\-Progress (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{state}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a04c93cf6ac2b690c0837b01fc8b37068}
+
+
+Inform the Hardware chip that an activity is in progress. 
+
+
+
+ \begin{DoxyNote}{Note}
+Called from both I\-S\-R and C\-L\-P task context 
+\end{DoxyNote}
+
+\begin{DoxyCode}
+709 \{
+710     \textcolor{comment}{// 如果target state和phy中的state不一致}
+711     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} != state)
+712     \{
+713         \textcolor{comment}{// state: reset, swap, change in progress, stable}
+714         \textcolor{keywordflow}{if} (state != \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771badc5ad96f1d56cc3354757de9aea78896}{kVbusPower\_Stable})
+715         \{
+716             ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}{currentStable} = 0;
+717             \textcolor{comment}{/* Disable any automatic disconnection during a swap */}
+718             \textcolor{comment}{// disable automatci discharge when detect disconnect to avoid wrong activities in swap
+       operation}
+719             \hyperlink{usb__pd__ptn5110_8h_a90e68fcc68e250295e83aa79a79ffe10}{REG\_CACHE\_MODIFY\_FIELD}(ptn5110Instance, CONTROL, power\_control,
+720                                    
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK}, 0);
+721         \}
+722         \textcolor{comment}{//如果status to kVbusPower\_Stable is in progress}
+723         \textcolor{keywordflow}{else}
+724         \{
+725             \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} == 
+      \hyperlink{group__usb__pd__stack_gga1af9af0106a9413093f8e0d9b796771bac6be16e80130e6e9909ce3075565f39b}{kVbusPower\_InPRSwap})
+726             \{
+727                 ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}{currentStable} = 1;
+728                 \textcolor{comment}{// pd power role: sink, source, none}
+729                 \textcolor{comment}{// 根据role重新初始化alert相关的部分}
+730                 \hyperlink{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca}{PDPTN5110\_ConnectUpdateAfterPRSwap}(ptn5110Instance, 
+      ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___af77c96ac21768f2e8a54fad69f97e96f}{phyPowerRole});
+731             \}
+732             \textcolor{comment}{/* Enable automatic disconnection after resuming normal operation */}
+733             \textcolor{comment}{// ADDR\_power\_control == TCPC\_POWER\_CONTROL\_IDX}
+734             \hyperlink{usb__pd__ptn5110_8h_a90e68fcc68e250295e83aa79a79ffe10}{REG\_CACHE\_MODIFY\_FIELD}(ptn5110Instance, CONTROL, power\_control,
+735                                    
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK},
+736                                    
+      \hyperlink{usb__pd__ptn5110__register_8h_ac632a47e0b2cb4d648e39c9bd3b7ae92}{TCPC\_POWER\_CONTROL\_AUTO\_DISCHARGE\_DISCONNECT\_MASK});
+737         \}
+738 
+739         ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwrInProgress} = state;
+740     \}
+741 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a04c93cf6ac2b690c0837b01fc8b37068_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a04c93cf6ac2b690c0837b01fc8b37068_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a4363da28058199bf22cacb67e5824518}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Src\-Set\-Typec\-Current (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{used\-C\-C, }
+\item[{uint8\-\_\-t}]{val}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a4363da28058199bf22cacb67e5824518}
+
+\begin{DoxyCode}
+769 \{
+770     \textcolor{comment}{/* Map from configuiration table values to Rp\_Value\_t value in roleControl */}
+771     uint8\_t cfgRpMap[3] = \{
+772         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805ceda2c21b21cb1f3495b95b672e49d917827}{ROLE\_CONTROL\_RP\_DEFAULT},    \textcolor{comment}{/*USBPD\_CURLIM\_STD\_USB*/}
+773         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805ceda20ed779255b1efa331f40861592ac627}{ROLE\_CONTROL\_RP\_VALUE\_RP\_1}, \textcolor{comment}{/*USBPD\_CURLIM\_1A5*/}
+774         \hyperlink{usb__pd__ptn5110__register_8h_a9e61abdadcb5d3299b5d98536e805cedaaec4ee49c6ff871850886150f5706001}{ROLE\_CONTROL\_RP\_VALUE\_RP\_3}, \textcolor{comment}{/*USBPD\_CURLIM\_3A*/}
+775     \};
+776     uint8\_t rpSel = cfgRpMap[val - 1];
+777 
+778     \textcolor{keywordflow}{if} (usedCC == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2})
+779     \{
+780         \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+781                       (uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6}{ROLE\_CONTROL\_CC1\_OPEN} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4}{ROLE\_CONTROL\_CC2\_RP} | rpSel);
+782     \}
+783     \textcolor{keywordflow}{else}
+784     \{
+785         \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CONTROL, role\_control,
+786                       (uint8\_t)\hyperlink{usb__pd__ptn5110__register_8h_a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db}{ROLE\_CONTROL\_CC1\_RP} | (uint8\_t)
+      \hyperlink{usb__pd__ptn5110__register_8h_a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e}{ROLE\_CONTROL\_CC2\_OPEN} | rpSel);
+787     \}
+788 
+789     \textcolor{comment}{/* TODO: will set "look4connection in sync function. */}
+790     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{true};
+791 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a4363da28058199bf22cacb67e5824518_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-S\-Witch\-C\-C\-Comms (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{enable, }
+\item[{uint8\-\_\-t}]{cc}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767}
+
+
+Select the C\-C line to route to the P\-H\-Y. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em enable} & true -\/ Enable commands and route according to cc\-\_\-orient\-\_\-reverse false -\/ Disable switch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+485 \{
+486     \textcolor{keywordflow}{if} (enable)
+487     \{
+488         \textcolor{keywordflow}{if} (cc != \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da38c70fd9b523ca5666dea46ae65119ce}{kPD\_CCInvalid})
+489         \{
+490             \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, tcpc\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ad548e3453940a3d02bb8f7647f29fc97}{TCPC\_TCPC\_CONTROL\_PLUG\_ORIENTATION\_MASK},
+491                                ((cc == \hyperlink{group__usb__pd__phy__drv_ggab23c0fba94b457218944bc5284d0d08da274bd8ffe2629a7d89fb09b4848e172d}{kPD\_CC2}) << 
+      \hyperlink{usb__pd__ptn5110__register_8h_ae2ad443f1ebc4f2264e9150cc633a28a}{TCPC\_TCPC\_CONTROL\_PLUG\_ORIENTATION\_LSB}));
+492         \}
+493     \}
+494     \textcolor{keywordflow}{else}
+495     \{
+496         \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, tcpc\_control, 
+      \hyperlink{usb__pd__ptn5110__register_8h_ad548e3453940a3d02bb8f7647f29fc97}{TCPC\_TCPC\_CONTROL\_PLUG\_ORIENTATION\_MASK}, 0);
+497     \}
+498 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a784ca3f7cf79f3df2a26734007ebd767_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ae7cdb7377bb383beaa0bbe287d3f3405}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Switch\-V\-Conn (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{enable}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ae7cdb7377bb383beaa0bbe287d3f3405}
+
+
+Select the C\-C line to route to the V\-C\-O\-N\-N source. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em enable} & true -\/ Enable commands and route according to cc\-\_\-orient\-\_\-reverse false -\/ Disable switch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+506 \{
+507     uint8\_t vconnSelect =
+508         enable ? (\hyperlink{usb__pd__ptn5110__register_8h_a1b637c1942c16ac5b22fcffa10bffd9f}{TCPC\_POWER\_CONTROL\_ENABLE\_VCONN\_MASK} | 
+      \hyperlink{usb__pd__ptn5110__register_8h_a84ab524c7aa730e7d29121932a81c98a}{TCPC\_POWER\_CONTROL\_VCONN\_POWER\_SUPPORTED\_MASK}) : 0;
+509     \hyperlink{usb__pd__ptn5110_8h_a3a2b41c2be56b4c6947ef71b319e9dc1}{RegCacheWriteField}(ptn5110Instance, CONTROL, power\_control,
+510                        \hyperlink{usb__pd__ptn5110__register_8h_a1b637c1942c16ac5b22fcffa10bffd9f}{TCPC\_POWER\_CONTROL\_ENABLE\_VCONN\_MASK} | 
+      \hyperlink{usb__pd__ptn5110__register_8h_a84ab524c7aa730e7d29121932a81c98a}{TCPC\_POWER\_CONTROL\_VCONN\_POWER\_SUPPORTED\_MASK},
+511                        vconnSelect);
+512 
+513     \textcolor{comment}{/* Enable Vconn must be set after roleControl to ensure there is no overlap */}
+514     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a44780576115e54b36970c33d085ff76d}{ADDR\_power\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, power\_control));
+515 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae7cdb7377bb383beaa0bbe287d3f3405_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae7cdb7377bb383beaa0bbe287d3f3405_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_ae27fca1a06ebec2028f45dd00e0eff8d}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Sync (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_ae27fca1a06ebec2028f45dd00e0eff8d}
+
+
+Syncronize hardware to C\-C state (role\-Control, tcpc\-\_\-control, fault\-\_\-control, power\-\_\-control) 
+
+
+
+ 
+\begin{DoxyCode}
+538 \{
+539     uint8\_t roleControl;
+540 
+541     \textcolor{comment}{/* Need to be in normal power mode to write to typec block */}
+542     \hyperlink{usb__pd__ptn5110_8h_a95b1b1e119af7cb316f55b340aae2531}{PDPTN5110\_PwrDoApplyCurState}(ptn5110Instance, 
+      \hyperlink{group__usb__pd__stack_gga71b74b2e350f1841b93c1f894403f85ba0f9bf42a2302492c1b73555ad91b530a}{kPhyPower\_NormalMode});
+543 
+544     roleControl = \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, role\_control);
+545 
+546     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a89aac5fc25777f43c58415e411e818b1}{ADDR\_tcpc\_control},
+547                     \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, tcpc\_control)
+548 #\textcolor{keywordflow}{if} (defined \hyperlink{usb__pd__ptn5110_8h_a0bc330dd6adc0cb152650b0f88319d26}{USBPD\_ENABLE\_PTN5110\_A0R1\_WORKAROUNDS}) && (
+      USBPD\_ENABLE\_PTN5110\_A0R1\_WORKAROUNDS)
+549                         \textcolor{comment}{/* Allow the TCPM to work-around incorrect entry to debug accessory */}
+550                         | (((\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, vendor\_id) == 
+      \hyperlink{group__usb__pd__stack_gab5c70518a449d87b8e044fe35f9794b9}{PD\_VENDOR\_ID\_NXP}) &&
+551                             (\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, product\_id) == 
+      \hyperlink{usb__pd__ptn5110_8h_adf3515b9e7855268cdfd61832d4c8eb2}{PRODUCT\_ID\_PTN5110}) &&
+552                             (\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, device\_id) < 
+      \hyperlink{usb__pd__ptn5110_8h_a4f3557e678fe998f83b4644e325cccd2}{DEVICE\_ID\_PTN5110\_A0R2})) ?
+553                                \hyperlink{usb__pd__ptn5110__register_8h_a521bd087cf76cc296c98ad4ba8cf145b}{TCPC\_TCPC\_CONTROL\_DEBUG\_ACCESSORY\_CONTROL\_MASK}
+       :
+554                                0)
+555 #endif
+556                         );
+557     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a5b7ca782e1151e94b80a237e369caeb3}{ADDR\_fault\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, fault\_control));
+558 
+559     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated})
+560     \{
+561         \hyperlink{usb__pd__ptn5110_8h_a92e0101ac00c84252c0c7fb3998c4d3f}{RegCacheWrite}(ptn5110Instance, CC\_STATUS, cc\_status, 0xFF);
+562         \hyperlink{usb__pd__timer_8c_afa3b5394c429c185ea93be16ddb1545f}{PD\_TimerStart}(ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___ac32468695e40e122402f73f58e2b2883}{pdHandle}, 
+      \hyperlink{usb__pd__timer_8h_a94e23fe7d4bf2bf6f8de1f51126d071fac01b412f395a7e02591756ce3d743ade}{timrCCFilter}, \hyperlink{usb__pd__timer_8h_ab8b31bf9bd74e3eba53ff71f1b488e64}{T\_CC\_FILTER\_MAX});
+563 
+564 \textcolor{preprocessor}{#if (defined USBPD\_ENABLE\_PTN5110\_A0R2\_WORKAROUNDS) && (USBPD\_ENABLE\_PTN5110\_A0R2\_WORKAROUNDS)}
+565 \textcolor{preprocessor}{}        \textcolor{keywordflow}{if} ((\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, vendor\_id) == 
+      \hyperlink{group__usb__pd__stack_gab5c70518a449d87b8e044fe35f9794b9}{PD\_VENDOR\_ID\_NXP}) &&
+566             (\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, product\_id) == 
+      \hyperlink{usb__pd__ptn5110_8h_adf3515b9e7855268cdfd61832d4c8eb2}{PRODUCT\_ID\_PTN5110}) &&
+567             (\hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, GLOBAL, device\_id) < 
+      \hyperlink{usb__pd__ptn5110_8h_a4f3557e678fe998f83b4644e325cccd2}{DEVICE\_ID\_PTN5110\_A0R2}))
+568         \{
+569             \textcolor{comment}{/* If we are starting to toggle, then preset the hardware state machine to the right levels */}
+570             \textcolor{keywordflow}{if} (\hyperlink{usb__pd__ptn5110_8h_a3f53add6772aaeee3daa6efb52969267}{RoleControlIsToggleSrcFirst}(roleControl))
+571             \{
+572                 \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a4e9acbaadfbfbfbfb3afb6917edbd85f}{ADDR\_role\_control}, (roleControl & ~\hyperlink{usb__pd__ptn5110__register_8h_a1cf8f4ed850df9a6b08e2031c094e16e}{TCPC\_ROLE\_CONTROL\_DRP\_MASK}));
+573             \}
+574             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{usb__pd__ptn5110_8h_a6ab249ba4ce435ade000545e55d5c650}{RoleControlIsToggleSnkFirst}(roleControl))
+575             \{
+576                 \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a4e9acbaadfbfbfbfb3afb6917edbd85f}{ADDR\_role\_control}, (roleControl & ~\hyperlink{usb__pd__ptn5110__register_8h_a1cf8f4ed850df9a6b08e2031c094e16e}{TCPC\_ROLE\_CONTROL\_DRP\_MASK}));
+577             \}
+578             \textcolor{keywordflow}{else}
+579             \{
+580             \}
+581         \}
+582 \textcolor{preprocessor}{#endif}
+583 \textcolor{preprocessor}{}
+584         \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a4e9acbaadfbfbfbfb3afb6917edbd85f}{ADDR\_role\_control}, roleControl);
+585     \}
+586 
+587     \textcolor{comment}{/* Enable Vconn must be set after roleControl to ensure there is no overlap */}
+588     \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_a44780576115e54b36970c33d085ff76d}{ADDR\_power\_control}, 
+      \hyperlink{usb__pd__ptn5110_8h_a829071e6e5240bf74a325f55eb6eabea}{RegCacheRead}(ptn5110Instance, CONTROL, power\_control));
+589 
+590     \textcolor{comment}{/* send Look4connection command when Drp/Rp/Rp or Drp/Rd/Rd */}
+591     \textcolor{keywordflow}{if} (ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} &&
+592         (\hyperlink{usb__pd__ptn5110_8h_a3f53add6772aaeee3daa6efb52969267}{RoleControlIsToggleSrcFirst}(roleControl) || 
+      \hyperlink{usb__pd__ptn5110_8h_a6ab249ba4ce435ade000545e55d5c650}{RoleControlIsToggleSnkFirst}(roleControl)))
+593     \{
+594         \hyperlink{usb__pd__ptn5110_8h_a094ea05af65e7446bcefb6cfc6fff237}{REG\_SET\_REG\_REF}(ptn5110Instance, \hyperlink{usb__pd__ptn5110__register_8h_aadd80629bc413c024b52fd14c9e324ae}{ADDR\_command}, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a2ba317fb7ded6dcbe6c89ae6d469ce11a3ce8e726f28c3b73aea249f079aeb3bb}{TCPC\_LOOK4CONNECTION});
+595     \}
+596 
+597     ptn5110Instance->\hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{roleControlUpdated} = \textcolor{keyword}{false};
+598 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae27fca1a06ebec2028f45dd00e0eff8d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_ae27fca1a06ebec2028f45dd00e0eff8d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap}}
+\index{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap@{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-P\-T\-N5110\-\_\-\-Connect\-Update\-After\-P\-R\-Swap (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-phy\-\_\-ptn5110\-\_\-instance\-\_\-t} $\ast$}]{ptn5110\-Instance, }
+\item[{uint8\-\_\-t}]{power\-Role}
+\end{DoxyParamCaption}
+)}}\label{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca}
+
+
+Update hardware after a power role swap has completed (e.\-g. read current advert of new source). 
+
+
+
+ 
+\begin{DoxyCode}
+618 \{
+619     \textcolor{comment}{/* reenable CC\_Status change alert when PR swap to src */}
+620     \textcolor{keywordflow}{if} (powerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+621     \{
+622         \hyperlink{usb__pd__ptn5110_8h_abd805633921ee7371cf2b2b90774e990}{PDPTN5110\_IntcIrqClearAndEnable}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110__register_8h_a6024dac3160698c7e906e3ced36c0c14}{TCPC\_ALERT\_MASK\_CC\_STATUS\_INTERRUPT\_MASK\_MASK});
+623     \}
+624 
+625     \textcolor{comment}{/* Power role swap does not prompt an interrupt - update the cached status/role info */}
+626     \hyperlink{usb__pd__ptn5110_8h_af840718cd0f3de58b800010cde92e847}{PDPTN5110\_RegCacheSynC}(ptn5110Instance, 
+      \hyperlink{usb__pd__ptn5110_8h_a3c2e8f0da8d2b0a16922bcd0c6c05474aa9ee7ab0f8e7ce950b5431b27427f5d3}{kRegModule\_CCStatus});
+627 
+628     \textcolor{comment}{/* Update the current status to cover the case where current sense was stable while swap in progress
+       asserted */}
+629     \hyperlink{usb__pd__ptn5110__connect_8c_a719232873c71eb8c1ae556668d842007}{PDPTN5110\_ConnectINTcTypeCCurrentStable}(ptn5110Instance);
+630 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__pd__ptn5110__connect_8c_a1136effbc01ddeeb75c6e70077fa1fca_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__pd__ptn5110__connect_8c_a0544c3fe466e421738dae463968b70ba}{\index{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}!else@{else}}
+\index{else@{else}!usb_pd_ptn5110_connect.c@{usb\-\_\-pd\-\_\-ptn5110\-\_\-connect.\-c}}
+\subsubsection[{else}]{\setlength{\rightskip}{0pt plus 5cm}else}}\label{usb__pd__ptn5110__connect_8c_a0544c3fe466e421738dae463968b70ba}

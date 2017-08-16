@@ -177,6 +177,7 @@ pd_status_t PD_InstanceInit(pd_handle *pdHandle,
     pdInstance->phyType = config->phyType;
 	//PD_DpmDemoAppCallback, event callback, 对应枚举体pd_dpm_callback_event_t
 	// Question: 作用是什么？
+	// 该函数通过PD_DpmAppCallback调用
     pdInstance->pdCallback = callbackFn;
 	//callbackFunctions, power related
     pdInstance->callbackFns = callbackFunctions;

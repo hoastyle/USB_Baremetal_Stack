@@ -1,0 +1,1168 @@
+\hypertarget{battery_2pd__app__demo_8c}{\section{demo/pd\-\_\-battery/pd\-\_\-app\-\_\-demo.c File Reference}
+\label{battery_2pd__app__demo_8c}\index{demo/pd\-\_\-battery/pd\-\_\-app\-\_\-demo.\-c@{demo/pd\-\_\-battery/pd\-\_\-app\-\_\-demo.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-app\-\_\-demo.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a}{pd\-\_\-port\-\_\-task} (void $\ast$arg)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_ae90a39427d391ee932de4fd9adbcde6a}{P\-D\-\_\-\-App\-Init} (void)
+\item 
+uint32\-\_\-t \hyperlink{battery_2pd__app__demo_8c_a3bdaba3176efa620aae5ac7921640dcb}{P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_a5e5d54addabe1dbcead41bd1d79adff1}{P\-D\-\_\-\-Demo\-Battery\-Change} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_a94e26762d115010a2e40112c73b2003d}{P\-D\-\_\-\-Demo\-Reset} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}{P\-D\-\_\-\-Demo\-Init} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_afd1cdc5925fb2f4d036e95d445e92efe}{P\-D\-\_\-\-Demo1ms\-Isr\-Process} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{battery_2pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}{P\-D\-\_\-\-Demo\-Find\-P\-D\-O} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance, \hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} $\ast$rdo, uint32\-\_\-t $\ast$voltage)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05}{P\-D\-\_\-\-Demo\-P\-D\-Reset} (void)
+\item 
+void \hyperlink{battery_2pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{P\-D\-\_\-\-Demo\-Task\-Fun} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{battery_2pd__app__demo_8c_ae90a39427d391ee932de4fd9adbcde6a}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-App\-Init@{P\-D\-\_\-\-App\-Init}}
+\index{P\-D\-\_\-\-App\-Init@{P\-D\-\_\-\-App\-Init}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-App\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-App\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_ae90a39427d391ee932de4fd9adbcde6a}
+
+\begin{DoxyCode}
+271 \{
+272     \textcolor{comment}{/* port config */}
+273     \textcolor{comment}{//因为给的是指针，所以sourceCaps 指向 selfSourcePdo1}
+274     \textcolor{comment}{// Question: g\_PowerPortConfig的作用是什么？}
+275     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}, \textcolor{comment}{/* source caps */}
+276         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 2;
+277     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_ab247068e26ad76b2670eb96da39969e1}{sinkCaps} = (uint32\_t *)&
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}, \textcolor{comment}{/* self sink caps */}
+278         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_aa1d58bf75fbebad4b8c7e29b0cc4c64e}{sinkCapCount} = 2;
+279     \textcolor{comment}{// initialize pd\_instance, pd\_app\_t.pdHandle = pd\_instance\_t}
+280     \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_ga3ab001290dc934fd6a45ad93916f5140}{PD\_InstanceInit}(&\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{pd__app_8c_a648f96eddcd92c89d8908b63ac0f9185}{PD\_DpmDemoAppCallback}, &\hyperlink{pd__app_8c_a306f9b8029582dfb8c64f163fea3cf65}{callbackFunctions}, &
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance},
+281                         &\hyperlink{pd__app_8c_a33272daf4c2c919c757e12106af7ffd5}{g\_PDConfig}) != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+282     \{
+283         PRINTF(\textcolor{stringliteral}{"pd init fail\(\backslash\)r\(\backslash\)n"});
+284     \}
+285 
+286     \textcolor{comment}{/* initialize port interrupt */}
+287     \textcolor{comment}{/* 设置MCU分配给PTN5110的GPIO pin interrupt, PORTE 31 pin}
+288 \textcolor{comment}{    set IRQC field of PORTE 31 pin PCR, NVIC除系统规定的中断，}
+289 \textcolor{comment}{    其他的中断是由芯片生产厂商硬件设计规定好的。对于KL27，参考KL27 ReferenceManual P52*/}
+290     PORT\_SetPinInterruptConfig(\hyperlink{pd__app_8h_ad99e5c127ff695f7b579400ef1062e76}{BOARD\_PTN5110\_GPIO\_PORT}, 
+      \hyperlink{pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{BOARD\_PTN5110\_GPIO\_PIN}, kPORT\_InterruptLogicZero);
+291     \textcolor{comment}{// set PORTE 31 pin data direction to 0 as input}
+292     \hyperlink{pd__app_8h_a1fcc7374a2ec203aceb85355f3118f3d}{BOARD\_PTN5110\_GPIO}->PDDR &= ~(1U << \hyperlink{pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{BOARD\_PTN5110\_GPIO\_PIN});   
+       \textcolor{comment}{/* gpio set as input */}
+293     \textcolor{comment}{// set PORTA 13 pin data direction to 1 as output}
+294     \hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}->PDDR |= (1U << 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}); \textcolor{comment}{/* as output */}
+295 
+296     \textcolor{comment}{//设置PTN5110 GPIO Interrupt的优先级}
+297     NVIC\_SetPriority((IRQn\_Type)\hyperlink{pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{BOARD\_PTN5110\_GPIO\_IRQ}, 
+      \hyperlink{pd__app_8c_a955008a65e30d3b860c6cf4f6d7c2e54}{PD\_PTN5110\_GPIO\_INTERRUPT\_PRIORITY});
+298 
+299     \hyperlink{pd__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{PD\_PowerBoardReset}();
+300 
+301     \textcolor{comment}{// pd\_app\_t type}
+302     \textcolor{comment}{// Question: pd\_app\_t 的作用是什么？}
+303     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop} = \hyperlink{group__usb__pd__stack_gga7a924235403e0acab44d01e720091aa1a5c5082dee0eb49208cd4a5c728ff7fce}{kPD\_MsgSOP};
+304     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} = 0;
+305     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a927a55034c0beae071c028b60cd36290}{partnerSinkCapNumber} = 0;
+306     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7020e18597a0914824f3b9cb417dff87}{reqestResponse} = 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca5cbc28129fbc8ef711e9af7a9400d858}{kCommandResult\_Accept};
+307     \textcolor{comment}{/* PDO1: fixed supply: dual-role power; Externally Powered; no USB communication; dual-role data; 5V;
+       2.7A */}
+308     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = 0;
+309     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a9965da25ad2e4b58fd579e5a0632145a}{dualRoleData} = 1;
+310     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_afcce88f5e0b229d32e79297566e80dfd}{dualRolePower} = 1;
+311     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_aa1715617698b348913227183195ae8f5}{externalPowered} = 1;
+312     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a2375dc4363d49f14521f1f7f6adffcde}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+313     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} = (27 * 10);
+314     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1a27fc2753ab60196afd3813e158d413}{peakCurrent} = 0;
+315 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+316 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a6e793acf2c695c57030e59f28dc5b65a}{unchunkedSupported} = 1;
+317 \textcolor{preprocessor}{#endif}
+318 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a0e2f3fc73e269168132defedb85f9d9f}{usbCommunicationsCapable} = 0;
+319     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_aa836f41dcaaafe17d4ff65eeb3729b6d}{usbSuspendSupported} = 0;
+320     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} = (5 * 1000 / 50);
+321     \textcolor{comment}{/* PDO2: fixed Supply: 9V - 1.5A */}
+322     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = 0;
+323     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a2375dc4363d49f14521f1f7f6adffcde}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+324     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} = (15 * 10);
+325     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} = (9 * 1000 / 50);
+326     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7356b8ec554edd5c580b8b2310e3fed0}{selfSouceCapNumber} = 2;
+327     \textcolor{comment}{/* PDO1: fixed:5.0V, 2.7A */}
+328     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue} = 0;
+329     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9290ef90d4336be4642f40aac2da8f5e}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+330     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a6e8fb8552ee54c1d0227a03b5d7aecbf}{dualRoleData} = 1;
+331     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9ff5e34e2bf3e62a6b4dc017f559c061}{dualRolePower} = 1;
+332     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a44e4b2e4bc2b34929036acee6ff6ae34}{externalPowered} = 1;
+333 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+334 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a31798efee281f6d1c69ff96d7a79e113}{frSwapRequiredCurrent} = \hyperlink{group__usb__pd__stack_gga2cce3e21dbed22affd462b139a25889fa8c5c8b5dc2ba25ed160cfd3d6447e917}{kFRSwap\_CurrentDefaultUSB};
+335 \textcolor{preprocessor}{#endif}
+336 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a511903e5dca26d874a304e558db6cc72}{higherCapability} = 1;
+337     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_aa19552768100717810142b8c4df3835c}{usbCommunicationsCapable} = 0;
+338     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a5e095a725455f85faa43a1573e62b798}{voltage} = (5 * 1000 / 50);
+339     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a264499e662c6bb82e0e25fc3d296b88b}{operateCurrent} = (27 * 10);
+340     \textcolor{comment}{/* PDO2: fixed: 9V, 1.5A */}
+341     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue} = 0;
+342     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9290ef90d4336be4642f40aac2da8f5e}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+343     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a5e095a725455f85faa43a1573e62b798}{voltage} = (9 * 1000 / 50);
+344     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a264499e662c6bb82e0e25fc3d296b88b}{operateCurrent} = (15 * 10);
+345     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7d9aa4d298cbd3ac189473e46181d5bd}{selfSinkCapNumber} = 2;
+346     \textcolor{comment}{/* default SVDM command header */}
+347     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.objPos = 0;
+348     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.vdmVersion = \hyperlink{usb__pd__config_8h_a365eed8791b0798547575ea313bc8977}{PD\_CONFIG\_STRUCTURED\_VDM\_VERSION};
+349     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.vdmType = 1;
+350     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.SVID = \hyperlink{group__usb__pd__stack_ga6d970ee2c757411a31911430bb94c722}{PD\_STANDARD\_ID};
+351     \textcolor{comment}{/* self ext cap */}
+352     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a3ebf0b088d638829f685c9e401af51d9}{vid} = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+353     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_ac452b1d60d7700625f5a48e4e688bc74}{pid} = \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+354     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a7422db66b33622addc1c55d9876bd495}{xid} = \hyperlink{pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{PD\_CONFIG\_XID};
+355     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a5f9b161cdc688ae7a7a71ac48bebe72b}{fwVersion} = 
+      \hyperlink{pd__app_8h_a4ef7179ada3aa804736cd3e353fbb21c}{PD\_CONFIG\_FW\_VER};
+356     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a72634ef8e798fcfdda60b4d1b2ddf557}{hwVersion} = 
+      \hyperlink{pd__app_8h_a21965bbb0ec86e3646ec403f4dfa9b5c}{PD\_CONFIG\_HW\_VER};
+357     \textcolor{comment}{/* self alert */}
+358     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a4461b57a4d3ff16523050f987b0dd53e}{selfAlert}.\hyperlink{struct__pd__alert__data__object_aed9a5657c490967d07dd7961217bc0f2}{alertValue} = 0u;
+359     \textcolor{comment}{/* self battery */}
+360     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_ab3c3ebf4347b9ed544f266e2f9d34238}{batteryDesignCap} = 10;
+361     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.
+      \hyperlink{struct__pd__battery__cap__data__block_a3c566271c930773785e19daf77a05542}{batteryLastFullChargeCap} = 10;
+362     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_afee674b89322db24d60b392150918ab5}{batteryType} = 0;
+363     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_a3924ff20a280c34339a952b179689def}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+364     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_a8b906175f5651c5041c707699ebd9388}{vid} = 
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+365     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2aeaaa8274da80148c91444df5a8bda3}{selfBatteryStatus}.\hyperlink{struct__pd__battery__status__data__object_a32d8fab9c01317f358ad5b2fe32c48e7}{batterInfo} = 0;
+366     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2aeaaa8274da80148c91444df5a8bda3}{selfBatteryStatus}.\hyperlink{struct__pd__battery__status__data__object_a9e8c5885cae3cd051e4f8bd18db1a9db}{batteryPC} = 10;
+367     \textcolor{comment}{/* manufacturer string */}
+368     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.\hyperlink{struct__pd__manufac__info__data__block_a36cef0d659afc8d14083aeb98cdf3741}{vid} = 
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+369     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.\hyperlink{struct__pd__manufac__info__data__block_abe4afcb81048be6703607c1c2a21e25e}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+370     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[0] = \textcolor{charliteral}{'N'};
+371     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[1] = \textcolor{charliteral}{'X'};
+372     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[2] = \textcolor{charliteral}{'P'};
+373     \textcolor{comment}{/* alternate mode (VDM) */}
+374     \textcolor{comment}{// idHeader}
+375     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_ab1f86734d25b3b0135b97b567dbbf827}{vdoValue} = 0;
+376     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.modalOperateSupport = 1;
+377 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+378 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.productTypeDFP = 2; \textcolor{comment}{/* PDUSB Host */}
+379 \textcolor{preprocessor}{#endif}
+380 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.productTypeUFPOrCablePlug = 2; \textcolor{comment}{/* PDUSB Peripheral */}
+381     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbCommunicationCapableAsDevice = 0;
+382     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbCommunicationCapableAsHost = 0;
+383     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbVendorID = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+384     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a77971a31b11bad8e3cfc5b159ea98360}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+385     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a0d79e90688b2dbf6675f8efb6ac6c973}{certStatVDO} = 
+      \hyperlink{pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{PD\_CONFIG\_XID};
+386     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a2f30cd86743fe79ef17a8f660dbd3fd9}{bcdDevice} = 
+      \hyperlink{pd__app_8h_ab9acab64aae126b1f2ac72021d33d77b}{PD\_CONFIG\_BCD\_DEVICE};
+387     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a11745e09255efcf04a755844a8f7dc4c}{selfVdmSVIDs} = ((uint32\_t)
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID} << 16); \textcolor{comment}{/* only one SVID (display port) */}
+388     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_afc00e2e0f839a534a57c6cd5d8154b34}{selfVdmModes} = \hyperlink{pd__app_8h_ae8ae89ff451272572c1c7fbaed85737d}{PD\_CONFIG\_APP\_MODE};        
+            \textcolor{comment}{/* only one Mode */}
+389     \textcolor{comment}{/* evaluate result */}
+390     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 1;
+391     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7c929e9d267016ae697a553a72528987}{drSwapAccept} = 1;
+392     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad3460ca1eda49e355b0b155671ba2823}{vconnSwapAccept} = 1;
+393     \textcolor{comment}{/* other */}
+394     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a6cd3330740f3a7d5c35f3c9edf8ec6e2}{selfHasEnterAlernateMode} = 0;
+395 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_ae90a39427d391ee932de4fd9adbcde6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_afd1cdc5925fb2f4d036e95d445e92efe}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo1ms\-Isr\-Process@{P\-D\-\_\-\-Demo1ms\-Isr\-Process}}
+\index{P\-D\-\_\-\-Demo1ms\-Isr\-Process@{P\-D\-\_\-\-Demo1ms\-Isr\-Process}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo1ms\-Isr\-Process}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo1ms\-Isr\-Process (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_afd1cdc5925fb2f4d036e95d445e92efe}
+
+\begin{DoxyCode}
+129 \{
+130     \textcolor{keyword}{static} \textcolor{keyword}{volatile} uint32\_t delay = 0;
+131     delay++;
+132 
+133     \textcolor{comment}{/* 1.2 s */}
+134     \textcolor{keywordflow}{if} (delay >= 1200)
+135     \{
+136         delay = 0;
+137         \hyperlink{battery_2pd__app__demo_8c_a5e5d54addabe1dbcead41bd1d79adff1}{PD\_DemoBatteryChange}(pdAppInstance);
+138         pdAppInstance->\hyperlink{struct__pd__app_a588a6313718bb3ee5f8bb272d420824c}{batteryChange} = 1;
+139     \}
+140 
+141     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_ae2690cba6796bc0ab60086bbb39d3a37}{retrySwapDelay} > 0)
+142     \{
+143         pdAppInstance->\hyperlink{struct__pd__app_ae2690cba6796bc0ab60086bbb39d3a37}{retrySwapDelay}--;
+144     \}
+145 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_afd1cdc5925fb2f4d036e95d445e92efe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_afd1cdc5925fb2f4d036e95d445e92efe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a5e5d54addabe1dbcead41bd1d79adff1}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Battery\-Change@{P\-D\-\_\-\-Demo\-Battery\-Change}}
+\index{P\-D\-\_\-\-Demo\-Battery\-Change@{P\-D\-\_\-\-Demo\-Battery\-Change}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Battery\-Change}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Battery\-Change (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a5e5d54addabe1dbcead41bd1d79adff1}
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordflow}{if} (!pdAppInstance->\hyperlink{struct__pd__app_aa51e69529584a27879d6822e64f6c1c1}{contractValid})
+65     \{
+66         \textcolor{keywordflow}{return};
+67     \}
+68 
+69     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_af2438fe1e518c3b17672853036e7487e}{selfPowerRole} == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+70     \{
+71         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 5)
+72         \{
+73             pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity}--;
+74         \}
+75 
+76         \textcolor{comment}{/* battery consume faster */}
+77         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition == 2)
+78         \{
+79             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 5)
+80             \{
+81                 pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity}--;
+82             \}
+83         \}
+84     \}
+85     \textcolor{keywordflow}{else}
+86     \{
+87         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} < 100)
+88         \{
+89             pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity}++;
+90         \}
+91 
+92         \textcolor{comment}{/* battery charge faster */}
+93         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} == 
+      \hyperlink{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}{PD\_DEMO\_BATTERY\_CHARGE\_REQUEST\_VOLTAGE})
+94         \{
+95             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} < 100)
+96             \{
+97                 pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity}++;
+98             \}
+99         \}
+100     \}
+101 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a5e5d54addabe1dbcead41bd1d79adff1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Find\-P\-D\-O@{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}}
+\index{P\-D\-\_\-\-Demo\-Find\-P\-D\-O@{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Find\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Demo\-Find\-P\-D\-O (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance, }
+\item[{{\bf pd\-\_\-rdo\-\_\-t} $\ast$}]{rdo, }
+\item[{uint32\-\_\-t $\ast$}]{voltage}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}
+
+\begin{DoxyCode}
+148 \{
+149     uint32\_t index;
+150     \hyperlink{struct__pd__source__pdo}{pd\_source\_pdo\_t} sourcePDO;
+151     uint32\_t requestVoltage;
+152     uint32\_t requestCurrent;
+153     uint8\_t findSourceCap = 0;
+154 
+155     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} == 0)
+156     \{
+157         \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+158     \}
+159 
+160     \textcolor{comment}{/* default rdo as 5V - 0.9A */}
+161     *voltage = 5000;
+162     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 1;
+163     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack = 0;
+164     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.capabilityMismatch = 0;
+165     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.usbCommunicationsCapable = 0;
+166     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.noUsbSuspend = 1;
+167     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = 500 / \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+168     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+169     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} < 100)
+170     \{
+171         requestVoltage = \hyperlink{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}{PD\_DEMO\_BATTERY\_CHARGE\_REQUEST\_VOLTAGE};
+172         requestCurrent = \hyperlink{battery_2pd__app_8h_ab9cf2aaccdd8a188d08b4cf3c767c72c}{PD\_DEMO\_BATTERY\_CHARGE\_REQUEST\_CURRENT};
+173     \}
+174     \textcolor{keywordflow}{else}
+175     \{
+176         requestVoltage = \hyperlink{battery_2pd__app_8h_ab5bb973e138eca86f7fef23bfdea61fe}{PD\_DEMO\_BATTERY\_FULL\_REQUEST\_VOLTAGE};
+177         requestCurrent = \hyperlink{battery_2pd__app_8h_a297a46cf34f9e2e2189d97f36a33d739}{PD\_DEMO\_BATTERY\_FULL\_REQUEST\_CURRENT};
+178     \}
+179 
+180     \textcolor{keywordflow}{for} (index = 0; index < pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber}; ++index)
+181     \{
+182         sourcePDO.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[index].
+      \hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue};
+183         \textcolor{keywordflow}{switch} (sourcePDO.\hyperlink{struct__pd__source__pdo_ad1af05b25c2dfc8f72eea50707536c10}{commonPDO}.\hyperlink{struct__pd__pdo__common_a5a1a819ee8e548be9b972852c75aa597}{pdoType})
+184         \{
+185             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed}:
+186             \{
+187                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} == requestVoltage) &&
+188                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT} >= requestCurrent))
+189                 \{
+190                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+191                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+192                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = requestCurrent / 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+193                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+194                     findSourceCap = 1;
+195                 \}
+196                 \textcolor{keywordflow}{break};
+197             \}
+198 
+199             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9ab2765d7b98d6e0922c4937be6d2ab618}{kPDO\_Variable}:
+200             \{
+201                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a713018c825f51d1a6a7186582b40a106}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} <= requestVoltage) &&
+202                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a493ced8078579d68ade7dfbce819b4d1}{maxVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} >= requestVoltage) &&
+203                     (sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a8a24367204d3381f0670311a88c0b2e6}{maxCurrent} * 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT} >= requestCurrent))
+204                 \{
+205                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_a81d5ae3b407a289661136aa515ba1942}{variablePDO}.\hyperlink{struct__pd__source__variable__pdo_a713018c825f51d1a6a7186582b40a106}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+206                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+207                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = requestCurrent / 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+208                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+209                     findSourceCap = 1;
+210                 \}
+211                 \textcolor{keywordflow}{break};
+212             \}
+213 
+214             \textcolor{keywordflow}{case} \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a42f5a5c21d0523dca99c8e14b2ec23a0}{kPDO\_Battery}:
+215             \{
+216                 \textcolor{keywordflow}{if} ((sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_a5c799cc37ea460e9bfeea8a05242cf54}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} <= requestVoltage) &&
+217                     (sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_af818fd645542287499a65f559ef6d571}{maxVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT} >= requestVoltage) &&
+218                     (sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_ae4498258205f03a10afdb32e445a57ef}{maxAllowPower} * 
+      \hyperlink{group__usb__pd__stack_ga18642aa62f457d8501be4bddf6608e80}{PD\_PDO\_POWER\_UNIT} >=
+219                      (requestVoltage * requestCurrent / 1000)))
+220                 \{
+221                     *voltage = sourcePDO.\hyperlink{struct__pd__source__pdo_ae677c279b52a30bc6ca29600d978757e}{batteryPDO}.\hyperlink{struct__pd__source__battery__pdo_a5c799cc37ea460e9bfeea8a05242cf54}{minVoltage} * 
+      \hyperlink{group__usb__pd__stack_ga83cbb5a0a1b721ddb0f815077c854e8e}{PD\_PDO\_VOLTAGE\_UNIT};
+222                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = (index + 1);
+223                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = (requestVoltage * requestCurrent) / 1000 / 
+      \hyperlink{group__usb__pd__stack_ga18642aa62f457d8501be4bddf6608e80}{PD\_PDO\_POWER\_UNIT};
+224                     rdo->\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue = rdo->
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+225                     findSourceCap = 1;
+226                 \}
+227                 \textcolor{keywordflow}{break};
+228             \}
+229 
+230             \textcolor{keywordflow}{default}:
+231                 \textcolor{keywordflow}{break};
+232         \}
+233 
+234         \textcolor{keywordflow}{if} (findSourceCap)
+235         \{
+236             \textcolor{keywordflow}{break};
+237         \}
+238     \}
+239 
+240     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+241 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}}
+\index{P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c}
+
+\begin{DoxyCode}
+121 \{
+122     pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} = 
+      \hyperlink{battery_2pd__app__demo_8c_a3bdaba3176efa620aae5ac7921640dcb}{PD\_DemoStartUpGetBatteryValue}(pdAppInstance);
+123     pdAppInstance->\hyperlink{struct__pd__app_a588a6313718bb3ee5f8bb272d420824c}{batteryChange} = 0;
+124     \hyperlink{battery_2pd__app__demo_8c_a94e26762d115010a2e40112c73b2003d}{PD\_DemoReset}(pdAppInstance);
+125     \textcolor{keywordflow}{return};
+126 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{battery_2pd__app__demo_8c_ad2600cc824c1726cccfed3267a9af27c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-P\-D\-Reset@{P\-D\-\_\-\-Demo\-P\-D\-Reset}}
+\index{P\-D\-\_\-\-Demo\-P\-D\-Reset@{P\-D\-\_\-\-Demo\-P\-D\-Reset}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-P\-D\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-P\-D\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05}
+
+\begin{DoxyCode}
+244 \{
+245     \hyperlink{group__usb__pd__stack_ga9397835347d48ef48b6b0ecba6312213}{pd\_handle} pdTmpHandle;
+246     \hyperlink{pd__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{PD\_PowerBoardReset}();
+247     NVIC\_DisableIRQ(PORTB\_PORTC\_PORTD\_PORTE\_IRQn);
+248     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} = 0;
+249     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aa51e69529584a27879d6822e64f6c1c1}{contractValid} = 0;
+250     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start};
+251     pdTmpHandle = \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle};
+252     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle} = NULL;
+253     vTaskDelete(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a120cdb4cb3b4a22de6cf2db174d53920}{pdTaskHandler});
+254     \hyperlink{group__usb__pd__stack_ga2a517af9491514966ad9c806eb998f78}{PD\_InstanceDeinit}(pdTmpHandle);
+255     \hyperlink{battery_2pd__app__demo_8c_ae90a39427d391ee932de4fd9adbcde6a}{PD\_AppInit}();
+256     \textcolor{keywordflow}{if} (xTaskCreate(\hyperlink{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a}{pd\_port\_task}, \textcolor{stringliteral}{"port"}, (1024u + 512u) / \textcolor{keyword}{sizeof}(portSTACK\_TYPE), NULL, 5,
+257                     &\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a120cdb4cb3b4a22de6cf2db174d53920}{pdTaskHandler}) != pdPASS)
+258     \{
+259         PRINTF(\textcolor{stringliteral}{"create pd task error\(\backslash\)r\(\backslash\)n"});
+260     \}
+261     NVIC\_EnableIRQ(PORTB\_PORTC\_PORTD\_PORTE\_IRQn);
+262 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a94e26762d115010a2e40112c73b2003d}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Reset@{P\-D\-\_\-\-Demo\-Reset}}
+\index{P\-D\-\_\-\-Demo\-Reset@{P\-D\-\_\-\-Demo\-Reset}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a94e26762d115010a2e40112c73b2003d}
+
+\begin{DoxyCode}
+104 \{
+105     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&pdAppInstance->
+      \hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1};
+106     if (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 30)
+107     \{
+108         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 2;
+109     \}
+110     \textcolor{keywordflow}{else}
+111     \{
+112         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 1;
+113     \}
+114     pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 0; \textcolor{comment}{/* invalid */}
+115     pdAppInstance->\hyperlink{struct__pd__app_aa51e69529584a27879d6822e64f6c1c1}{contractValid} = 0;
+116     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start};
+117     pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} = 0;
+118 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a94e26762d115010a2e40112c73b2003d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a3bdaba3176efa620aae5ac7921640dcb}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value@{P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value}}
+\index{P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value@{P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t P\-D\-\_\-\-Demo\-Start\-Up\-Get\-Battery\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a3bdaba3176efa620aae5ac7921640dcb}
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordflow}{return} 30; \textcolor{comment}{/* default start up battery is 5% */}
+60 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{battery_2pd__app__demo_8c_a3bdaba3176efa620aae5ac7921640dcb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}}
+\index{P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Task\-Fun}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Task\-Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18}
+
+\begin{DoxyCode}
+265 \{
+266     \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\_status\_t} status = \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073a4d58370b8ee8d3d2a4c477f7a3f84dda}{kStatus\_PD\_Error};
+267     \textcolor{keyword}{static} uint8\_t runningPowerRole = \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8bae0c041be8e861b6b6e95444d9b83c99f}{kPD\_PowerRoleNone};
+268     \textcolor{keyword}{static} uint8\_t trySwap = 0;
+269     \textcolor{keyword}{static} uint8\_t retryCount = 0;
+270 
+271     \textcolor{keywordflow}{if} (!pdAppInstance->\hyperlink{struct__pd__app_aa51e69529584a27879d6822e64f6c1c1}{contractValid})
+272     \{
+273         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start};
+274         \textcolor{keywordflow}{return};
+275     \}
+276 
+277     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a588a6313718bb3ee5f8bb272d420824c}{batteryChange} == 1)
+278     \{
+279         pdAppInstance->\hyperlink{struct__pd__app_a588a6313718bb3ee5f8bb272d420824c}{batteryChange} = 0;
+280 
+281         uint8\_t chargeVoltage;
+282         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_af2438fe1e518c3b17672853036e7487e}{selfPowerRole} == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+283         \{
+284             chargeVoltage = (pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.
+      \hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition == 2 ? 9 : 5);
+285             \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} <= 5)
+286             \{
+287                 chargeVoltage = 0;
+288             \}
+289         \}
+290         \textcolor{keywordflow}{else}
+291         \{
+292             chargeVoltage = ((pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} == 
+      \hyperlink{battery_2pd__app_8h_ab5bb973e138eca86f7fef23bfdea61fe}{PD\_DEMO\_BATTERY\_FULL\_REQUEST\_VOLTAGE}) ? 5 : 9);
+293         \}
+294         PRINTF(\textcolor{stringliteral}{"battery percent:%d, charge voltage:%dV\(\backslash\)r\(\backslash\)n"}, pdAppInstance->
+      \hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity}, chargeVoltage);
+295     \}
+296 
+297     \textcolor{keywordflow}{if} (runningPowerRole != pdAppInstance->\hyperlink{struct__pd__app_af2438fe1e518c3b17672853036e7487e}{selfPowerRole})
+298     \{
+299         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start};
+300         runningPowerRole = pdAppInstance->\hyperlink{struct__pd__app_af2438fe1e518c3b17672853036e7487e}{selfPowerRole};
+301         \textcolor{keywordflow}{if} (runningPowerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+302         \{
+303             pdAppInstance->\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 1u;
+304         \}
+305         \textcolor{keywordflow}{else}
+306         \{
+307             pdAppInstance->\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 0u;
+308         \}
+309     \}
+310 
+311     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} == \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start})
+312     \{
+313         \textcolor{keywordflow}{if} (runningPowerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+314         \{
+315             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}{kDemoState\_TryChangeAsSink};
+316         \}
+317         \textcolor{keywordflow}{else}
+318         \{
+319             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+320         \}
+321     \}
+322 
+323     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 30)
+324     \{
+325         \textcolor{keywordflow}{if} (\hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} == 1)
+326         \{
+327             \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&pdAppInstance->
+      \hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1};
+328             \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 2;
+329             PRINTF(\textcolor{stringliteral}{"change source caps as high power(5V/9V)\(\backslash\)r\(\backslash\)n"});
+330         \}
+331     \}
+332     \textcolor{keywordflow}{else}
+333     \{
+334         \textcolor{keywordflow}{if} (\hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} == 2)
+335         \{
+336             \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&pdAppInstance->
+      \hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1};
+337             \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 1;
+338             PRINTF(\textcolor{stringliteral}{"change source caps as low power(5V)\(\backslash\)r\(\backslash\)n"});
+339         \}
+340     \}
+341 
+342     \textcolor{comment}{/* reference to readme */}
+343     \textcolor{keywordflow}{if} (runningPowerRole == \hyperlink{group__usb__pd__stack_gga46146487374ddc31d48f33b2b6a26f8ba9fdae65ce89c7d877981a3abef33a2cb}{kPD\_PowerRoleSource})
+344     \{
+345         pdAppInstance->\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 1;
+346 
+347         \textcolor{keywordflow}{switch} (pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState})
+348         \{
+349             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle}:
+350                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 5)
+351                 \{
+352                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a6e72ee6532ef61497b162a28b4500433}{drpTryFunction} = 
+      \hyperlink{group__usb__pd__stack_gga4794fa8903a011ba6f0be0f04925411eaff14c5fbf053f7e1292cd753ca873a0f}{kTypecTry\_None};
+353                 \}
+354 
+355                 \textcolor{keywordflow}{if} ((pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} < 30) &&
+356                     (pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition ==
+       2))
+357                 \{
+358                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&pdAppInstance->
+      \hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1};
+359                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 1;
+360                     pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 0
+      ; \textcolor{comment}{/* invalid */}
+361                     status = \hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa30530dc299e85a527d236c16e68bff36}{PD\_DPM\_CONTROL\_POWER\_NEGOTIATION}, NULL);
+362                     \textcolor{keywordflow}{if} (status != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+363                     \{
+364                         PRINTF(\textcolor{stringliteral}{"error\(\backslash\)r\(\backslash\)n"});
+365                     \}
+366                 \}
+367                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} <= 20)
+368                 \{
+369                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{kDemoState\_NeedChangeAsSink};
+370                 \}
+371                 \textcolor{keywordflow}{else}
+372                 \{
+373                 \}
+374                 \textcolor{keywordflow}{break};
+375 
+376             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a3c2f8df2adce7808842af0be1e252a9b}{kDemoState\_TryChangeAsSink}:
+377                 PRINTF(\textcolor{stringliteral}{"try to swap as sink\(\backslash\)r\(\backslash\)n"});
+378                 trySwap = 1;
+379                 retryCount = 2;
+380                 pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{kDemoState\_GetPartnerSrcCap};
+381                 \textcolor{keywordflow}{break};
+382 
+383             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{kDemoState\_NeedChangeAsSink}:
+384                 PRINTF(\textcolor{stringliteral}{"need change as sink because battery is low\(\backslash\)r\(\backslash\)n"});
+385                 trySwap = 0;
+386                 retryCount = 2;
+387                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} > 0)
+388                 \{
+389                     retryCount = 2;
+390                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink};
+391                 \}
+392                 \textcolor{keywordflow}{else}
+393                 \{
+394                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{kDemoState\_GetPartnerSrcCap};
+395                 \}
+396                 \textcolor{keywordflow}{break};
+397 
+398             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{kDemoState\_GetPartnerSrcCap}:
+399                 \textcolor{keywordflow}{if} (retryCount > 0)
+400                 \{
+401                     PRINTF(\textcolor{stringliteral}{"get partner source caps\(\backslash\)r\(\backslash\)n"});
+402                     \textcolor{comment}{/* get partner source cap */}
+403                     pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} = 1;
+404                     pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} = 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error};
+405                     status = \hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aae21522a20dc98bf1e6a27fd41104158a}{PD\_DPM\_CONTROL\_GET\_PARTNER\_SOURCE\_CAPABILITIES}, NULL);
+406                     \textcolor{keywordflow}{if} (status == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+407                     \{
+408                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}{kDemoState\_WaitPartnerSrcCap};
+409                     \}
+410                     \textcolor{keywordflow}{else}
+411                     \{
+412                         PRINTF(\textcolor{stringliteral}{"error\(\backslash\)r\(\backslash\)n"});
+413                     \}
+414                     retryCount--;
+415                 \}
+416                 \textcolor{keywordflow}{else}
+417                 \{
+418                     PRINTF(\textcolor{stringliteral}{"retry fail\(\backslash\)r\(\backslash\)n"});
+419                     \textcolor{keywordflow}{if} (trySwap)
+420                     \{
+421                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+422                     \}
+423                     \textcolor{keywordflow}{else}
+424                     \{
+425                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower};
+426                     \}
+427                 \}
+428                 \textcolor{keywordflow}{break};
+429 
+430             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a06429a2895ca878e7cae52b80c0cbc97}{kDemoState\_WaitPartnerSrcCap}:
+431                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} == 0)
+432                 \{
+433                     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca41691f050dc39a33f802354eacc3df48}{kCommandResult\_Success})
+434                     \{
+435                         \hyperlink{struct__pd__rdo}{pd\_rdo\_t} rdo;
+436                         uint32\_t voltage;
+437                         PRINTF(\textcolor{stringliteral}{"receive source capabilities\(\backslash\)r\(\backslash\)n"});
+438 
+439                         \textcolor{keywordflow}{if} (\hyperlink{pd__app__demo_8c_a320c5867d39cdebb0bc6e98084c6be69}{PD\_DemoFindPDO}(pdAppInstance, &rdo, &voltage) == 
+      \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+440                         \{
+441                             \textcolor{keywordflow}{if} (trySwap)
+442                             \{
+443                                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[0].
+      \hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.\hyperlink{struct__pd__source__fixed__pdo_aa1715617698b348913227183195ae8f5}{externalPowered})
+444                                 \{
+445                                     retryCount = 2;
+446                                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink};
+447                                 \}
+448                                 \textcolor{keywordflow}{else}
+449                                 \{
+450                                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+451                                 \}
+452                             \}
+453                             \textcolor{keywordflow}{else}
+454                             \{
+455                                 retryCount = 2;
+456                                 pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink};
+457                             \}
+458                         \}
+459                         \textcolor{keywordflow}{else}
+460                         \{
+461                             PRINTF(\textcolor{stringliteral}{"source cap cannot satisfy reqeust\(\backslash\)r\(\backslash\)n"});
+462                             \textcolor{keywordflow}{if} (trySwap)
+463                             \{
+464                                 pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+465                             \}
+466                             \textcolor{keywordflow}{else}
+467                             \{
+468                                 pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower};
+469                             \}
+470                         \}
+471                     \}
+472                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045caa7d52b6983bc63b06da53587776a1664}{kCommandResult\_NotSupported})
+473                     \{
+474                         PRINTF(\textcolor{stringliteral}{"partner don't support src cap\(\backslash\)r\(\backslash\)n"});
+475                         \textcolor{keywordflow}{if} (trySwap)
+476                         \{
+477                             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+478                         \}
+479                         \textcolor{keywordflow}{else}
+480                         \{
+481                             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower};
+482                         \}
+483                         PRINTF(\textcolor{stringliteral}{"partner don't support source function\(\backslash\)r\(\backslash\)n"});
+484                     \}
+485                     \textcolor{keywordflow}{else}
+486                     \{
+487                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2a712c45512323f10d124b06bb7c910b}{kDemoState\_GetPartnerSrcCap};
+488                     \}
+489                 \}
+490                 \textcolor{keywordflow}{break};
+491 
+492             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink}:
+493                 \textcolor{keywordflow}{if} (retryCount > 0)
+494                 \{
+495                     PRINTF(\textcolor{stringliteral}{"try pr swap\(\backslash\)r\(\backslash\)n"});
+496                     pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} = 1;
+497                     pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} = 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error};
+498                     status = \hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa5bf96cb3d2c1316e33303794e70be8a4}{PD\_DPM\_CONTROL\_PR\_SWAP}, NULL);
+499                     \textcolor{keywordflow}{if} (status == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+500                     \{
+501                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}{kDemoState\_WaitPRSwap};
+502                     \}
+503                     \textcolor{keywordflow}{else}
+504                     \{
+505                         PRINTF(\textcolor{stringliteral}{"error\(\backslash\)r\(\backslash\)n"});
+506                     \}
+507                     retryCount--;
+508                 \}
+509                 \textcolor{keywordflow}{else}
+510                 \{
+511                     PRINTF(\textcolor{stringliteral}{"retry fail\(\backslash\)r\(\backslash\)n"});
+512                     \textcolor{keywordflow}{if} (trySwap)
+513                     \{
+514                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+515                     \}
+516                     \textcolor{keywordflow}{else}
+517                     \{
+518                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower};
+519                     \}
+520                 \}
+521                 \textcolor{keywordflow}{break};
+522 
+523             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aa76d30e1891ae5871e76a956852667b8}{kDemoState\_WaitPRSwap}:
+524                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} == 0)
+525                 \{
+526                     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca41691f050dc39a33f802354eacc3df48}{kCommandResult\_Success})
+527                     \{
+528                         \textcolor{comment}{/* code cannot excute here, will go to the sink code */}
+529                     \}
+530                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045caa7d52b6983bc63b06da53587776a1664}{kCommandResult\_NotSupported}) ||
+531                              (pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca1f47bf73466bcfd41a0e492b4ee77221}{kCommandResult\_Reject}))
+532                     \{
+533                         PRINTF(\textcolor{stringliteral}{"swap reject\(\backslash\)r\(\backslash\)n"});
+534                         \textcolor{keywordflow}{if} (trySwap)
+535                         \{
+536                             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+537                         \}
+538                         \textcolor{keywordflow}{else}
+539                         \{
+540                             pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower};
+541                         \}
+542                     \}
+543                     \textcolor{keywordflow}{else}
+544                     \{
+545                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273aab80852b5c882001e3177ad95671031d}{kDemoState\_SwapAsSink}; \textcolor{comment}{/* retry */}
+546                     \}
+547                 \}
+548                 \textcolor{keywordflow}{break};
+549 
+550             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ae052d339e316f256638301dd7ae68283}{kDemoState\_SrcReducePower}:
+551                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition != 
+      1)
+552                 \{
+553                     PRINTF(\textcolor{stringliteral}{"source reduce power\(\backslash\)r\(\backslash\)n"});
+554                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&pdAppInstance->
+      \hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1};
+555                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 1;
+556                     PRINTF(\textcolor{stringliteral}{"change source caps as low power(5V)\(\backslash\)r\(\backslash\)n"});
+557                     pdAppInstance->\hyperlink{struct__pd__app_aff1ed842707beaa8768ec52f9e22c91b}{partnerRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 0
+      ; \textcolor{comment}{/* invalid */}
+558                     status = \hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aa30530dc299e85a527d236c16e68bff36}{PD\_DPM\_CONTROL\_POWER\_NEGOTIATION}, NULL);
+559                     \textcolor{keywordflow}{if} (status != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+560                     \{
+561                         PRINTF(\textcolor{stringliteral}{"error\(\backslash\)r\(\backslash\)n"});
+562                     \}
+563                 \}
+564 
+565                 pdAppInstance->\hyperlink{struct__pd__app_ae2690cba6796bc0ab60086bbb39d3a37}{retrySwapDelay} = 5 * 1000; \textcolor{comment}{/* 5s */}
+566                 pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}{kDemoState\_SwapSinkFail};
+567                 \textcolor{keywordflow}{break};
+568 
+569             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0983104b6ad87531e530651a55455dc2}{kDemoState\_SwapSinkFail}:
+570                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} <= 5)
+571                 \{
+572                     \hyperlink{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05}{PD\_DemoPDReset}();
+573                     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a6e72ee6532ef61497b162a28b4500433}{drpTryFunction} = 
+      \hyperlink{group__usb__pd__stack_gga4794fa8903a011ba6f0be0f04925411ea96a98ce2756ccbcd3c300db89ae9be67}{kTypecTry\_Snk};
+574                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273ace280bef3638a7f786959e6ec35b570b}{kDemoState\_Start};
+575                 \}
+576                 \textcolor{keywordflow}{else}
+577                 \{
+578                     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_ae2690cba6796bc0ab60086bbb39d3a37}{retrySwapDelay} == 0)
+579                     \{
+580                         PRINTF(\textcolor{stringliteral}{"try swap again\(\backslash\)r\(\backslash\)n"});
+581                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a92abbbf0505887f68eb2b2f8be3fa435}{kDemoState\_NeedChangeAsSink};
+582                     \}
+583                 \}
+584                 \textcolor{keywordflow}{break};
+585 
+586             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273abcba6860bceeee0a7fbc50321d727886}{kDemoState\_NoPower}:
+587                 \hyperlink{battery_2pd__app__demo_8c_a5a66a0380a323ac58a24d481949aaf05}{PD\_DemoPDReset}();
+588                 \textcolor{keywordflow}{break};
+589 
+590             \textcolor{keywordflow}{default}:
+591                 \textcolor{keywordflow}{break};
+592         \}
+593     \}
+594     \textcolor{keywordflow}{else}
+595     \{
+596         \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} > 30)
+597         \{
+598             pdAppInstance->\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 1u;
+599         \}
+600         \textcolor{keywordflow}{else}
+601         \{
+602             pdAppInstance->\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 0u;
+603         \}
+604 
+605         \textcolor{keywordflow}{switch} (pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState})
+606         \{
+607             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle}:
+608                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a0c2c01fcb1b30a9b27dbb8ea83d7647b}{batteryQuantity} >= 100)
+609                 \{
+610                     \textcolor{comment}{/* rquest low power */}
+611                     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} == 
+      \hyperlink{battery_2pd__app_8h_aa0b11bcac2ce53ca04c7998027306301}{PD\_DEMO\_BATTERY\_CHARGE\_REQUEST\_VOLTAGE})
+612                     \{
+613                         retryCount = 2;
+614                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{kDemoState\_RequestLowPower};
+615                     \}
+616                 \}
+617                 \textcolor{keywordflow}{break};
+618 
+619             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{kDemoState\_RequestLowPower}:
+620                 \textcolor{keywordflow}{if} (retryCount > 0)
+621                 \{
+622                     \textcolor{comment}{/* default rdo as 5V - 0.9A */}
+623                     pdAppInstance->\hyperlink{struct__pd__app_aaef3da806ed2695378c7ce5cc01462d5}{sinkRequestVoltage} = 5000;
+624                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.objectPosition = 1;
+625                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.giveBack = 0;
+626                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.capabilityMismatch = 0;
+627                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.usbCommunicationsCapable
+       = 0;
+628                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.noUsbSuspend = 1;
+629                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue = 500 / 
+      \hyperlink{group__usb__pd__stack_ga63746ad31eee8f5912a846952e6645b6}{PD\_PDO\_CURRENT\_UNIT};
+630                     pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.maxOrMinOperateValue =
+631                         pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO}.\hyperlink{struct__pd__rdo_acd03d551b682b870d0e30be5819d013e}{bitFields}.operateValue;
+632                     \textcolor{comment}{/* get partner source cap */}
+633                     pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} = 1;
+634                     pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} = 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca2037b8a85f98d8d2413d589dbe7ea4fd}{kCommandResult\_Error};
+635                     status =
+636                         \hyperlink{group__usb__pd__stack_gaa61d0ac40ef36db1ef5a88532f6eea90}{PD\_Command}(pdAppInstance->\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_ggabf2676c3360b7c572954ae09c0a5e46aaba6e4b2d7dedd71db8266ca2c496af71}{PD\_DPM\_CONTROL\_REQUEST}, &pdAppInstance->\hyperlink{struct__pd__app_ab41fa9c76e29ce689c812cfc7ad55150}{sinkRequestRDO});
+637                     \textcolor{keywordflow}{if} (status == \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+638                     \{
+639                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}{kDemoState\_WaitRequestLowPower};
+640                     \}
+641                     \textcolor{keywordflow}{else}
+642                     \{
+643                         PRINTF(\textcolor{stringliteral}{"error\(\backslash\)r\(\backslash\)n"});
+644                     \}
+645                 \}
+646                 \textcolor{keywordflow}{else}
+647                 \{
+648                     PRINTF(\textcolor{stringliteral}{"retry fail\(\backslash\)r\(\backslash\)n"});
+649                     pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+650                 \}
+651                 \textcolor{keywordflow}{break};
+652 
+653             \textcolor{keywordflow}{case} \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a0abbb49fd21efb705daef48af30ef91c}{kDemoState\_WaitRequestLowPower}:
+654                 \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_a5fb16448ac6d446eaf7fc758bff182d0}{commandWait} == 0)
+655                 \{
+656                     \textcolor{keywordflow}{if} (pdAppInstance->\hyperlink{struct__pd__app_aad9f6262f331cbc8c594dada122c31dd}{commandResult} == 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca41691f050dc39a33f802354eacc3df48}{kCommandResult\_Success})
+657                     \{
+658                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a44f35bb54e0afe687b9625a1a0e91c0e}{kDemoState\_Idle};
+659                     \}
+660                     \textcolor{keywordflow}{else}
+661                     \{
+662                         pdAppInstance->\hyperlink{struct__pd__app_ab62809cc014aa5182f48a2414a7d785c}{demoState} = 
+      \hyperlink{battery_2pd__app_8h_a163c4cd07f08eb6973342f288c3b2273a2e91c92fe0b0207f24a950f121a1abae}{kDemoState\_RequestLowPower}; \textcolor{comment}{/* retry */}
+663                     \}
+664                 \}
+665                 \textcolor{keywordflow}{break};
+666 
+667             \textcolor{keywordflow}{default}:
+668                 \textcolor{keywordflow}{break};
+669         \}
+670     \}
+671     \textcolor{keywordflow}{return};
+672 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a8695f73a631d0d7fa71c0d0301d6ff18_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a}{\index{battery/pd\-\_\-app\-\_\-demo.\-c@{battery/pd\-\_\-app\-\_\-demo.\-c}!pd\-\_\-port\-\_\-task@{pd\-\_\-port\-\_\-task}}
+\index{pd\-\_\-port\-\_\-task@{pd\-\_\-port\-\_\-task}!battery/pd_app_demo.c@{battery/pd\-\_\-app\-\_\-demo.\-c}}
+\subsubsection[{pd\-\_\-port\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void pd\-\_\-port\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a}
+
+\begin{DoxyCode}
+244 \{
+245     EnableIRQ((IRQn\_Type)\hyperlink{pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{BOARD\_PTN5110\_GPIO\_IRQ});
+246     \textcolor{keywordflow}{while} (1)
+247     \{
+248         \hyperlink{group__usb__pd__stack_ga4227c58a9524464e19ee6efe9615f78e}{PD\_InstanceTask}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle});
+249     \}
+250 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_2pd__app__demo_8c_a2114c6046165e8c1249a9c4656acde1a_icgraph}
+\end{center}
+\end{figure}
+
+

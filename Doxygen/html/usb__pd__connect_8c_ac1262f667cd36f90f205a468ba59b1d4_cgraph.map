@@ -1,0 +1,10 @@
+<map id="PD_ConnectInitRole" name="PD_ConnectInitRole">
+<area shape="rect" id="node2" href="$usb__pd__connect_8c.html#a83de99272e34bf7bad5146401157ccff" title="PD_ConnectSetPowerProgress" alt="" coords="198,5,405,32"/>
+<area shape="rect" id="node3" href="$usb__pd__connect_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="487,5,601,32"/>
+<area shape="rect" id="node4" href="$usb__pd__connect_8c.html#a0608faf2438b33700fc4680061ae69ab" title="PD_ConnectSetupNewState" alt="" coords="207,107,396,133"/>
+<area shape="rect" id="node6" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="489,157,599,184"/>
+<area shape="rect" id="node8" href="$usb__pd__timer_8c.html#afd2f667e16635d3db0523f13afe7610c" title="PD_TimerCheckValidTimeOut" alt="" coords="202,208,401,235"/>
+<area shape="rect" id="node9" href="$usb__pd__connect_8c.html#aa173143bdf6b1a4a301e5576b364d5d6" title="PD_ConnectGetInitRoleState" alt="" coords="204,259,399,285"/>
+<area shape="rect" id="node5" href="$usb__pd__timer_8c.html#a453ba4a7609afd86d5e6b9fb8759b6b5" title="PD_TimerClear" alt="" coords="488,56,600,83"/>
+<area shape="rect" id="node7" href="$usb__pd__connect_8c.html#a0328bd52ba61da793f163660077a0076" title="PD_ConnectSetMonitorCC" alt="" coords="454,107,634,133"/>
+</map>

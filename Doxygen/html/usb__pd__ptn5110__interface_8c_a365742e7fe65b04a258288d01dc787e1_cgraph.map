@@ -1,0 +1,13 @@
+<map id="USB_RAM_ADDRESS_ALIGNMENT" name="USB_RAM_ADDRESS_ALIGNMENT">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#ae176a3f90e065c327a147a07c4b05885" title="Callback when connection is detached or disabled (unused, I think the original code use this error) ..." alt="" coords="304,5,504,46"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110_8h.html#a04e4e22845301da2fa5e7555f9f59ba0" title="Assert and monitor Rp in unattached state. " alt="" coords="301,70,507,111"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110_8h.html#a8c56e52ddbb1fbb4d9fc09d36fe49a73" title="Assert and monitor Rd in unattached state. " alt="" coords="301,135,507,177"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110_8h.html#ad55a4f79062b33d94bd7284e08a73ba3" title="Toggle and monitor Rp/Rd in unattached state. " alt="" coords="299,201,509,242"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html#ae27fca1a06ebec2028f45dd00e0eff8d" title="Syncronize hardware to CC state (roleControl, tcpc_control, fault_control, power_control) ..." alt="" coords="313,267,495,293"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="595,101,749,128"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="835,94,1024,135"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1079,76,1225,103"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1073,127,1231,153"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110_8h.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="558,241,786,268"/>
+<area shape="rect" id="node12" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="617,292,727,319"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="PDPTN5110_DetectDetach" name="PDPTN5110_DetectDetach">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#a0679fd98bbeb52b3046805a304939aaa" title="Assert and monitor Rp. " alt="" coords="258,5,465,46"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#ac845e3e6c969e18371e948c8190123d2" title="Set register when dbg acc source is attached. " alt="" coords="252,70,471,111"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110_8h.html#a6d7f033cf50fdc8a29caff893219629a" title="Assert and monitor Rp as DTS source. " alt="" coords="258,135,465,177"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110_8h.html#af57d909893f710a05924c70ee0a4d1a5" title="Set CC to monitor for accessory disconnection on CC1. " alt="" coords="238,201,485,242"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html#ab94dc6e083ed76c5ff0dda5e184ee592" title="Assert and monitor Rd in unattached state. " alt="" coords="258,266,465,307"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110_8h.html#a21ff53f5b949eac37e29c4942c51a315" title="Set register when dbg acc sink is attached. " alt="" coords="250,331,473,373"/>
+<area shape="rect" id="node12" href="$usb__pd__ptn5110_8h.html#a50ff250867f55687d57baa1c76315239" title="Assert and monitor Rd as DTS sink. " alt="" coords="258,397,465,438"/>
+<area shape="rect" id="node13" href="$usb__pd__ptn5110_8h.html#ae27fca1a06ebec2028f45dd00e0eff8d" title="Syncronize hardware to CC state (roleControl, tcpc_control, fault_control, power_control) ..." alt="" coords="270,463,453,489"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="571,339,725,365"/>
+<area shape="rect" id="node5" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="811,331,1000,373"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1055,313,1201,340"/>
+<area shape="rect" id="node7" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1049,364,1207,391"/>
+<area shape="rect" id="node14" href="$usb__pd__ptn5110_8h.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="534,437,762,464"/>
+<area shape="rect" id="node15" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="593,488,703,515"/>
+</map>

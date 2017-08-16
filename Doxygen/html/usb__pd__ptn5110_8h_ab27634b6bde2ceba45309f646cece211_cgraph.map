@@ -1,0 +1,9 @@
+<map id="PDPTN5110_PwrWaitForPOrCOmpletEAndEnableClocks" name="PDPTN5110_PwrWaitForPOrCOmpletEAndEnableClocks">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#a23ffe07d15749d22b25f595037f791ee" title="REG_GET_FIELD" alt="" coords="351,5,481,32"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110_8h.html#a58db123e84d17c84a438b375737d9830" title="REG_GET_REG_REF" alt="" coords="339,56,493,83"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__hal_8c.html#af44c9a145b9a610ae07c5c7d8ab08e85" title="PD_WaitUsec" alt="" coords="363,107,469,133"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__hal_8c.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="302,157,530,184"/>
+<area shape="rect" id="node3" href="$group__usb__pd__cmsis__wrapper.html#ga190a521ef01279662f71d4e33e51aa4c" title="Read data from slave. " alt="" coords="579,23,768,65"/>
+<area shape="rect" id="node4" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="823,5,969,32"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="817,56,975,83"/>
+</map>

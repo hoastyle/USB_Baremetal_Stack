@@ -1,0 +1,246 @@
+\hypertarget{pd__power__app_8c}{\section{demo/pd/pd\-\_\-power\-\_\-app.c File Reference}
+\label{pd__power__app_8c}\index{demo/pd/pd\-\_\-power\-\_\-app.\-c@{demo/pd/pd\-\_\-power\-\_\-app.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-power\-\_\-interface.\-h\char`\"{}}\\*
+Include dependency graph for pd\-\_\-power\-\_\-app.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{pd__power__app_8c_a62850a40a6b346bded92241c798d202a}{P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps} (void $\ast$callback\-Param)
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps} (void $\ast$callback\-Param)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{P\-D\-\_\-\-Power\-Board\-Reset} (void)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__power__app_8c_a877430377afe70b94985c6651ccb867f}{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power} (\hyperlink{pd__power__interface_8h_a996b4f357eab1a3ea5f512fc3013759b}{pd\-\_\-vbus\-\_\-power\-\_\-t} vbus\-Power)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power} (\hyperlink{pd__power__interface_8h_a996b4f357eab1a3ea5f512fc3013759b}{pd\-\_\-vbus\-\_\-power\-\_\-t} vbus\-Power)
+\item 
+\hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}{P\-D\-\_\-\-Power\-Board\-Control\-Vconn} (uint8\-\_\-t on)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Control\-Vconn@{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}}
+\index{P\-D\-\_\-\-Power\-Board\-Control\-Vconn@{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Control\-Vconn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Control\-Vconn (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{on}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1}
+
+\begin{DoxyCode}
+149 \{
+150     uint8\_t controlVal;
+151     controlVal = (on ? 1 : 0);
+152     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a62e8479d23bf1208d5735aa76ff2aef6}{PD\_CONTROL\_VCONN}, &controlVal);
+153     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+154 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c_ad7654314734595cdfdcd7e1081d17fe1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__power__app_8c_a62850a40a6b346bded92241c798d202a}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps}}
+\index{P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ P\-D\-\_\-\-Power\-Board\-Get\-Partner\-Source\-Caps (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_a62850a40a6b346bded92241c798d202a}
+
+\begin{DoxyCode}
+54 \{
+55     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+56 
+57     \textcolor{keywordflow}{return} &(pdAppInstance->\hyperlink{struct__pd__app_ac8c4ef05a14fc26bacd62f1937726488}{partnerSourceCaps}[0].\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue});
+58 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c_a62850a40a6b346bded92241c798d202a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}}
+\index{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps@{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ P\-D\-\_\-\-Power\-Board\-Get\-Self\-Source\-Caps (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{callback\-Param}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a}
+
+\begin{DoxyCode}
+61 \{
+62     \hyperlink{struct__pd__app}{pd\_app\_t} *pdAppInstance = (\hyperlink{struct__pd__app}{pd\_app\_t} *)callbackParam;
+63 
+64     \textcolor{keywordflow}{return} (uint32\_t *)&(pdAppInstance->\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1});
+65 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c_af642f48c8168af6e5a744cb02fb9e65a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Reset@{P\-D\-\_\-\-Power\-Board\-Reset}}
+\index{P\-D\-\_\-\-Power\-Board\-Reset@{P\-D\-\_\-\-Power\-Board\-Reset}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}
+
+\begin{DoxyCode}
+70 \{
+71     \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+72 
+73     \textcolor{comment}{//Question: reset的时候设置为0，什么时候会设置为其他值？}
+74     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} = 0u;
+75     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+76     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 0;
+77     \textcolor{comment}{// (base, pin, output), 设置output为0}
+78     \textcolor{comment}{// PTA13 on MCU <-> J403 pin5 EXTRA\_EN\_SRC, source 9V, disable extra source}
+79     GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 0);
+80     \textcolor{comment}{//g\_PDAppInstance.pdHandle指向PD\_Instance}
+81     \textcolor{comment}{//PD\_Control中，大部分case将获得的结果存进第三个参数变量}
+82     \textcolor{comment}{//if enSRC & enSNK1都为0，则会通过register command to disable source vbus and disable sink vbus}
+83     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+84     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1ab4baaafc5cca20f365d103a948261b1f}{PD\_CONTROL\_DISCHARGE\_VBUS}, NULL);
+85     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+86 \}
+\end{DoxyCode}
+\hypertarget{pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}}
+\index{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Sink\-Enable\-Vbus\-Power (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-vbus\-\_\-power\-\_\-t}}]{vbus\-Power}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159}
+
+\begin{DoxyCode}
+138 \{
+139     \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+140 
+141     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+142     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 1;
+143     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+144     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+145 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c_a3f5abe7fe812ca7f2a9a6721468e6159_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pd__power__app_8c_a877430377afe70b94985c6651ccb867f}{\index{pd\-\_\-power\-\_\-app.\-c@{pd\-\_\-power\-\_\-app.\-c}!P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}}
+\index{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power@{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}!pd_power_app.c@{pd\-\_\-power\-\_\-app.\-c}}
+\subsubsection[{P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-status\-\_\-t} P\-D\-\_\-\-Power\-Board\-Source\-Enable\-Vbus\-Power (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-vbus\-\_\-power\-\_\-t}}]{vbus\-Power}
+\end{DoxyParamCaption}
+)}}\label{pd__power__app_8c_a877430377afe70b94985c6651ccb867f}
+
+\begin{DoxyCode}
+93 \{
+94     uint32\_t delay = 1000000;
+95     \hyperlink{struct__pd__ptn5110__ctrl__pin}{pd\_ptn5110\_ctrl\_pin\_t} phyPowerPinCtrl;
+96 
+97     phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_aa46e27b5322119661fe8081a042478f7}{enSNK1} = 0;
+98     \textcolor{comment}{// 这里的单位是50mV，如果minVoltage > 5V}
+99     \textcolor{keywordflow}{if} (vbusPower.\hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage} >= \hyperlink{pd__power__interface_8h_a4806185481400089d3663d120e4c412d}{VSAFE5V\_IN\_50MV})
+100     \{
+101         phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 1;
+102     \}
+103     \textcolor{keywordflow}{else}
+104     \{
+105         phyPowerPinCtrl.\hyperlink{struct__pd__ptn5110__ctrl__pin_ace741c1da1ba78c0e1068f69a4a8f9d5}{enSRC} = 0;
+106     \}
+107     \hyperlink{group__usb__pd__stack_gac3d77e334213f541028d2da518086ca2}{PD\_Control}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{group__usb__pd__stack_gga0edd2a390d28d96646bc71aac1858af1a219d3fe217c5bf11a8126d09ee9fdb0c}{PD\_CONTROL\_PHY\_POWER\_PIN}, &phyPowerPinCtrl);
+108 
+109     \textcolor{keywordflow}{if} (vbusPower.\hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage} > \hyperlink{pd__power__interface_8h_a4806185481400089d3663d120e4c412d}{VSAFE5V\_IN\_50MV})
+110     \{
+111         \textcolor{comment}{//(basic, pin number, logic), GPIOA + 13}
+112         GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 1);
+113         \textcolor{comment}{/* when return, the power is ready. */}
+114         \textcolor{keywordflow}{while} (--delay)
+115         \{
+116             \_\_ASM(\textcolor{stringliteral}{"nop"});
+117         \}
+118     \}
+119     \textcolor{keywordflow}{else}
+120     \{
+121         GPIO\_WritePinOutput(\hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}, 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}, 0);
+122         \textcolor{keywordflow}{if} (\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} > 
+      \hyperlink{pd__power__interface_8h_a4806185481400089d3663d120e4c412d}{VSAFE5V\_IN\_50MV})
+123         \{
+124             \textcolor{keywordflow}{while} (--delay)
+125             \{
+126                 \_\_ASM(\textcolor{stringliteral}{"nop"});
+127             \}
+128         \}
+129     \}
+130     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_abcf864ac3f98a5cb50592cd6110be6a0}{sourceVbusVoltage} = vbusPower.
+      \hyperlink{struct__pd__vbus__power_a4a38147fb5014bae4ac87fb0e327ea43}{minVoltage};
+131 
+132     \textcolor{keywordflow}{return} \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success};
+133 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pd__power__app_8c_a877430377afe70b94985c6651ccb867f_icgraph}
+\end{center}
+\end{figure}
+
+

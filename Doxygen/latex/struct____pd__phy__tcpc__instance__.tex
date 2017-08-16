@@ -1,0 +1,218 @@
+\hypertarget{struct____pd__phy__tcpc__instance__}{\section{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\- Struct Reference}
+\label{struct____pd__phy__tcpc__instance__}\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+}
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-ptn5110.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct____pd__phy__tcpc__instance____coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_ga9397835347d48ef48b6b0ecba6312213}{pd\-\_\-handle} \hyperlink{struct____pd__phy__tcpc__instance___ac32468695e40e122402f73f58e2b2883}{pd\-Handle}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct____pd__phy__tcpc__instance___a8e1d29bc419bff24ef7dce9038a0cbe6}{msg\-Tx\-Buf}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___ab7f6700604267abb1ae7c89b848038f5}{msg\-Rx\-Cache\-Buf} \mbox{[}32\mbox{]}
+\item 
+\hyperlink{structpd__phy__TCPC__reg__cache__t}{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t} \hyperlink{struct____pd__phy__tcpc__instance___aad3c9ce4cbeb9feae002869320f59c43}{tcpc\-Reg\-Cache}
+\item 
+\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$ \hyperlink{struct____pd__phy__tcpc__instance___a09664b0949afea262f2c6ca813d1dc47}{cmsis\-Adapter}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct____pd__phy__tcpc__instance___a7f28556318380a24d677a846ce484a65}{rx\-Data\-Buffer}
+\item 
+uint32\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a3af6de9acc878ce8698441e39dfb52cc}{rx\-Data\-Length}
+\item 
+volatile \hyperlink{group__usb__pd__phy__drv_gab6924dca8731119eec80f1740a1564eb}{pd\-\_\-phy\-\_\-rx\-\_\-result\-\_\-t} \hyperlink{struct____pd__phy__tcpc__instance___aac4e841aeece50c977507048068e5b71}{cache\-Rx\-Result}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___aad459891077d4c8217e6ff3a46563a34}{cache\-Rx\-Valid}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a6c157191032eff69be9192ca58263192}{occupied}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a4dc4e216656e3e2ae311c3e5d9b30f7f}{pd\-Phy\-Id}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a50d7547738a416ec3a69cd72896830c8}{fr\-Swap\-Source\-O\-K}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a24037bc939fa4ef146806af07f94633d}{msg\-Tx\-Buf\-State}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___ae7ea8877aeb1575b2965df9314d5a2cf}{prev\-Pwr\-Stat}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a3516be0335f933f899fb28a9437f5bdc}{initial\-Cc\-Status}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a570de85ac09a6b1c2846340c62ca6db6}{hal\-Wait\-Vsafe0\-V}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a4f5e58eba28f763faec84e6cf21f3bec}{hal\-Vsafe5\-V\-Yes}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___adaf45c602e807d187285f47600ba9f22}{hal\-Vbus\-Yes}
+\item 
+volatile uint16\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___acb8b5bda19e51013f2e9b53a5210a49b}{cache\-Ena}
+\item 
+volatile uint16\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a58fe51ff1ebabdf028e6b24925d0d612}{intc\-Last\-Status}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a411ad2f7bc90a10a62a5ec1f466a4a97}{used\-C\-C}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{role\-Control\-Updated}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___af77c96ac21768f2e8a54fad69f97e96f}{phy\-Power\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a5963a6c4377fd4b3782f880eb70a314e}{phy\-Data\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a68e310d1771e6f32f6d1b1b9f5c00aa8}{ams\-Sink\-Tx\-O\-K}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}{current\-Stable}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{pwr\-In\-Progress}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a19a01f5c9205bebfac2a3514249db1fc}{low\-Power\-State}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a95990260c9d5be8724a2feca748ee3da}{tx\-Abort}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a6a94c29840da978ce0d5d0da545cf57f}{msg\-Id} \mbox{[}8\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a48ed369a0454eb7ee62d935801db2018}{rcv\-Msg\-Id} \mbox{[}8\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a2551b07e2795fdd33e05f05dfad8f211}{first\-Msg\-After\-Reset} \mbox{[}8\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___ab4f0c543ff4b3ad2293c07da59f94aaf}{msg\-Rx\-Sop\-Mask}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a3f43dcc28b084f1a3a2d05c3821290d9}{msg\-Tx\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a4be0d51647641b8fbf79c0307bac4db5}{msg\-A\-M\-S\-State}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a2f5f0754a16062bcf9c7572d8c3b5bd7}{tx\-Have}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a1e81356f89f625e8c0bd9436e7352fb3}{rx\-Have}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct____pd__phy__tcpc__instance___a31fe4873d6a4ddce98b3105eccad7cee}{revision}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct____pd__phy__tcpc__instance___a68e310d1771e6f32f6d1b1b9f5c00aa8}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!ams\-Sink\-Tx\-O\-K@{ams\-Sink\-Tx\-O\-K}}
+\index{ams\-Sink\-Tx\-O\-K@{ams\-Sink\-Tx\-O\-K}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{ams\-Sink\-Tx\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::ams\-Sink\-Tx\-O\-K}}\label{struct____pd__phy__tcpc__instance___a68e310d1771e6f32f6d1b1b9f5c00aa8}
+\hypertarget{struct____pd__phy__tcpc__instance___acb8b5bda19e51013f2e9b53a5210a49b}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!cache\-Ena@{cache\-Ena}}
+\index{cache\-Ena@{cache\-Ena}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{cache\-Ena}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::cache\-Ena}}\label{struct____pd__phy__tcpc__instance___acb8b5bda19e51013f2e9b53a5210a49b}
+\hypertarget{struct____pd__phy__tcpc__instance___aac4e841aeece50c977507048068e5b71}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!cache\-Rx\-Result@{cache\-Rx\-Result}}
+\index{cache\-Rx\-Result@{cache\-Rx\-Result}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{cache\-Rx\-Result}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf pd\-\_\-phy\-\_\-rx\-\_\-result\-\_\-t} \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::cache\-Rx\-Result}}\label{struct____pd__phy__tcpc__instance___aac4e841aeece50c977507048068e5b71}
+\hypertarget{struct____pd__phy__tcpc__instance___aad459891077d4c8217e6ff3a46563a34}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!cache\-Rx\-Valid@{cache\-Rx\-Valid}}
+\index{cache\-Rx\-Valid@{cache\-Rx\-Valid}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{cache\-Rx\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::cache\-Rx\-Valid}}\label{struct____pd__phy__tcpc__instance___aad459891077d4c8217e6ff3a46563a34}
+\hypertarget{struct____pd__phy__tcpc__instance___a09664b0949afea262f2c6ca813d1dc47}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!cmsis\-Adapter@{cmsis\-Adapter}}
+\index{cmsis\-Adapter@{cmsis\-Adapter}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{cmsis\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmsis\-\_\-driver\-\_\-adapter\-\_\-t}$\ast$ \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::cmsis\-Adapter}}\label{struct____pd__phy__tcpc__instance___a09664b0949afea262f2c6ca813d1dc47}
+\hypertarget{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!current\-Stable@{current\-Stable}}
+\index{current\-Stable@{current\-Stable}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{current\-Stable}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::current\-Stable}}\label{struct____pd__phy__tcpc__instance___a0a78bbebf4ee073519c2250c856c58da}
+\hypertarget{struct____pd__phy__tcpc__instance___a2551b07e2795fdd33e05f05dfad8f211}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!first\-Msg\-After\-Reset@{first\-Msg\-After\-Reset}}
+\index{first\-Msg\-After\-Reset@{first\-Msg\-After\-Reset}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{first\-Msg\-After\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::first\-Msg\-After\-Reset\mbox{[}8\mbox{]}}}\label{struct____pd__phy__tcpc__instance___a2551b07e2795fdd33e05f05dfad8f211}
+\hypertarget{struct____pd__phy__tcpc__instance___a50d7547738a416ec3a69cd72896830c8}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!fr\-Swap\-Source\-O\-K@{fr\-Swap\-Source\-O\-K}}
+\index{fr\-Swap\-Source\-O\-K@{fr\-Swap\-Source\-O\-K}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{fr\-Swap\-Source\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::fr\-Swap\-Source\-O\-K}}\label{struct____pd__phy__tcpc__instance___a50d7547738a416ec3a69cd72896830c8}
+\hypertarget{struct____pd__phy__tcpc__instance___adaf45c602e807d187285f47600ba9f22}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!hal\-Vbus\-Yes@{hal\-Vbus\-Yes}}
+\index{hal\-Vbus\-Yes@{hal\-Vbus\-Yes}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{hal\-Vbus\-Yes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::hal\-Vbus\-Yes}}\label{struct____pd__phy__tcpc__instance___adaf45c602e807d187285f47600ba9f22}
+\hypertarget{struct____pd__phy__tcpc__instance___a4f5e58eba28f763faec84e6cf21f3bec}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!hal\-Vsafe5\-V\-Yes@{hal\-Vsafe5\-V\-Yes}}
+\index{hal\-Vsafe5\-V\-Yes@{hal\-Vsafe5\-V\-Yes}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{hal\-Vsafe5\-V\-Yes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::hal\-Vsafe5\-V\-Yes}}\label{struct____pd__phy__tcpc__instance___a4f5e58eba28f763faec84e6cf21f3bec}
+\hypertarget{struct____pd__phy__tcpc__instance___a570de85ac09a6b1c2846340c62ca6db6}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!hal\-Wait\-Vsafe0\-V@{hal\-Wait\-Vsafe0\-V}}
+\index{hal\-Wait\-Vsafe0\-V@{hal\-Wait\-Vsafe0\-V}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{hal\-Wait\-Vsafe0\-V}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::hal\-Wait\-Vsafe0\-V}}\label{struct____pd__phy__tcpc__instance___a570de85ac09a6b1c2846340c62ca6db6}
+\hypertarget{struct____pd__phy__tcpc__instance___a3516be0335f933f899fb28a9437f5bdc}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!initial\-Cc\-Status@{initial\-Cc\-Status}}
+\index{initial\-Cc\-Status@{initial\-Cc\-Status}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{initial\-Cc\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::initial\-Cc\-Status}}\label{struct____pd__phy__tcpc__instance___a3516be0335f933f899fb28a9437f5bdc}
+\hypertarget{struct____pd__phy__tcpc__instance___a58fe51ff1ebabdf028e6b24925d0d612}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!intc\-Last\-Status@{intc\-Last\-Status}}
+\index{intc\-Last\-Status@{intc\-Last\-Status}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{intc\-Last\-Status}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::intc\-Last\-Status}}\label{struct____pd__phy__tcpc__instance___a58fe51ff1ebabdf028e6b24925d0d612}
+\hypertarget{struct____pd__phy__tcpc__instance___a19a01f5c9205bebfac2a3514249db1fc}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!low\-Power\-State@{low\-Power\-State}}
+\index{low\-Power\-State@{low\-Power\-State}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{low\-Power\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::low\-Power\-State}}\label{struct____pd__phy__tcpc__instance___a19a01f5c9205bebfac2a3514249db1fc}
+\hypertarget{struct____pd__phy__tcpc__instance___a4be0d51647641b8fbf79c0307bac4db5}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-A\-M\-S\-State@{msg\-A\-M\-S\-State}}
+\index{msg\-A\-M\-S\-State@{msg\-A\-M\-S\-State}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-A\-M\-S\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-A\-M\-S\-State}}\label{struct____pd__phy__tcpc__instance___a4be0d51647641b8fbf79c0307bac4db5}
+\hypertarget{struct____pd__phy__tcpc__instance___a6a94c29840da978ce0d5d0da545cf57f}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Id@{msg\-Id}}
+\index{msg\-Id@{msg\-Id}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Id\mbox{[}8\mbox{]}}}\label{struct____pd__phy__tcpc__instance___a6a94c29840da978ce0d5d0da545cf57f}
+\hypertarget{struct____pd__phy__tcpc__instance___ab7f6700604267abb1ae7c89b848038f5}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Rx\-Cache\-Buf@{msg\-Rx\-Cache\-Buf}}
+\index{msg\-Rx\-Cache\-Buf@{msg\-Rx\-Cache\-Buf}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Rx\-Cache\-Buf}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Rx\-Cache\-Buf\mbox{[}32\mbox{]}}}\label{struct____pd__phy__tcpc__instance___ab7f6700604267abb1ae7c89b848038f5}
+\hypertarget{struct____pd__phy__tcpc__instance___ab4f0c543ff4b3ad2293c07da59f94aaf}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Rx\-Sop\-Mask@{msg\-Rx\-Sop\-Mask}}
+\index{msg\-Rx\-Sop\-Mask@{msg\-Rx\-Sop\-Mask}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Rx\-Sop\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Rx\-Sop\-Mask}}\label{struct____pd__phy__tcpc__instance___ab4f0c543ff4b3ad2293c07da59f94aaf}
+\hypertarget{struct____pd__phy__tcpc__instance___a8e1d29bc419bff24ef7dce9038a0cbe6}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Tx\-Buf@{msg\-Tx\-Buf}}
+\index{msg\-Tx\-Buf@{msg\-Tx\-Buf}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Tx\-Buf}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Tx\-Buf}}\label{struct____pd__phy__tcpc__instance___a8e1d29bc419bff24ef7dce9038a0cbe6}
+\hypertarget{struct____pd__phy__tcpc__instance___a24037bc939fa4ef146806af07f94633d}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Tx\-Buf\-State@{msg\-Tx\-Buf\-State}}
+\index{msg\-Tx\-Buf\-State@{msg\-Tx\-Buf\-State}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Tx\-Buf\-State}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Tx\-Buf\-State}}\label{struct____pd__phy__tcpc__instance___a24037bc939fa4ef146806af07f94633d}
+\hypertarget{struct____pd__phy__tcpc__instance___a3f43dcc28b084f1a3a2d05c3821290d9}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!msg\-Tx\-Sop@{msg\-Tx\-Sop}}
+\index{msg\-Tx\-Sop@{msg\-Tx\-Sop}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{msg\-Tx\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::msg\-Tx\-Sop}}\label{struct____pd__phy__tcpc__instance___a3f43dcc28b084f1a3a2d05c3821290d9}
+\hypertarget{struct____pd__phy__tcpc__instance___a6c157191032eff69be9192ca58263192}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!occupied@{occupied}}
+\index{occupied@{occupied}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{occupied}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::occupied}}\label{struct____pd__phy__tcpc__instance___a6c157191032eff69be9192ca58263192}
+\hypertarget{struct____pd__phy__tcpc__instance___ac32468695e40e122402f73f58e2b2883}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!pd\-Handle@{pd\-Handle}}
+\index{pd\-Handle@{pd\-Handle}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{pd\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-handle} \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::pd\-Handle}}\label{struct____pd__phy__tcpc__instance___ac32468695e40e122402f73f58e2b2883}
+\hypertarget{struct____pd__phy__tcpc__instance___a4dc4e216656e3e2ae311c3e5d9b30f7f}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!pd\-Phy\-Id@{pd\-Phy\-Id}}
+\index{pd\-Phy\-Id@{pd\-Phy\-Id}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{pd\-Phy\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::pd\-Phy\-Id}}\label{struct____pd__phy__tcpc__instance___a4dc4e216656e3e2ae311c3e5d9b30f7f}
+\hypertarget{struct____pd__phy__tcpc__instance___a5963a6c4377fd4b3782f880eb70a314e}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!phy\-Data\-Role@{phy\-Data\-Role}}
+\index{phy\-Data\-Role@{phy\-Data\-Role}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{phy\-Data\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::phy\-Data\-Role}}\label{struct____pd__phy__tcpc__instance___a5963a6c4377fd4b3782f880eb70a314e}
+\hypertarget{struct____pd__phy__tcpc__instance___af77c96ac21768f2e8a54fad69f97e96f}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!phy\-Power\-Role@{phy\-Power\-Role}}
+\index{phy\-Power\-Role@{phy\-Power\-Role}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{phy\-Power\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::phy\-Power\-Role}}\label{struct____pd__phy__tcpc__instance___af77c96ac21768f2e8a54fad69f97e96f}
+\hypertarget{struct____pd__phy__tcpc__instance___ae7ea8877aeb1575b2965df9314d5a2cf}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!prev\-Pwr\-Stat@{prev\-Pwr\-Stat}}
+\index{prev\-Pwr\-Stat@{prev\-Pwr\-Stat}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{prev\-Pwr\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::prev\-Pwr\-Stat}}\label{struct____pd__phy__tcpc__instance___ae7ea8877aeb1575b2965df9314d5a2cf}
+\hypertarget{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!pwr\-In\-Progress@{pwr\-In\-Progress}}
+\index{pwr\-In\-Progress@{pwr\-In\-Progress}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{pwr\-In\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::pwr\-In\-Progress}}\label{struct____pd__phy__tcpc__instance___aa594b019548753b279b058071e537257}
+\hypertarget{struct____pd__phy__tcpc__instance___a48ed369a0454eb7ee62d935801db2018}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!rcv\-Msg\-Id@{rcv\-Msg\-Id}}
+\index{rcv\-Msg\-Id@{rcv\-Msg\-Id}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{rcv\-Msg\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::rcv\-Msg\-Id\mbox{[}8\mbox{]}}}\label{struct____pd__phy__tcpc__instance___a48ed369a0454eb7ee62d935801db2018}
+\hypertarget{struct____pd__phy__tcpc__instance___a31fe4873d6a4ddce98b3105eccad7cee}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!revision@{revision}}
+\index{revision@{revision}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{revision}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::revision}}\label{struct____pd__phy__tcpc__instance___a31fe4873d6a4ddce98b3105eccad7cee}
+\hypertarget{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!role\-Control\-Updated@{role\-Control\-Updated}}
+\index{role\-Control\-Updated@{role\-Control\-Updated}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{role\-Control\-Updated}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::role\-Control\-Updated}}\label{struct____pd__phy__tcpc__instance___a12f900cf19375e18339d43ee8ec60b55}
+\hypertarget{struct____pd__phy__tcpc__instance___a7f28556318380a24d677a846ce484a65}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!rx\-Data\-Buffer@{rx\-Data\-Buffer}}
+\index{rx\-Data\-Buffer@{rx\-Data\-Buffer}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{rx\-Data\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::rx\-Data\-Buffer}}\label{struct____pd__phy__tcpc__instance___a7f28556318380a24d677a846ce484a65}
+\hypertarget{struct____pd__phy__tcpc__instance___a3af6de9acc878ce8698441e39dfb52cc}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!rx\-Data\-Length@{rx\-Data\-Length}}
+\index{rx\-Data\-Length@{rx\-Data\-Length}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{rx\-Data\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::rx\-Data\-Length}}\label{struct____pd__phy__tcpc__instance___a3af6de9acc878ce8698441e39dfb52cc}
+\hypertarget{struct____pd__phy__tcpc__instance___a1e81356f89f625e8c0bd9436e7352fb3}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!rx\-Have@{rx\-Have}}
+\index{rx\-Have@{rx\-Have}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{rx\-Have}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::rx\-Have}}\label{struct____pd__phy__tcpc__instance___a1e81356f89f625e8c0bd9436e7352fb3}
+\hypertarget{struct____pd__phy__tcpc__instance___aad3c9ce4cbeb9feae002869320f59c43}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!tcpc\-Reg\-Cache@{tcpc\-Reg\-Cache}}
+\index{tcpc\-Reg\-Cache@{tcpc\-Reg\-Cache}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{tcpc\-Reg\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t} \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::tcpc\-Reg\-Cache}}\label{struct____pd__phy__tcpc__instance___aad3c9ce4cbeb9feae002869320f59c43}
+\hypertarget{struct____pd__phy__tcpc__instance___a95990260c9d5be8724a2feca748ee3da}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!tx\-Abort@{tx\-Abort}}
+\index{tx\-Abort@{tx\-Abort}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{tx\-Abort}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::tx\-Abort}}\label{struct____pd__phy__tcpc__instance___a95990260c9d5be8724a2feca748ee3da}
+\hypertarget{struct____pd__phy__tcpc__instance___a2f5f0754a16062bcf9c7572d8c3b5bd7}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!tx\-Have@{tx\-Have}}
+\index{tx\-Have@{tx\-Have}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{tx\-Have}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::tx\-Have}}\label{struct____pd__phy__tcpc__instance___a2f5f0754a16062bcf9c7572d8c3b5bd7}
+\hypertarget{struct____pd__phy__tcpc__instance___a411ad2f7bc90a10a62a5ec1f466a4a97}{\index{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}!used\-C\-C@{used\-C\-C}}
+\index{used\-C\-C@{used\-C\-C}!__pd_phy_tcpc_instance_@{\-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-}}
+\subsubsection[{used\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-\-\_\-pd\-\_\-phy\-\_\-tcpc\-\_\-instance\-\_\-\-::used\-C\-C}}\label{struct____pd__phy__tcpc__instance___a411ad2f7bc90a10a62a5ec1f466a4a97}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/ptn5110/\hyperlink{usb__pd__ptn5110_8h}{usb\-\_\-pd\-\_\-ptn5110.\-h}\end{DoxyCompactItemize}

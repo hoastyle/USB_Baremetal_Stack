@@ -1,0 +1,788 @@
+\hypertarget{source__charger_2main_8c}{\section{demo/pd\-\_\-source\-\_\-charger/main.c File Reference}
+\label{source__charger_2main_8c}\index{demo/pd\-\_\-source\-\_\-charger/main.\-c@{demo/pd\-\_\-source\-\_\-charger/main.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-pd\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-pd.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Free\-R\-T\-O\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}queue.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pd\-\_\-app.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-device\-\_\-registers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-lptmr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pin\-\_\-mux.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}clock\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-gpio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-port.\-h\char`\"{}}\\*
+Include dependency graph for main.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{source__charger_2main_8c_ae6e6a45abcb1570254eac1b1a97d5269}{L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T}~1000\-U
+\item 
+\#define \hyperlink{source__charger_2main_8c_a8373ccf3ab33079224300af79c6550ca}{L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K}~C\-L\-O\-C\-K\-\_\-\-Get\-Freq(k\-C\-L\-O\-C\-K\-\_\-\-Lpo\-Clk)
+\item 
+\#define \hyperlink{source__charger_2main_8c_a90ce3e1a4998d1ada36c91f780e6b51b}{I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T}~100\-U
+\item 
+\#define \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2\-C0\-\_\-\-S\-C\-L}~(0\-U)
+\item 
+\#define \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2\-C0\-\_\-\-S\-D\-A}~(1\-U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{source__charger_2main_8c_ae90a39427d391ee932de4fd9adbcde6a}{P\-D\-\_\-\-App\-Init} (void)
+\item 
+void \hyperlink{source__charger_2main_8c_ad2600cc824c1726cccfed3267a9af27c}{P\-D\-\_\-\-Demo\-Init} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{source__charger_2main_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{P\-D\-\_\-\-Demo\-Task\-Fun} (\hyperlink{pd__app_8h_a43bb8eb90b29f6cc276fd6368cef34c2}{pd\-\_\-app\-\_\-t} $\ast$pd\-App\-Instance)
+\item 
+void \hyperlink{source__charger_2main_8c_ae761a2f76f1c1bacf1b945a2d200c954}{B\-O\-A\-R\-D\-\_\-\-Init\-Hardware} (void)
+\item 
+void \hyperlink{source__charger_2main_8c_a17aeb1479aebf017a3ed96ca31d3ab47}{B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus} (void)
+\item 
+void \hyperlink{source__charger_2main_8c_a30721ec44aabc66bf54f35369009cd7e}{B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus} (void)
+\item 
+uint32\-\_\-t \hyperlink{source__charger_2main_8c_a73764cfa7f698aaf4619feb412c5d725}{I2\-C0\-\_\-\-Get\-Freq} (void)
+\item 
+uint32\-\_\-t \hyperlink{source__charger_2main_8c_ae0e7e9338ef40768cfe101c1b01f6f87}{I2\-C1\-\_\-\-Get\-Freq} (void)
+\item 
+static void \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\-\_\-release\-\_\-bus\-\_\-delay} (void)
+\item 
+void \hyperlink{source__charger_2main_8c_ae0c183b567ef830cf7a1e2a5d7c11868}{L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler} (void)
+\item 
+static void \hyperlink{source__charger_2main_8c_aef83075c23be0c40e043062c26845074}{P\-D\-\_\-1mstimer\-Init} (void)
+\item 
+static void \hyperlink{source__charger_2main_8c_a616cf54a58f0aad132292f45995c3560}{pd\-\_\-port\-\_\-task} (void $\ast$arg)
+\item 
+static void \hyperlink{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf}{pd\-\_\-demo\-\_\-task} (void $\ast$arg)
+\item 
+int \hyperlink{source__charger_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!I2\-C0\-\_\-\-S\-C\-L@{I2\-C0\-\_\-\-S\-C\-L}}
+\index{I2\-C0\-\_\-\-S\-C\-L@{I2\-C0\-\_\-\-S\-C\-L}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{I2\-C0\-\_\-\-S\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C0\-\_\-\-S\-C\-L~(0\-U)}}\label{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}
+\hypertarget{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!I2\-C0\-\_\-\-S\-D\-A@{I2\-C0\-\_\-\-S\-D\-A}}
+\index{I2\-C0\-\_\-\-S\-D\-A@{I2\-C0\-\_\-\-S\-D\-A}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{I2\-C0\-\_\-\-S\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C0\-\_\-\-S\-D\-A~(1\-U)}}\label{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}
+\hypertarget{source__charger_2main_8c_a90ce3e1a4998d1ada36c91f780e6b51b}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T@{I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T}}
+\index{I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T@{I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-B\-U\-S\-\_\-\-C\-O\-U\-N\-T~100\-U}}\label{source__charger_2main_8c_a90ce3e1a4998d1ada36c91f780e6b51b}
+\hypertarget{source__charger_2main_8c_a8373ccf3ab33079224300af79c6550ca}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K@{L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K}}
+\index{L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K@{L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-P\-T\-M\-R\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-C\-L\-O\-C\-K~C\-L\-O\-C\-K\-\_\-\-Get\-Freq(k\-C\-L\-O\-C\-K\-\_\-\-Lpo\-Clk)}}\label{source__charger_2main_8c_a8373ccf3ab33079224300af79c6550ca}
+\hypertarget{source__charger_2main_8c_ae6e6a45abcb1570254eac1b1a97d5269}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T@{L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T}}
+\index{L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T@{L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-P\-T\-M\-R\-\_\-\-U\-S\-E\-C\-\_\-\-C\-O\-U\-N\-T~1000\-U}}\label{source__charger_2main_8c_ae6e6a45abcb1570254eac1b1a97d5269}
+
+
+\subsection{Function Documentation}
+\hypertarget{source__charger_2main_8c_a30721ec44aabc66bf54f35369009cd7e}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus@{B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus}}
+\index{B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus@{B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-I2\-C0\-\_\-\-Release\-Bus (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_a30721ec44aabc66bf54f35369009cd7e}
+
+\begin{DoxyCode}
+98 \{
+99     uint8\_t i = 0;
+100     gpio\_pin\_config\_t pin\_config;
+101     port\_pin\_config\_t i2c\_pin\_config = \{0\};
+102 
+103     \textcolor{comment}{/* Config pin mux as gpio */}
+104     i2c\_pin\_config.pullSelect = kPORT\_PullUp;
+105     i2c\_pin\_config.mux = kPORT\_MuxAsGpio;
+106 
+107     pin\_config.pinDirection = kGPIO\_DigitalOutput;
+108     pin\_config.outputLogic = 1U;
+109     CLOCK\_EnableClock(kCLOCK\_PortB);
+110     PORT\_SetPinConfig(PORTB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, &i2c\_pin\_config);
+111     PORT\_SetPinConfig(PORTB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, &i2c\_pin\_config);
+112 
+113     GPIO\_PinInit(GPIOB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, &pin\_config);
+114     GPIO\_PinInit(GPIOB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, &pin\_config);
+115 
+116     \textcolor{comment}{/* Drive SDA low first to simulate a start */}
+117     GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, 0U);
+118     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+119 
+120     \textcolor{comment}{/* Send 9 pulses on SCL and keep SDA high */}
+121     \textcolor{keywordflow}{for} (i = 0; i < 9; i++)
+122     \{
+123         GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, 0U);
+124         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+125 
+126         GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, 1U);
+127         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+128 
+129         GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, 1U);
+130         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+131         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+132     \}
+133 
+134     \textcolor{comment}{/* Send stop */}
+135     GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, 0U);
+136     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+137 
+138     GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, 0U);
+139     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+140 
+141     GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_a69f255245dd74fb6785ca39656cf9983}{I2C0\_SCL}, 1U);
+142     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+143 
+144     GPIO\_WritePinOutput(GPIOB, \hyperlink{source__charger_2main_8c_af530325ce28cf25ce89308fbd9ac8c16}{I2C0\_SDA}, 1U);
+145     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+146 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a30721ec44aabc66bf54f35369009cd7e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_a17aeb1479aebf017a3ed96ca31d3ab47}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus@{B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus}}
+\index{B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus@{B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-I2\-C1\-\_\-\-Release\-Bus (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_a17aeb1479aebf017a3ed96ca31d3ab47}
+
+\begin{DoxyCode}
+149 \{
+150     uint8\_t i = 0;
+151     gpio\_pin\_config\_t pin\_config;
+152     port\_pin\_config\_t i2c\_pin\_config = \{0\};
+153 
+154     \textcolor{comment}{/* Config pin mux as gpio */}
+155     i2c\_pin\_config.pullSelect = kPORT\_PullUp;
+156     i2c\_pin\_config.mux = kPORT\_MuxAsGpio;
+157 
+158     pin\_config.pinDirection = kGPIO\_DigitalOutput;
+159     pin\_config.outputLogic = 1U;
+160     CLOCK\_EnableClock(kCLOCK\_PortD);
+161     PORT\_SetPinConfig(PORTD, 7u, &i2c\_pin\_config);
+162     PORT\_SetPinConfig(PORTD, 6u, &i2c\_pin\_config);
+163 
+164     GPIO\_PinInit(GPIOD, 7u, &pin\_config);
+165     GPIO\_PinInit(GPIOD, 6u, &pin\_config);
+166 
+167     \textcolor{comment}{/* Drive SDA low first to simulate a start */}
+168     GPIO\_WritePinOutput(GPIOD, 6u, 0U);
+169     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+170 
+171     \textcolor{comment}{/* Send 9 pulses on SCL and keep SDA high */}
+172     \textcolor{keywordflow}{for} (i = 0; i < 9; i++)
+173     \{
+174         GPIO\_WritePinOutput(GPIOD, 7u, 0U);
+175         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+176 
+177         GPIO\_WritePinOutput(GPIOD, 6u, 1U);
+178         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+179 
+180         GPIO\_WritePinOutput(GPIOD, 7u, 1U);
+181         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+182         \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+183     \}
+184 
+185     \textcolor{comment}{/* Send stop */}
+186     GPIO\_WritePinOutput(GPIOD, 7u, 0U);
+187     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+188 
+189     GPIO\_WritePinOutput(GPIOD, 6u, 0U);
+190     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+191 
+192     GPIO\_WritePinOutput(GPIOD, 7u, 1U);
+193     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+194 
+195     GPIO\_WritePinOutput(GPIOD, 6u, 1U);
+196     \hyperlink{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{i2c\_release\_bus\_delay}();
+197 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a17aeb1479aebf017a3ed96ca31d3ab47_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_ae761a2f76f1c1bacf1b945a2d200c954}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!B\-O\-A\-R\-D\-\_\-\-Init\-Hardware@{B\-O\-A\-R\-D\-\_\-\-Init\-Hardware}}
+\index{B\-O\-A\-R\-D\-\_\-\-Init\-Hardware@{B\-O\-A\-R\-D\-\_\-\-Init\-Hardware}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Init\-Hardware}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Init\-Hardware (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_ae761a2f76f1c1bacf1b945a2d200c954}
+\hypertarget{source__charger_2main_8c_a73764cfa7f698aaf4619feb412c5d725}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!I2\-C0\-\_\-\-Get\-Freq@{I2\-C0\-\_\-\-Get\-Freq}}
+\index{I2\-C0\-\_\-\-Get\-Freq@{I2\-C0\-\_\-\-Get\-Freq}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{I2\-C0\-\_\-\-Get\-Freq}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t I2\-C0\-\_\-\-Get\-Freq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_a73764cfa7f698aaf4619feb412c5d725}
+
+\begin{DoxyCode}
+79 \{
+80     \textcolor{keywordflow}{return} CLOCK\_GetFreq(I2C0\_CLK\_SRC);
+81 \}
+\end{DoxyCode}
+\hypertarget{source__charger_2main_8c_ae0e7e9338ef40768cfe101c1b01f6f87}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!I2\-C1\-\_\-\-Get\-Freq@{I2\-C1\-\_\-\-Get\-Freq}}
+\index{I2\-C1\-\_\-\-Get\-Freq@{I2\-C1\-\_\-\-Get\-Freq}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{I2\-C1\-\_\-\-Get\-Freq}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t I2\-C1\-\_\-\-Get\-Freq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_ae0e7e9338ef40768cfe101c1b01f6f87}
+
+\begin{DoxyCode}
+84 \{
+85     \textcolor{keywordflow}{return} CLOCK\_GetFreq(I2C1\_CLK\_SRC);
+86 \}
+\end{DoxyCode}
+\hypertarget{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!i2c\-\_\-release\-\_\-bus\-\_\-delay@{i2c\-\_\-release\-\_\-bus\-\_\-delay}}
+\index{i2c\-\_\-release\-\_\-bus\-\_\-delay@{i2c\-\_\-release\-\_\-bus\-\_\-delay}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{i2c\-\_\-release\-\_\-bus\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}static void i2c\-\_\-release\-\_\-bus\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde}
+
+\begin{DoxyCode}
+89 \{
+90     uint32\_t i = 0;
+91     \textcolor{keywordflow}{for} (i = 0; i < \hyperlink{source__charger_2main_8c_a90ce3e1a4998d1ada36c91f780e6b51b}{I2C\_RELEASE\_BUS\_COUNT}; i++)
+92     \{
+93         \_\_NOP();
+94     \}
+95 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a7f7816383300ac6172b76349792d6dde_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_ae0c183b567ef830cf7a1e2a5d7c11868}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler@{L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler}}
+\index{L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler@{L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void L\-P\-T\-M\-R0\-\_\-\-I\-R\-Q\-Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_ae0c183b567ef830cf7a1e2a5d7c11868}
+
+\begin{DoxyCode}
+200 \{
+201     LPTMR\_ClearStatusFlags(LPTMR0, kLPTMR\_TimerCompareFlag);
+202     \textcolor{comment}{/* Callback into timer service */}
+203     \hyperlink{group__usb__pd__stack_gad8420ee79286dfb87b1b9d9c0845f31d}{PD\_TimerIsrFunction}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.
+      \hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle});
+204 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_ae0c183b567ef830cf7a1e2a5d7c11868_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!main@{main}}
+\index{main@{main}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+273 \{
+274     \hyperlink{group__pin__mux_ga2c9fe54b6b84723fbaa590a6f4576966}{BOARD\_InitPins}();
+275     \hyperlink{clock__config_8c_a5e69c4eff0fd5236bbb0ff4e1d5a7a7e}{BOARD\_BootClockRUN}();
+276     \hyperlink{main_8c_a30721ec44aabc66bf54f35369009cd7e}{BOARD\_I2C0\_ReleaseBus}();
+277     \hyperlink{board_8c_a4c84ccb952cb083367d7040cf9de3db8}{BOARD\_InitDebugConsole}();
+278 
+279     \textcolor{keywordflow}{if} (xTaskCreate(\hyperlink{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf}{pd\_demo\_task}, \textcolor{stringliteral}{"demo"}, 512 / \textcolor{keyword}{sizeof}(portSTACK\_TYPE), NULL, 4, NULL) != 
+      pdPASS)
+280     \{
+281         PRINTF(\textcolor{stringliteral}{"create demo task error\(\backslash\)r\(\backslash\)n"});
+282     \}
+283 
+284     vTaskStartScheduler();
+285 
+286     \textcolor{keywordflow}{while} (1)
+287     \{
+288         ;
+289     \}
+290 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_aef83075c23be0c40e043062c26845074}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!P\-D\-\_\-1mstimer\-Init@{P\-D\-\_\-1mstimer\-Init}}
+\index{P\-D\-\_\-1mstimer\-Init@{P\-D\-\_\-1mstimer\-Init}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{P\-D\-\_\-1mstimer\-Init}]{\setlength{\rightskip}{0pt plus 5cm}static void P\-D\-\_\-1mstimer\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{source__charger_2main_8c_aef83075c23be0c40e043062c26845074}
+
+\begin{DoxyCode}
+207 \{
+208     lptmr\_config\_t lptmrConfig;
+209 
+210     \textcolor{comment}{/* Configure LPTMR */}
+211     \textcolor{comment}{/*}
+212 \textcolor{comment}{     * lptmrConfig.timerMode = kLPTMR\_TimerModeTimeCounter;}
+213 \textcolor{comment}{     * lptmrConfig.pinSelect = kLPTMR\_PinSelectInput\_0;}
+214 \textcolor{comment}{     * lptmrConfig.pinPolarity = kLPTMR\_PinPolarityActiveHigh;}
+215 \textcolor{comment}{     * lptmrConfig.enableFreeRunning = false;}
+216 \textcolor{comment}{     * lptmrConfig.bypassPrescaler = true;}
+217 \textcolor{comment}{     * lptmrConfig.prescalerClockSource = kLPTMR\_PrescalerClock\_1;}
+218 \textcolor{comment}{     * lptmrConfig.value = kLPTMR\_Prescale\_Glitch\_0;}
+219 \textcolor{comment}{     */}
+220     LPTMR\_GetDefaultConfig(&lptmrConfig);
+221 
+222     \textcolor{comment}{/* Initialize the LPTMR */}
+223     LPTMR\_Init(LPTMR0, &lptmrConfig);
+224 
+225     \textcolor{comment}{/*}
+226 \textcolor{comment}{     * Set timer period.}
+227 \textcolor{comment}{     * Note : the parameter "ticks" of LPTMR\_SetTimerPeriod should be equal or greater than 1.}
+228 \textcolor{comment}{    */}
+229     LPTMR\_SetTimerPeriod(LPTMR0, USEC\_TO\_COUNT(\hyperlink{source__charger_2main_8c_ae6e6a45abcb1570254eac1b1a97d5269}{LPTMR\_USEC\_COUNT}, 
+      \hyperlink{source__charger_2main_8c_a8373ccf3ab33079224300af79c6550ca}{LPTMR\_SOURCE\_CLOCK}));
+230 
+231     \textcolor{comment}{/* Enable timer interrupt */}
+232     LPTMR\_EnableInterrupts(LPTMR0, kLPTMR\_TimerInterruptEnable);
+233 
+234     \textcolor{comment}{/* Enable at the NVIC */}
+235     EnableIRQ(LPTMR0\_IRQn);
+236 
+237     \textcolor{comment}{/* Start counting */}
+238     LPTMR\_StartTimer(LPTMR0);
+239 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_aef83075c23be0c40e043062c26845074_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_ae90a39427d391ee932de4fd9adbcde6a}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!P\-D\-\_\-\-App\-Init@{P\-D\-\_\-\-App\-Init}}
+\index{P\-D\-\_\-\-App\-Init@{P\-D\-\_\-\-App\-Init}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{P\-D\-\_\-\-App\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-App\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_ae90a39427d391ee932de4fd9adbcde6a}
+
+\begin{DoxyCode}
+271 \{
+272     \textcolor{comment}{/* port config */}
+273     \textcolor{comment}{//因为给的是指针，所以sourceCaps 指向 selfSourcePdo1}
+274     \textcolor{comment}{// Question: g\_PowerPortConfig的作用是什么？}
+275     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a12847f31ee382d4bdee4067c9ee177f4}{sourceCaps} = (uint32\_t *)&
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}, \textcolor{comment}{/* source caps */}
+276         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_a7cf6689616437623deb3b42e5467e26f}{sourceCapCount} = 2;
+277     \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_ab247068e26ad76b2670eb96da39969e1}{sinkCaps} = (uint32\_t *)&
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}, \textcolor{comment}{/* self sink caps */}
+278         \hyperlink{pd__app_8c_a31ad0b046935918c7fa0fed8885192c8}{g\_PowerPortConfig}.\hyperlink{struct__pd__power__port__config_aa1d58bf75fbebad4b8c7e29b0cc4c64e}{sinkCapCount} = 2;
+279     \textcolor{comment}{// initialize pd\_instance, pd\_app\_t.pdHandle = pd\_instance\_t}
+280     \textcolor{keywordflow}{if} (\hyperlink{group__usb__pd__stack_ga3ab001290dc934fd6a45ad93916f5140}{PD\_InstanceInit}(&\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle}, 
+      \hyperlink{pd__app_8c_a648f96eddcd92c89d8908b63ac0f9185}{PD\_DpmDemoAppCallback}, &\hyperlink{pd__app_8c_a306f9b8029582dfb8c64f163fea3cf65}{callbackFunctions}, &
+      \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance},
+281                         &\hyperlink{pd__app_8c_a33272daf4c2c919c757e12106af7ffd5}{g\_PDConfig}) != \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+282     \{
+283         PRINTF(\textcolor{stringliteral}{"pd init fail\(\backslash\)r\(\backslash\)n"});
+284     \}
+285 
+286     \textcolor{comment}{/* initialize port interrupt */}
+287     \textcolor{comment}{/* 设置MCU分配给PTN5110的GPIO pin interrupt, PORTE 31 pin}
+288 \textcolor{comment}{    set IRQC field of PORTE 31 pin PCR, NVIC除系统规定的中断，}
+289 \textcolor{comment}{    其他的中断是由芯片生产厂商硬件设计规定好的。对于KL27，参考KL27 ReferenceManual P52*/}
+290     PORT\_SetPinInterruptConfig(\hyperlink{pd__app_8h_ad99e5c127ff695f7b579400ef1062e76}{BOARD\_PTN5110\_GPIO\_PORT}, 
+      \hyperlink{pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{BOARD\_PTN5110\_GPIO\_PIN}, kPORT\_InterruptLogicZero);
+291     \textcolor{comment}{// set PORTE 31 pin data direction to 0 as input}
+292     \hyperlink{pd__app_8h_a1fcc7374a2ec203aceb85355f3118f3d}{BOARD\_PTN5110\_GPIO}->PDDR &= ~(1U << \hyperlink{pd__app_8h_ac0976521bb8bc7a1e4724ec1188e7f46}{BOARD\_PTN5110\_GPIO\_PIN});   
+       \textcolor{comment}{/* gpio set as input */}
+293     \textcolor{comment}{// set PORTA 13 pin data direction to 1 as output}
+294     \hyperlink{pd__app_8h_a77241910fa3175fcb0afaea8fe32077d}{PD\_EXTRA\_EN\_SRC\_GPIO}->PDDR |= (1U << 
+      \hyperlink{pd__app_8h_a07b7d368c8bae862deab6d5fc4c1ead5}{PD\_EXTRA\_EN\_SRC\_GPIO\_PIN}); \textcolor{comment}{/* as output */}
+295 
+296     \textcolor{comment}{//设置PTN5110 GPIO Interrupt的优先级}
+297     NVIC\_SetPriority((IRQn\_Type)\hyperlink{pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{BOARD\_PTN5110\_GPIO\_IRQ}, 
+      \hyperlink{pd__app_8c_a955008a65e30d3b860c6cf4f6d7c2e54}{PD\_PTN5110\_GPIO\_INTERRUPT\_PRIORITY});
+298 
+299     \hyperlink{pd__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{PD\_PowerBoardReset}();
+300 
+301     \textcolor{comment}{// pd\_app\_t type}
+302     \textcolor{comment}{// Question: pd\_app\_t 的作用是什么？}
+303     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2fc0a3061498fda37106d3d16aec10c8}{msgSop} = \hyperlink{group__usb__pd__stack_gga7a924235403e0acab44d01e720091aa1a5c5082dee0eb49208cd4a5c728ff7fce}{kPD\_MsgSOP};
+304     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7cd2902dee071f9f64b078bd4ac955be}{partnerSourceCapNumber} = 0;
+305     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a927a55034c0beae071c028b60cd36290}{partnerSinkCapNumber} = 0;
+306     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7020e18597a0914824f3b9cb417dff87}{reqestResponse} = 
+      \hyperlink{group__usb__pd__stack_ggaa0c9fbfbfb4442ef9d805438bfeb045ca5cbc28129fbc8ef711e9af7a9400d858}{kCommandResult\_Accept};
+307     \textcolor{comment}{/* PDO1: fixed supply: dual-role power; Externally Powered; no USB communication; dual-role data; 5V;
+       2.7A */}
+308     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = 0;
+309     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a9965da25ad2e4b58fd579e5a0632145a}{dualRoleData} = 1;
+310     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_afcce88f5e0b229d32e79297566e80dfd}{dualRolePower} = 1;
+311     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_aa1715617698b348913227183195ae8f5}{externalPowered} = 1;
+312     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a2375dc4363d49f14521f1f7f6adffcde}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+313     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} = (27 * 10);
+314     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1a27fc2753ab60196afd3813e158d413}{peakCurrent} = 0;
+315 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+316 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a6e793acf2c695c57030e59f28dc5b65a}{unchunkedSupported} = 1;
+317 \textcolor{preprocessor}{#endif}
+318 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a0e2f3fc73e269168132defedb85f9d9f}{usbCommunicationsCapable} = 0;
+319     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_aa836f41dcaaafe17d4ff65eeb3729b6d}{usbSuspendSupported} = 0;
+320     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad908e0fab5fa09248c7412253ce41095}{selfSourcePdo1}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} = (5 * 1000 / 50);
+321     \textcolor{comment}{/* PDO2: fixed Supply: 9V - 1.5A */}
+322     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_ae7c1220b81dd8506c6731d7a6adc6ac9}{PDOValue} = 0;
+323     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a2375dc4363d49f14521f1f7f6adffcde}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+324     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_a1bb1756a3f7fe82e0395efac18eb8f41}{maxCurrent} = (15 * 10);
+325     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a49087b316d085ddf2be9d4ab093a0088}{selfSourcePdo2}.\hyperlink{struct__pd__source__pdo_a2405f8ee75a370cba4a48b94080958b1}{fixedPDO}.
+      \hyperlink{struct__pd__source__fixed__pdo_abba8fe6a9f4c4f6ac33cbfe075945e6a}{voltage} = (9 * 1000 / 50);
+326     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7356b8ec554edd5c580b8b2310e3fed0}{selfSouceCapNumber} = 2;
+327     \textcolor{comment}{/* PDO1: fixed:5.0V, 2.7A */}
+328     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue} = 0;
+329     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9290ef90d4336be4642f40aac2da8f5e}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+330     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a6e8fb8552ee54c1d0227a03b5d7aecbf}{dualRoleData} = 1;
+331     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9ff5e34e2bf3e62a6b4dc017f559c061}{dualRolePower} = 1;
+332     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a44e4b2e4bc2b34929036acee6ff6ae34}{externalPowered} = 1;
+333 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+334 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a31798efee281f6d1c69ff96d7a79e113}{frSwapRequiredCurrent} = \hyperlink{group__usb__pd__stack_gga2cce3e21dbed22affd462b139a25889fa8c5c8b5dc2ba25ed160cfd3d6447e917}{kFRSwap\_CurrentDefaultUSB};
+335 \textcolor{preprocessor}{#endif}
+336 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a511903e5dca26d874a304e558db6cc72}{higherCapability} = 1;
+337     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_aa19552768100717810142b8c4df3835c}{usbCommunicationsCapable} = 0;
+338     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a5e095a725455f85faa43a1573e62b798}{voltage} = (5 * 1000 / 50);
+339     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7e5149d6cb2c98b3193c34c766e41cfb}{selfSinkPdo1}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a264499e662c6bb82e0e25fc3d296b88b}{operateCurrent} = (27 * 10);
+340     \textcolor{comment}{/* PDO2: fixed: 9V, 1.5A */}
+341     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue} = 0;
+342     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a9290ef90d4336be4642f40aac2da8f5e}{fixedSupply} = \hyperlink{group__usb__pd__stack_ggab9f5d08f382b92b55a7f5f224a231dc9a92d0f35b314a01e880e257e5af3c9e62}{kPDO\_Fixed};
+343     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a5e095a725455f85faa43a1573e62b798}{voltage} = (9 * 1000 / 50);
+344     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae66313fc794d1247c12b2f9df61c740b}{selfSinkPdo2}.\hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}.
+      \hyperlink{struct__pd__sink__fixed__pdo_a264499e662c6bb82e0e25fc3d296b88b}{operateCurrent} = (15 * 10);
+345     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7d9aa4d298cbd3ac189473e46181d5bd}{selfSinkCapNumber} = 2;
+346     \textcolor{comment}{/* default SVDM command header */}
+347     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.objPos = 0;
+348     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.vdmVersion = \hyperlink{usb__pd__config_8h_a365eed8791b0798547575ea313bc8977}{PD\_CONFIG\_STRUCTURED\_VDM\_VERSION};
+349     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.vdmType = 1;
+350     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae2637382e9ae847b799c8b6e0dd1f290}{defaultSVDMCommandHeader}.
+      \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}.SVID = \hyperlink{group__usb__pd__stack_ga6d970ee2c757411a31911430bb94c722}{PD\_STANDARD\_ID};
+351     \textcolor{comment}{/* self ext cap */}
+352     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a3ebf0b088d638829f685c9e401af51d9}{vid} = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+353     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_ac452b1d60d7700625f5a48e4e688bc74}{pid} = \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+354     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a7422db66b33622addc1c55d9876bd495}{xid} = \hyperlink{pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{PD\_CONFIG\_XID};
+355     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a5f9b161cdc688ae7a7a71ac48bebe72b}{fwVersion} = 
+      \hyperlink{pd__app_8h_a4ef7179ada3aa804736cd3e353fbb21c}{PD\_CONFIG\_FW\_VER};
+356     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_aeb76e6e3f6c697b91755a540ee5772cf}{selfExtCap}.\hyperlink{struct__pd__source__cap__ext__data__block_a72634ef8e798fcfdda60b4d1b2ddf557}{hwVersion} = 
+      \hyperlink{pd__app_8h_a21965bbb0ec86e3646ec403f4dfa9b5c}{PD\_CONFIG\_HW\_VER};
+357     \textcolor{comment}{/* self alert */}
+358     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a4461b57a4d3ff16523050f987b0dd53e}{selfAlert}.\hyperlink{struct__pd__alert__data__object_aed9a5657c490967d07dd7961217bc0f2}{alertValue} = 0u;
+359     \textcolor{comment}{/* self battery */}
+360     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_ab3c3ebf4347b9ed544f266e2f9d34238}{batteryDesignCap} = 10;
+361     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.
+      \hyperlink{struct__pd__battery__cap__data__block_a3c566271c930773785e19daf77a05542}{batteryLastFullChargeCap} = 10;
+362     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_afee674b89322db24d60b392150918ab5}{batteryType} = 0;
+363     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_a3924ff20a280c34339a952b179689def}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+364     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a69b5c0754997308fe2ad9308d7bb3622}{selfBatteryCap}.\hyperlink{struct__pd__battery__cap__data__block_a8b906175f5651c5041c707699ebd9388}{vid} = 
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+365     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2aeaaa8274da80148c91444df5a8bda3}{selfBatteryStatus}.\hyperlink{struct__pd__battery__status__data__object_a32d8fab9c01317f358ad5b2fe32c48e7}{batterInfo} = 0;
+366     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a2aeaaa8274da80148c91444df5a8bda3}{selfBatteryStatus}.\hyperlink{struct__pd__battery__status__data__object_a9e8c5885cae3cd051e4f8bd18db1a9db}{batteryPC} = 10;
+367     \textcolor{comment}{/* manufacturer string */}
+368     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.\hyperlink{struct__pd__manufac__info__data__block_a36cef0d659afc8d14083aeb98cdf3741}{vid} = 
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+369     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.\hyperlink{struct__pd__manufac__info__data__block_abe4afcb81048be6703607c1c2a21e25e}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+370     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[0] = \textcolor{charliteral}{'N'};
+371     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[1] = \textcolor{charliteral}{'X'};
+372     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a8a105b2e53346e00f5ce2304ab67796a}{selfManufacInfo}.
+      \hyperlink{struct__pd__manufac__info__data__block_a02e7724a7ade9d8136676933ec43b637}{manufacturerString}[2] = \textcolor{charliteral}{'P'};
+373     \textcolor{comment}{/* alternate mode (VDM) */}
+374     \textcolor{comment}{// idHeader}
+375     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_ab1f86734d25b3b0135b97b567dbbf827}{vdoValue} = 0;
+376     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.modalOperateSupport = 1;
+377 \textcolor{preprocessor}{#if ((defined PD\_CONFIG\_REVISION) && (PD\_CONFIG\_REVISION >= PD\_SPEC\_REVISION\_30))}
+378 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.productTypeDFP = 2; \textcolor{comment}{/* PDUSB Host */}
+379 \textcolor{preprocessor}{#endif}
+380 \textcolor{preprocessor}{}    \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.productTypeUFPOrCablePlug = 2; \textcolor{comment}{/* PDUSB Peripheral */}
+381     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbCommunicationCapableAsDevice = 0;
+382     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbCommunicationCapableAsHost = 0;
+383     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a1a5bca628bc1dca775f43f351328892e}{idHeaderVDO}.
+      \hyperlink{struct__pd__id__heaer__vdo_aa8e2886698b5a02a2245c9a3fb667783}{bitFields}.usbVendorID = \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID};
+384     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a77971a31b11bad8e3cfc5b159ea98360}{pid} = 
+      \hyperlink{pd__app_8h_a30e0c82a1eefaa6ac3e6b145bd3cb171}{PD\_CONFIG\_PID};
+385     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a0d79e90688b2dbf6675f8efb6ac6c973}{certStatVDO} = 
+      \hyperlink{pd__app_8h_acbddd60832f5e1b8d1103cdb6d3fb3cd}{PD\_CONFIG\_XID};
+386     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a9ed2335d20ff0eb86b07dc8770d2b6a7}{selfVdmIdentity}.\hyperlink{struct__pd__vdm__identity__data_a2f30cd86743fe79ef17a8f660dbd3fd9}{bcdDevice} = 
+      \hyperlink{pd__app_8h_ab9acab64aae126b1f2ac72021d33d77b}{PD\_CONFIG\_BCD\_DEVICE};
+387     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a11745e09255efcf04a755844a8f7dc4c}{selfVdmSVIDs} = ((uint32\_t)
+      \hyperlink{pd__app_8h_a91dfd33e2891ead42941df24caa16abe}{PD\_VENDOR\_VID} << 16); \textcolor{comment}{/* only one SVID (display port) */}
+388     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_afc00e2e0f839a534a57c6cd5d8154b34}{selfVdmModes} = \hyperlink{pd__app_8h_ae8ae89ff451272572c1c7fbaed85737d}{PD\_CONFIG\_APP\_MODE};        
+            \textcolor{comment}{/* only one Mode */}
+389     \textcolor{comment}{/* evaluate result */}
+390     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ae6928ddf7cec733c1244b9f6a2034452}{prSwapAccept} = 1;
+391     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a7c929e9d267016ae697a553a72528987}{drSwapAccept} = 1;
+392     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_ad3460ca1eda49e355b0b155671ba2823}{vconnSwapAccept} = 1;
+393     \textcolor{comment}{/* other */}
+394     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a6cd3330740f3a7d5c35f3c9edf8ec6e2}{selfHasEnterAlernateMode} = 0;
+395 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_ae90a39427d391ee932de4fd9adbcde6a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!pd\-\_\-demo\-\_\-task@{pd\-\_\-demo\-\_\-task}}
+\index{pd\-\_\-demo\-\_\-task@{pd\-\_\-demo\-\_\-task}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{pd\-\_\-demo\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}static void pd\-\_\-demo\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf}
+
+\begin{DoxyCode}
+251 \{
+252     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle} = NULL;
+253     NVIC\_SetPriority(\hyperlink{pd__app_8h_a18048c93d49255e049dea54335b4bb76}{PD\_I2C\_MASTER\_IRQn}, 1);
+254     NVIC\_EnableIRQ(\hyperlink{pd__app_8h_a18048c93d49255e049dea54335b4bb76}{PD\_I2C\_MASTER\_IRQn});
+255 
+256     \hyperlink{source__charger_2main_8c_aef83075c23be0c40e043062c26845074}{PD\_1mstimerInit}();
+257     \hyperlink{main_8c_ae90a39427d391ee932de4fd9adbcde6a}{PD\_AppInit}();
+258     PRINTF(\textcolor{stringliteral}{"pd init success\(\backslash\)r\(\backslash\)n"});
+259 
+260     \textcolor{keywordflow}{if} (xTaskCreate(\hyperlink{battery_2main_8c_a2114c6046165e8c1249a9c4656acde1a}{pd\_port\_task}, \textcolor{stringliteral}{"port"}, (1024u + 512u) / \textcolor{keyword}{sizeof}(portSTACK\_TYPE), NULL, 5, 
+      NULL) != pdPASS)
+261     \{
+262         PRINTF(\textcolor{stringliteral}{"create pd task error\(\backslash\)r\(\backslash\)n"});
+263     \}
+264 
+265     \hyperlink{main_8c_ad2600cc824c1726cccfed3267a9af27c}{PD\_DemoInit}(&\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance});
+266     \textcolor{keywordflow}{while} (1)
+267     \{
+268         \hyperlink{main_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{PD\_DemoTaskFun}(&\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance});
+269     \}
+270 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{source__charger_2main_8c_a83c983ad37627b3d0f2ba5f1d4d6efaf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_ad2600cc824c1726cccfed3267a9af27c}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}}
+\index{P\-D\-\_\-\-Demo\-Init@{P\-D\-\_\-\-Demo\-Init}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_ad2600cc824c1726cccfed3267a9af27c}
+
+\begin{DoxyCode}
+448 \{
+449     \textcolor{comment}{//sw1 & sw3 默认状态都是idle}
+450     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a86abcaa13a196038eec6f5eab97ab940}{sw1State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+451     \hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a43c11ce854eb3293efaf0f274421a675}{sw3State} = \hyperlink{pd__app_8h_a5b47ebb48bc0d0527e0291571f77ad43a2bbdbaf0b1c6156e54b8a539165341a6}{kDEMO\_SWIdle};
+452     \textcolor{comment}{/* button */}
+453     gpio\_pin\_config\_t sw\_config = \{
+454         kGPIO\_DigitalInput, 0,
+455     \};
+456     \textcolor{comment}{/* Init input switch GPIO. 初始化Demo需要用到的button */}
+457     GPIO\_PinInit(\hyperlink{board_8h_a2c77deecd8804a5c2ad03696e98afbc7}{BOARD\_SW3\_GPIO}, \hyperlink{board_8h_ac0ca71ebe7376087f8b894b96e80b318}{BOARD\_SW3\_GPIO\_PIN}, &sw\_config);
+458 
+459     GPIO\_PinInit(\hyperlink{board_8h_aa25baa3a8fa4609c02da92fa8f4b302f}{BOARD\_SW1\_GPIO}, \hyperlink{board_8h_aad97021fdd34ec8ce0ed8db741294a26}{BOARD\_SW1\_GPIO\_PIN}, &sw\_config);
+460 
+461     \textcolor{comment}{/* clear debug console input cache */}
+462     \hyperlink{pd__app__demo_8c_a7c4377a1b696af69d92e5b6e57e9b244}{PD\_DemoConsoleClearInputCache}();
+463 
+464     pdAppInstance->\hyperlink{struct__pd__app_a5ed6114200d041b6c16989abea86dbde}{printProvider} = 0;
+465     pdAppInstance->\hyperlink{struct__pd__app_aab6771fc259fceda49fd93d3971c8f77}{printConsumer} = 0;
+466     pdAppInstance->\hyperlink{struct__pd__app_ace27760f393eeceee39cf902b659cb67}{printFull} = 0;
+467 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{source__charger_2main_8c_ad2600cc824c1726cccfed3267a9af27c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_a8695f73a631d0d7fa71c0d0301d6ff18}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}}
+\index{P\-D\-\_\-\-Demo\-Task\-Fun@{P\-D\-\_\-\-Demo\-Task\-Fun}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{P\-D\-\_\-\-Demo\-Task\-Fun}]{\setlength{\rightskip}{0pt plus 5cm}void P\-D\-\_\-\-Demo\-Task\-Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf pd\-\_\-app\-\_\-t} $\ast$}]{pd\-App\-Instance}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2main_8c_a8695f73a631d0d7fa71c0d0301d6ff18}
+
+\begin{DoxyCode}
+774 \{
+775     \textcolor{keywordtype}{char} uartData;
+776 
+777     \hyperlink{pd__app__demo_8c_a5f91038dff6b95cdfdba6f2186d4414b}{PD\_DemoProcessPrint}(pdAppInstance);
+778     \hyperlink{pd__app__demo_8c_a3a3ac214fb23b3b22492e93cff16ab6e}{USB\_PDDemoProcessSW}(pdAppInstance);
+779     \textcolor{keywordflow}{if} (\hyperlink{pd__app__demo_8c_accd270a5a7f6c6e330a5707baee3e07f}{PD\_DemoConsoleTryReadChar}(&uartData) == 
+      \hyperlink{group__usb__pd__stack_ggaaad4cd00dd02567c6169429e3a895073acf06f954f9c52f560cea34df48c63555}{kStatus\_PD\_Success})
+780     \{
+781         \hyperlink{pd__app__demo_8c_a35a5744ceb43d67dc3bf4d2040c39a54}{USB\_PDDemoProcessMenu}(pdAppInstance, uartData);
+782     \}
+783 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a8695f73a631d0d7fa71c0d0301d6ff18_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{source__charger_2main_8c_a616cf54a58f0aad132292f45995c3560}{\index{source\-\_\-charger/main.\-c@{source\-\_\-charger/main.\-c}!pd\-\_\-port\-\_\-task@{pd\-\_\-port\-\_\-task}}
+\index{pd\-\_\-port\-\_\-task@{pd\-\_\-port\-\_\-task}!source_charger/main.c@{source\-\_\-charger/main.\-c}}
+\subsubsection[{pd\-\_\-port\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}static void pd\-\_\-port\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{source__charger_2main_8c_a616cf54a58f0aad132292f45995c3560}
+
+\begin{DoxyCode}
+242 \{
+243     EnableIRQ((IRQn\_Type)\hyperlink{pd__app_8h_ae0efede5c9bfe4dfe7351a4759b5ae61}{BOARD\_PTN5110\_GPIO\_IRQ});
+244     \textcolor{keywordflow}{while} (1)
+245     \{
+246         \hyperlink{group__usb__pd__stack_ga4227c58a9524464e19ee6efe9615f78e}{PD\_InstanceTask}(\hyperlink{pd__app_8c_a4c95db98c2e53feffacac68c5c3abd80}{g\_PDAppInstance}.\hyperlink{struct__pd__app_a604cb18a01edb2da262e6d53fe41b70e}{pdHandle});
+247     \}
+248 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2main_8c_a616cf54a58f0aad132292f45995c3560_cgraph}
+\end{center}
+\end{figure}
+
+

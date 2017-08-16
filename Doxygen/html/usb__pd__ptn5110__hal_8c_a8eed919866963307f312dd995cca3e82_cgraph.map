@@ -1,0 +1,11 @@
+<map id="PDPTN5110_VbusVoltageAlarmLoIntCallback" name="PDPTN5110_VbusVoltageAlarmLoIntCallback">
+<area shape="rect" id="node2" href="$group__usb__pd__phy__drv.html#ga7f7f94758771b173653d27c508c8b33f" title="Notify PD stack the PHY status. " alt="" coords="264,88,347,115"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#gaa83073c31cced5742027d4046bd633db" title="Sets an event flag. " alt="" coords="681,37,815,64"/>
+<area shape="rect" id="node4" href="$usb__pd__interface_8c.html#a6ad144a0e0d32b011f83156c3edd30a8" title="PD_MsgSendDone" alt="" coords="446,37,581,64"/>
+<area shape="rect" id="node5" href="$usb__pd__interface_8c.html#a83de99272e34bf7bad5146401157ccff" title="PD_ConnectSetPowerProgress" alt="" coords="410,88,617,115"/>
+<area shape="rect" id="node6" href="$usb__pd__policy_8c.html#abdde9b20d8e38e68b6de66b1e9ece3eb" title="PD_DpmCheckLessOrEqualVsafe5v" alt="" coords="395,189,632,216"/>
+<area shape="rect" id="node10" href="$usb__pd__interface_8c.html#a81174001cad1ad0a3978c41a4e21daa0" title="PD_MsgReceived" alt="" coords="449,139,577,165"/>
+<area shape="rect" id="node7" href="$usb__pd__policy_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="691,189,805,216"/>
+<area shape="rect" id="node8" href="$group__usb__os__abstraction.html#gab25fb5d93d3b665ca8eadf2a670d3361" title="Checks an event flag. " alt="" coords="865,164,1018,191"/>
+<area shape="rect" id="node9" href="$group__usb__os__abstraction.html#ga90357f04d40469dc07104033b3c8581c" title="Clears an event flag. " alt="" coords="868,215,1015,241"/>
+</map>

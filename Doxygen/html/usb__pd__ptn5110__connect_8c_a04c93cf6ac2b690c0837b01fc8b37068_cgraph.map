@@ -1,0 +1,6 @@
+<map id="PDPTN5110_ConnectSetInProgress" name="PDPTN5110_ConnectSetInProgress">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#a1136effbc01ddeeb75c6e70077fa1fca" title="Update hardware after a power role swap has completed (e.g. read current advert of new source)..." alt="" coords="289,63,511,105"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#abd805633921ee7371cf2b2b90774e990" title="Clear and enable external interrupt. " alt="" coords="568,5,763,46"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110_8h.html#af840718cd0f3de58b800010cde92e847" title="Read the remote registers to local buffer. " alt="" coords="566,71,765,97"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__connect_8c.html#a719232873c71eb8c1ae556668d842007" title="Callback to be called when TypeC current sense is stable. " alt="" coords="560,122,771,163"/>
+</map>

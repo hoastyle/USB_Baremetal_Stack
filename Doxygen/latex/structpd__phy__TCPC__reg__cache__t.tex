@@ -1,0 +1,318 @@
+\hypertarget{structpd__phy__TCPC__reg__cache__t}{\section{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t Struct Reference}
+\label{structpd__phy__TCPC__reg__cache__t}\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-ptn5110.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a7b91c3334783aadd61b12c07d39f1608}{vendor\_id}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aa13da5b6b5bbc6b617ae6a2f6ad137a0}{product\_id}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_ac49c5c8089375e3a01b0270d65ba2e60}{device\_id}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a2cd2900c5aef66e22ca024e5b309189e}{usbtypec\_rev}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aba321c96f64c0adefd04cefc3212d658}{usbpd\_rev\_ver}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_af8fe5685e301deeecddcfa7b111dba39}{pd\_interface\_rev}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a0f3d76756d4ae848200a50d75bb6d18d}{GLOBAL}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aa3d6f1264968fb73c640d2f2c5f77c35}{alert}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a42962740ed9a333c3853192e062b0da6}{INTC}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aae2a1595a6b584d5097e5578a49cf98d}{ext\_alert}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a49c7828fdaf6c466e630a48ce616dd5b}{EXT\_INTC}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a2bffc25557df60d150064acb8a942fed}{alert\_mask}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aa27641032a12a746e571f4cdb6f64897}{ext\_alert\_mask}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a8af6d246f24efef12815e98880faed70}{power\_status\_mask}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a0394f1002b73a51ea5d8468e0b09f2c9}{fault\_status\_mask}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_aa2a82192cbe0aee9a40c236647139411}{MASK}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a6027afc50c4b3dac3cd6a677772f7d83}{message\_header\_info}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_af1cd5a4519fe678d013799c04f3abb01}{receive\_detect}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_afb0b62dd06fbc8af399d22362d61179e}{receive\_byte\_count}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aa4114620bd71b92cc274097665830b17}{rx\_buf\_frame\_type}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_aaaa43ebe926655e4e64e7940f3bdab6f}{rx\_buf\_header}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_ae2c4d034ac6bd7522973795a092d29cc}{MSG\_RX}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_ac97cde79dc5aa0b85caf836b4e3c8870}{transmit}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_ab34efc76102ec53e13822f28153de3da}{MSG\_TX}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a9b844669333a0f7bbf0c2cd9533a2596}{config\_standard\_output}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a6cec48fdaba1119fb070c82003136b05}{CONF\_STD\_OUT}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a8271f0587de98c5504df7e2bc489835d}{tcpc\_control}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a7b30d9898d43fbb5ffa0000d85164e24}{role\_control}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_af1999bdfc4f6ada6288bc8eb56ca3289}{fault\_control}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a6f2b98b2132297cd69612b45fcac2c75}{power\_control}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a62952ade18c2ee72f74d53efa4f99378}{CONTROL}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a81878558e3ea58ad7ec3ac7e2a6221ed}{cc\_status}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a52ffc1628e54c6bb8073989ed96d2c3e}{CC\_STATUS}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a05e820779bb725ef96a3bc1916ac68e9}{power\_status}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a0b4d0bf01753eda242fefe4c8140707d}{POWER\_STATUS}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a469e8c7d1d32f308cca7b4c3df5cfc9a}{fault\_status}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a43ca8f40bc54330696a7ac56030341d7}{FAULT\_STATUS}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a71389bc5f1470694c3a0d9eb79b9a9f0}{device\_capabilities\_1}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a9e8caf15d639f3fe85269f9fb5469fdd}{device\_capabilities\_2}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_ae37c13d841a0098a80ff755bea676a65}{standard\_input\_capabilities}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a8f7a12602d3bac5d12cf259011a9b978}{standard\_output\_capabilities}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a38027d191f4a9a92f964dc8b75e43b17}{CAPABILITY}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a77cd19f5675645cf641bd5c47b705bf7}{vbus\_voltage}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_afd03d7ab726af896b632adfafa3d3f45}{vbus\_sink\_disconnect\_threshold}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_afc4b4051f3a05cbfe3b0e90cb4cfd3f3}{vbus\_stop\_discharge\_threshold}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a15ead00db63289bc3add98d923806ca6}{vbus\_voltage\_alarm\_hi\_cfg}\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_acc33aa4cf0c9d65fd0b4b6530b925d87}{vbus\_voltage\_alarm\_lo\_cfg}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_ab24b76010533fea692b8f6ff4f7d3fea}{VBUS}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_a77ebfa121228fc5465d99db37998175b}{pmu\_lowpower}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_ad943ee4fe1c61e4938e5db59ba275898}{PMU}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_ae8546f1fc28db9e0b79df7dea7cf902b}{ext\_status}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_aaedc9164647071c46cde97df5e92b769}{EXT\_STATUS}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_adeec58b66e622f403301a4996e9e3157}{ext\_config}\\
+\>uint8\_t \hyperlink{structpd__phy__TCPC__reg__cache__t_ad776feb48742cfe1be66850000367e2e}{ext\_control}\\
+\} \hyperlink{structpd__phy__TCPC__reg__cache__t_a3b1495d18f8ed0bb88c5acffa1a031b2}{EXT\_CONTROL}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aa3d6f1264968fb73c640d2f2c5f77c35}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!alert@{alert}}
+\index{alert@{alert}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{alert}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::alert}}\label{structpd__phy__TCPC__reg__cache__t_aa3d6f1264968fb73c640d2f2c5f77c35}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a2bffc25557df60d150064acb8a942fed}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!alert\-\_\-mask@{alert\-\_\-mask}}
+\index{alert\-\_\-mask@{alert\-\_\-mask}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{alert\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::alert\-\_\-mask}}\label{structpd__phy__TCPC__reg__cache__t_a2bffc25557df60d150064acb8a942fed}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a38027d191f4a9a92f964dc8b75e43b17}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!C\-A\-P\-A\-B\-I\-L\-I\-T\-Y@{C\-A\-P\-A\-B\-I\-L\-I\-T\-Y}}
+\index{C\-A\-P\-A\-B\-I\-L\-I\-T\-Y@{C\-A\-P\-A\-B\-I\-L\-I\-T\-Y}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{C\-A\-P\-A\-B\-I\-L\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-C\-A\-P\-A\-B\-I\-L\-I\-T\-Y}}\label{structpd__phy__TCPC__reg__cache__t_a38027d191f4a9a92f964dc8b75e43b17}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a81878558e3ea58ad7ec3ac7e2a6221ed}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!cc\-\_\-status@{cc\-\_\-status}}
+\index{cc\-\_\-status@{cc\-\_\-status}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{cc\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::cc\-\_\-status}}\label{structpd__phy__TCPC__reg__cache__t_a81878558e3ea58ad7ec3ac7e2a6221ed}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a52ffc1628e54c6bb8073989ed96d2c3e}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!C\-C\-\_\-\-S\-T\-A\-T\-U\-S@{C\-C\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{C\-C\-\_\-\-S\-T\-A\-T\-U\-S@{C\-C\-\_\-\-S\-T\-A\-T\-U\-S}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{C\-C\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-C\-C\-\_\-\-S\-T\-A\-T\-U\-S}}\label{structpd__phy__TCPC__reg__cache__t_a52ffc1628e54c6bb8073989ed96d2c3e}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a6cec48fdaba1119fb070c82003136b05}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T@{C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T}}
+\index{C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T@{C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-C\-O\-N\-F\-\_\-\-S\-T\-D\-\_\-\-O\-U\-T}}\label{structpd__phy__TCPC__reg__cache__t_a6cec48fdaba1119fb070c82003136b05}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a9b844669333a0f7bbf0c2cd9533a2596}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!config\-\_\-standard\-\_\-output@{config\-\_\-standard\-\_\-output}}
+\index{config\-\_\-standard\-\_\-output@{config\-\_\-standard\-\_\-output}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{config\-\_\-standard\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::config\-\_\-standard\-\_\-output}}\label{structpd__phy__TCPC__reg__cache__t_a9b844669333a0f7bbf0c2cd9533a2596}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a62952ade18c2ee72f74d53efa4f99378}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!C\-O\-N\-T\-R\-O\-L@{C\-O\-N\-T\-R\-O\-L}}
+\index{C\-O\-N\-T\-R\-O\-L@{C\-O\-N\-T\-R\-O\-L}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-C\-O\-N\-T\-R\-O\-L}}\label{structpd__phy__TCPC__reg__cache__t_a62952ade18c2ee72f74d53efa4f99378}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a71389bc5f1470694c3a0d9eb79b9a9f0}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!device\-\_\-capabilities\-\_\-1@{device\-\_\-capabilities\-\_\-1}}
+\index{device\-\_\-capabilities\-\_\-1@{device\-\_\-capabilities\-\_\-1}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{device\-\_\-capabilities\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::device\-\_\-capabilities\-\_\-1}}\label{structpd__phy__TCPC__reg__cache__t_a71389bc5f1470694c3a0d9eb79b9a9f0}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a9e8caf15d639f3fe85269f9fb5469fdd}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!device\-\_\-capabilities\-\_\-2@{device\-\_\-capabilities\-\_\-2}}
+\index{device\-\_\-capabilities\-\_\-2@{device\-\_\-capabilities\-\_\-2}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{device\-\_\-capabilities\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::device\-\_\-capabilities\-\_\-2}}\label{structpd__phy__TCPC__reg__cache__t_a9e8caf15d639f3fe85269f9fb5469fdd}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ac49c5c8089375e3a01b0270d65ba2e60}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!device\-\_\-id@{device\-\_\-id}}
+\index{device\-\_\-id@{device\-\_\-id}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{device\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::device\-\_\-id}}\label{structpd__phy__TCPC__reg__cache__t_ac49c5c8089375e3a01b0270d65ba2e60}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aae2a1595a6b584d5097e5578a49cf98d}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!ext\-\_\-alert@{ext\-\_\-alert}}
+\index{ext\-\_\-alert@{ext\-\_\-alert}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{ext\-\_\-alert}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::ext\-\_\-alert}}\label{structpd__phy__TCPC__reg__cache__t_aae2a1595a6b584d5097e5578a49cf98d}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aa27641032a12a746e571f4cdb6f64897}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!ext\-\_\-alert\-\_\-mask@{ext\-\_\-alert\-\_\-mask}}
+\index{ext\-\_\-alert\-\_\-mask@{ext\-\_\-alert\-\_\-mask}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{ext\-\_\-alert\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::ext\-\_\-alert\-\_\-mask}}\label{structpd__phy__TCPC__reg__cache__t_aa27641032a12a746e571f4cdb6f64897}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_adeec58b66e622f403301a4996e9e3157}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!ext\-\_\-config@{ext\-\_\-config}}
+\index{ext\-\_\-config@{ext\-\_\-config}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{ext\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::ext\-\_\-config}}\label{structpd__phy__TCPC__reg__cache__t_adeec58b66e622f403301a4996e9e3157}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ad776feb48742cfe1be66850000367e2e}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!ext\-\_\-control@{ext\-\_\-control}}
+\index{ext\-\_\-control@{ext\-\_\-control}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{ext\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::ext\-\_\-control}}\label{structpd__phy__TCPC__reg__cache__t_ad776feb48742cfe1be66850000367e2e}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a3b1495d18f8ed0bb88c5acffa1a031b2}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L@{E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}}
+\index{E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L@{E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-E\-X\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}}\label{structpd__phy__TCPC__reg__cache__t_a3b1495d18f8ed0bb88c5acffa1a031b2}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a49c7828fdaf6c466e630a48ce616dd5b}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!E\-X\-T\-\_\-\-I\-N\-T\-C@{E\-X\-T\-\_\-\-I\-N\-T\-C}}
+\index{E\-X\-T\-\_\-\-I\-N\-T\-C@{E\-X\-T\-\_\-\-I\-N\-T\-C}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{E\-X\-T\-\_\-\-I\-N\-T\-C}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-E\-X\-T\-\_\-\-I\-N\-T\-C}}\label{structpd__phy__TCPC__reg__cache__t_a49c7828fdaf6c466e630a48ce616dd5b}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ae8546f1fc28db9e0b79df7dea7cf902b}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!ext\-\_\-status@{ext\-\_\-status}}
+\index{ext\-\_\-status@{ext\-\_\-status}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{ext\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::ext\-\_\-status}}\label{structpd__phy__TCPC__reg__cache__t_ae8546f1fc28db9e0b79df7dea7cf902b}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aaedc9164647071c46cde97df5e92b769}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S@{E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S@{E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-E\-X\-T\-\_\-\-S\-T\-A\-T\-U\-S}}\label{structpd__phy__TCPC__reg__cache__t_aaedc9164647071c46cde97df5e92b769}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_af1999bdfc4f6ada6288bc8eb56ca3289}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!fault\-\_\-control@{fault\-\_\-control}}
+\index{fault\-\_\-control@{fault\-\_\-control}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{fault\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::fault\-\_\-control}}\label{structpd__phy__TCPC__reg__cache__t_af1999bdfc4f6ada6288bc8eb56ca3289}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a469e8c7d1d32f308cca7b4c3df5cfc9a}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!fault\-\_\-status@{fault\-\_\-status}}
+\index{fault\-\_\-status@{fault\-\_\-status}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{fault\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::fault\-\_\-status}}\label{structpd__phy__TCPC__reg__cache__t_a469e8c7d1d32f308cca7b4c3df5cfc9a}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a43ca8f40bc54330696a7ac56030341d7}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S@{F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S@{F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}}\label{structpd__phy__TCPC__reg__cache__t_a43ca8f40bc54330696a7ac56030341d7}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a0394f1002b73a51ea5d8468e0b09f2c9}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!fault\-\_\-status\-\_\-mask@{fault\-\_\-status\-\_\-mask}}
+\index{fault\-\_\-status\-\_\-mask@{fault\-\_\-status\-\_\-mask}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{fault\-\_\-status\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::fault\-\_\-status\-\_\-mask}}\label{structpd__phy__TCPC__reg__cache__t_a0394f1002b73a51ea5d8468e0b09f2c9}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a0f3d76756d4ae848200a50d75bb6d18d}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!G\-L\-O\-B\-A\-L@{G\-L\-O\-B\-A\-L}}
+\index{G\-L\-O\-B\-A\-L@{G\-L\-O\-B\-A\-L}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{G\-L\-O\-B\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-G\-L\-O\-B\-A\-L}}\label{structpd__phy__TCPC__reg__cache__t_a0f3d76756d4ae848200a50d75bb6d18d}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a42962740ed9a333c3853192e062b0da6}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!I\-N\-T\-C@{I\-N\-T\-C}}
+\index{I\-N\-T\-C@{I\-N\-T\-C}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{I\-N\-T\-C}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-I\-N\-T\-C}}\label{structpd__phy__TCPC__reg__cache__t_a42962740ed9a333c3853192e062b0da6}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aa2a82192cbe0aee9a40c236647139411}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!M\-A\-S\-K@{M\-A\-S\-K}}
+\index{M\-A\-S\-K@{M\-A\-S\-K}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-M\-A\-S\-K}}\label{structpd__phy__TCPC__reg__cache__t_aa2a82192cbe0aee9a40c236647139411}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a6027afc50c4b3dac3cd6a677772f7d83}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!message\-\_\-header\-\_\-info@{message\-\_\-header\-\_\-info}}
+\index{message\-\_\-header\-\_\-info@{message\-\_\-header\-\_\-info}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{message\-\_\-header\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::message\-\_\-header\-\_\-info}}\label{structpd__phy__TCPC__reg__cache__t_a6027afc50c4b3dac3cd6a677772f7d83}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ae2c4d034ac6bd7522973795a092d29cc}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!M\-S\-G\-\_\-\-R\-X@{M\-S\-G\-\_\-\-R\-X}}
+\index{M\-S\-G\-\_\-\-R\-X@{M\-S\-G\-\_\-\-R\-X}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{M\-S\-G\-\_\-\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-M\-S\-G\-\_\-\-R\-X}}\label{structpd__phy__TCPC__reg__cache__t_ae2c4d034ac6bd7522973795a092d29cc}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ab34efc76102ec53e13822f28153de3da}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!M\-S\-G\-\_\-\-T\-X@{M\-S\-G\-\_\-\-T\-X}}
+\index{M\-S\-G\-\_\-\-T\-X@{M\-S\-G\-\_\-\-T\-X}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{M\-S\-G\-\_\-\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-M\-S\-G\-\_\-\-T\-X}}\label{structpd__phy__TCPC__reg__cache__t_ab34efc76102ec53e13822f28153de3da}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_af8fe5685e301deeecddcfa7b111dba39}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!pd\-\_\-interface\-\_\-rev@{pd\-\_\-interface\-\_\-rev}}
+\index{pd\-\_\-interface\-\_\-rev@{pd\-\_\-interface\-\_\-rev}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{pd\-\_\-interface\-\_\-rev}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::pd\-\_\-interface\-\_\-rev}}\label{structpd__phy__TCPC__reg__cache__t_af8fe5685e301deeecddcfa7b111dba39}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ad943ee4fe1c61e4938e5db59ba275898}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!P\-M\-U@{P\-M\-U}}
+\index{P\-M\-U@{P\-M\-U}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{P\-M\-U}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-P\-M\-U}}\label{structpd__phy__TCPC__reg__cache__t_ad943ee4fe1c61e4938e5db59ba275898}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a77ebfa121228fc5465d99db37998175b}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!pmu\-\_\-lowpower@{pmu\-\_\-lowpower}}
+\index{pmu\-\_\-lowpower@{pmu\-\_\-lowpower}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{pmu\-\_\-lowpower}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::pmu\-\_\-lowpower}}\label{structpd__phy__TCPC__reg__cache__t_a77ebfa121228fc5465d99db37998175b}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a6f2b98b2132297cd69612b45fcac2c75}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!power\-\_\-control@{power\-\_\-control}}
+\index{power\-\_\-control@{power\-\_\-control}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{power\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::power\-\_\-control}}\label{structpd__phy__TCPC__reg__cache__t_a6f2b98b2132297cd69612b45fcac2c75}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a05e820779bb725ef96a3bc1916ac68e9}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!power\-\_\-status@{power\-\_\-status}}
+\index{power\-\_\-status@{power\-\_\-status}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{power\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::power\-\_\-status}}\label{structpd__phy__TCPC__reg__cache__t_a05e820779bb725ef96a3bc1916ac68e9}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a0b4d0bf01753eda242fefe4c8140707d}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S@{P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S@{P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-P\-O\-W\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S}}\label{structpd__phy__TCPC__reg__cache__t_a0b4d0bf01753eda242fefe4c8140707d}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a8af6d246f24efef12815e98880faed70}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!power\-\_\-status\-\_\-mask@{power\-\_\-status\-\_\-mask}}
+\index{power\-\_\-status\-\_\-mask@{power\-\_\-status\-\_\-mask}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{power\-\_\-status\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::power\-\_\-status\-\_\-mask}}\label{structpd__phy__TCPC__reg__cache__t_a8af6d246f24efef12815e98880faed70}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aa13da5b6b5bbc6b617ae6a2f6ad137a0}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!product\-\_\-id@{product\-\_\-id}}
+\index{product\-\_\-id@{product\-\_\-id}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{product\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::product\-\_\-id}}\label{structpd__phy__TCPC__reg__cache__t_aa13da5b6b5bbc6b617ae6a2f6ad137a0}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_afb0b62dd06fbc8af399d22362d61179e}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!receive\-\_\-byte\-\_\-count@{receive\-\_\-byte\-\_\-count}}
+\index{receive\-\_\-byte\-\_\-count@{receive\-\_\-byte\-\_\-count}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{receive\-\_\-byte\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::receive\-\_\-byte\-\_\-count}}\label{structpd__phy__TCPC__reg__cache__t_afb0b62dd06fbc8af399d22362d61179e}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_af1cd5a4519fe678d013799c04f3abb01}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!receive\-\_\-detect@{receive\-\_\-detect}}
+\index{receive\-\_\-detect@{receive\-\_\-detect}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{receive\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::receive\-\_\-detect}}\label{structpd__phy__TCPC__reg__cache__t_af1cd5a4519fe678d013799c04f3abb01}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a7b30d9898d43fbb5ffa0000d85164e24}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!role\-\_\-control@{role\-\_\-control}}
+\index{role\-\_\-control@{role\-\_\-control}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{role\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::role\-\_\-control}}\label{structpd__phy__TCPC__reg__cache__t_a7b30d9898d43fbb5ffa0000d85164e24}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aa4114620bd71b92cc274097665830b17}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!rx\-\_\-buf\-\_\-frame\-\_\-type@{rx\-\_\-buf\-\_\-frame\-\_\-type}}
+\index{rx\-\_\-buf\-\_\-frame\-\_\-type@{rx\-\_\-buf\-\_\-frame\-\_\-type}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{rx\-\_\-buf\-\_\-frame\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::rx\-\_\-buf\-\_\-frame\-\_\-type}}\label{structpd__phy__TCPC__reg__cache__t_aa4114620bd71b92cc274097665830b17}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aaaa43ebe926655e4e64e7940f3bdab6f}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!rx\-\_\-buf\-\_\-header@{rx\-\_\-buf\-\_\-header}}
+\index{rx\-\_\-buf\-\_\-header@{rx\-\_\-buf\-\_\-header}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{rx\-\_\-buf\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::rx\-\_\-buf\-\_\-header}}\label{structpd__phy__TCPC__reg__cache__t_aaaa43ebe926655e4e64e7940f3bdab6f}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ae37c13d841a0098a80ff755bea676a65}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!standard\-\_\-input\-\_\-capabilities@{standard\-\_\-input\-\_\-capabilities}}
+\index{standard\-\_\-input\-\_\-capabilities@{standard\-\_\-input\-\_\-capabilities}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{standard\-\_\-input\-\_\-capabilities}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::standard\-\_\-input\-\_\-capabilities}}\label{structpd__phy__TCPC__reg__cache__t_ae37c13d841a0098a80ff755bea676a65}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a8f7a12602d3bac5d12cf259011a9b978}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!standard\-\_\-output\-\_\-capabilities@{standard\-\_\-output\-\_\-capabilities}}
+\index{standard\-\_\-output\-\_\-capabilities@{standard\-\_\-output\-\_\-capabilities}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{standard\-\_\-output\-\_\-capabilities}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::standard\-\_\-output\-\_\-capabilities}}\label{structpd__phy__TCPC__reg__cache__t_a8f7a12602d3bac5d12cf259011a9b978}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a8271f0587de98c5504df7e2bc489835d}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!tcpc\-\_\-control@{tcpc\-\_\-control}}
+\index{tcpc\-\_\-control@{tcpc\-\_\-control}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{tcpc\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::tcpc\-\_\-control}}\label{structpd__phy__TCPC__reg__cache__t_a8271f0587de98c5504df7e2bc489835d}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ac97cde79dc5aa0b85caf836b4e3c8870}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!transmit@{transmit}}
+\index{transmit@{transmit}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{transmit}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::transmit}}\label{structpd__phy__TCPC__reg__cache__t_ac97cde79dc5aa0b85caf836b4e3c8870}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_aba321c96f64c0adefd04cefc3212d658}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!usbpd\-\_\-rev\-\_\-ver@{usbpd\-\_\-rev\-\_\-ver}}
+\index{usbpd\-\_\-rev\-\_\-ver@{usbpd\-\_\-rev\-\_\-ver}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{usbpd\-\_\-rev\-\_\-ver}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::usbpd\-\_\-rev\-\_\-ver}}\label{structpd__phy__TCPC__reg__cache__t_aba321c96f64c0adefd04cefc3212d658}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a2cd2900c5aef66e22ca024e5b309189e}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!usbtypec\-\_\-rev@{usbtypec\-\_\-rev}}
+\index{usbtypec\-\_\-rev@{usbtypec\-\_\-rev}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{usbtypec\-\_\-rev}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::usbtypec\-\_\-rev}}\label{structpd__phy__TCPC__reg__cache__t_a2cd2900c5aef66e22ca024e5b309189e}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_ab24b76010533fea692b8f6ff4f7d3fea}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!V\-B\-U\-S@{V\-B\-U\-S}}
+\index{V\-B\-U\-S@{V\-B\-U\-S}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{V\-B\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::\-V\-B\-U\-S}}\label{structpd__phy__TCPC__reg__cache__t_ab24b76010533fea692b8f6ff4f7d3fea}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_afd03d7ab726af896b632adfafa3d3f45}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold@{vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold}}
+\index{vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold@{vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vbus\-\_\-sink\-\_\-disconnect\-\_\-threshold}}\label{structpd__phy__TCPC__reg__cache__t_afd03d7ab726af896b632adfafa3d3f45}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_afc4b4051f3a05cbfe3b0e90cb4cfd3f3}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vbus\-\_\-stop\-\_\-discharge\-\_\-threshold@{vbus\-\_\-stop\-\_\-discharge\-\_\-threshold}}
+\index{vbus\-\_\-stop\-\_\-discharge\-\_\-threshold@{vbus\-\_\-stop\-\_\-discharge\-\_\-threshold}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vbus\-\_\-stop\-\_\-discharge\-\_\-threshold}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vbus\-\_\-stop\-\_\-discharge\-\_\-threshold}}\label{structpd__phy__TCPC__reg__cache__t_afc4b4051f3a05cbfe3b0e90cb4cfd3f3}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a77cd19f5675645cf641bd5c47b705bf7}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vbus\-\_\-voltage@{vbus\-\_\-voltage}}
+\index{vbus\-\_\-voltage@{vbus\-\_\-voltage}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vbus\-\_\-voltage}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vbus\-\_\-voltage}}\label{structpd__phy__TCPC__reg__cache__t_a77cd19f5675645cf641bd5c47b705bf7}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a15ead00db63289bc3add98d923806ca6}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg@{vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg}}
+\index{vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg@{vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vbus\-\_\-voltage\-\_\-alarm\-\_\-hi\-\_\-cfg}}\label{structpd__phy__TCPC__reg__cache__t_a15ead00db63289bc3add98d923806ca6}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_acc33aa4cf0c9d65fd0b4b6530b925d87}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg@{vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg}}
+\index{vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg@{vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vbus\-\_\-voltage\-\_\-alarm\-\_\-lo\-\_\-cfg}}\label{structpd__phy__TCPC__reg__cache__t_acc33aa4cf0c9d65fd0b4b6530b925d87}
+\hypertarget{structpd__phy__TCPC__reg__cache__t_a7b91c3334783aadd61b12c07d39f1608}{\index{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}!vendor\-\_\-id@{vendor\-\_\-id}}
+\index{vendor\-\_\-id@{vendor\-\_\-id}!pd_phy_TCPC_reg_cache_t@{pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t}}
+\subsubsection[{vendor\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t pd\-\_\-phy\-\_\-\-T\-C\-P\-C\-\_\-reg\-\_\-cache\-\_\-t\-::vendor\-\_\-id}}\label{structpd__phy__TCPC__reg__cache__t_a7b91c3334783aadd61b12c07d39f1608}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/ptn5110/\hyperlink{usb__pd__ptn5110_8h}{usb\-\_\-pd\-\_\-ptn5110.\-h}\end{DoxyCompactItemize}

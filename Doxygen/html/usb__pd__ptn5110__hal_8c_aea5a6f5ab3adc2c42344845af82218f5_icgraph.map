@@ -1,0 +1,4 @@
+<map id="PDPTN5110_IntcTypecChipInit" name="PDPTN5110_IntcTypecChipInit">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#af673ca9417d66b63412b2d7f0ea9b176" title="Return true if vbus is within loose bounds of VSafe0V. " alt="" coords="261,5,403,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="451,5,573,32"/>
+</map>

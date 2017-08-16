@@ -1,0 +1,6 @@
+<map id="PDPTN5110_ConnectSwitchVConn" name="PDPTN5110_ConnectSwitchVConn">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="285,31,440,57"/>
+<area shape="rect" id="node3" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="488,23,677,65"/>
+<area shape="rect" id="node4" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="733,5,878,32"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="726,56,885,83"/>
+</map>

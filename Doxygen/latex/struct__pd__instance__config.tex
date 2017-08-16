@@ -1,0 +1,65 @@
+\hypertarget{struct__pd__instance__config}{\section{\-\_\-pd\-\_\-instance\-\_\-config Struct Reference}
+\label{struct__pd__instance__config}\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+}
+
+
+P\-D instance config.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance__config_a68e8aae835b95ae67d48701973864acf}{device\-Type}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance__config_a131f930f58f1a9bfe1488acb62aa2725}{phy\-Interrupt\-Num}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance__config_a1f5e597bbfc0af871a5e887c34eb3aca}{phy\-Type}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance__config_acb93f9cec67a95c40730be43c80d3214}{phy\-Interface}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance__config_a7e72c5dda8b81981ebd3062f6999bce1}{interface\-Param}
+\item 
+void $\ast$ \hyperlink{struct__pd__instance__config_a1aa5e1d3d8e54bcaa77f41a6de3eb371}{device\-Config}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D instance config. 
+
+used in P\-D\-\_\-\-Instance\-Init function 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__instance__config_a1aa5e1d3d8e54bcaa77f41a6de3eb371}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!device\-Config@{device\-Config}}
+\index{device\-Config@{device\-Config}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{device\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-pd\-\_\-instance\-\_\-config\-::device\-Config}}\label{struct__pd__instance__config_a1aa5e1d3d8e54bcaa77f41a6de3eb371}
+The type is based on the device\-Type value.
+\begin{DoxyItemize}
+\item k\-Device\-Type\-\_\-\-Normal\-Power\-Port\-: \hyperlink{group__usb__pd__stack_ga1897a14a90aea9e4b0e7cf1e5b4ea449}{pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t}
+\item k\-Device\-Type\-\_\-\-Cable\-: not supported yet.
+\item k\-Device\-Type\-\_\-\-Audio\-Acc\-Device\-: not supported yet.
+\item k\-Device\-Type\-\_\-\-Debug\-Acc\-Device\-: not supported yet.
+\item k\-Device\-Type\-\_\-\-Alternate\-Mode\-Product\-: not supported yet. 
+\end{DoxyItemize}\hypertarget{struct__pd__instance__config_a68e8aae835b95ae67d48701973864acf}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!device\-Type@{device\-Type}}
+\index{device\-Type@{device\-Type}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{device\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-\_\-config\-::device\-Type}}\label{struct__pd__instance__config_a68e8aae835b95ae67d48701973864acf}
+The device type, for example\-: normal power port or cable, the value is \hyperlink{group__usb__pd__stack_gac70b6cd09eeb45ce1aeaa279f44adbc7}{pd\-\_\-device\-\_\-type\-\_\-t} \hypertarget{struct__pd__instance__config_a7e72c5dda8b81981ebd3062f6999bce1}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!interface\-Param@{interface\-Param}}
+\index{interface\-Param@{interface\-Param}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{interface\-Param}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-\_\-config\-::interface\-Param}}\label{struct__pd__instance__config_a7e72c5dda8b81981ebd3062f6999bce1}
+for i2c\-: it is slave address; for spi\-: it is spi P\-C\-S info \hypertarget{struct__pd__instance__config_acb93f9cec67a95c40730be43c80d3214}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!phy\-Interface@{phy\-Interface}}
+\index{phy\-Interface@{phy\-Interface}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{phy\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-\_\-config\-::phy\-Interface}}\label{struct__pd__instance__config_acb93f9cec67a95c40730be43c80d3214}
+The P\-H\-Y interface (I2\-C, S\-P\-I etc), the value is \hyperlink{group__usb__pd__stack_ga0499cb1eb2ad70e8d155ff72b50c7a38}{pd\-\_\-phy\-\_\-interface\-\_\-t} \hypertarget{struct__pd__instance__config_a131f930f58f1a9bfe1488acb62aa2725}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!phy\-Interrupt\-Num@{phy\-Interrupt\-Num}}
+\index{phy\-Interrupt\-Num@{phy\-Interrupt\-Num}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{phy\-Interrupt\-Num}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-\_\-config\-::phy\-Interrupt\-Num}}\label{struct__pd__instance__config_a131f930f58f1a9bfe1488acb62aa2725}
+The P\-H\-Y G\-P\-I\-O interrupt number. P\-D stack need the interrupt number to prevent nested operation to P\-H\-Y. \hypertarget{struct__pd__instance__config_a1f5e597bbfc0af871a5e887c34eb3aca}{\index{\-\_\-pd\-\_\-instance\-\_\-config@{\-\_\-pd\-\_\-instance\-\_\-config}!phy\-Type@{phy\-Type}}
+\index{phy\-Type@{phy\-Type}!_pd_instance_config@{\-\_\-pd\-\_\-instance\-\_\-config}}
+\subsubsection[{phy\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-\_\-config\-::phy\-Type}}\label{struct__pd__instance__config_a1f5e597bbfc0af871a5e887c34eb3aca}
+The P\-H\-Y type, the value is \hyperlink{group__usb__pd__stack_gaafe9b09173bbffaa5075085b0dab18ec}{pd\-\_\-phy\-\_\-type\-\_\-t} 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{usb__osa__bm_8h}{\section{osa/usb\-\_\-osa\-\_\-bm.h File Reference}
+\label{usb__osa__bm_8h}\index{osa/usb\-\_\-osa\-\_\-bm.\-h@{osa/usb\-\_\-osa\-\_\-bm.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}()~uint32\-\_\-t usb\-Osa\-Current\-Sr;
+\item 
+\#define \hyperlink{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}()~\hyperlink{usb__osa__freertos_8h_a02e3681f4d617bc573b8345f65b153a2}{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}(\&usb\-Osa\-Current\-Sr)
+\item 
+\#define \hyperlink{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}()~\hyperlink{usb__osa__freertos_8h_af96b90699740b15e8494df08a83c39b1}{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}(usb\-Osa\-Current\-Sr)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usb__osa__bm_8h_ac42ca7ad6d902a13ca35a535c596b2c3}{U\-S\-B\-\_\-\-Osa\-Enter\-Critical} (uint32\-\_\-t $\ast$sr)
+\item 
+void \hyperlink{usb__osa__bm_8h_a2c19ad90a05cfd27fd1be3a1f14a0b75}{U\-S\-B\-\_\-\-Osa\-Exit\-Critical} (uint32\-\_\-t sr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}{\index{usb\-\_\-osa\-\_\-bm.\-h@{usb\-\_\-osa\-\_\-bm.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}!usb_osa_bm.h@{usb\-\_\-osa\-\_\-bm.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-N\-T\-E\-R\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf U\-S\-B\-\_\-\-Osa\-Enter\-Critical}(\&usb\-Osa\-Current\-Sr)}}\label{usb__osa__bm_8h_a0485f70bf9c9a22f0340f014bc567362}
+\hypertarget{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}{\index{usb\-\_\-osa\-\_\-bm.\-h@{usb\-\_\-osa\-\_\-bm.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}!usb_osa_bm.h@{usb\-\_\-osa\-\_\-bm.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-E\-X\-I\-T\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf U\-S\-B\-\_\-\-Osa\-Exit\-Critical}(usb\-Osa\-Current\-Sr)}}\label{usb__osa__bm_8h_a5b8053eca19b6df666a26fad3b07f953}
+\hypertarget{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}{\index{usb\-\_\-osa\-\_\-bm.\-h@{usb\-\_\-osa\-\_\-bm.\-h}!U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}}
+\index{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C@{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}!usb_osa_bm.h@{usb\-\_\-osa\-\_\-bm.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-S\-R\-\_\-\-A\-L\-L\-O\-C(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~uint32\-\_\-t usb\-Osa\-Current\-Sr;}}\label{usb__osa__bm_8h_a8dbccf46cc2f8e3b5cece6a4a84f7ae8}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__osa__bm_8h_ac42ca7ad6d902a13ca35a535c596b2c3}{\index{usb\-\_\-osa\-\_\-bm.\-h@{usb\-\_\-osa\-\_\-bm.\-h}!U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}!usb_osa_bm.h@{usb\-\_\-osa\-\_\-bm.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Enter\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__bm_8h_ac42ca7ad6d902a13ca35a535c596b2c3}
+
+\begin{DoxyCode}
+115 \{
+116     *sr = DisableGlobalIRQ();
+117     \_\_ASM(\textcolor{stringliteral}{"CPSID I"});
+118 \}
+\end{DoxyCode}
+\hypertarget{usb__osa__bm_8h_a2c19ad90a05cfd27fd1be3a1f14a0b75}{\index{usb\-\_\-osa\-\_\-bm.\-h@{usb\-\_\-osa\-\_\-bm.\-h}!U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}!usb_osa_bm.h@{usb\-\_\-osa\-\_\-bm.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Exit\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__bm_8h_a2c19ad90a05cfd27fd1be3a1f14a0b75}
+
+\begin{DoxyCode}
+121 \{
+122     EnableGlobalIRQ(sr);
+123 \}
+\end{DoxyCode}

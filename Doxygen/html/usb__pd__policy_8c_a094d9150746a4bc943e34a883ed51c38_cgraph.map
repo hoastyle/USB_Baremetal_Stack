@@ -1,0 +1,31 @@
+<map id="PD_PsmPrimaryStateProcessPdMsg" name="PD_PsmPrimaryStateProcessPdMsg">
+<area shape="rect" id="node2" href="$usb__pd__policy_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="1291,74,1405,101"/>
+<area shape="rect" id="node5" href="$usb__pd__policy_8c.html#a275c11fb3caf0d669e274a15f4c39f61" title="PD_PsmReset" alt="" coords="301,23,411,50"/>
+<area shape="rect" id="node7" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="835,538,944,565"/>
+<area shape="rect" id="node8" href="$usb__pd__timer_8c.html#a453ba4a7609afd86d5e6b9fb8759b6b5" title="PD_TimerClear" alt="" coords="300,690,412,717"/>
+<area shape="rect" id="node9" href="$usb__pd__policy_8c.html#a26fc00ebd036043cf62cc2e558becd5c" title="PD_PsmStartCommand" alt="" coords="275,487,437,514"/>
+<area shape="rect" id="node14" href="$usb__pd__policy_8c.html#aff3535a878f79a57d065fa8d9b5aba57" title="PD_PsmTransitionOnMsgSend\lControl" alt="" coords="254,371,458,412"/>
+<area shape="rect" id="node25" href="$usb__pd__policy_8c.html#a8478bb46d180cbe30f733a859d18547f" title="PD_DpmClearMsg" alt="" coords="290,741,422,767"/>
+<area shape="rect" id="node26" href="$usb__pd__policy_8c.html#a694e9dd685d69f5b21d23e6bbee6e7d9" title="PD_DpmAppCallback" alt="" coords="281,589,431,615"/>
+<area shape="rect" id="node30" href="$usb__pd__policy_8c.html#a1ae8632e71437586ae348c78f1518772" title="PD_MsgSetPortRole" alt="" coords="547,690,691,717"/>
+<area shape="rect" id="node3" href="$group__usb__os__abstraction.html#gab25fb5d93d3b665ca8eadf2a670d3361" title="Checks an event flag. " alt="" coords="1465,74,1618,101"/>
+<area shape="rect" id="node4" href="$group__usb__os__abstraction.html#ga90357f04d40469dc07104033b3c8581c" title="Clears an event flag. " alt="" coords="1468,125,1615,151"/>
+<area shape="rect" id="node6" href="$usb__pd__timer_8c.html#a815f84fb85fcde5a2efa4af5a02e323c" title="PD_TimerCancelAllTimers" alt="" coords="530,23,707,50"/>
+<area shape="rect" id="node10" href="$usb__pd__msg_8c.html#a0f4c4b5235e5789a5b705a458ff97bfe" title="PD_MsgSrcStartCommand" alt="" coords="528,487,709,514"/>
+<area shape="rect" id="node13" href="$usb__pd__msg_8c.html#a5181f0cdc3342fe4e3898f08f5cf73b6" title="PD_MsgSnkCheckStartCommand" alt="" coords="507,411,730,438"/>
+<area shape="rect" id="node11" href="$usb__pd__timer_8c.html#a3d4072fbbc7b10a05c795eaf9ed33f5f" title="PD_TimerCheckInvalidOrTimeOut" alt="" coords="779,487,1000,514"/>
+<area shape="rect" id="node12" href="$usb__pd__msg_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="1083,437,1197,463"/>
+<area shape="rect" id="node15" href="$usb__pd__policy_8c.html#aebb9e4a574913ad404235c42dd319730" title="PD_MsgSendControlTransition" alt="" coords="517,298,720,325"/>
+<area shape="rect" id="node16" href="$usb__pd__policy_8c.html#a3020cc9ec6198c8c996b4c0dbdba937d" title="PD_MsgSend" alt="" coords="838,269,941,295"/>
+<area shape="rect" id="node19" href="$usb__pd__policy_8c.html#a31725b2a47c3137de52deb06cfb27e56" title="PD_MsgWaitSendResult" alt="" coords="805,218,973,245"/>
+<area shape="rect" id="node23" href="$usb__pd__policy_8c.html#aa631d2e98602c309c01a110bed7cf94c" title="Function to simplify the error handling of message transmit. " alt="" coords="787,320,991,361"/>
+<area shape="rect" id="node17" href="$usb__pd__msg_8c.html#aadc2d7bd93e2f244a0b4aefb26d5d5ad" title="PD_MsgReceive" alt="" coords="1079,327,1201,354"/>
+<area shape="rect" id="node18" href="$group__usb__os__abstraction.html#gaa83073c31cced5742027d4046bd633db" title="Sets an event flag. " alt="" coords="1281,327,1415,354"/>
+<area shape="rect" id="node20" href="$group__usb__os__abstraction.html#ga5ce587209d676871f3ec62900054febd" title="Waits for an event flag. " alt="" coords="1069,175,1211,202"/>
+<area shape="rect" id="node21" href="$usb__pd__msg_8c.html#a39aa541f6a8e3843b3ab18fdcf533768" title="PD_PortTaskEventProcess" alt="" coords="1049,125,1231,151"/>
+<area shape="rect" id="node22" href="$usb__pd__msg_8c.html#a25116c60801fe4f4def90e3e42614b54" title="PD_ConnectCheck" alt="" coords="1073,226,1207,253"/>
+<area shape="rect" id="node24" href="$usb__pd__policy_8c.html#a4a1258c0505ff43986e259a96d0bccf4" title="PD_MsgRecvPending" alt="" coords="1065,378,1215,405"/>
+<area shape="rect" id="node27" href="$usb__pd__policy_8c.html#a90012fae056618ce9b4431bd004a852a" title="PD_MsgSrcEndCommand" alt="" coords="531,589,707,615"/>
+<area shape="rect" id="node28" href="$usb__pd__policy_8c.html#a83de99272e34bf7bad5146401157ccff" title="PD_ConnectSetPowerProgress" alt="" coords="515,639,722,666"/>
+<area shape="rect" id="node29" href="$usb__pd__connect_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="833,639,946,666"/>
+</map>

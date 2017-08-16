@@ -1,0 +1,8 @@
+<map id="PDPTN5110_PwrDoApplyCurState" name="PDPTN5110_PwrDoApplyCurState">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#ae27fca1a06ebec2028f45dd00e0eff8d" title="Syncronize hardware to CC state (roleControl, tcpc_control, fault_control, power_control) ..." alt="" coords="315,95,498,121"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="873,107,1018,133"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__hal_8c.html#ab27634b6bde2ceba45309f646cece211" title="Check for PorComplete status and wait if needed. " alt="" coords="283,146,530,187"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a365742e7fe65b04a258288d01dc787e1" title="USB_RAM_ADDRESS_ALIGNMENT" alt="" coords="579,5,824,32"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a7ac2368f9c8bd64f0734fb97465cfe97" title="PDPTN5110_DetectDetach" alt="" coords="609,56,793,83"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="641,157,762,184"/>
+</map>

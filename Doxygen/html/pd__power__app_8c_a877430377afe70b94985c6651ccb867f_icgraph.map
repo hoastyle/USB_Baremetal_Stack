@@ -1,0 +1,4 @@
+<map id="PD_PowerBoardSourceEnableVbusPower" name="PD_PowerBoardSourceEnableVbusPower">
+<area shape="rect" id="node2" href="$source__charger_2pd__power__interface_8h.html#a9f8cada612c26ee29a2eaf595f412284" title="PD_PowerSrcTurnOnDefaultVbus" alt="" coords="257,5,477,32"/>
+<area shape="rect" id="node3" href="$source__charger_2pd__power__interface_8h.html#a19f863f127ba9c21cacaa20e050ce6c7" title="PD_PowerSrcTurnOnRequestVbus" alt="" coords="253,56,480,83"/>
+</map>

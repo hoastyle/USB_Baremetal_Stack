@@ -1,0 +1,6 @@
+<map id="PDPTN5110_ConnectReleasePowerControl" name="PDPTN5110_ConnectReleasePowerControl">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#ae08e54c5c0945d6f40e0dde03d9cca41" title="Set CC to Z and disable comparators. " alt="" coords="271,31,481,57"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__interface_8c.html#a365742e7fe65b04a258288d01dc787e1" title="USB_RAM_ADDRESS_ALIGNMENT" alt="" coords="253,81,499,108"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__interface_8c.html#a661c1fb39c7530ec757dffc93443b203" title="PDPTN5110_Init" alt="" coords="559,5,681,32"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="547,56,693,83"/>
+</map>

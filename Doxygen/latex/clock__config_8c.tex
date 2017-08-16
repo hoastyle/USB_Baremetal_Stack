@@ -1,0 +1,235 @@
+\hypertarget{clock__config_8c}{\section{demo/pd/clock\-\_\-config.c File Reference}
+\label{clock__config_8c}\index{demo/pd/clock\-\_\-config.\-c@{demo/pd/clock\-\_\-config.\-c}}
+}
+{\ttfamily \#include \char`\"{}fsl\-\_\-smc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}clock\-\_\-config.\-h\char`\"{}}\\*
+Include dependency graph for clock\-\_\-config.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{clock__config_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{clock__config_8c_add5e76ff128f2a9e4c3803c2b0161f92}{S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K}~0\-U
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{clock__config_8c_a5e69c4eff0fd5236bbb0ff4e1d5a7a7e}{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N} (void)
+\begin{DoxyCompactList}\small\item\em This function executes configuration of clocks. \end{DoxyCompactList}\item 
+void \hyperlink{clock__config_8c_aeda06d8bee4b00642713d50a62d8edc9}{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R} (void)
+\begin{DoxyCompactList}\small\item\em This function executes configuration of clocks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{clock__config_8c_aa3cd3e43291e81e795d642b79b6088e6}{System\-Core\-Clock}
+\item 
+const mcglite\-\_\-config\-\_\-t \hyperlink{clock__config_8c_a5798795d229f04f06b6d48f215ada1c2}{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}
+\begin{DoxyCompactList}\small\item\em M\-C\-G lite set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. \end{DoxyCompactList}\item 
+const sim\-\_\-clock\-\_\-config\-\_\-t \hyperlink{clock__config_8c_a0ce73e827dc487aaac07190a651d9dff}{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}
+\begin{DoxyCompactList}\small\item\em S\-I\-M module set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. \end{DoxyCompactList}\item 
+const osc\-\_\-config\-\_\-t \hyperlink{clock__config_8c_a8a30f1ebc78e392bb8b05a8fdd7cca15}{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}
+\begin{DoxyCompactList}\small\item\em O\-S\-C set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. \end{DoxyCompactList}\item 
+const mcglite\-\_\-config\-\_\-t \hyperlink{clock__config_8c_af74b49a15230f47e1b4dac6c4b3475ec}{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}
+\begin{DoxyCompactList}\small\item\em M\-C\-G lite set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. \end{DoxyCompactList}\item 
+const sim\-\_\-clock\-\_\-config\-\_\-t \hyperlink{clock__config_8c_af1ec80b657d4d5d4e60ab69d71808807}{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}
+\begin{DoxyCompactList}\small\item\em S\-I\-M module set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. \end{DoxyCompactList}\item 
+const osc\-\_\-config\-\_\-t \hyperlink{clock__config_8c_a725699f951cc1d3f2007cc96cab2d142}{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}
+\begin{DoxyCompactList}\small\item\em O\-S\-C set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{clock__config_8c_add5e76ff128f2a9e4c3803c2b0161f92}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K@{S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K}}
+\index{S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K@{S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I\-M\-\_\-\-O\-S\-C32\-K\-S\-E\-L\-\_\-\-O\-S\-C32\-K\-C\-L\-K\-\_\-\-C\-L\-K~0\-U}}\label{clock__config_8c_add5e76ff128f2a9e4c3803c2b0161f92}
+O\-S\-C32\-K\-S\-E\-L select\-: O\-S\-C32\-K\-C\-L\-K clock 
+
+\subsection{Function Documentation}
+\hypertarget{clock__config_8c_a5e69c4eff0fd5236bbb0ff4e1d5a7a7e}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}
+\index{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{clock__config_8c_a5e69c4eff0fd5236bbb0ff4e1d5a7a7e}
+
+
+This function executes configuration of clocks. 
+
+
+\begin{DoxyCode}
+135 \{
+136     \textcolor{comment}{/* Set the system clock dividers in SIM to safe value. */}
+137     CLOCK\_SetSimSafeDivs();
+138     \textcolor{comment}{/* Set MCG to HIRC mode. */}
+139     CLOCK\_SetMcgliteConfig(&\hyperlink{clock__config_8c_a5798795d229f04f06b6d48f215ada1c2}{mcgliteConfig\_BOARD\_BootClockRUN});
+140     \textcolor{comment}{/* Set the clock configuration in SIM module. */}
+141     CLOCK\_SetSimConfig(&\hyperlink{clock__config_8c_a0ce73e827dc487aaac07190a651d9dff}{simConfig\_BOARD\_BootClockRUN});
+142     \textcolor{comment}{/* Set SystemCoreClock variable. */}
+143     \hyperlink{clock__config_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock} = \hyperlink{clock__config_8h_a6ae55dea13be64e40de107ee288779f3}{BOARD\_BOOTCLOCKRUN\_CORE\_CLOCK};
+144 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{clock__config_8c_a5e69c4eff0fd5236bbb0ff4e1d5a7a7e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{clock__config_8c_aeda06d8bee4b00642713d50a62d8edc9}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}
+\index{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{clock__config_8c_aeda06d8bee4b00642713d50a62d8edc9}
+
+
+This function executes configuration of clocks. 
+
+
+\begin{DoxyCode}
+207 \{
+208     \textcolor{comment}{/* Set the system clock dividers in SIM to safe value. */}
+209     CLOCK\_SetSimSafeDivs();
+210     \textcolor{comment}{/* Set MCG to LIRC2M mode. */}
+211     CLOCK\_SetMcgliteConfig(&\hyperlink{clock__config_8c_af74b49a15230f47e1b4dac6c4b3475ec}{mcgliteConfig\_BOARD\_BootClockVLPR});
+212     \textcolor{comment}{/* Set the clock configuration in SIM module. */}
+213     CLOCK\_SetSimConfig(&\hyperlink{clock__config_8c_af1ec80b657d4d5d4e60ab69d71808807}{simConfig\_BOARD\_BootClockVLPR});
+214     \textcolor{comment}{/* Set VLPR power mode. */}
+215     SMC\_SetPowerModeProtection(SMC, kSMC\_AllowPowerModeAll);
+216 \textcolor{preprocessor}{#if (defined(FSL\_FEATURE\_SMC\_HAS\_LPWUI) && FSL\_FEATURE\_SMC\_HAS\_LPWUI)}
+217 \textcolor{preprocessor}{}    SMC\_SetPowerModeVlpr(SMC, \textcolor{keyword}{false});
+218 \textcolor{preprocessor}{#else}
+219 \textcolor{preprocessor}{}    SMC\_SetPowerModeVlpr(SMC);
+220 \textcolor{preprocessor}{#endif}
+221 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while} (SMC\_GetPowerModeState(SMC) != kSMC\_PowerStateVlpr)
+222     \{
+223     \}
+224     \textcolor{comment}{/* Set SystemCoreClock variable. */}
+225     \hyperlink{clock__config_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock} = \hyperlink{clock__config_8h_a210b0086dcdb8229f4941c823588f142}{BOARD\_BOOTCLOCKVLPR\_CORE\_CLOCK};
+226 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{clock__config_8c_a5798795d229f04f06b6d48f215ada1c2}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}
+\index{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}const mcglite\-\_\-config\-\_\-t mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}\label{clock__config_8c_a5798795d229f04f06b6d48f215ada1c2}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .outSrc = kMCGLITE\_ClkSrcHirc,            
+        .irclkEnableMode = kMCGLITE\_IrclkEnable,  
+        .ircs = kMCGLITE\_Lirc8M,                  
+        .fcrdiv = kMCGLITE\_LircDivBy1,            
+        .lircDiv2 = kMCGLITE\_LircDivBy1,          
+        .hircEnableInNotHircMode = \textcolor{keyword}{true},          
+    \}
+\end{DoxyCode}
+
+
+M\-C\-G lite set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. 
+
+\hypertarget{clock__config_8c_af74b49a15230f47e1b4dac6c4b3475ec}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}
+\index{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}const mcglite\-\_\-config\-\_\-t mcglite\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}\label{clock__config_8c_af74b49a15230f47e1b4dac6c4b3475ec}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .outSrc = kMCGLITE\_ClkSrcLirc,            
+        .irclkEnableMode = kMCGLITE\_IrclkEnable,  
+        .ircs = kMCGLITE\_Lirc2M,                  
+        .fcrdiv = kMCGLITE\_LircDivBy1,            
+        .lircDiv2 = kMCGLITE\_LircDivBy1,          
+        .hircEnableInNotHircMode = \textcolor{keyword}{false},         
+    \}
+\end{DoxyCode}
+
+
+M\-C\-G lite set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. 
+
+\hypertarget{clock__config_8c_a8a30f1ebc78e392bb8b05a8fdd7cca15}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}
+\index{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}const osc\-\_\-config\-\_\-t osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}\label{clock__config_8c_a8a30f1ebc78e392bb8b05a8fdd7cca15}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .freq = 0U,                               
+        .capLoad = (kOSC\_Cap4P | kOSC\_Cap8P),     
+        .workMode = kOSC\_ModeOscLowPower,         
+        .oscerConfig =
+            \{
+                .enableMode = kOSC\_ErClkEnable,   
+            \}
+    \}
+\end{DoxyCode}
+
+
+O\-S\-C set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. 
+
+\hypertarget{clock__config_8c_a725699f951cc1d3f2007cc96cab2d142}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}
+\index{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}const osc\-\_\-config\-\_\-t osc\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}\label{clock__config_8c_a725699f951cc1d3f2007cc96cab2d142}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .freq = 0U,                               
+        .capLoad = (kOSC\_Cap4P | kOSC\_Cap8P),     
+        .workMode = kOSC\_ModeExt,                 
+        .oscerConfig =
+            \{
+                .enableMode = kOSC\_ErClkEnable,   
+            \}
+    \}
+\end{DoxyCode}
+
+
+O\-S\-C set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. 
+
+\hypertarget{clock__config_8c_a0ce73e827dc487aaac07190a651d9dff}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}
+\index{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N@{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}const sim\-\_\-clock\-\_\-config\-\_\-t sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N}}\label{clock__config_8c_a0ce73e827dc487aaac07190a651d9dff}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .er32kSrc = \hyperlink{clock__config_8c_add5e76ff128f2a9e4c3803c2b0161f92}{SIM\_OSC32KSEL\_OSC32KCLK\_CLK},  
+        .clkdiv1 = 0x10000U,                      
+    \}
+\end{DoxyCode}
+
+
+S\-I\-M module set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-R\-U\-N configuration. 
+
+\hypertarget{clock__config_8c_af1ec80b657d4d5d4e60ab69d71808807}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}
+\index{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R@{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}const sim\-\_\-clock\-\_\-config\-\_\-t sim\-Config\-\_\-\-B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R}}\label{clock__config_8c_af1ec80b657d4d5d4e60ab69d71808807}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        .er32kSrc = \hyperlink{clock__config_8c_add5e76ff128f2a9e4c3803c2b0161f92}{SIM\_OSC32KSEL\_OSC32KCLK\_CLK},  
+        .clkdiv1 = 0x10000U,                      
+    \}
+\end{DoxyCode}
+
+
+S\-I\-M module set for B\-O\-A\-R\-D\-\_\-\-Boot\-Clock\-V\-L\-P\-R configuration. 
+
+\hypertarget{clock__config_8c_aa3cd3e43291e81e795d642b79b6088e6}{\index{clock\-\_\-config.\-c@{clock\-\_\-config.\-c}!System\-Core\-Clock@{System\-Core\-Clock}}
+\index{System\-Core\-Clock@{System\-Core\-Clock}!clock_config.c@{clock\-\_\-config.\-c}}
+\subsubsection[{System\-Core\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t System\-Core\-Clock}}\label{clock__config_8c_aa3cd3e43291e81e795d642b79b6088e6}

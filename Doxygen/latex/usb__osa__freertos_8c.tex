@@ -1,0 +1,156 @@
+\hypertarget{usb__osa__freertos_8c}{\section{osa/usb\-\_\-osa\-\_\-freertos.c File Reference}
+\label{usb__osa__freertos_8c}\index{osa/usb\-\_\-osa\-\_\-freertos.\-c@{osa/usb\-\_\-osa\-\_\-freertos.\-c}}
+}
+{\ttfamily \#include \char`\"{}stdint.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-device\-\_\-registers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-osa.\-h\char`\"{}}\\*
+Include dependency graph for usb\-\_\-osa\-\_\-freertos.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__osa__freertos_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__usb__osa__event__struct}{\-\_\-usb\-\_\-osa\-\_\-event\-\_\-struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__osa__freertos_8c_a4c7623dbec32d3d7191e8030942207a5}{M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K}(msec)~((1000\-L + ((uint32\-\_\-t)config\-T\-I\-C\-K\-\_\-\-R\-A\-T\-E\-\_\-\-H\-Z $\ast$ (uint32\-\_\-t)(msec -\/ 1\-U))) / 1000\-L)
+\item 
+\#define \hyperlink{usb__osa__freertos_8c_a71a0e24782d4a6a615fd8a66ee7d3ec9}{T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C}(tick)~((tick)$\ast$1000u\-L / (uint32\-\_\-t)config\-T\-I\-C\-K\-\_\-\-R\-A\-T\-E\-\_\-\-H\-Z)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{struct__usb__osa__event__struct}{\-\_\-usb\-\_\-osa\-\_\-event\-\_\-struct} \hyperlink{usb__osa__freertos_8c_a4a17d9a141b44b32ff16ac9d6016c268}{usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__usb__os__abstraction_gab17b3446bbcfb6207dc230fcdd4c9f99}{U\-S\-B\-\_\-\-Osa\-Memory\-Allocate} (uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Reserves the requested amount of memory in bytes. \end{DoxyCompactList}\item 
+void \hyperlink{group__usb__os__abstraction_ga3d4a16dd11d39ce340299876f92d9366}{U\-S\-B\-\_\-\-Osa\-Memory\-Free} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Frees the memory previously reserved. \end{DoxyCompactList}\item 
+void \hyperlink{usb__osa__freertos_8c_a02e3681f4d617bc573b8345f65b153a2}{U\-S\-B\-\_\-\-Osa\-Enter\-Critical} (uint8\-\_\-t $\ast$sr)
+\item 
+void \hyperlink{usb__osa__freertos_8c_af96b90699740b15e8494df08a83c39b1}{U\-S\-B\-\_\-\-Osa\-Exit\-Critical} (uint8\-\_\-t sr)
+\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf38d525580499ff2657303eb807efc61}{U\-S\-B\-\_\-\-Osa\-Event\-Create} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} $\ast$handle, uint32\-\_\-t flag)
+\begin{DoxyCompactList}\small\item\em Creates an event object with all flags cleared. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga3d07a809b1fa8450c1383aa8bbd49b37}{U\-S\-B\-\_\-\-Osa\-Event\-Destroy} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a created event object. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaa83073c31cced5742027d4046bd633db}{U\-S\-B\-\_\-\-Osa\-Event\-Set} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask)
+\begin{DoxyCompactList}\small\item\em Sets an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga5ce587209d676871f3ec62900054febd}{U\-S\-B\-\_\-\-Osa\-Event\-Wait} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask, uint32\-\_\-t flag, uint32\-\_\-t timeout, uint32\-\_\-t $\ast$bit\-Set)
+\begin{DoxyCompactList}\small\item\em Waits for an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gab25fb5d93d3b665ca8eadf2a670d3361}{U\-S\-B\-\_\-\-Osa\-Event\-Check} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask, uint32\-\_\-t $\ast$bit\-Set)
+\begin{DoxyCompactList}\small\item\em Checks an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{U\-S\-B\-\_\-\-Osa\-Event\-Clear} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask)
+\begin{DoxyCompactList}\small\item\em Clears an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga9d4a6e4130aac6d6b65d4cf6545f6625}{U\-S\-B\-\_\-\-Osa\-Sem\-Create} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} $\ast$handle, uint32\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em Creates a semaphore with a given value. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga078945ac6116e19459d2f38fe8feb994}{U\-S\-B\-\_\-\-Osa\-Sem\-Destroy} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a semaphore object. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gad44e7105ccf6f06a6dac75307c6c1b0f}{U\-S\-B\-\_\-\-Osa\-Sem\-Post} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Posts a semaphore. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gafe9ff8755eb9afadd0ad328ca4fe4c8c}{U\-S\-B\-\_\-\-Osa\-Sem\-Wait} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle, uint32\-\_\-t timeout)
+\begin{DoxyCompactList}\small\item\em Waits on a semaphore. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf36ecc5a6c3359a6587750b17800f49d}{U\-S\-B\-\_\-\-Osa\-Mutex\-Create} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Creates a mutex. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga68f890c3d76f212e6fa8cf787b918a5b}{U\-S\-B\-\_\-\-Osa\-Mutex\-Destroy} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a mutex. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga1fed31c4b683c5f652b4e2e8b23c34fd}{U\-S\-B\-\_\-\-Osa\-Mutex\-Lock} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Waits for a mutex and locks it. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaad3249273d566eae00e2cea81192315a}{U\-S\-B\-\_\-\-Osa\-Mutex\-Unlock} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Unlocks a mutex. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gacc28243bdfb636e21508879789ab5a0c}{U\-S\-B\-\_\-\-Osa\-Msgq\-Create} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} $\ast$handle, uint32\-\_\-t count, uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Creates a message queue. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gafc20008f4680ff9f0720574841b34e42}{U\-S\-B\-\_\-\-Osa\-Msgq\-Destroy} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a message queue. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga6ba61c6cf5e772dbce90c5626dbd0db0}{U\-S\-B\-\_\-\-Osa\-Msgq\-Send} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Sends a message. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf2effe68aa0486c0823e253f78836d17}{U\-S\-B\-\_\-\-Osa\-Msgq\-Recv} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg, uint32\-\_\-t timeout)
+\begin{DoxyCompactList}\small\item\em Receives a message. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga734fbdd1bae936ba6758087ad2d9d862}{U\-S\-B\-\_\-\-Osa\-Msgq\-Check} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Checks a message queue and receives a message if the queue is not empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__osa__freertos_8c_a4c7623dbec32d3d7191e8030942207a5}{\index{usb\-\_\-osa\-\_\-freertos.\-c@{usb\-\_\-osa\-\_\-freertos.\-c}!M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K@{M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K}}
+\index{M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K@{M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K}!usb_osa_freertos.c@{usb\-\_\-osa\-\_\-freertos.\-c}}
+\subsubsection[{M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-E\-C\-\_\-\-T\-O\-\_\-\-T\-I\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{msec}
+\end{DoxyParamCaption}
+)~((1000\-L + ((uint32\-\_\-t)config\-T\-I\-C\-K\-\_\-\-R\-A\-T\-E\-\_\-\-H\-Z $\ast$ (uint32\-\_\-t)(msec -\/ 1\-U))) / 1000\-L)}}\label{usb__osa__freertos_8c_a4c7623dbec32d3d7191e8030942207a5}
+\hypertarget{usb__osa__freertos_8c_a71a0e24782d4a6a615fd8a66ee7d3ec9}{\index{usb\-\_\-osa\-\_\-freertos.\-c@{usb\-\_\-osa\-\_\-freertos.\-c}!T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C@{T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C}}
+\index{T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C@{T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C}!usb_osa_freertos.c@{usb\-\_\-osa\-\_\-freertos.\-c}}
+\subsubsection[{T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-C\-K\-S\-\_\-\-T\-O\-\_\-\-M\-S\-E\-C(
+\begin{DoxyParamCaption}
+\item[{}]{tick}
+\end{DoxyParamCaption}
+)~((tick)$\ast$1000u\-L / (uint32\-\_\-t)config\-T\-I\-C\-K\-\_\-\-R\-A\-T\-E\-\_\-\-H\-Z)}}\label{usb__osa__freertos_8c_a71a0e24782d4a6a615fd8a66ee7d3ec9}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__osa__freertos_8c_a4a17d9a141b44b32ff16ac9d6016c268}{\index{usb\-\_\-osa\-\_\-freertos.\-c@{usb\-\_\-osa\-\_\-freertos.\-c}!usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t@{usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t}}
+\index{usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t@{usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t}!usb_osa_freertos.c@{usb\-\_\-osa\-\_\-freertos.\-c}}
+\subsubsection[{usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-usb\-\_\-osa\-\_\-event\-\_\-struct}  {\bf usb\-\_\-osa\-\_\-event\-\_\-struct\-\_\-t}}}\label{usb__osa__freertos_8c_a4a17d9a141b44b32ff16ac9d6016c268}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__osa__freertos_8c_a02e3681f4d617bc573b8345f65b153a2}{\index{usb\-\_\-osa\-\_\-freertos.\-c@{usb\-\_\-osa\-\_\-freertos.\-c}!U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Enter\-Critical@{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}!usb_osa_freertos.c@{usb\-\_\-osa\-\_\-freertos.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Enter\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Enter\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__freertos_8c_a02e3681f4d617bc573b8345f65b153a2}
+
+\begin{DoxyCode}
+136 \{
+137 \textcolor{preprocessor}{#if defined(\_\_GIC\_PRIO\_BITS)}
+138 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} ((\_\_get\_CPSR() & CPSR\_M\_Msk) == 0x13)
+139 \textcolor{preprocessor}{#else}
+140 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\_\_get\_IPSR())
+141 \textcolor{preprocessor}{#endif}
+142 \textcolor{preprocessor}{}    \{
+143         *sr = portSET\_INTERRUPT\_MASK\_FROM\_ISR();
+144     \}
+145     \textcolor{keywordflow}{else}
+146     \{
+147         portENTER\_CRITICAL();
+148     \}
+149 \}
+\end{DoxyCode}
+\hypertarget{usb__osa__freertos_8c_af96b90699740b15e8494df08a83c39b1}{\index{usb\-\_\-osa\-\_\-freertos.\-c@{usb\-\_\-osa\-\_\-freertos.\-c}!U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}}
+\index{U\-S\-B\-\_\-\-Osa\-Exit\-Critical@{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}!usb_osa_freertos.c@{usb\-\_\-osa\-\_\-freertos.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-Osa\-Exit\-Critical}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-\_\-\-Osa\-Exit\-Critical (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{sr}
+\end{DoxyParamCaption}
+)}}\label{usb__osa__freertos_8c_af96b90699740b15e8494df08a83c39b1}
+
+\begin{DoxyCode}
+152 \{
+153 \textcolor{preprocessor}{#if defined(\_\_GIC\_PRIO\_BITS)}
+154 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} ((\_\_get\_CPSR() & CPSR\_M\_Msk) == 0x13)
+155 \textcolor{preprocessor}{#else}
+156 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\_\_get\_IPSR())
+157 \textcolor{preprocessor}{#endif}
+158 \textcolor{preprocessor}{}    \{
+159         portCLEAR\_INTERRUPT\_MASK\_FROM\_ISR(sr);
+160     \}
+161     \textcolor{keywordflow}{else}
+162     \{
+163         portEXIT\_CRITICAL();
+164     \}
+165 \}
+\end{DoxyCode}

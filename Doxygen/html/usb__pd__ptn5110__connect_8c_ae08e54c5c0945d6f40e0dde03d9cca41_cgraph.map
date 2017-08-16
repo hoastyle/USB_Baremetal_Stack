@@ -1,0 +1,7 @@
+<map id="PDPTN5110_ConnectDisableAll" name="PDPTN5110_ConnectDisableAll">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__connect_8c.html#ae176a3f90e065c327a147a07c4b05885" title="Callback when connection is detached or disabled (unused, I think the original code use this error) ..." alt="" coords="264,23,464,65"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="512,31,667,57"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="715,23,904,65"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="959,5,1105,32"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="953,56,1111,83"/>
+</map>

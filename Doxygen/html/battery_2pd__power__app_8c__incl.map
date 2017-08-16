@@ -1,0 +1,9 @@
+<map id="demo/pd_battery/pd_power_app.c" name="demo/pd_battery/pd_power_app.c">
+<area shape="rect" id="node2" href="$battery_2usb__pd__config_8h.html" title="usb_pd_config.h" alt="" coords="51,96,167,123"/>
+<area shape="rect" id="node3" href="$usb__pd_8h.html" title="usb_pd.h" alt="" coords="120,171,193,197"/>
+<area shape="rect" id="node7" href="$battery_2pd__app_8h.html" title="pd_app.h" alt="" coords="243,96,316,123"/>
+<area shape="rect" id="node9" href="$battery_2pd__power__interface_8h.html" title="pd_power_interface.h" alt="" coords="445,96,592,123"/>
+<area shape="rect" id="node4" href="$usb__osa_8h.html" title="usb_osa.h" alt="" coords="5,245,87,272"/>
+<area shape="rect" id="node5" href="$usb__misc_8h.html" title="usb_misc.h" alt="" coords="113,245,201,272"/>
+<area shape="rect" id="node6" href="$usb__cmsis__wrapper_8h.html" title="usb_cmsis_wrapper.h" alt="" coords="227,245,375,272"/>
+</map>

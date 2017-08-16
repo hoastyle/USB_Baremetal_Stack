@@ -1,0 +1,7 @@
+<map id="demo/pd_battery/board.h" name="demo/pd_battery/board.h">
+<area shape="rect" id="node2" href="$battery_2board_8c.html" title="demo/pd_battery/board.c" alt="" coords="5,88,171,115"/>
+<area shape="rect" id="node3" href="$battery_2main_8c.html" title="demo/pd_battery/main.c" alt="" coords="196,88,359,115"/>
+<area shape="rect" id="node4" href="$battery_2pd__app_8c.html" title="demo/pd_battery/pd\l_app.c" alt="" coords="383,81,520,122"/>
+<area shape="rect" id="node5" href="$battery_2pd__app__demo_8c.html" title="demo/pd_battery/pd\l_app_demo.c" alt="" coords="545,81,681,122"/>
+<area shape="rect" id="node6" href="$battery_2pd__command__interface_8c.html" title="demo/pd_battery/pd\l_command_interface.c" alt="" coords="707,81,860,122"/>
+</map>

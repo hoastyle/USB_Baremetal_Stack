@@ -1,0 +1,88 @@
+\hypertarget{usb__cmsis__wrapper_8h}{\section{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.h File Reference}
+\label{usb__cmsis__wrapper_8h}\index{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.\-h@{pd/cmsis\-\_\-wrapper/usb\-\_\-cmsis\-\_\-wrapper.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__cmsis__wrapper_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__pd__i2c__interface__config}{\-\_\-pd\-\_\-i2c\-\_\-interface\-\_\-config}
+\begin{DoxyCompactList}\small\item\em I2\-C interface configure parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__pd__spi__interface__config}{\-\_\-pd\-\_\-spi\-\_\-interface\-\_\-config}
+\begin{DoxyCompactList}\small\item\em S\-P\-I interface configure parameter. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__cmsis__drier__adapter}{\-\_\-cmsis\-\_\-drier\-\_\-adapter}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__pd__cmsis__wrapper_ga38c9923b4a5ea65a306222e1250ee94a}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-C\-O\-U\-N\-T}~(10)
+\begin{DoxyCompactList}\small\item\em C\-M\-S\-I\-S I2\-C/\-S\-P\-I transfer retry count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559e}{\-\_\-cmsis\-\_\-driver\-\_\-state} \hyperlink{usb__cmsis__wrapper_8h_ad57594d61a28ca6afbcb6ee27ba085b9}{cmsis\-\_\-driver\-\_\-state\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{struct__pd__i2c__interface__config}{\-\_\-pd\-\_\-i2c\-\_\-interface\-\_\-config} \hyperlink{group__usb__pd__cmsis__wrapper_gada87adb00aefcd83988ef970c2f4d750}{pd\-\_\-i2c\-\_\-interface\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em I2\-C interface configure parameter. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__pd__spi__interface__config}{\-\_\-pd\-\_\-spi\-\_\-interface\-\_\-config} \hyperlink{group__usb__pd__cmsis__wrapper_ga0a6afc9ea2599bcbe9b60e47f60d6bed}{pd\-\_\-spi\-\_\-interface\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em S\-P\-I interface configure parameter. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__cmsis__drier__adapter}{\-\_\-cmsis\-\_\-drier\-\_\-adapter} \hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559e}{\-\_\-cmsis\-\_\-driver\-\_\-state} \{ \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eafb0462cc3691779825ffa01ae1c08b52}{C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E}, 
+\hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559ea929231ba9285acc9b01a0cab5ae1d6f5}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G}, 
+\hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eaa7e5f36b0a192cf758bff2f01f639173}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga4140e0b4e54efdabe981bdfbc97725dd}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Init} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$$\ast$cmsis\-Driver, uint8\-\_\-t interface, void $\ast$interface\-Config)
+\begin{DoxyCompactList}\small\item\em Initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga5ae4fe326851bb5374399212012e22f9}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Deinit} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver)
+\begin{DoxyCompactList}\small\item\em De-\/initialize C\-M\-S\-I\-S driver adapter instance. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga09c1e56830b347c846c280fe3525c757}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Write\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, const uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Write data to slave. \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{group__usb__pd__cmsis__wrapper_ga190a521ef01279662f71d4e33e51aa4c}{C\-M\-S\-I\-S\-\_\-\-Port\-Control\-Interface\-Read\-Register} (\hyperlink{group__usb__pd__cmsis__wrapper_ga53daa69dcc6fde0029cec3452c8b58ff}{cmsis\-\_\-driver\-\_\-adapter\-\_\-t} $\ast$cmsis\-Driver, uint32\-\_\-t register\-Addr, uint8\-\_\-t register\-Len, uint8\-\_\-t $\ast$data, uint32\-\_\-t num)
+\begin{DoxyCompactList}\small\item\em Read data from slave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__cmsis__wrapper_8h_ad57594d61a28ca6afbcb6ee27ba085b9}{\index{usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}!cmsis\-\_\-driver\-\_\-state\-\_\-t@{cmsis\-\_\-driver\-\_\-state\-\_\-t}}
+\index{cmsis\-\_\-driver\-\_\-state\-\_\-t@{cmsis\-\_\-driver\-\_\-state\-\_\-t}!usb_cmsis_wrapper.h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}}
+\subsubsection[{cmsis\-\_\-driver\-\_\-state\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-cmsis\-\_\-driver\-\_\-state}  {\bf cmsis\-\_\-driver\-\_\-state\-\_\-t}}}\label{usb__cmsis__wrapper_8h_ad57594d61a28ca6afbcb6ee27ba085b9}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559e}{\index{usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}!\-\_\-cmsis\-\_\-driver\-\_\-state@{\-\_\-cmsis\-\_\-driver\-\_\-state}}
+\index{\-\_\-cmsis\-\_\-driver\-\_\-state@{\-\_\-cmsis\-\_\-driver\-\_\-state}!usb_cmsis_wrapper.h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}}
+\subsubsection[{\-\_\-cmsis\-\_\-driver\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-cmsis\-\_\-driver\-\_\-state}}}\label{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E@{C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E}!usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}}\index{usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}!C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E@{C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E}}\item[{\em 
+\hypertarget{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eafb0462cc3691779825ffa01ae1c08b52}{C\-M\-S\-I\-S\-\_\-\-I\-D\-L\-E}\label{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eafb0462cc3691779825ffa01ae1c08b52}
+}]\index{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G}!usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}}\index{usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}!C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559ea929231ba9285acc9b01a0cab5ae1d6f5}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-I\-N\-G}\label{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559ea929231ba9285acc9b01a0cab5ae1d6f5}
+}]\index{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E}!usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}}\index{usb\-\_\-cmsis\-\_\-wrapper.\-h@{usb\-\_\-cmsis\-\_\-wrapper.\-h}!C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E@{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E}}\item[{\em 
+\hypertarget{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eaa7e5f36b0a192cf758bff2f01f639173}{C\-M\-S\-I\-S\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-D\-O\-N\-E}\label{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eaa7e5f36b0a192cf758bff2f01f639173}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+38 \{
+39     \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eafb0462cc3691779825ffa01ae1c08b52}{CMSIS\_IDLE},
+40     \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559ea929231ba9285acc9b01a0cab5ae1d6f5}{CMSIS\_TRANSFERING},
+41     \hyperlink{usb__cmsis__wrapper_8h_a618300d1172bd934a4bbdf5aa66b559eaa7e5f36b0a192cf758bff2f01f639173}{CMSIS\_TRANSFER\_ERROR\_DONE},
+42 \} \hyperlink{usb__cmsis__wrapper_8h_ad57594d61a28ca6afbcb6ee27ba085b9}{cmsis\_driver\_state\_t};
+\end{DoxyCode}

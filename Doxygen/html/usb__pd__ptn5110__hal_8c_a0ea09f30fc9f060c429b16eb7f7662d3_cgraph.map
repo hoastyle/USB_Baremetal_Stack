@@ -1,0 +1,7 @@
+<map id="PDPTN5110_ResetFetControl" name="PDPTN5110_ResetFetControl">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#a67a3e2c7b4ac0267b2ba8092bb99ee04" title="PDPTN5110_SetFetControl" alt="" coords="253,31,437,57"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="485,31,640,57"/>
+<area shape="rect" id="node4" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="688,23,877,65"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="933,5,1078,32"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="926,56,1085,83"/>
+</map>

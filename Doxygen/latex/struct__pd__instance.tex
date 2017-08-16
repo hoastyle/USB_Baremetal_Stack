@@ -1,0 +1,508 @@
+\hypertarget{struct__pd__instance}{\section{\-\_\-pd\-\_\-instance Struct Reference}
+\label{struct__pd__instance}\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}}
+}
+
+
+{\ttfamily \#include $<$usb\-\_\-pd\-\_\-interface.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-instance\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__pd__instance__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__pd__stack_gab39e13c5c0808b2fe22b7dac49db335a}{pd\-\_\-phy\-\_\-handle} \hyperlink{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{pd\-Phy\-Handle}
+\item 
+\hyperlink{group__usb__pd__stack_gafa6034f9e204836697da1f2fc996cbad}{pd\-\_\-instance\-\_\-config\-\_\-t} $\ast$ \hyperlink{struct__pd__instance_a2d9a457d63da9c4cb5e3feece0cbf3ec}{pd\-Config}
+\item 
+\hyperlink{group__usb__pd__stack_ga1897a14a90aea9e4b0e7cf1e5b4ea449}{pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t} $\ast$ \hyperlink{struct__pd__instance_aa7854ddf70e64f92b178cc5d787037a2}{pd\-Power\-Port\-Config}
+\item 
+const \hyperlink{group__usb__pd__phy__drv_ga9494f6971e6132cb70c98b92f45af74f}{pd\-\_\-phy\-\_\-api\-\_\-interface\-\_\-t} $\ast$ \hyperlink{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{phy\-Interface}
+\item 
+\hyperlink{group__usb__pd__stack_ga270b6a571db4fa308a1cce3df32f5439}{pd\-\_\-stack\-\_\-callback\-\_\-t} \hyperlink{struct__pd__instance_a3718a4d773d48136d66706ac063ef948}{pd\-Callback}
+\item 
+\hyperlink{group__usb__pd__stack_gaf1142461de7d7dcc6268c286ba956265}{pd\-\_\-power\-\_\-handle\-\_\-callback\-\_\-t} $\ast$ \hyperlink{struct__pd__instance_a519457e415e4eb39231c3e32316ffc83}{callback\-Fns}
+\item 
+void $\ast$ \hyperlink{struct__pd__instance_a0eb7710a55cb5eb2a57355d772b26f74}{callback\-Param}
+\item 
+\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} \hyperlink{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{task\-Event\-Handle}
+\item 
+\hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} \hyperlink{struct__pd__instance_a199dd2b0ea66f8eb7e67714c4a4264a5}{rdo\-Request}
+\item 
+\hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} \hyperlink{struct__pd__instance_a3e7e606f531f84a6f70e3a49de313f41}{rdo\-Success\-Request}
+\item 
+\hyperlink{group__usb__pd__stack_ga4dcb1103574222cf94d4b45128f2b884}{pd\-\_\-rdo\-\_\-t} \hyperlink{struct__pd__instance_ad8cdcafc4b643a8f147febada1cd5704}{partner\-Rdo\-Request}
+\item 
+\hyperlink{group__usb__pd__stack_gae3adfd5239231ab405b04bef0ae1df5a}{pd\-\_\-source\-\_\-pdo\-\_\-t} \hyperlink{struct__pd__instance_ad5c623ba7be298aa8ecdad50a298d609}{self\-Or\-Partner\-First\-Source\-P\-D\-O}
+\item 
+\hyperlink{group__usb__pd__phy__drv_ga4930ef145bdc6eb8fb43bb431eb305da}{pd\-\_\-phy\-\_\-vendor\-\_\-info\-\_\-t} \hyperlink{struct__pd__instance_a8cf1d14cc029410e591cbfe30d5b2cd9}{phy\-Info}
+\item 
+volatile uint32\-\_\-t \hyperlink{struct__pd__instance_a00d9a2aa7fd533c3ac15236b61e894f0}{timrs\-Running\-State} \mbox{[}32/32\mbox{]}
+\item 
+volatile uint32\-\_\-t \hyperlink{struct__pd__instance_a4e19ba81575c13f30d4482d5ac141573}{timrs\-Time\-Out\-State} \mbox{[}32/32\mbox{]}
+\item 
+volatile uint16\-\_\-t \hyperlink{struct__pd__instance_a10267d00b21df313fb3064255d161d6b}{timrs\-Time\-Value} \mbox{[}32\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance_ad959040fa9c36726ad10ccc9e46876e9}{psm\-Cable\-Identities} \mbox{[}7\mbox{]}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{receiving\-Data\-Buffer}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{receiving\-Data} \mbox{[}8\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}{sending\-Data} \mbox{[}8\mbox{]}
+\item 
+volatile uint32\-\_\-t $\ast$ \hyperlink{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}{received\-Data}
+\item 
+volatile uint32\-\_\-t \hyperlink{struct__pd__instance_a0d570b6b188a0e6756df839f35f346b5}{received\-Length}
+\item 
+volatile \hyperlink{group__usb__pd__stack_ga38ef16bfe01e9e07d6b3ac77648c6bee}{pd\-\_\-msg\-\_\-header\-\_\-t} \hyperlink{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{sending\-Msg\-Header}
+\item 
+volatile \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}{receive\-Result}
+\item 
+volatile \hyperlink{group__usb__pd__stack_ga04a1f331d9807a70ab9bb753f5ed1c80}{pd\-\_\-status\-\_\-t} \hyperlink{struct__pd__instance_ac02af68a4c0e36f39a1b3203c5638c2b}{sending\-Result}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{receive\-State}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a21c5a4229c4d099a6840ac2d13a5a32e}{received\-Sop}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_af70b04cd5c8187c6a0424dea57205e8c}{hard\-Reset\-Received}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{sending\-State}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a4649287fd50df5de2602a502655f7bb2}{occupied}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_afae58a0b309262dc37fac1f4f92c6d7b}{phy\-Type}
+\item 
+\hyperlink{group__usb__pd__stack_gacedc4a601815782eff03211731ea2c7a}{pd\-\_\-svdm\-\_\-command\-\_\-param\-\_\-t} \hyperlink{struct__pd__instance_a37746abee0ebb0169f8a1e7227d8645b}{structured\-Vdm\-Command\-Parameter}
+\item 
+\hyperlink{group__usb__pd__stack_ga353c18d85300f7ee60dab2241f2e1310}{pd\-\_\-unstructured\-\_\-vdm\-\_\-command\-\_\-param\-\_\-t} \hyperlink{struct__pd__instance_a38406a43dd1715456b1111ad897d8120}{unstructured\-Vdm\-Command\-Parameter}
+\item 
+\hyperlink{group__usb__pd__stack_gac903dadc9a1dffbaac4f91f982a038de}{pd\-\_\-command\-\_\-data\-\_\-param\-\_\-t} \hyperlink{struct__pd__instance_a05d172382020769919cd2afd088fe164}{command\-Ext\-Param}
+\item 
+\hyperlink{group__usb__pd__stack_gac903dadc9a1dffbaac4f91f982a038de}{pd\-\_\-command\-\_\-data\-\_\-param\-\_\-t} \hyperlink{struct__pd__instance_a93988814b8f6bf439021e6ff46fff207}{command\-Ext\-Param\-Callback}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance_a6fb96c0e5c3f5f6f05f9964541078e3a}{dpm\-Msg\-Bits}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__instance_a483c8ee561c9edc878c4462f8b073027}{alert\-A\-D\-O}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_aece677cf125a9acd9546c1bc0f75b5b9}{command\-Is\-Initiator}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_a3bc0e6fd670db006ccb2ba39dadedcc5}{psm\-Cur\-State}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_ab770921a8b608fc49a0d564a22a1aad3}{psm\-New\-State}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_a4a53a203e61b44957d56747fb7c8a312}{psm\-Interrupted\-State}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_ad376945c62a0066016cf2652e62da35a}{psm\-Secondary\-State} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_a539e99b475d489e955238343ca800918}{psm\-New\-Secondary\-State} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_a708b6e13ca54fe83d4200c3fff80a820}{psm\-Dr\-Swap\-Prev\-State}
+\item 
+\hyperlink{usb__pd__spec_8h_a46ab85ad33154cc61c1fa42d5ca24944}{pd\-\_\-psm\-\_\-state\-\_\-t} \hyperlink{struct__pd__instance_a9446b569ba4bb1c6df4367bad40bf987}{psm\-Vconn\-Swap\-Prev\-State}
+\item 
+\hyperlink{usb__pd__spec_8h_a9a1674d34c926c8ecd0f9f70e2da0338}{Type\-C\-State\-\_\-t} \hyperlink{struct__pd__instance_a2c4dd56715311bcb898a01a7cbec1609}{cur\-Connect\-State}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a48293366cd7123e1c703dd01f0921304}{command\-Evaluate\-Result}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a3ac03447bd16031091bc4b30da45576f}{asm\-Vdm\-Reply\-Msg}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a26c06a89ab6d2c3fbf265abd7dfc04a3}{get\-Battery\-Cap\-Data\-Block}
+\item 
+uint16\-\_\-t \hyperlink{struct__pd__instance_a3638013563f1cb1208f12b5930970fa2}{dpm\-Cable\-Max\-Current}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a2edcb21b9d568937192741d32381d2b1}{initialize\-Label}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_aefbe7a5da39f65fa52efdc9cbae4d9cc}{is\-Connected}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_aa310a61602eb5d34b4b511ce4ad60f1d}{connected\-Result}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a6e12cc53d94812cf2a28973fae7c6a7e}{dpm\-State\-Machine}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a4f8aff7c9d2b914a5be9f0bd297c197c}{connect\-State}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_aea65859fe3a8409ac66aa9f54fb119bf}{cur\-Power\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a766dd3de4bdd34f1eebcd41d1425327a}{cur\-Data\-Role}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a19172e14529d11e2239205c36accdfba}{command\-Processing}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_afcd5caf46554e0640a45ac547d7bacf0}{vdm\-Exit\-Received} \mbox{[}3\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a0087c1b246d026c864194bf77ebcf654}{cc\-Used}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af4167196731cf1a846f23c4d6473181c}{in\-Progress}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a4905e96236b6de63bba2c1d34c5a0a8b}{vbus\-Discharge\-In\-Progress}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a007de2aa1ac9ae814d10d26a949dd61d}{pending\-S\-O\-P}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a5905690cc5a12a0758be0574d4bc262e}{ra\-Present}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a1b1254d08a7d1b7809c37ac0e1253ed5}{psm\-Presently\-Vconn\-Source}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_aec0a54cf65dfa1880cb41eccb8caa043}{psm\-Vdm\-Active\-Mode\-Valid\-Mask}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_aa73d40dd2f32910810c5b58fd7ada98f}{psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_adb289c40585aa5170d8208d0202f55e5}{psm\-Hard\-Reset\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_aec485d99451925aec7a6237f92791cd3}{psm\-Caps\-Counter}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a80a39754275c80b96db63d02b7e049ec}{psm\-Soft\-Reset\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af7c28b72771ce442ee733892186c4e6c}{revision}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_abb01fbdcfbc66eba6c7d5d85e91e62e4}{no\-Connect\-But\-V\-Bus\-Exit}
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a46b9d34b21328c188c161825bf8e8217}{rd\-Rp\-Error\-Count}
+\item 
+volatile uint16\-\_\-t \hyperlink{struct__pd__instance_a2505651a0001ea647306dbd800927778}{wait\-Time}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a88df7992251beb09fa2888f4ddf9766f}{try\-S\-N\-K\-State}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_ac25d2d3e3181280ef797e42323c60053}{psm\-Goto\-Min\-Tx}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af189a6cdfc3021280df10fe8a7a86a8f}{psm\-Goto\-Min\-Rx}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_aea1b390f81517cb7ef24eacda944f4ec}{enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a83ce4a62d8bb8f280b4fb7fdbcdc8d5a}{enter\-Try\-S\-N\-K\-From\-Powered\-Acc}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_ae190e16d15f42371ac82937f08371c98}{cc1\-Monitor}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af6e379f0550864c814e92c07732b6ea9}{cc2\-Monitor}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a817d87a8494e9f703f8854e7fdf32dfd}{psm\-Hard\-Reset\-Needs\-V\-Safe0\-V}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_afc95df19affca8d292c845f328349f8f}{psm\-Presently\-Pd\-Connected}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_ab15695a76307bdc413424030ad701a47}{psm\-Previously\-Pd\-Connected}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a7be408d709efe6ec210d68a3d4098cc9}{psm\-Cable\-Plug\-Reset\-Needed}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af7a143c0a8141d2a359a5ce18eb708f6}{psm\-Cable\-Discoveried}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a685445e828df5a05b1084fd0ea75c10a}{psm\-Snk\-Receive\-Rdo\-Wait\-Retry}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_a23dce9c00575a5fd5ed120e08e9c4412}{psm\-Explicit\-Contract\-Existed}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a7420286a3fc5b58010ff2dc607a8d77a}{asm\-Hard\-Reset\-Snk\-Processing}\-: 1
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__instance_af61039550d3e5b4f070ac74ed3e711a3}{unchunked\-Feature}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}{command\-Src\-Owner}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_ae144ddf17de553d955ce28afa535d4f9}{alert\-Wait\-Reply}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a3ec5ee7a312bb3b142e16fc8ba019476}{fr5\-V\-Opened}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_ac9684a4a5a96ac21f503ad702a245a7e}{fr\-Swap\-Received}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}{enable\-Receive}\-: 1
+\item 
+volatile uint8\-\_\-t \hyperlink{struct__pd__instance_a3b09927227c17d95712a2af3d5f921f2}{enter\-Src\-From\-Swap}\-: 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__instance_a483c8ee561c9edc878c4462f8b073027}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!alert\-A\-D\-O@{alert\-A\-D\-O}}
+\index{alert\-A\-D\-O@{alert\-A\-D\-O}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{alert\-A\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-::alert\-A\-D\-O}}\label{struct__pd__instance_a483c8ee561c9edc878c4462f8b073027}
+\hypertarget{struct__pd__instance_ae144ddf17de553d955ce28afa535d4f9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!alert\-Wait\-Reply@{alert\-Wait\-Reply}}
+\index{alert\-Wait\-Reply@{alert\-Wait\-Reply}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{alert\-Wait\-Reply}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::alert\-Wait\-Reply}}\label{struct__pd__instance_ae144ddf17de553d955ce28afa535d4f9}
+\hypertarget{struct__pd__instance_a7420286a3fc5b58010ff2dc607a8d77a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!asm\-Hard\-Reset\-Snk\-Processing@{asm\-Hard\-Reset\-Snk\-Processing}}
+\index{asm\-Hard\-Reset\-Snk\-Processing@{asm\-Hard\-Reset\-Snk\-Processing}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{asm\-Hard\-Reset\-Snk\-Processing}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::asm\-Hard\-Reset\-Snk\-Processing}}\label{struct__pd__instance_a7420286a3fc5b58010ff2dc607a8d77a}
+\hypertarget{struct__pd__instance_a3ac03447bd16031091bc4b30da45576f}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!asm\-Vdm\-Reply\-Msg@{asm\-Vdm\-Reply\-Msg}}
+\index{asm\-Vdm\-Reply\-Msg@{asm\-Vdm\-Reply\-Msg}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{asm\-Vdm\-Reply\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::asm\-Vdm\-Reply\-Msg}}\label{struct__pd__instance_a3ac03447bd16031091bc4b30da45576f}
+\hypertarget{struct__pd__instance_a519457e415e4eb39231c3e32316ffc83}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!callback\-Fns@{callback\-Fns}}
+\index{callback\-Fns@{callback\-Fns}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{callback\-Fns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-power\-\_\-handle\-\_\-callback\-\_\-t}$\ast$ \-\_\-pd\-\_\-instance\-::callback\-Fns}}\label{struct__pd__instance_a519457e415e4eb39231c3e32316ffc83}
+\hypertarget{struct__pd__instance_a0eb7710a55cb5eb2a57355d772b26f74}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!callback\-Param@{callback\-Param}}
+\index{callback\-Param@{callback\-Param}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{callback\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-pd\-\_\-instance\-::callback\-Param}}\label{struct__pd__instance_a0eb7710a55cb5eb2a57355d772b26f74}
+\hypertarget{struct__pd__instance_ae190e16d15f42371ac82937f08371c98}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cc1\-Monitor@{cc1\-Monitor}}
+\index{cc1\-Monitor@{cc1\-Monitor}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cc1\-Monitor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::cc1\-Monitor}}\label{struct__pd__instance_ae190e16d15f42371ac82937f08371c98}
+\hypertarget{struct__pd__instance_af6e379f0550864c814e92c07732b6ea9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cc2\-Monitor@{cc2\-Monitor}}
+\index{cc2\-Monitor@{cc2\-Monitor}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cc2\-Monitor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::cc2\-Monitor}}\label{struct__pd__instance_af6e379f0550864c814e92c07732b6ea9}
+\hypertarget{struct__pd__instance_a0087c1b246d026c864194bf77ebcf654}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cc\-Used@{cc\-Used}}
+\index{cc\-Used@{cc\-Used}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cc\-Used}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::cc\-Used}}\label{struct__pd__instance_a0087c1b246d026c864194bf77ebcf654}
+\hypertarget{struct__pd__instance_a48293366cd7123e1c703dd01f0921304}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Evaluate\-Result@{command\-Evaluate\-Result}}
+\index{command\-Evaluate\-Result@{command\-Evaluate\-Result}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Evaluate\-Result}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::command\-Evaluate\-Result}}\label{struct__pd__instance_a48293366cd7123e1c703dd01f0921304}
+\hypertarget{struct__pd__instance_a05d172382020769919cd2afd088fe164}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Ext\-Param@{command\-Ext\-Param}}
+\index{command\-Ext\-Param@{command\-Ext\-Param}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Ext\-Param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-command\-\_\-data\-\_\-param\-\_\-t} \-\_\-pd\-\_\-instance\-::command\-Ext\-Param}}\label{struct__pd__instance_a05d172382020769919cd2afd088fe164}
+\hypertarget{struct__pd__instance_a93988814b8f6bf439021e6ff46fff207}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Ext\-Param\-Callback@{command\-Ext\-Param\-Callback}}
+\index{command\-Ext\-Param\-Callback@{command\-Ext\-Param\-Callback}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Ext\-Param\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-command\-\_\-data\-\_\-param\-\_\-t} \-\_\-pd\-\_\-instance\-::command\-Ext\-Param\-Callback}}\label{struct__pd__instance_a93988814b8f6bf439021e6ff46fff207}
+\hypertarget{struct__pd__instance_aece677cf125a9acd9546c1bc0f75b5b9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Is\-Initiator@{command\-Is\-Initiator}}
+\index{command\-Is\-Initiator@{command\-Is\-Initiator}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Is\-Initiator}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::command\-Is\-Initiator}}\label{struct__pd__instance_aece677cf125a9acd9546c1bc0f75b5b9}
+\hypertarget{struct__pd__instance_a19172e14529d11e2239205c36accdfba}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Processing@{command\-Processing}}
+\index{command\-Processing@{command\-Processing}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Processing}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::command\-Processing}}\label{struct__pd__instance_a19172e14529d11e2239205c36accdfba}
+\hypertarget{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!command\-Src\-Owner@{command\-Src\-Owner}}
+\index{command\-Src\-Owner@{command\-Src\-Owner}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{command\-Src\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::command\-Src\-Owner}}\label{struct__pd__instance_ac9c3ed52c22920ccea6ecd0d1e0f6651}
+\hypertarget{struct__pd__instance_aa310a61602eb5d34b4b511ce4ad60f1d}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!connected\-Result@{connected\-Result}}
+\index{connected\-Result@{connected\-Result}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{connected\-Result}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::connected\-Result}}\label{struct__pd__instance_aa310a61602eb5d34b4b511ce4ad60f1d}
+\hypertarget{struct__pd__instance_a4f8aff7c9d2b914a5be9f0bd297c197c}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!connect\-State@{connect\-State}}
+\index{connect\-State@{connect\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{connect\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::connect\-State}}\label{struct__pd__instance_a4f8aff7c9d2b914a5be9f0bd297c197c}
+\hypertarget{struct__pd__instance_a2c4dd56715311bcb898a01a7cbec1609}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cur\-Connect\-State@{cur\-Connect\-State}}
+\index{cur\-Connect\-State@{cur\-Connect\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cur\-Connect\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type\-C\-State\-\_\-t} \-\_\-pd\-\_\-instance\-::cur\-Connect\-State}}\label{struct__pd__instance_a2c4dd56715311bcb898a01a7cbec1609}
+\hypertarget{struct__pd__instance_a766dd3de4bdd34f1eebcd41d1425327a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cur\-Data\-Role@{cur\-Data\-Role}}
+\index{cur\-Data\-Role@{cur\-Data\-Role}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cur\-Data\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::cur\-Data\-Role}}\label{struct__pd__instance_a766dd3de4bdd34f1eebcd41d1425327a}
+\hypertarget{struct__pd__instance_aea65859fe3a8409ac66aa9f54fb119bf}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!cur\-Power\-Role@{cur\-Power\-Role}}
+\index{cur\-Power\-Role@{cur\-Power\-Role}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{cur\-Power\-Role}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::cur\-Power\-Role}}\label{struct__pd__instance_aea65859fe3a8409ac66aa9f54fb119bf}
+\hypertarget{struct__pd__instance_a3638013563f1cb1208f12b5930970fa2}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!dpm\-Cable\-Max\-Current@{dpm\-Cable\-Max\-Current}}
+\index{dpm\-Cable\-Max\-Current@{dpm\-Cable\-Max\-Current}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{dpm\-Cable\-Max\-Current}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t \-\_\-pd\-\_\-instance\-::dpm\-Cable\-Max\-Current}}\label{struct__pd__instance_a3638013563f1cb1208f12b5930970fa2}
+\hypertarget{struct__pd__instance_a6fb96c0e5c3f5f6f05f9964541078e3a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!dpm\-Msg\-Bits@{dpm\-Msg\-Bits}}
+\index{dpm\-Msg\-Bits@{dpm\-Msg\-Bits}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{dpm\-Msg\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-::dpm\-Msg\-Bits}}\label{struct__pd__instance_a6fb96c0e5c3f5f6f05f9964541078e3a}
+\hypertarget{struct__pd__instance_a6e12cc53d94812cf2a28973fae7c6a7e}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!dpm\-State\-Machine@{dpm\-State\-Machine}}
+\index{dpm\-State\-Machine@{dpm\-State\-Machine}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{dpm\-State\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::dpm\-State\-Machine}}\label{struct__pd__instance_a6e12cc53d94812cf2a28973fae7c6a7e}
+\hypertarget{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!enable\-Receive@{enable\-Receive}}
+\index{enable\-Receive@{enable\-Receive}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{enable\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::enable\-Receive}}\label{struct__pd__instance_a7ac775fb724d971003420ee22adc0fbe}
+\hypertarget{struct__pd__instance_aea1b390f81517cb7ef24eacda944f4ec}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K@{enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K}}
+\index{enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K@{enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::enter\-Attached\-Src\-From\-Attach\-Wait\-S\-N\-K}}\label{struct__pd__instance_aea1b390f81517cb7ef24eacda944f4ec}
+\hypertarget{struct__pd__instance_a3b09927227c17d95712a2af3d5f921f2}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!enter\-Src\-From\-Swap@{enter\-Src\-From\-Swap}}
+\index{enter\-Src\-From\-Swap@{enter\-Src\-From\-Swap}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{enter\-Src\-From\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::enter\-Src\-From\-Swap}}\label{struct__pd__instance_a3b09927227c17d95712a2af3d5f921f2}
+\hypertarget{struct__pd__instance_a83ce4a62d8bb8f280b4fb7fdbcdc8d5a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!enter\-Try\-S\-N\-K\-From\-Powered\-Acc@{enter\-Try\-S\-N\-K\-From\-Powered\-Acc}}
+\index{enter\-Try\-S\-N\-K\-From\-Powered\-Acc@{enter\-Try\-S\-N\-K\-From\-Powered\-Acc}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{enter\-Try\-S\-N\-K\-From\-Powered\-Acc}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::enter\-Try\-S\-N\-K\-From\-Powered\-Acc}}\label{struct__pd__instance_a83ce4a62d8bb8f280b4fb7fdbcdc8d5a}
+\hypertarget{struct__pd__instance_a3ec5ee7a312bb3b142e16fc8ba019476}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!fr5\-V\-Opened@{fr5\-V\-Opened}}
+\index{fr5\-V\-Opened@{fr5\-V\-Opened}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{fr5\-V\-Opened}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::fr5\-V\-Opened}}\label{struct__pd__instance_a3ec5ee7a312bb3b142e16fc8ba019476}
+\hypertarget{struct__pd__instance_ac9684a4a5a96ac21f503ad702a245a7e}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!fr\-Swap\-Received@{fr\-Swap\-Received}}
+\index{fr\-Swap\-Received@{fr\-Swap\-Received}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{fr\-Swap\-Received}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::fr\-Swap\-Received}}\label{struct__pd__instance_ac9684a4a5a96ac21f503ad702a245a7e}
+\hypertarget{struct__pd__instance_a26c06a89ab6d2c3fbf265abd7dfc04a3}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!get\-Battery\-Cap\-Data\-Block@{get\-Battery\-Cap\-Data\-Block}}
+\index{get\-Battery\-Cap\-Data\-Block@{get\-Battery\-Cap\-Data\-Block}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{get\-Battery\-Cap\-Data\-Block}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::get\-Battery\-Cap\-Data\-Block}}\label{struct__pd__instance_a26c06a89ab6d2c3fbf265abd7dfc04a3}
+\hypertarget{struct__pd__instance_af70b04cd5c8187c6a0424dea57205e8c}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!hard\-Reset\-Received@{hard\-Reset\-Received}}
+\index{hard\-Reset\-Received@{hard\-Reset\-Received}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{hard\-Reset\-Received}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::hard\-Reset\-Received}}\label{struct__pd__instance_af70b04cd5c8187c6a0424dea57205e8c}
+\hypertarget{struct__pd__instance_a2edcb21b9d568937192741d32381d2b1}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!initialize\-Label@{initialize\-Label}}
+\index{initialize\-Label@{initialize\-Label}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{initialize\-Label}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::initialize\-Label}}\label{struct__pd__instance_a2edcb21b9d568937192741d32381d2b1}
+\hypertarget{struct__pd__instance_af4167196731cf1a846f23c4d6473181c}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!in\-Progress@{in\-Progress}}
+\index{in\-Progress@{in\-Progress}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{in\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::in\-Progress}}\label{struct__pd__instance_af4167196731cf1a846f23c4d6473181c}
+\hypertarget{struct__pd__instance_aefbe7a5da39f65fa52efdc9cbae4d9cc}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!is\-Connected@{is\-Connected}}
+\index{is\-Connected@{is\-Connected}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{is\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::is\-Connected}}\label{struct__pd__instance_aefbe7a5da39f65fa52efdc9cbae4d9cc}
+\hypertarget{struct__pd__instance_abb01fbdcfbc66eba6c7d5d85e91e62e4}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!no\-Connect\-But\-V\-Bus\-Exit@{no\-Connect\-But\-V\-Bus\-Exit}}
+\index{no\-Connect\-But\-V\-Bus\-Exit@{no\-Connect\-But\-V\-Bus\-Exit}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{no\-Connect\-But\-V\-Bus\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::no\-Connect\-But\-V\-Bus\-Exit}}\label{struct__pd__instance_abb01fbdcfbc66eba6c7d5d85e91e62e4}
+\hypertarget{struct__pd__instance_a4649287fd50df5de2602a502655f7bb2}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!occupied@{occupied}}
+\index{occupied@{occupied}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{occupied}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::occupied}}\label{struct__pd__instance_a4649287fd50df5de2602a502655f7bb2}
+\hypertarget{struct__pd__instance_ad8cdcafc4b643a8f147febada1cd5704}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!partner\-Rdo\-Request@{partner\-Rdo\-Request}}
+\index{partner\-Rdo\-Request@{partner\-Rdo\-Request}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{partner\-Rdo\-Request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-rdo\-\_\-t} \-\_\-pd\-\_\-instance\-::partner\-Rdo\-Request}}\label{struct__pd__instance_ad8cdcafc4b643a8f147febada1cd5704}
+\hypertarget{struct__pd__instance_a3718a4d773d48136d66706ac063ef948}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!pd\-Callback@{pd\-Callback}}
+\index{pd\-Callback@{pd\-Callback}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{pd\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-stack\-\_\-callback\-\_\-t} \-\_\-pd\-\_\-instance\-::pd\-Callback}}\label{struct__pd__instance_a3718a4d773d48136d66706ac063ef948}
+\hypertarget{struct__pd__instance_a2d9a457d63da9c4cb5e3feece0cbf3ec}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!pd\-Config@{pd\-Config}}
+\index{pd\-Config@{pd\-Config}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{pd\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-instance\-\_\-config\-\_\-t}$\ast$ \-\_\-pd\-\_\-instance\-::pd\-Config}}\label{struct__pd__instance_a2d9a457d63da9c4cb5e3feece0cbf3ec}
+\hypertarget{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!pd\-Phy\-Handle@{pd\-Phy\-Handle}}
+\index{pd\-Phy\-Handle@{pd\-Phy\-Handle}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{pd\-Phy\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-phy\-\_\-handle} \-\_\-pd\-\_\-instance\-::pd\-Phy\-Handle}}\label{struct__pd__instance_a7c1184292efe9a5ae30b6ac422c1e9f4}
+\hypertarget{struct__pd__instance_aa7854ddf70e64f92b178cc5d787037a2}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!pd\-Power\-Port\-Config@{pd\-Power\-Port\-Config}}
+\index{pd\-Power\-Port\-Config@{pd\-Power\-Port\-Config}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{pd\-Power\-Port\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t}$\ast$ \-\_\-pd\-\_\-instance\-::pd\-Power\-Port\-Config}}\label{struct__pd__instance_aa7854ddf70e64f92b178cc5d787037a2}
+\hypertarget{struct__pd__instance_a007de2aa1ac9ae814d10d26a949dd61d}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!pending\-S\-O\-P@{pending\-S\-O\-P}}
+\index{pending\-S\-O\-P@{pending\-S\-O\-P}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{pending\-S\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::pending\-S\-O\-P}}\label{struct__pd__instance_a007de2aa1ac9ae814d10d26a949dd61d}
+\hypertarget{struct__pd__instance_a8cf1d14cc029410e591cbfe30d5b2cd9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!phy\-Info@{phy\-Info}}
+\index{phy\-Info@{phy\-Info}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{phy\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-phy\-\_\-vendor\-\_\-info\-\_\-t} \-\_\-pd\-\_\-instance\-::phy\-Info}}\label{struct__pd__instance_a8cf1d14cc029410e591cbfe30d5b2cd9}
+\hypertarget{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!phy\-Interface@{phy\-Interface}}
+\index{phy\-Interface@{phy\-Interface}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{phy\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf pd\-\_\-phy\-\_\-api\-\_\-interface\-\_\-t}$\ast$ \-\_\-pd\-\_\-instance\-::phy\-Interface}}\label{struct__pd__instance_adbed7b2cd53df40e0611a8879c903339}
+\hypertarget{struct__pd__instance_afae58a0b309262dc37fac1f4f92c6d7b}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!phy\-Type@{phy\-Type}}
+\index{phy\-Type@{phy\-Type}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{phy\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::phy\-Type}}\label{struct__pd__instance_afae58a0b309262dc37fac1f4f92c6d7b}
+\hypertarget{struct__pd__instance_af7a143c0a8141d2a359a5ce18eb708f6}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Cable\-Discoveried@{psm\-Cable\-Discoveried}}
+\index{psm\-Cable\-Discoveried@{psm\-Cable\-Discoveried}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Cable\-Discoveried}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Cable\-Discoveried}}\label{struct__pd__instance_af7a143c0a8141d2a359a5ce18eb708f6}
+\hypertarget{struct__pd__instance_ad959040fa9c36726ad10ccc9e46876e9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Cable\-Identities@{psm\-Cable\-Identities}}
+\index{psm\-Cable\-Identities@{psm\-Cable\-Identities}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Cable\-Identities}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Cable\-Identities\mbox{[}7\mbox{]}}}\label{struct__pd__instance_ad959040fa9c36726ad10ccc9e46876e9}
+\hypertarget{struct__pd__instance_a7be408d709efe6ec210d68a3d4098cc9}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Cable\-Plug\-Reset\-Needed@{psm\-Cable\-Plug\-Reset\-Needed}}
+\index{psm\-Cable\-Plug\-Reset\-Needed@{psm\-Cable\-Plug\-Reset\-Needed}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Cable\-Plug\-Reset\-Needed}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Cable\-Plug\-Reset\-Needed}}\label{struct__pd__instance_a7be408d709efe6ec210d68a3d4098cc9}
+\hypertarget{struct__pd__instance_aec485d99451925aec7a6237f92791cd3}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Caps\-Counter@{psm\-Caps\-Counter}}
+\index{psm\-Caps\-Counter@{psm\-Caps\-Counter}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Caps\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Caps\-Counter}}\label{struct__pd__instance_aec485d99451925aec7a6237f92791cd3}
+\hypertarget{struct__pd__instance_a3bc0e6fd670db006ccb2ba39dadedcc5}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Cur\-State@{psm\-Cur\-State}}
+\index{psm\-Cur\-State@{psm\-Cur\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Cur\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-Cur\-State}}\label{struct__pd__instance_a3bc0e6fd670db006ccb2ba39dadedcc5}
+\hypertarget{struct__pd__instance_a708b6e13ca54fe83d4200c3fff80a820}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Dr\-Swap\-Prev\-State@{psm\-Dr\-Swap\-Prev\-State}}
+\index{psm\-Dr\-Swap\-Prev\-State@{psm\-Dr\-Swap\-Prev\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Dr\-Swap\-Prev\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-Dr\-Swap\-Prev\-State}}\label{struct__pd__instance_a708b6e13ca54fe83d4200c3fff80a820}
+\hypertarget{struct__pd__instance_a23dce9c00575a5fd5ed120e08e9c4412}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Explicit\-Contract\-Existed@{psm\-Explicit\-Contract\-Existed}}
+\index{psm\-Explicit\-Contract\-Existed@{psm\-Explicit\-Contract\-Existed}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Explicit\-Contract\-Existed}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Explicit\-Contract\-Existed}}\label{struct__pd__instance_a23dce9c00575a5fd5ed120e08e9c4412}
+\hypertarget{struct__pd__instance_af189a6cdfc3021280df10fe8a7a86a8f}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Goto\-Min\-Rx@{psm\-Goto\-Min\-Rx}}
+\index{psm\-Goto\-Min\-Rx@{psm\-Goto\-Min\-Rx}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Goto\-Min\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Goto\-Min\-Rx}}\label{struct__pd__instance_af189a6cdfc3021280df10fe8a7a86a8f}
+\hypertarget{struct__pd__instance_ac25d2d3e3181280ef797e42323c60053}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Goto\-Min\-Tx@{psm\-Goto\-Min\-Tx}}
+\index{psm\-Goto\-Min\-Tx@{psm\-Goto\-Min\-Tx}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Goto\-Min\-Tx}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Goto\-Min\-Tx}}\label{struct__pd__instance_ac25d2d3e3181280ef797e42323c60053}
+\hypertarget{struct__pd__instance_adb289c40585aa5170d8208d0202f55e5}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Hard\-Reset\-Count@{psm\-Hard\-Reset\-Count}}
+\index{psm\-Hard\-Reset\-Count@{psm\-Hard\-Reset\-Count}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Hard\-Reset\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Hard\-Reset\-Count}}\label{struct__pd__instance_adb289c40585aa5170d8208d0202f55e5}
+\hypertarget{struct__pd__instance_a817d87a8494e9f703f8854e7fdf32dfd}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Hard\-Reset\-Needs\-V\-Safe0\-V@{psm\-Hard\-Reset\-Needs\-V\-Safe0\-V}}
+\index{psm\-Hard\-Reset\-Needs\-V\-Safe0\-V@{psm\-Hard\-Reset\-Needs\-V\-Safe0\-V}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Hard\-Reset\-Needs\-V\-Safe0\-V}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Hard\-Reset\-Needs\-V\-Safe0\-V}}\label{struct__pd__instance_a817d87a8494e9f703f8854e7fdf32dfd}
+\hypertarget{struct__pd__instance_a4a53a203e61b44957d56747fb7c8a312}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Interrupted\-State@{psm\-Interrupted\-State}}
+\index{psm\-Interrupted\-State@{psm\-Interrupted\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Interrupted\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-Interrupted\-State}}\label{struct__pd__instance_a4a53a203e61b44957d56747fb7c8a312}
+\hypertarget{struct__pd__instance_a539e99b475d489e955238343ca800918}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-New\-Secondary\-State@{psm\-New\-Secondary\-State}}
+\index{psm\-New\-Secondary\-State@{psm\-New\-Secondary\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-New\-Secondary\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-New\-Secondary\-State\mbox{[}3\mbox{]}}}\label{struct__pd__instance_a539e99b475d489e955238343ca800918}
+\hypertarget{struct__pd__instance_ab770921a8b608fc49a0d564a22a1aad3}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-New\-State@{psm\-New\-State}}
+\index{psm\-New\-State@{psm\-New\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-New\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-New\-State}}\label{struct__pd__instance_ab770921a8b608fc49a0d564a22a1aad3}
+\hypertarget{struct__pd__instance_afc95df19affca8d292c845f328349f8f}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Presently\-Pd\-Connected@{psm\-Presently\-Pd\-Connected}}
+\index{psm\-Presently\-Pd\-Connected@{psm\-Presently\-Pd\-Connected}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Presently\-Pd\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Presently\-Pd\-Connected}}\label{struct__pd__instance_afc95df19affca8d292c845f328349f8f}
+\hypertarget{struct__pd__instance_a1b1254d08a7d1b7809c37ac0e1253ed5}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Presently\-Vconn\-Source@{psm\-Presently\-Vconn\-Source}}
+\index{psm\-Presently\-Vconn\-Source@{psm\-Presently\-Vconn\-Source}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Presently\-Vconn\-Source}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Presently\-Vconn\-Source}}\label{struct__pd__instance_a1b1254d08a7d1b7809c37ac0e1253ed5}
+\hypertarget{struct__pd__instance_ab15695a76307bdc413424030ad701a47}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Previously\-Pd\-Connected@{psm\-Previously\-Pd\-Connected}}
+\index{psm\-Previously\-Pd\-Connected@{psm\-Previously\-Pd\-Connected}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Previously\-Pd\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Previously\-Pd\-Connected}}\label{struct__pd__instance_ab15695a76307bdc413424030ad701a47}
+\hypertarget{struct__pd__instance_ad376945c62a0066016cf2652e62da35a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Secondary\-State@{psm\-Secondary\-State}}
+\index{psm\-Secondary\-State@{psm\-Secondary\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Secondary\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-Secondary\-State\mbox{[}3\mbox{]}}}\label{struct__pd__instance_ad376945c62a0066016cf2652e62da35a}
+\hypertarget{struct__pd__instance_a685445e828df5a05b1084fd0ea75c10a}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Snk\-Receive\-Rdo\-Wait\-Retry@{psm\-Snk\-Receive\-Rdo\-Wait\-Retry}}
+\index{psm\-Snk\-Receive\-Rdo\-Wait\-Retry@{psm\-Snk\-Receive\-Rdo\-Wait\-Retry}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Snk\-Receive\-Rdo\-Wait\-Retry}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Snk\-Receive\-Rdo\-Wait\-Retry}}\label{struct__pd__instance_a685445e828df5a05b1084fd0ea75c10a}
+\hypertarget{struct__pd__instance_a80a39754275c80b96db63d02b7e049ec}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Soft\-Reset\-Sop@{psm\-Soft\-Reset\-Sop}}
+\index{psm\-Soft\-Reset\-Sop@{psm\-Soft\-Reset\-Sop}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Soft\-Reset\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Soft\-Reset\-Sop}}\label{struct__pd__instance_a80a39754275c80b96db63d02b7e049ec}
+\hypertarget{struct__pd__instance_a9446b569ba4bb1c6df4367bad40bf987}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Vconn\-Swap\-Prev\-State@{psm\-Vconn\-Swap\-Prev\-State}}
+\index{psm\-Vconn\-Swap\-Prev\-State@{psm\-Vconn\-Swap\-Prev\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Vconn\-Swap\-Prev\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-psm\-\_\-state\-\_\-t} \-\_\-pd\-\_\-instance\-::psm\-Vconn\-Swap\-Prev\-State}}\label{struct__pd__instance_a9446b569ba4bb1c6df4367bad40bf987}
+\hypertarget{struct__pd__instance_aec0a54cf65dfa1880cb41eccb8caa043}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-Vdm\-Active\-Mode\-Valid\-Mask@{psm\-Vdm\-Active\-Mode\-Valid\-Mask}}
+\index{psm\-Vdm\-Active\-Mode\-Valid\-Mask@{psm\-Vdm\-Active\-Mode\-Valid\-Mask}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-Vdm\-Active\-Mode\-Valid\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-Vdm\-Active\-Mode\-Valid\-Mask}}\label{struct__pd__instance_aec0a54cf65dfa1880cb41eccb8caa043}
+\hypertarget{struct__pd__instance_aa73d40dd2f32910810c5b58fd7ada98f}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg@{psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg}}
+\index{psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg@{psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::psm\-V\-D\-M\-Busy\-Wait\-Dpm\-Msg}}\label{struct__pd__instance_aa73d40dd2f32910810c5b58fd7ada98f}
+\hypertarget{struct__pd__instance_a5905690cc5a12a0758be0574d4bc262e}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!ra\-Present@{ra\-Present}}
+\index{ra\-Present@{ra\-Present}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{ra\-Present}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::ra\-Present}}\label{struct__pd__instance_a5905690cc5a12a0758be0574d4bc262e}
+\hypertarget{struct__pd__instance_a199dd2b0ea66f8eb7e67714c4a4264a5}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!rdo\-Request@{rdo\-Request}}
+\index{rdo\-Request@{rdo\-Request}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{rdo\-Request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-rdo\-\_\-t} \-\_\-pd\-\_\-instance\-::rdo\-Request}}\label{struct__pd__instance_a199dd2b0ea66f8eb7e67714c4a4264a5}
+\hypertarget{struct__pd__instance_a3e7e606f531f84a6f70e3a49de313f41}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!rdo\-Success\-Request@{rdo\-Success\-Request}}
+\index{rdo\-Success\-Request@{rdo\-Success\-Request}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{rdo\-Success\-Request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-rdo\-\_\-t} \-\_\-pd\-\_\-instance\-::rdo\-Success\-Request}}\label{struct__pd__instance_a3e7e606f531f84a6f70e3a49de313f41}
+\hypertarget{struct__pd__instance_a46b9d34b21328c188c161825bf8e8217}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!rd\-Rp\-Error\-Count@{rd\-Rp\-Error\-Count}}
+\index{rd\-Rp\-Error\-Count@{rd\-Rp\-Error\-Count}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{rd\-Rp\-Error\-Count}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::rd\-Rp\-Error\-Count}}\label{struct__pd__instance_a46b9d34b21328c188c161825bf8e8217}
+\hypertarget{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!received\-Data@{received\-Data}}
+\index{received\-Data@{received\-Data}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{received\-Data}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-instance\-::received\-Data}}\label{struct__pd__instance_accf867a3b224d5e7708c3167b49eb259}
+\hypertarget{struct__pd__instance_a0d570b6b188a0e6756df839f35f346b5}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!received\-Length@{received\-Length}}
+\index{received\-Length@{received\-Length}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{received\-Length}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\-\_\-t \-\_\-pd\-\_\-instance\-::received\-Length}}\label{struct__pd__instance_a0d570b6b188a0e6756df839f35f346b5}
+\hypertarget{struct__pd__instance_a21c5a4229c4d099a6840ac2d13a5a32e}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!received\-Sop@{received\-Sop}}
+\index{received\-Sop@{received\-Sop}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{received\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::received\-Sop}}\label{struct__pd__instance_a21c5a4229c4d099a6840ac2d13a5a32e}
+\hypertarget{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!receive\-Result@{receive\-Result}}
+\index{receive\-Result@{receive\-Result}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{receive\-Result}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf pd\-\_\-status\-\_\-t} \-\_\-pd\-\_\-instance\-::receive\-Result}}\label{struct__pd__instance_a64014dae5dccd1adb710c12fcc8b23cf}
+\hypertarget{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!receive\-State@{receive\-State}}
+\index{receive\-State@{receive\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{receive\-State}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::receive\-State}}\label{struct__pd__instance_ac2c84f6b1ff2b7c8a1b1ac9ee358ef0e}
+\hypertarget{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!receiving\-Data@{receiving\-Data}}
+\index{receiving\-Data@{receiving\-Data}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{receiving\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-::receiving\-Data\mbox{[}8\mbox{]}}}\label{struct__pd__instance_a1112b16cc2add6100cbf81134f74caf1}
+\hypertarget{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!receiving\-Data\-Buffer@{receiving\-Data\-Buffer}}
+\index{receiving\-Data\-Buffer@{receiving\-Data\-Buffer}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{receiving\-Data\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-pd\-\_\-instance\-::receiving\-Data\-Buffer}}\label{struct__pd__instance_aa2afb566f855b4b00bcdf335d8d997a3}
+\hypertarget{struct__pd__instance_af7c28b72771ce442ee733892186c4e6c}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!revision@{revision}}
+\index{revision@{revision}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{revision}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::revision}}\label{struct__pd__instance_af7c28b72771ce442ee733892186c4e6c}
+\hypertarget{struct__pd__instance_ad5c623ba7be298aa8ecdad50a298d609}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!self\-Or\-Partner\-First\-Source\-P\-D\-O@{self\-Or\-Partner\-First\-Source\-P\-D\-O}}
+\index{self\-Or\-Partner\-First\-Source\-P\-D\-O@{self\-Or\-Partner\-First\-Source\-P\-D\-O}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{self\-Or\-Partner\-First\-Source\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-source\-\_\-pdo\-\_\-t} \-\_\-pd\-\_\-instance\-::self\-Or\-Partner\-First\-Source\-P\-D\-O}}\label{struct__pd__instance_ad5c623ba7be298aa8ecdad50a298d609}
+\hypertarget{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!sending\-Data@{sending\-Data}}
+\index{sending\-Data@{sending\-Data}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{sending\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-instance\-::sending\-Data\mbox{[}8\mbox{]}}}\label{struct__pd__instance_a6c867a07c66667ea3eab5ec882090e09}
+\hypertarget{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!sending\-Msg\-Header@{sending\-Msg\-Header}}
+\index{sending\-Msg\-Header@{sending\-Msg\-Header}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{sending\-Msg\-Header}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf pd\-\_\-msg\-\_\-header\-\_\-t} \-\_\-pd\-\_\-instance\-::sending\-Msg\-Header}}\label{struct__pd__instance_a6031ed1c3ec10c04ea5daf9a76485f68}
+\hypertarget{struct__pd__instance_ac02af68a4c0e36f39a1b3203c5638c2b}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!sending\-Result@{sending\-Result}}
+\index{sending\-Result@{sending\-Result}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{sending\-Result}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf pd\-\_\-status\-\_\-t} \-\_\-pd\-\_\-instance\-::sending\-Result}}\label{struct__pd__instance_ac02af68a4c0e36f39a1b3203c5638c2b}
+\hypertarget{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!sending\-State@{sending\-State}}
+\index{sending\-State@{sending\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{sending\-State}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t \-\_\-pd\-\_\-instance\-::sending\-State}}\label{struct__pd__instance_ad19f652f47e237558f18b224b5d57e23}
+\hypertarget{struct__pd__instance_a37746abee0ebb0169f8a1e7227d8645b}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!structured\-Vdm\-Command\-Parameter@{structured\-Vdm\-Command\-Parameter}}
+\index{structured\-Vdm\-Command\-Parameter@{structured\-Vdm\-Command\-Parameter}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{structured\-Vdm\-Command\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-svdm\-\_\-command\-\_\-param\-\_\-t} \-\_\-pd\-\_\-instance\-::structured\-Vdm\-Command\-Parameter}}\label{struct__pd__instance_a37746abee0ebb0169f8a1e7227d8645b}
+\hypertarget{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!task\-Event\-Handle@{task\-Event\-Handle}}
+\index{task\-Event\-Handle@{task\-Event\-Handle}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{task\-Event\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf usb\-\_\-osa\-\_\-event\-\_\-handle} \-\_\-pd\-\_\-instance\-::task\-Event\-Handle}}\label{struct__pd__instance_ab04e9fcc994b2547509169e07ab21465}
+\hypertarget{struct__pd__instance_a00d9a2aa7fd533c3ac15236b61e894f0}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!timrs\-Running\-State@{timrs\-Running\-State}}
+\index{timrs\-Running\-State@{timrs\-Running\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{timrs\-Running\-State}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\-\_\-t \-\_\-pd\-\_\-instance\-::timrs\-Running\-State\mbox{[}32/32\mbox{]}}}\label{struct__pd__instance_a00d9a2aa7fd533c3ac15236b61e894f0}
+\hypertarget{struct__pd__instance_a4e19ba81575c13f30d4482d5ac141573}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!timrs\-Time\-Out\-State@{timrs\-Time\-Out\-State}}
+\index{timrs\-Time\-Out\-State@{timrs\-Time\-Out\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{timrs\-Time\-Out\-State}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\-\_\-t \-\_\-pd\-\_\-instance\-::timrs\-Time\-Out\-State\mbox{[}32/32\mbox{]}}}\label{struct__pd__instance_a4e19ba81575c13f30d4482d5ac141573}
+\hypertarget{struct__pd__instance_a10267d00b21df313fb3064255d161d6b}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!timrs\-Time\-Value@{timrs\-Time\-Value}}
+\index{timrs\-Time\-Value@{timrs\-Time\-Value}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{timrs\-Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\-\_\-t \-\_\-pd\-\_\-instance\-::timrs\-Time\-Value\mbox{[}32\mbox{]}}}\label{struct__pd__instance_a10267d00b21df313fb3064255d161d6b}
+\hypertarget{struct__pd__instance_a88df7992251beb09fa2888f4ddf9766f}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!try\-S\-N\-K\-State@{try\-S\-N\-K\-State}}
+\index{try\-S\-N\-K\-State@{try\-S\-N\-K\-State}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{try\-S\-N\-K\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::try\-S\-N\-K\-State}}\label{struct__pd__instance_a88df7992251beb09fa2888f4ddf9766f}
+\hypertarget{struct__pd__instance_af61039550d3e5b4f070ac74ed3e711a3}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!unchunked\-Feature@{unchunked\-Feature}}
+\index{unchunked\-Feature@{unchunked\-Feature}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{unchunked\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::unchunked\-Feature}}\label{struct__pd__instance_af61039550d3e5b4f070ac74ed3e711a3}
+\hypertarget{struct__pd__instance_a38406a43dd1715456b1111ad897d8120}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!unstructured\-Vdm\-Command\-Parameter@{unstructured\-Vdm\-Command\-Parameter}}
+\index{unstructured\-Vdm\-Command\-Parameter@{unstructured\-Vdm\-Command\-Parameter}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{unstructured\-Vdm\-Command\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-unstructured\-\_\-vdm\-\_\-command\-\_\-param\-\_\-t} \-\_\-pd\-\_\-instance\-::unstructured\-Vdm\-Command\-Parameter}}\label{struct__pd__instance_a38406a43dd1715456b1111ad897d8120}
+\hypertarget{struct__pd__instance_a4905e96236b6de63bba2c1d34c5a0a8b}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!vbus\-Discharge\-In\-Progress@{vbus\-Discharge\-In\-Progress}}
+\index{vbus\-Discharge\-In\-Progress@{vbus\-Discharge\-In\-Progress}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{vbus\-Discharge\-In\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::vbus\-Discharge\-In\-Progress}}\label{struct__pd__instance_a4905e96236b6de63bba2c1d34c5a0a8b}
+\hypertarget{struct__pd__instance_afcd5caf46554e0640a45ac547d7bacf0}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!vdm\-Exit\-Received@{vdm\-Exit\-Received}}
+\index{vdm\-Exit\-Received@{vdm\-Exit\-Received}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{vdm\-Exit\-Received}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-instance\-::vdm\-Exit\-Received\mbox{[}3\mbox{]}}}\label{struct__pd__instance_afcd5caf46554e0640a45ac547d7bacf0}
+\hypertarget{struct__pd__instance_a2505651a0001ea647306dbd800927778}{\index{\-\_\-pd\-\_\-instance@{\-\_\-pd\-\_\-instance}!wait\-Time@{wait\-Time}}
+\index{wait\-Time@{wait\-Time}!_pd_instance@{\-\_\-pd\-\_\-instance}}
+\subsubsection[{wait\-Time}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\-\_\-t \-\_\-pd\-\_\-instance\-::wait\-Time}}\label{struct__pd__instance_a2505651a0001ea647306dbd800927778}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd__interface_8h}{usb\-\_\-pd\-\_\-interface.\-h}\end{DoxyCompactItemize}

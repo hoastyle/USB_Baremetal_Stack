@@ -1,0 +1,104 @@
+\subsection*{function in main.\-c}
+
+
+\begin{DoxyItemize}
+\item Board Initialization
+\item \hyperlink{main_8c_ae90a39427d391ee932de4fd9adbcde6a}{P\-D\-\_\-\-App\-Init()}
+\item task pd\-\_\-port\-\_\-task
+\item P\-D\-\_\-\-Demo\-Init(\& pd\-\_\-app\-\_\-t g\-\_\-\-P\-D\-App\-Instance)
+\item P\-D\-\_\-\-Demo\-Task\-Fun(\& pd\-\_\-app\-\_\-t g\-P\-D\-App\-Instance)
+\end{DoxyItemize}
+
+\subsection*{Board Initialization}
+
+
+\begin{DoxyItemize}
+\item Init pins
+\item Init clock
+\item Init I2\-C, init I2\-C interrupt for arm core
+\item Init console for debug
+\item Init 1ms timer
+\end{DoxyItemize}
+
+\subsection*{P\-D\-\_\-\-App\-Init}
+
+
+\begin{DoxyItemize}
+\item T\-C\-P\-C board gpio interupt initialization
+\item \hyperlink{group__usb__pd__stack_ga3ab001290dc934fd6a45ad93916f5140}{P\-D\-\_\-\-Instance\-Init()}
+\item \hyperlink{pd__app_8c_a0fcfdce4020a6f6d89a1dca22db9736d}{P\-D\-\_\-\-Power\-Board\-Reset()}
+\item g\-\_\-\-P\-D\-App\-Instance Initialization, including P\-D\-O and some other info
+\end{DoxyItemize}
+
+\section*{Framework}
+
+\subsection*{Basic Data Structure}
+
+
+\begin{DoxyItemize}
+\item Basic Data Structure
+\item Data Structure Relationship
+\end{DoxyItemize}
+
+pd\-\_\-app\-\_\-t\-: for application or demo pd\-\_\-instance\-\_\-t\-: for pd
+
+
+\begin{DoxyItemize}
+\item 每个instance对应什么？
+\end{DoxyItemize}
+
+pd\-\_\-ptn5110\-\_\-ctrl\-\_\-pin\-\_\-t pd\-\_\-instance\-\_\-config\-\_\-t, 包含power config, interface config, phy type config, irq config, product type config, 该config在\-P\-D\-\_\-\-Instance\-Init()中被使用。 pd\-\_\-power\-\_\-port\-\_\-config\-\_\-t, 表示power的配置，使用宏控制选择不同的power config, 如\-D\-R\-P...
+
+\subsection*{Layer}
+
+\section*{P\-H\-Y Driver}
+
+两个部分
+
+
+\begin{DoxyItemize}
+\item 公共
+\item 特定type phy
+\begin{DoxyItemize}
+\item hal
+\item connect
+\item msg
+\item interface
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+公共部分在pd/usb\-\_\-pd\-\_\-phy.h中定义，包括相关的结构体，枚举体等等。 特定部分在pd/specific\-\_\-phy\-\_\-driver中定义，并定义相应接口文件，如specific\-\_\-phy\-\_\-driver\-\_\-interface.c
+
+\subsection*{Interface}
+
+\hyperlink{usb__pd__ptn5110__interface_8c}{usb\-\_\-pd\-\_\-ptn5110\-\_\-interface.\-c}\-: 接口文件，其中定义的function作为整个\-P\-H\-Y Driver的接口\-A\-P\-I。 P\-H\-Y Driver的接口\-A\-P\-I，在pd/usb\-\_\-pd\-\_\-interface.c中复制给pd\-\_\-phy\-\_\-api\-\_\-interface\-\_\-t结构体，该结构体则是\-P\-H\-Y Driver对于上层软件的entry.
+
+``` struct pd\-\_\-phy\-\_\-api\-\_\-interface\-\_\-t \{ pd\-Phy\-Init; pd\-Phy\-Deinit; pd\-Phy\-Send; pd\-Phy\-Receive; pd\-Phy\-Control; \} ```
+
+\subsection*{Question}
+
+
+\begin{DoxyItemize}
+\item What's the role of hal?
+\item Why use register cache?
+\end{DoxyItemize}
+
+\section*{State Machine}
+
+\subsection*{Stack State Machine}
+
+\subsection*{Connect State Machine}
+
+核心变量：
+\begin{DoxyItemize}
+\item Type\-C\-State\-\_\-t pd\-Instance-\/$>$cur\-Connect\-State
+\item connected\-: pd\-\_\-connect\-\_\-state\-\_\-t not stable, connected, disconnected
+\item connect\-Status\-:
+\item pd\-Instance-\/$>$connect\-Result\-:
+\end{DoxyItemize}
+
+P\-D\-\_\-\-Connect\-State\-Machine P\-D\-\_\-\-Connect\-Setup\-New\-State
+
+\subsection*{Policy Engine State Machine}
+
+Shield's alert pin will connect to P\-O\-R\-T\-E-\/31 (J2-\/2) of F\-L27 board, J2-\/2 of F\-L27 board is connect with P\-O\-R\-T\-E-\/31 of F\-L27 M\-C\-U, this pin was 使用\-P\-O\-R\-T E 31(对应\-N\-V\-I\-C 31中断)作为shield board的中断。 

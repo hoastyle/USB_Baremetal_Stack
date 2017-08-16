@@ -1,0 +1,51 @@
+\hypertarget{usb__device__khci_8h}{\section{device/usb\-\_\-device\-\_\-khci.h File Reference}
+\label{usb__device__khci_8h}\index{device/usb\-\_\-device\-\_\-khci.\-h@{device/usb\-\_\-device\-\_\-khci.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__usb__device__khci__endpoint__state__struct}{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em Endpoint state structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__usb__device__khci__state__struct}{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct}
+\begin{DoxyCompactList}\small\item\em K\-H\-C\-I state structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_ga9f6b9327136f7d46cd44196625ffbe57}{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-X\-\_\-\-F\-S\-\_\-\-I\-S\-O\-\_\-\-M\-A\-X\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~(1023\-U)
+\begin{DoxyCompactList}\small\item\em The maximum value of I\-S\-O maximum packet size for F\-S in U\-S\-B specification 2.\-0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_gad2104656ccd927add52df23fc6618043}{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-X\-\_\-\-F\-S\-\_\-\-N\-O\-N\-E\-\_\-\-I\-S\-O\-\_\-\-M\-A\-X\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~(64\-U)
+\begin{DoxyCompactList}\small\item\em The maximum value of non-\/\-I\-S\-O maximum packet size for F\-S in U\-S\-B specification 2.\-0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_ga1ba0ab661daf2302b64972f524948489}{U\-S\-B\-\_\-\-K\-H\-C\-I\-\_\-\-B\-D\-T\-\_\-\-S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}(bdt\-\_\-base, ep, direction, odd, address)
+\begin{DoxyCompactList}\small\item\em Set B\-D\-T buffer address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_gad93495da57693ca917381eaa4bf0e1d5}{U\-S\-B\-\_\-\-K\-H\-C\-I\-\_\-\-B\-D\-T\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}(bdt\-\_\-base, ep, direction, odd, control)
+\begin{DoxyCompactList}\small\item\em Set B\-D\-T control fields. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_ga8f053b5c8affe26aa04d161449230985}{U\-S\-B\-\_\-\-K\-H\-C\-I\-\_\-\-B\-D\-T\-\_\-\-G\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}(bdt\-\_\-base, ep, direction, odd)
+\begin{DoxyCompactList}\small\item\em Get B\-D\-T buffer address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__device__controller__khci__driver_ga76ad3cb952ddc0c7fc7e3c5012a62f89}{U\-S\-B\-\_\-\-K\-H\-C\-I\-\_\-\-B\-D\-T\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}(bdt\-\_\-base, ep, direction, odd)
+\begin{DoxyCompactList}\small\item\em Get B\-D\-T control fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__khci__endpoint__state__struct}{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct} \hyperlink{group__usb__device__controller__khci__driver_ga78d53188f22fcd0f4058fafea867d1df}{usb\-\_\-device\-\_\-khci\-\_\-endpoint\-\_\-state\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Endpoint state structure. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{struct__usb__device__khci__state__struct}{\-\_\-usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct} \hyperlink{group__usb__device__controller__khci__driver_ga0132f753d6b7c62680d20f8a1926d825}{usb\-\_\-device\-\_\-khci\-\_\-state\-\_\-struct\-\_\-t}
+\begin{DoxyCompactList}\small\item\em K\-H\-C\-I state structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf U\-S\-B device K\-H\-C\-I functions}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_gad9e6ecba752b0253547e3d57b7b8ea15}{U\-S\-B\-\_\-\-Device\-Khci\-Init} (uint8\-\_\-t controller\-Id, \hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle} handle, \hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} $\ast$khci\-Handle)
+\begin{DoxyCompactList}\small\item\em Initializes the U\-S\-B device K\-H\-C\-I instance. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_gaeca0b3ce2863e004da6f749ebaeed21d}{U\-S\-B\-\_\-\-Device\-Khci\-Deinit} (\hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} khci\-Handle)
+\begin{DoxyCompactList}\small\item\em Deinitializes the U\-S\-B device K\-H\-C\-I instance. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_gae85f89ac73253f83952f2a2b04211932}{U\-S\-B\-\_\-\-Device\-Khci\-Send} (\hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} khci\-Handle, uint8\-\_\-t endpoint\-Address, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Sends data through a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_ga5ab67ead189ef8a325de9db7d4025a32}{U\-S\-B\-\_\-\-Device\-Khci\-Recv} (\hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} khci\-Handle, uint8\-\_\-t endpoint\-Address, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Receives data through a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_ga9cd047248d7e6e682112e8ab79ddf027}{U\-S\-B\-\_\-\-Device\-Khci\-Cancel} (\hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} khci\-Handle, uint8\-\_\-t ep)
+\begin{DoxyCompactList}\small\item\em Cancels the pending transfer in a specified endpoint. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t} \hyperlink{group__usb__device__controller__khci__driver_gab532e6ca027a37aa09d8ba7a9f5e8983}{U\-S\-B\-\_\-\-Device\-Khci\-Control} (\hyperlink{group__usb__device__controller__driver_gaec03ce2e4732aa876cd2a91cf8e93b5b}{usb\-\_\-device\-\_\-controller\-\_\-handle} khci\-Handle, \hyperlink{group__usb__device__controller__driver_gae16dc18943ae9da34a2b122859568b5e}{usb\-\_\-device\-\_\-control\-\_\-type\-\_\-t} type, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Controls the status of the selected item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}

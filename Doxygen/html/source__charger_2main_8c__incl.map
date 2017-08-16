@@ -1,0 +1,11 @@
+<map id="demo/pd_source_charger/main.c" name="demo/pd_source_charger/main.c">
+<area shape="rect" id="node2" href="$source__charger_2usb__pd__config_8h.html" title="usb_pd_config.h" alt="" coords="51,96,167,123"/>
+<area shape="rect" id="node3" href="$usb__pd_8h.html" title="usb_pd.h" alt="" coords="120,171,193,197"/>
+<area shape="rect" id="node12" href="$source__charger_2pd__app_8h.html" title="pd_app.h" alt="" coords="723,96,796,123"/>
+<area shape="rect" id="node16" href="$source__charger_2pin__mux_8h.html" title="pin_mux.h" alt="" coords="1267,96,1348,123"/>
+<area shape="rect" id="node17" href="$source__charger_2board_8h.html" title="board.h" alt="" coords="1425,96,1489,123"/>
+<area shape="rect" id="node18" href="$source__charger_2clock__config_8h.html" title="clock_config.h" alt="" coords="1339,171,1445,197"/>
+<area shape="rect" id="node4" href="$usb__osa_8h.html" title="usb_osa.h" alt="" coords="5,245,87,272"/>
+<area shape="rect" id="node5" href="$usb__misc_8h.html" title="usb_misc.h" alt="" coords="113,245,201,272"/>
+<area shape="rect" id="node6" href="$usb__cmsis__wrapper_8h.html" title="usb_cmsis_wrapper.h" alt="" coords="227,245,375,272"/>
+</map>

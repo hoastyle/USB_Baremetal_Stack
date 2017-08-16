@@ -1,0 +1,101 @@
+\hypertarget{usb_8h}{\section{include/usb.h File Reference}
+\label{usb_8h}\index{include/usb.\-h@{include/usb.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-osa.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-misc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-spec.\-h\char`\"{}}\\*
+Include dependency graph for usb.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__usb__version}{\-\_\-usb\-\_\-version}
+\begin{DoxyCompactList}\small\item\em U\-S\-B stack version fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__drv_ga748c984a1c47a981517bcd69bbde81d0}{U\-S\-B\-\_\-\-S\-T\-A\-C\-K\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}~(1\-U)
+\begin{DoxyCompactList}\small\item\em Defines U\-S\-B stack major version. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__drv_gaa7232ea54594fbf6cedfd486a723985a}{U\-S\-B\-\_\-\-S\-T\-A\-C\-K\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}~(6\-U)
+\begin{DoxyCompactList}\small\item\em Defines U\-S\-B stack minor version. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__drv_ga32b306d2cf41bca7370f9ea66dda6872}{U\-S\-B\-\_\-\-S\-T\-A\-C\-K\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-B\-U\-G\-F\-I\-X}~(3\-U)
+\begin{DoxyCompactList}\small\item\em Defines U\-S\-B stack bugfix version. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__drv_gaf9019052932ee7a0d4f5c28c4eefffd9}{U\-S\-B\-\_\-\-M\-A\-K\-E\-\_\-\-V\-E\-R\-S\-I\-O\-N}(major, minor, bugfix)~(((major) $<$$<$ 16) $\vert$ ((minor) $<$$<$ 8) $\vert$ (bugfix))
+\begin{DoxyCompactList}\small\item\em U\-S\-B stack version definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__usb__drv_ga31d8e2352453c297062fe03df5193b22}{\-\_\-usb\-\_\-status} \hyperlink{group__usb__drv_ga3172b9f50553fb6d8aa2823d10a39c58}{usb\-\_\-status\-\_\-t}
+\begin{DoxyCompactList}\small\item\em U\-S\-B error code. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__drv_ga54bc454c4d89ebc62bcdf09f5bdf688e}{usb\-\_\-host\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em U\-S\-B host handle type define. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__drv_gae62132dc6e5eba994f8aa56cb7399abc}{usb\-\_\-device\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em U\-S\-B device handle type define. For device stack it is the whole device handle; for host stack it is the attached device instance handle. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__drv_ga7d25adf2128a3eba7b847eea081de6fe}{usb\-\_\-otg\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em U\-S\-B O\-T\-G handle type define. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__drv_gabbaaa0009bbf8797e30a739960f3fd58}{\-\_\-usb\-\_\-controller\-\_\-index} \hyperlink{group__usb__drv_ga7050376bd615bfc9027ac2ab0fd853f3}{usb\-\_\-controller\-\_\-index\-\_\-t}
+\begin{DoxyCompactList}\small\item\em U\-S\-B controller I\-D. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__usb__version}{\-\_\-usb\-\_\-version} \hyperlink{group__usb__drv_ga05687927bd26979d4ccb85a4aa049d5a}{usb\-\_\-version\-\_\-t}
+\begin{DoxyCompactList}\small\item\em U\-S\-B stack version fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__usb__drv_ga31d8e2352453c297062fe03df5193b22}{\-\_\-usb\-\_\-status} \{ \\*
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a0c8b01c22129d30aff699526a8ea0581}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Success} = 0x00\-U, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22afd90e0bd7a365b6c20e33bd6360268bc}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Error}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22ac6f4d3b575486b3eae381810ffe4926f}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Busy}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a48887f91c9cfd6f527006a94a7eddd34}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Invalid\-Handle}, 
+\\*
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22af48bf54eb07843ae7eaa2f429c1ce385}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Invalid\-Parameter}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a9dc2f51741b3b0f3971a7eefdae0a41b}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Invalid\-Request}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22ae690567769ea8fad45505d70db9a51a5}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Controller\-Not\-Found}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22aa5943ffb08c7ac40e5eac4a0be5368c8}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Invalid\-Controller\-Interface}, 
+\\*
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22ae3b3a10c236de27f22f32a5e8656adba}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Not\-Supported}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a6a3a4a11fc1645d95dc577185d6eb5d3}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Retry}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a0f334b827770c04348d58d85fe8d3bf9}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Transfer\-Stall}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22af43c149cf8db934abfb8d02d0a38e1e3}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Transfer\-Failed}, 
+\\*
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a1d77b207429895136555526c8bf74549}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Alloc\-Fail}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a80be9c48ae4e4b7e3237a42a5a3b6fc9}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Lack\-Swap\-Buffer}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a09c0e2a34c3d0909b311076bc86439af}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Transfer\-Cancel}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a261a3b09ea3550a7e523ebdfbbce8ec2}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-Bandwidth\-Fail}, 
+\\*
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a8ad91fced2776e5edfe13cefb611f710}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-M\-S\-D\-Status\-Fail}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22ab192debae3af98bdd70019a246c3e842}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-E\-H\-C\-I\-Attached}, 
+\hyperlink{group__usb__drv_gga31d8e2352453c297062fe03df5193b22a498dab7e38305648ff47a8f6c4712590}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-E\-H\-C\-I\-Detached}
+ \}
+\begin{DoxyCompactList}\small\item\em U\-S\-B error code. \end{DoxyCompactList}\item 
+enum \hyperlink{group__usb__drv_gabbaaa0009bbf8797e30a739960f3fd58}{\-\_\-usb\-\_\-controller\-\_\-index} \{ \\*
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a7ad5b317df9a862c39d8b1e7c91014f9}{k\-U\-S\-B\-\_\-\-Controller\-Khci0} = 0\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a6351ab500411d87ae2d1a75d2dfbec18}{k\-U\-S\-B\-\_\-\-Controller\-Khci1} = 1\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a7328be3149b15a646c781f1d0539ec78}{k\-U\-S\-B\-\_\-\-Controller\-Ehci0} = 2\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a52f6d241c7c0a44f8e81c4f764b2b40d}{k\-U\-S\-B\-\_\-\-Controller\-Ehci1} = 3\-U, 
+\\*
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a7c0bf790cf25570c130884e8b21b991b}{k\-U\-S\-B\-\_\-\-Controller\-Lpc\-Ip3511\-Fs0} = 4\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a426c3914e817140f2f926d1f163a3655}{k\-U\-S\-B\-\_\-\-Controller\-Lpc\-Ip3511\-Fs1}, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58ace87531e21705753ea4f1503d2da8882}{k\-U\-S\-B\-\_\-\-Controller\-Lpc\-Ip3511\-Hs0} = 6\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a3c37e570324545fcdb5992e10769b3a3}{k\-U\-S\-B\-\_\-\-Controller\-Lpc\-Ip3511\-Hs1}, 
+\\*
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a711b1e29fb2c0dd68d20d59f31335972}{k\-U\-S\-B\-\_\-\-Controller\-Ohci0} = 8\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58a6416be8beb90241154641bb9a70855bb}{k\-U\-S\-B\-\_\-\-Controller\-Ohci1} = 9\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58aff91853c79053e29ed39983b1ecbaab7}{k\-U\-S\-B\-\_\-\-Controller\-Ip3516\-Hs0} = 10\-U, 
+\hyperlink{group__usb__drv_ggabbaaa0009bbf8797e30a739960f3fd58ae38749d26885d781cc8802c47e2ee37d}{k\-U\-S\-B\-\_\-\-Controller\-Ip3516\-Hs1}
+ \}
+\begin{DoxyCompactList}\small\item\em U\-S\-B controller I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}

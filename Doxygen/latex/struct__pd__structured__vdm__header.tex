@@ -1,0 +1,74 @@
+\hypertarget{struct__pd__structured__vdm__header}{\section{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header Struct Reference}
+\label{struct__pd__structured__vdm__header}\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+}
+
+
+P\-D structured V\-D\-M header.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_aada24db165d116acd79aa1a44a30d2e1}{command}: 5\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_ae96832372241f43fdbb0a364539d424f}{reserved1}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_a8146babffdd0022316369e0631995bf1}{commandType}: 2\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_a70c79769097f532657064784a5803022}{objPos}: 3\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_aced9840a12b97bb0e0acc6e4d72a3566}{reserved2}: 2\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_af95df1485673cf3bd9b62d4de0185a07}{vdmVersion}: 2\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_a096921553a1351b55e5419e8f5eac69a}{vdmType}: 1\\
+\>\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_a9b7bde8903697b83450597f27aceb370}{SVID}: 16\\
+\>\} \hyperlink{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{bitFields}\\
+\>uint32\_t \hyperlink{struct__pd__structured__vdm__header_a0544fc4b30468ec5d5b435a05b30ced1}{structuredVdmHeaderVal}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D structured V\-D\-M header. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__structured__vdm__header_ad81a4fe2b7dc1e0ec659f27d52344596}{\subsubsection[{"@41}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__structured__vdm__header_ad81a4fe2b7dc1e0ec659f27d52344596}
+\hypertarget{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!bit\-Fields@{bit\-Fields}}
+\index{bit\-Fields@{bit\-Fields}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{bit\-Fields}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::bit\-Fields}}\label{struct__pd__structured__vdm__header_afc8471a70fa430820836286de3cf2281}
+union structured V\-D\-M header structure \hypertarget{struct__pd__structured__vdm__header_aada24db165d116acd79aa1a44a30d2e1}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!command@{command}}
+\index{command@{command}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::command}}\label{struct__pd__structured__vdm__header_aada24db165d116acd79aa1a44a30d2e1}
+command \hypertarget{struct__pd__structured__vdm__header_a8146babffdd0022316369e0631995bf1}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!command\-Type@{command\-Type}}
+\index{command\-Type@{command\-Type}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{command\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::command\-Type}}\label{struct__pd__structured__vdm__header_a8146babffdd0022316369e0631995bf1}
+command type \hypertarget{struct__pd__structured__vdm__header_a70c79769097f532657064784a5803022}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!obj\-Pos@{obj\-Pos}}
+\index{obj\-Pos@{obj\-Pos}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{obj\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::obj\-Pos}}\label{struct__pd__structured__vdm__header_a70c79769097f532657064784a5803022}
+object position \hypertarget{struct__pd__structured__vdm__header_ae96832372241f43fdbb0a364539d424f}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{reserved1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::reserved1}}\label{struct__pd__structured__vdm__header_ae96832372241f43fdbb0a364539d424f}
+reserved \hypertarget{struct__pd__structured__vdm__header_aced9840a12b97bb0e0acc6e4d72a3566}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{reserved2}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::reserved2}}\label{struct__pd__structured__vdm__header_aced9840a12b97bb0e0acc6e4d72a3566}
+reserved \hypertarget{struct__pd__structured__vdm__header_a0544fc4b30468ec5d5b435a05b30ced1}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!structured\-Vdm\-Header\-Val@{structured\-Vdm\-Header\-Val}}
+\index{structured\-Vdm\-Header\-Val@{structured\-Vdm\-Header\-Val}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{structured\-Vdm\-Header\-Val}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::structured\-Vdm\-Header\-Val}}\label{struct__pd__structured__vdm__header_a0544fc4b30468ec5d5b435a05b30ced1}
+union 32bits value \hypertarget{struct__pd__structured__vdm__header_a9b7bde8903697b83450597f27aceb370}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!S\-V\-I\-D@{S\-V\-I\-D}}
+\index{S\-V\-I\-D@{S\-V\-I\-D}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{S\-V\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::\-S\-V\-I\-D}}\label{struct__pd__structured__vdm__header_a9b7bde8903697b83450597f27aceb370}
+S\-V\-I\-D value \hypertarget{struct__pd__structured__vdm__header_a096921553a1351b55e5419e8f5eac69a}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!vdm\-Type@{vdm\-Type}}
+\index{vdm\-Type@{vdm\-Type}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{vdm\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::vdm\-Type}}\label{struct__pd__structured__vdm__header_a096921553a1351b55e5419e8f5eac69a}
+vdm type, structured vdm \hypertarget{struct__pd__structured__vdm__header_af95df1485673cf3bd9b62d4de0185a07}{\index{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}!vdm\-Version@{vdm\-Version}}
+\index{vdm\-Version@{vdm\-Version}!_pd_structured_vdm_header@{\-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header}}
+\subsubsection[{vdm\-Version}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-structured\-\_\-vdm\-\_\-header\-::vdm\-Version}}\label{struct__pd__structured__vdm__header_af95df1485673cf3bd9b62d4de0185a07}
+vdm version 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

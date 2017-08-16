@@ -1,0 +1,9 @@
+<map id="PD_MsgWaitSendResult" name="PD_MsgWaitSendResult">
+<area shape="rect" id="node2" href="$group__usb__os__abstraction.html#ga5ce587209d676871f3ec62900054febd" title="Waits for an event flag. " alt="" coords="242,5,385,32"/>
+<area shape="rect" id="node3" href="$usb__pd__msg_8c.html#a39aa541f6a8e3843b3ab18fdcf533768" title="PD_PortTaskEventProcess" alt="" coords="222,56,405,83"/>
+<area shape="rect" id="node6" href="$group__usb__os__abstraction.html#ga90357f04d40469dc07104033b3c8581c" title="Clears an event flag. " alt="" coords="620,56,767,83"/>
+<area shape="rect" id="node7" href="$usb__pd__msg_8c.html#a25116c60801fe4f4def90e3e42614b54" title="PD_ConnectCheck" alt="" coords="246,157,381,184"/>
+<area shape="rect" id="node8" href="$usb__pd__msg_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="257,208,370,235"/>
+<area shape="rect" id="node4" href="$usb__pd__policy_8c.html#a555b1880b5b259c3fdcd3da821e06cf2" title="PD_PhyControl" alt="" coords="454,5,567,32"/>
+<area shape="rect" id="node5" href="$group__usb__os__abstraction.html#gab25fb5d93d3b665ca8eadf2a670d3361" title="Checks an event flag. " alt="" coords="617,5,770,32"/>
+</map>

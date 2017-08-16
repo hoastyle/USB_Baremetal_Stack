@@ -1,0 +1,51 @@
+<map id="PD_PhyControl" name="PD_PhyControl">
+<area shape="rect" id="node2" href="$group__usb__pd__stack.html#ga3ab001290dc934fd6a45ad93916f5140" title="Initialize PD stack instance. " alt="" coords="202,5,318,32"/>
+<area shape="rect" id="node4" href="$usb__pd__policy_8c.html#a275c11fb3caf0d669e274a15f4c39f61" title="PD_PsmReset" alt="" coords="462,832,573,859"/>
+<area shape="rect" id="node5" href="$usb__pd__policy_8c.html#a094d9150746a4bc943e34a883ed51c38" title="PD_PsmPrimaryStateProcess\lPdMsg" alt="" coords="702,411,901,453"/>
+<area shape="rect" id="node6" href="$usb__pd__policy_8c.html#ac46d497d9fc03b0096c2977f6a203e02" title="PD_PsmProcessState" alt="" coords="980,389,1135,416"/>
+<area shape="rect" id="node7" href="$usb__pd__policy_8c.html#ac6e31fa3949c6ca1288f96b6c5252bba" title="PD_PsmStateMachine" alt="" coords="1231,389,1385,416"/>
+<area shape="rect" id="node8" href="$usb__pd__policy_8c.html#a602f8622c0ba8d21b5013537dd3dadf9" title="PD_StackStateMachine" alt="" coords="1489,389,1652,416"/>
+<area shape="rect" id="node10" href="$usb__pd__policy_8c.html#afbd2eb3bceb62f29229f0bff6eed6844" title="PD_PsmEnterState" alt="" coords="989,591,1126,617"/>
+<area shape="rect" id="node13" href="$usb__pd__policy_8c.html#a39aa541f6a8e3843b3ab18fdcf533768" title="PD_PortTaskEventProcess" alt="" coords="169,372,351,399"/>
+<area shape="rect" id="node17" href="$usb__pd__policy_8c.html#aa2694544089f6e2d123810cd48b27d6e" title="PD_PsmDisconnect" alt="" coords="189,56,331,83"/>
+<area shape="rect" id="node19" href="$usb__pd__policy_8c.html#a8afdb6c45b33f168a2fb95395714bdfa" title="PD_DpmDischargeVbus" alt="" coords="719,208,884,235"/>
+<area shape="rect" id="node22" href="$usb__pd__policy_8c.html#ac70b1975475b5b94815c02eb5be41e1a" title="PD_DpmSetVconn" alt="" coords="735,680,868,707"/>
+<area shape="rect" id="node23" href="$usb__pd__policy_8c.html#ade792f3a5e9ffb477a9598ad4a3fb697" title="PD_DpmCheckVbus" alt="" coords="188,259,332,285"/>
+<area shape="rect" id="node24" href="$usb__pd__policy_8c.html#abdde9b20d8e38e68b6de66b1e9ece3eb" title="PD_DpmCheckLessOrEqualVsafe5v" alt="" coords="683,731,920,757"/>
+<area shape="rect" id="node32" href="$usb__pd__policy_8c.html#a95fba600d6ef64c773c5bbe23666aa6e" title="PD_DpmCheckVsafe0V" alt="" coords="719,629,883,656"/>
+<area shape="rect" id="node33" href="$group__usb__pd__stack.html#gaa61d0ac40ef36db1ef5a88532f6eea90" title="start up PD command. " alt="" coords="206,1111,314,1137"/>
+<area shape="rect" id="node41" href="$group__usb__pd__stack.html#gac3d77e334213f541028d2da518086ca2" title="Control PD stack and get info from PD stack. " alt="" coords="215,1496,305,1523"/>
+<area shape="rect" id="node3" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="473,5,562,32"/>
+<area shape="rect" id="node11" href="$usb__pd__policy_8c.html#aec90d4fab260652b95f5027a080bff6b" title="PD_PsmConnect" alt="" coords="739,883,863,909"/>
+<area shape="rect" id="node9" href="$group__usb__pd__stack.html#ga4227c58a9524464e19ee6efe9615f78e" title="PD stack&#39;s instance task. " alt="" coords="1721,389,1847,416"/>
+<area shape="rect" id="node12" href="$usb__pd__policy_8c.html#a150b2573c8bfe54de3d77cd020d85bc0" title="PD_DpmConnect" alt="" coords="995,795,1120,821"/>
+<area shape="rect" id="node14" href="$usb__pd__policy_8c.html#a31725b2a47c3137de52deb06cfb27e56" title="PD_MsgWaitSendResult" alt="" coords="433,503,601,529"/>
+<area shape="rect" id="node15" href="$usb__pd__policy_8c.html#aebb9e4a574913ad404235c42dd319730" title="PD_MsgSendControlTransition" alt="" coords="700,477,903,504"/>
+<area shape="rect" id="node16" href="$usb__pd__policy_8c.html#a954ab3161cbbe8dcb01c1904d4796ec5" title="PD_MsgSendDataTransition" alt="" coords="707,579,895,605"/>
+<area shape="rect" id="node18" href="$usb__pd__policy_8c.html#abc2774ff9e02e6ff6ff4a5fb8088c344" title="PD_DpmDisconnect" alt="" coords="730,56,873,83"/>
+<area shape="rect" id="node20" href="$usb__pd__connect_8c.html#a6147b33e99b7812c8de585d73af2f2c4" title="PD_ConnectStateMachine" alt="" coords="969,208,1146,235"/>
+<area shape="rect" id="node21" href="$usb__pd__policy_8c.html#a25116c60801fe4f4def90e3e42614b54" title="PD_ConnectCheck" alt="" coords="1241,259,1375,285"/>
+<area shape="rect" id="node25" href="$group__usb__pd__phy__drv.html#ga7f7f94758771b173653d27c508c8b33f" title="Notify PD stack the PHY status. " alt="" coords="1016,1085,1099,1112"/>
+<area shape="rect" id="node26" href="$usb__pd__ptn5110__hal_8c.html#a835e57283bb576d741f5668e2ebc55f6" title="PDPTN5110_PsStatChangeInt\lCallback" alt="" coords="1207,1267,1409,1309"/>
+<area shape="rect" id="node27" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="1469,1177,1672,1204"/>
+<area shape="rect" id="node28" href="$usb__pd__ptn5110__hal_8c.html#a8eed919866963307f312dd995cca3e82" title="Callback for VBUS Voltage Alarm Lo alert. " alt="" coords="1203,1137,1413,1178"/>
+<area shape="rect" id="node29" href="$usb__pd__ptn5110__interface_8c.html#a9bd17dd5e461a91ba93e8452b66820fa" title="PDPTN5110_Receive" alt="" coords="1233,1035,1383,1061"/>
+<area shape="rect" id="node30" href="$group__usb__pd__stack.html#gadc10377ece46e63b966463e501451e33" title="PD PTN5110 PHY ISR function. " alt="" coords="1224,1085,1392,1112"/>
+<area shape="rect" id="node31" href="$usb__pd__ptn5110__msg_8c.html#ab7229a8cdc4e1c840c8fd1a0d1d5b75c" title="Get the bist data from the HW registers (unused) " alt="" coords="1195,1202,1421,1243"/>
+<area shape="rect" id="node34" href="$pd__app__demo_8c.html#a35a5744ceb43d67dc3bf4d2040c39a54" title="USB_PDDemoProcessMenu" alt="" coords="706,1405,897,1432"/>
+<area shape="rect" id="node35" href="$pd__app__demo_8c.html#a3a3ac214fb23b3b22492e93cff16ab6e" title="USB_PDDemoProcessSW" alt="" coords="427,1237,608,1264"/>
+<area shape="rect" id="node36" href="$battery_2pd__app__demo_8c.html#a8695f73a631d0d7fa71c0d0301d6ff18" title="PD_DemoTaskFun" alt="" coords="450,984,585,1011"/>
+<area shape="rect" id="node37" href="$battery_2pd__command__interface_8h.html#a5132db16a33567cd42087c3721dd4ae2" title="PD_DpmPowerRoleSwapRequest\lCallback" alt="" coords="406,1289,629,1330"/>
+<area shape="rect" id="node38" href="$pd__command__interface_8h.html#ab41a0c34d9f0d4eb2a54b8278f6e7122" title="PD_DpmSVDMRequestCallback" alt="" coords="410,1035,625,1061"/>
+<area shape="rect" id="node39" href="$pd__command__interface_8h.html#aac5d271607893f2f71fa4d9388575fb6" title="PD_DpmSVDMResultCallback" alt="" coords="415,1187,619,1213"/>
+<area shape="rect" id="node40" href="$pd__command__interface_8h.html#a5adc076144a387892c254f6155d31e5a" title="PD_DpmReceiveAlertCallback" alt="" coords="416,1085,619,1112"/>
+<area shape="rect" id="node42" href="$pd__app_8c.html#a76d0496e2aa1a40759b549a23506f14a" title="PD_DpmConnectCallback" alt="" coords="429,1355,605,1381"/>
+<area shape="rect" id="node43" href="$pd__app__demo_8c.html#a34a9fa6c23ab02f6d4f13f1bea381478" title="USB_PDDemoPrintMenu" alt="" coords="432,1405,603,1432"/>
+<area shape="rect" id="node44" href="$battery_2pd__command__interface_8h.html#a56366de8b1a258b7a5f5fc7169613daa" title="PD_DpmPowerRoleSwapResult\lCallback" alt="" coords="412,1457,623,1498"/>
+<area shape="rect" id="node45" href="$pd__command__interface_8h.html#a76fb531d4b8bdecc111981b065ed4669" title="PD_DpmDataRoleSwapResult\lCallback" alt="" coords="416,1522,619,1563"/>
+<area shape="rect" id="node46" href="$battery_2pd__command__interface_8h.html#ac453a89bad337b7eb4deb9c0bc908a97" title="PD_DpmVconnSwapResultCallback" alt="" coords="400,1588,635,1615"/>
+<area shape="rect" id="node47" href="$source__charger_2pd__power__interface_8h.html#a0fcfdce4020a6f6d89a1dca22db9736d" title="PD_PowerBoardReset" alt="" coords="440,1639,595,1665"/>
+<area shape="rect" id="node48" href="$source__charger_2pd__power__interface_8h.html#a877430377afe70b94985c6651ccb867f" title="PD_PowerBoardSourceEnable\lVbusPower" alt="" coords="417,1690,617,1731"/>
+<area shape="rect" id="node49" href="$battery_2pd__power__interface_8h.html#a3f5abe7fe812ca7f2a9a6721468e6159" title="PD_PowerBoardSinkEnableVbus\lPower" alt="" coords="410,1755,625,1797"/>
+<area shape="rect" id="node50" href="$source__charger_2pd__power__interface_8h.html#ad7654314734595cdfdcd7e1081d17fe1" title="PD_PowerBoardControlVconn" alt="" coords="418,1821,617,1848"/>
+</map>

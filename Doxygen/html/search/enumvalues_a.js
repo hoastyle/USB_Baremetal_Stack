@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['role_5fcontrol_5fcc1_5fopen',['ROLE_CONTROL_CC1_OPEN',['../usb__pd__ptn5110__register_8h.html#a9cdc92ee02dbb573642ea7f140b635c6a30d0d85b8f541087b990b0a2c10cacc6',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc1_5fra',['ROLE_CONTROL_CC1_RA',['../usb__pd__ptn5110__register_8h.html#a9cdc92ee02dbb573642ea7f140b635c6adf14e4d62daad9aae7c2e4a8d0c82f07',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc1_5frd',['ROLE_CONTROL_CC1_RD',['../usb__pd__ptn5110__register_8h.html#a9cdc92ee02dbb573642ea7f140b635c6ad1971cd6098f4e7f699ba5bbf0b522e2',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc1_5frp',['ROLE_CONTROL_CC1_RP',['../usb__pd__ptn5110__register_8h.html#a9cdc92ee02dbb573642ea7f140b635c6adb96b59af234d90e3e9eb0d69a6221db',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc2_5fopen',['ROLE_CONTROL_CC2_OPEN',['../usb__pd__ptn5110__register_8h.html#a62f63b1f1038ed899e1a234979f0239ea9c2cea9d6b5689f54b1727062452122e',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc2_5fra',['ROLE_CONTROL_CC2_RA',['../usb__pd__ptn5110__register_8h.html#a62f63b1f1038ed899e1a234979f0239ea1853ac8e060e282b5b518a7468cae060',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc2_5frd',['ROLE_CONTROL_CC2_RD',['../usb__pd__ptn5110__register_8h.html#a62f63b1f1038ed899e1a234979f0239ea789822d846e607cdfaebdbd1f18d1a4b',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5fcc2_5frp',['ROLE_CONTROL_CC2_RP',['../usb__pd__ptn5110__register_8h.html#a62f63b1f1038ed899e1a234979f0239ea13187372e5a608de7c8da848ba4281c4',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5frp_5fdefault',['ROLE_CONTROL_RP_DEFAULT',['../usb__pd__ptn5110__register_8h.html#a9e61abdadcb5d3299b5d98536e805ceda2c21b21cb1f3495b95b672e49d917827',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5frp_5fvalue_5frp_5f1',['ROLE_CONTROL_RP_VALUE_RP_1',['../usb__pd__ptn5110__register_8h.html#a9e61abdadcb5d3299b5d98536e805ceda20ed779255b1efa331f40861592ac627',1,'usb_pd_ptn5110_register.h']]],
+  ['role_5fcontrol_5frp_5fvalue_5frp_5f3',['ROLE_CONTROL_RP_VALUE_RP_3',['../usb__pd__ptn5110__register_8h.html#a9e61abdadcb5d3299b5d98536e805cedaaec4ee49c6ff871850886150f5706001',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fcable_5freset',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_CABLE_RESET',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086a01f808f7fd2c8b80fbcabc41a02910f2',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fsop',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_SOP',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086a9761f29c9f226de546fb5eb6b909c457',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fsop_5fdbg_5fp',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_SOP_DBG_P',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086aa822b20eb5fc50d0d5f5c1c3007d825b',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fsop_5fdbg_5fpp',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_SOP_DBG_PP',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086a84b804685b8c7473cbfa6482e409baf1',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fsop_5fp',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_SOP_P',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086a91ddd825d8e9dd1eb98db9b52d5e5567',1,'usb_pd_ptn5110_register.h']]],
+  ['rx_5fbuf_5fframe_5ftype_5freceived_5fsop_5fmessage_5freceived_5fsop_5fpp',['RX_BUF_FRAME_TYPE_RECEIVED_SOP_MESSAGE_RECEIVED_SOP_PP',['../usb__pd__ptn5110__register_8h.html#a66487c8955bb4084b6d4558f304e8086af7fc8a3a1a6e4553aa5e31eb1c49b1b9',1,'usb_pd_ptn5110_register.h']]]
+];

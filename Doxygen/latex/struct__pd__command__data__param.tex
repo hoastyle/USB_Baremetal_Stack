@@ -1,0 +1,48 @@
+\hypertarget{struct__pd__command__data__param}{\section{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param Struct Reference}
+\label{struct__pd__command__data__param}\index{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}}
+}
+
+
+For some command with data use this structure as parameter.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{struct__pd__command__data__param_a1ebd3619e990184cbc131f98137e3447}{data\-Length}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct__pd__command__data__param_a208a0a5b69c2c44eaa616e4e1d6b77ee}{data\-Buffer}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__command__data__param_abc162486c37792c444d2ea46da2c27ed}{sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__command__data__param_ae615100fed31d9a3b0d14df3e88b427f}{result\-Status}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+For some command with data use this structure as parameter. 
+
+The callback events of src\-\_\-ext\-\_\-cap, status, battery\-\_\-cap, battery\-\_\-status, manufacturer\-\_\-info and alert command will use this structure. it provide the command data. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__command__data__param_a208a0a5b69c2c44eaa616e4e1d6b77ee}{\index{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}!data\-Buffer@{data\-Buffer}}
+\index{data\-Buffer@{data\-Buffer}!_pd_command_data_param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}}
+\subsubsection[{data\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ \-\_\-pd\-\_\-command\-\_\-data\-\_\-param\-::data\-Buffer}}\label{struct__pd__command__data__param_a208a0a5b69c2c44eaa616e4e1d6b77ee}
+data buffer \hypertarget{struct__pd__command__data__param_a1ebd3619e990184cbc131f98137e3447}{\index{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}!data\-Length@{data\-Length}}
+\index{data\-Length@{data\-Length}!_pd_command_data_param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}}
+\subsubsection[{data\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-command\-\_\-data\-\_\-param\-::data\-Length}}\label{struct__pd__command__data__param_a1ebd3619e990184cbc131f98137e3447}
+data length, the max length is 260 (extended msg) \hypertarget{struct__pd__command__data__param_ae615100fed31d9a3b0d14df3e88b427f}{\index{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}!result\-Status@{result\-Status}}
+\index{result\-Status@{result\-Status}!_pd_command_data_param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}}
+\subsubsection[{result\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-command\-\_\-data\-\_\-param\-::result\-Status}}\label{struct__pd__command__data__param_ae615100fed31d9a3b0d14df3e88b427f}
+command's result\-: success with data or fail. the value is \hyperlink{group__usb__pd__stack_ga59917b1485caba4dd8d9b65ca5a5fd92}{pd\-\_\-command\-\_\-result\-\_\-t} \hypertarget{struct__pd__command__data__param_abc162486c37792c444d2ea46da2c27ed}{\index{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}!sop@{sop}}
+\index{sop@{sop}!_pd_command_data_param@{\-\_\-pd\-\_\-command\-\_\-data\-\_\-param}}
+\subsubsection[{sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-command\-\_\-data\-\_\-param\-::sop}}\label{struct__pd__command__data__param_abc162486c37792c444d2ea46da2c27ed}
+message sop 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

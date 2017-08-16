@@ -1,0 +1,32 @@
+<map id="PDPTN5110_Init" name="PDPTN5110_Init">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__interface_8c.html#a3f9428044002b73cf9154a5566a0d49d" title="PDPTN5110_GetInstance" alt="" coords="221,141,395,168"/>
+<area shape="rect" id="node3" href="$group__usb__pd__cmsis__wrapper.html#ga4140e0b4e54efdabe981bdfbc97725dd" title="Initialize CMSIS driver adapter instance. " alt="" coords="205,192,411,219"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110_8h.html#af673ca9417d66b63412b2d7f0ea9b176" title="Return true if vbus is within loose bounds of VSafe0V. " alt="" coords="541,169,683,196"/>
+<area shape="rect" id="node16" href="$usb__pd__ptn5110_8h.html#a0dd9eaa05d32525cd38a9c5e94d11ea3" title="Initialise the hardware for bypass state machine. " alt="" coords="223,515,393,541"/>
+<area shape="rect" id="node17" href="$usb__pd__ptn5110_8h.html#a1f7aba9e8c5eef7018b18c617fdc27b1" title="Disable message RX and reset the protocol layer (for SOURCE_DISABLE state) (unused, low power related) " alt="" coords="177,344,439,371"/>
+<area shape="rect" id="node20" href="$usb__pd__ptn5110_8h.html#ab27634b6bde2ceba45309f646cece211" title="Check for PorComplete status and wait if needed. " alt="" coords="489,267,735,309"/>
+<area shape="rect" id="node25" href="$usb__pd__ptn5110_8h.html#a34b274ef814628d8ab8d9a7f1070360e" title="Enable interrupts for connection. " alt="" coords="197,591,419,633"/>
+<area shape="rect" id="node27" href="$usb__pd__ptn5110_8h.html#ae08e54c5c0945d6f40e0dde03d9cca41" title="Set CC to Z and disable comparators. " alt="" coords="203,401,413,428"/>
+<area shape="rect" id="node29" href="$usb__pd__ptn5110_8h.html#ae27fca1a06ebec2028f45dd00e0eff8d" title="Syncronize hardware to CC state (roleControl, tcpc_control, fault_control, power_control) ..." alt="" coords="217,464,399,491"/>
+<area shape="rect" id="node4" href="$group__usb__os__abstraction.html#gaf36ecc5a6c3359a6587750b17800f49d" title="Creates a mutex. " alt="" coords="534,119,690,145"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__hal_8c.html#af231659d66feb7b47a04d094eafcc74c" title="Enable the Callback for power supply change interrupt, initalize state according to the state at this..." alt="" coords="785,57,1013,98"/>
+<area shape="rect" id="node9" href="$usb__pd__ptn5110__hal_8c.html#a8e4f6113bbacda70cdd2023d29a73e02" title="Disable FR Swap. " alt="" coords="799,123,998,149"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html#a1cec78afbffeb91ccd0fcf72d021d139" title="REG_SET_FIELD" alt="" coords="834,224,963,251"/>
+<area shape="rect" id="node15" href="$usb__pd__ptn5110__hal_8c.html#aea5a6f5ab3adc2c42344845af82218f5" title="Initialise this module. " alt="" coords="795,5,1002,32"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__hal_8c.html#af840718cd0f3de58b800010cde92e847" title="Read the remote registers to local buffer. " alt="" coords="1062,5,1261,32"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__hal_8c.html#abd805633921ee7371cf2b2b90774e990" title="Clear and enable external interrupt. " alt="" coords="1064,57,1259,98"/>
+<area shape="rect" id="node11" href="$group__usb__pd__cmsis__wrapper.html#ga190a521ef01279662f71d4e33e51aa4c" title="Read data from slave. " alt="" coords="1067,217,1256,258"/>
+<area shape="rect" id="node14" href="$group__usb__pd__cmsis__wrapper.html#ga09c1e56830b347c846c280fe3525c757" title="Write data to slave. " alt="" coords="1067,282,1256,323"/>
+<area shape="rect" id="node12" href="$group__usb__os__abstraction.html#ga1fed31c4b683c5f652b4e2e8b23c34fd" title="Waits for a mutex and locks it. " alt="" coords="1317,228,1462,255"/>
+<area shape="rect" id="node13" href="$group__usb__os__abstraction.html#gaad3249273d566eae00e2cea81192315a" title="Unlocks a mutex. " alt="" coords="1310,283,1469,309"/>
+<area shape="rect" id="node18" href="$usb__pd__ptn5110__msg_8c.html#a9270792d50c929299fb0525020c1291a" title="Set RECEIVE_DETECT register directly. " alt="" coords="504,333,720,374"/>
+<area shape="rect" id="node19" href="$usb__pd__ptn5110_8h.html#a094ea05af65e7446bcefb6cfc6fff237" title="REG_SET_REG_REF" alt="" coords="821,427,976,453"/>
+<area shape="rect" id="node21" href="$usb__pd__ptn5110_8h.html#a23ffe07d15749d22b25f595037f791ee" title="REG_GET_FIELD" alt="" coords="833,275,964,301"/>
+<area shape="rect" id="node22" href="$usb__pd__ptn5110_8h.html#a58db123e84d17c84a438b375737d9830" title="REG_GET_REG_REF" alt="" coords="821,173,976,200"/>
+<area shape="rect" id="node23" href="$usb__pd__ptn5110__hal_8c.html#af44c9a145b9a610ae07c5c7d8ab08e85" title="PD_WaitUsec" alt="" coords="845,376,952,403"/>
+<area shape="rect" id="node24" href="$usb__pd__ptn5110__hal_8c.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="785,325,1013,352"/>
+<area shape="rect" id="node26" href="$usb__pd__ptn5110_8h.html#abd805633921ee7371cf2b2b90774e990" title="Clear and enable external interrupt. " alt="" coords="515,617,709,658"/>
+<area shape="rect" id="node28" href="$usb__pd__ptn5110__connect_8c.html#ae176a3f90e065c327a147a07c4b05885" title="Callback when connection is detached or disabled (unused, I think the original code use this error) ..." alt="" coords="512,398,712,439"/>
+<area shape="rect" id="node30" href="$usb__pd__ptn5110_8h.html#a95b1b1e119af7cb316f55b340aae2531" title="Hardware specific register settings for power mode. " alt="" coords="498,515,726,541"/>
+<area shape="rect" id="node31" href="$usb__pd__timer_8c.html#afa3b5394c429c185ea93be16ddb1545f" title="PD_TimerStart" alt="" coords="557,565,667,592"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="PD_PhyControl" name="PD_PhyControl">
+<area shape="rect" id="node2" href="$usb__pd__connect_8c.html#a0608faf2438b33700fc4680061ae69ab" title="PD_ConnectSetupNewState" alt="" coords="185,503,375,530"/>
+<area shape="rect" id="node3" href="$usb__pd__connect_8c.html#a4cb64b10c04da73729388d11be51338e" title="PD_ConnectStateDrpToggle\lSrcOrSnkFirstProcess" alt="" coords="445,337,633,379"/>
+<area shape="rect" id="node4" href="$usb__pd__connect_8c.html#a6147b33e99b7812c8de585d73af2f2c4" title="PD_ConnectStateMachine" alt="" coords="715,286,893,313"/>
+<area shape="rect" id="node6" href="$usb__pd__policy_8c.html#a602f8622c0ba8d21b5013537dd3dadf9" title="PD_StackStateMachine" alt="" coords="1376,809,1539,835"/>
+<area shape="rect" id="node8" href="$usb__pd__policy_8c.html#ac1262f667cd36f90f205a468ba59b1d4" title="PD_ConnectInitRole" alt="" coords="467,555,610,582"/>
+<area shape="rect" id="node10" href="$usb__pd__policy_8c.html#afbd2eb3bceb62f29229f0bff6eed6844" title="PD_PsmEnterState" alt="" coords="979,1062,1117,1089"/>
+<area shape="rect" id="node11" href="$usb__pd__policy_8c.html#ac6e31fa3949c6ca1288f96b6c5252bba" title="PD_PsmStateMachine" alt="" coords="1173,910,1328,937"/>
+<area shape="rect" id="node13" href="$usb__pd__policy_8c.html#ac46d497d9fc03b0096c2977f6a203e02" title="PD_PsmProcessState" alt="" coords="971,1661,1125,1687"/>
+<area shape="rect" id="node14" href="$usb__pd__connect_8c.html#af6d40e216e9c36436e8363ff28113a3a" title="PD_ConnectStateSrcUnattached\lSrcProcess" alt="" coords="173,201,387,243"/>
+<area shape="rect" id="node15" href="$usb__pd__connect_8c.html#a6313417f32370723f208ee8129f7348b" title="PD_ConnectStateSrcAttach\lWaitSrcProcess" alt="" coords="187,283,373,324"/>
+<area shape="rect" id="node16" href="$usb__pd__connect_8c.html#ad9e61e9e67e7d53a66151eae69b658d8" title="PD_ConnectStateSnkAttach\lWaitSnkProcess" alt="" coords="185,380,375,421"/>
+<area shape="rect" id="node17" href="$usb__pd__connect_8c.html#a0144954fa9035cc4e57c20a6a32713c8" title="PD_ConnectStateSnkAttached\lSnkProcess" alt="" coords="179,76,381,117"/>
+<area shape="rect" id="node18" href="$usb__pd__policy_8c.html#a83de99272e34bf7bad5146401157ccff" title="PD_ConnectSetPowerProgress" alt="" coords="177,758,383,785"/>
+<area shape="rect" id="node20" href="$group__usb__pd__stack.html#gaa61d0ac40ef36db1ef5a88532f6eea90" title="start up PD command. " alt="" coords="485,1113,593,1139"/>
+<area shape="rect" id="node23" href="$usb__pd__policy_8c.html#a094d9150746a4bc943e34a883ed51c38" title="PD_PsmPrimaryStateProcess\lPdMsg" alt="" coords="705,1367,903,1408"/>
+<area shape="rect" id="node24" href="$group__usb__pd__stack.html#ga3ab001290dc934fd6a45ad93916f5140" title="Initialize PD stack instance. " alt="" coords="481,1163,597,1190"/>
+<area shape="rect" id="node26" href="$usb__pd__msg_8c.html#a8efd2af273b221ad6fe948153b704c96" title="PD_MsgInit" alt="" coords="235,859,325,886"/>
+<area shape="rect" id="node27" href="$usb__pd__policy_8c.html#a82812de846825e22cc625886aa4ed653" title="PD_MsgReset" alt="" coords="485,859,593,886"/>
+<area shape="rect" id="node28" href="$usb__pd__policy_8c.html#a4c31fc7951e54e4e153f64d3a8e229ef" title="PD_MsgDisable" alt="" coords="221,2091,339,2118"/>
+<area shape="rect" id="node29" href="$usb__pd__policy_8c.html#aa2694544089f6e2d123810cd48b27d6e" title="PD_PsmDisconnect" alt="" coords="468,2091,609,2118"/>
+<area shape="rect" id="node31" href="$usb__pd__policy_8c.html#a1ae8632e71437586ae348c78f1518772" title="PD_MsgSetPortRole" alt="" coords="467,1467,611,1494"/>
+<area shape="rect" id="node33" href="$usb__pd__policy_8c.html#a31725b2a47c3137de52deb06cfb27e56" title="PD_MsgWaitSendResult" alt="" coords="455,1585,623,1611"/>
+<area shape="rect" id="node36" href="$usb__pd__policy_8c.html#ab97edd8ad822d84ac4c3c60716d949e6" title="PD_MsgSendHardReset" alt="" coords="197,1011,363,1038"/>
+<area shape="rect" id="node37" href="$usb__pd__policy_8c.html#a76b0f4cfb65f3523c10e8e472f42d9c4" title="PD_MsgStopReceive" alt="" coords="730,2041,878,2067"/>
+<area shape="rect" id="node38" href="$usb__pd__msg_8c.html#a0f4c4b5235e5789a5b705a458ff97bfe" title="PD_MsgSrcStartCommand" alt="" coords="189,1265,371,1291"/>
+<area shape="rect" id="node40" href="$usb__pd__policy_8c.html#a90012fae056618ce9b4431bd004a852a" title="PD_MsgSrcEndCommand" alt="" coords="192,961,368,987"/>
+<area shape="rect" id="node41" href="$usb__pd__msg_8c.html#a5181f0cdc3342fe4e3898f08f5cf73b6" title="PD_MsgSnkCheckStartCommand" alt="" coords="169,1315,391,1342"/>
+<area shape="rect" id="node42" href="$usb__pd__policy_8c.html#a275c11fb3caf0d669e274a15f4c39f61" title="PD_PsmReset" alt="" coords="483,1366,594,1393"/>
+<area shape="rect" id="node43" href="$usb__pd__policy_8c.html#a39aa541f6a8e3843b3ab18fdcf533768" title="PD_PortTaskEventProcess" alt="" coords="189,1939,371,1966"/>
+<area shape="rect" id="node44" href="$usb__pd__policy_8c.html#a8afdb6c45b33f168a2fb95395714bdfa" title="PD_DpmDischargeVbus" alt="" coords="456,657,621,683"/>
+<area shape="rect" id="node45" href="$usb__pd__policy_8c.html#ac70b1975475b5b94815c02eb5be41e1a" title="PD_DpmSetVconn" alt="" coords="737,1889,871,1915"/>
+<area shape="rect" id="node46" href="$usb__pd__policy_8c.html#ade792f3a5e9ffb477a9598ad4a3fb697" title="PD_DpmCheckVbus" alt="" coords="732,1787,876,1814"/>
+<area shape="rect" id="node47" href="$usb__pd__policy_8c.html#abdde9b20d8e38e68b6de66b1e9ece3eb" title="PD_DpmCheckLessOrEqualVsafe5v" alt="" coords="685,1737,923,1763"/>
+<area shape="rect" id="node49" href="$usb__pd__policy_8c.html#a95fba600d6ef64c773c5bbe23666aa6e" title="PD_DpmCheckVsafe0V" alt="" coords="722,1113,886,1139"/>
+<area shape="rect" id="node50" href="$group__usb__pd__stack.html#gac3d77e334213f541028d2da518086ca2" title="Control PD stack and get info from PD stack. " alt="" coords="235,1214,325,1241"/>
+<area shape="rect" id="node9" href="$usb__pd__policy_8c.html#a3aa051f964b97e729b999996b3cf4efe" title="PD_ConnectSetPRSwapRole" alt="" coords="441,454,637,481"/>
+<area shape="rect" id="node12" href="$usb__pd__policy_8c.html#af415d8897be39b06937aa0c1316abca9" title="PD_ConnectAltModeEnterFail" alt="" coords="705,809,903,835"/>
+<area shape="rect" id="node5" href="$usb__pd__policy_8c.html#a25116c60801fe4f4def90e3e42614b54" title="PD_ConnectCheck" alt="" coords="1183,298,1318,325"/>
+<area shape="rect" id="node7" href="$group__usb__pd__stack.html#ga4227c58a9524464e19ee6efe9615f78e" title="PD stack&#39;s instance task. " alt="" coords="1587,809,1714,835"/>
+<area shape="rect" id="node19" href="$usb__pd__policy_8c.html#ac674e40520a08c8895ec4e852a3751c7" title="PD_PsmSetNormalPower" alt="" coords="451,707,626,734"/>
+<area shape="rect" id="node22" href="$usb__pd__policy_8c.html#a694e9dd685d69f5b21d23e6bbee6e7d9" title="PD_DpmAppCallback" alt="" coords="463,961,614,987"/>
+<area shape="rect" id="node21" href="$pd__app__demo_8c.html#a35a5744ceb43d67dc3bf4d2040c39a54" title="USB_PDDemoProcessMenu" alt="" coords="709,1214,899,1241"/>
+<area shape="rect" id="node25" href="$source__charger_2main_8c.html#ae90a39427d391ee932de4fd9adbcde6a" title="PD_AppInit" alt="" coords="759,1163,849,1190"/>
+<area shape="rect" id="node30" href="$usb__pd__policy_8c.html#abc2774ff9e02e6ff6ff4a5fb8088c344" title="PD_DpmDisconnect" alt="" coords="733,2091,875,2118"/>
+<area shape="rect" id="node32" href="$usb__pd__policy_8c.html#aec90d4fab260652b95f5027a080bff6b" title="PD_PsmConnect" alt="" coords="742,1433,866,1459"/>
+<area shape="rect" id="node34" href="$usb__pd__policy_8c.html#aebb9e4a574913ad404235c42dd319730" title="PD_MsgSendControlTransition" alt="" coords="703,1635,905,1662"/>
+<area shape="rect" id="node35" href="$usb__pd__policy_8c.html#a954ab3161cbbe8dcb01c1904d4796ec5" title="PD_MsgSendDataTransition" alt="" coords="710,1585,898,1611"/>
+<area shape="rect" id="node39" href="$usb__pd__policy_8c.html#a26fc00ebd036043cf62cc2e558becd5c" title="PD_PsmStartCommand" alt="" coords="457,1290,620,1317"/>
+<area shape="rect" id="node48" href="$group__usb__pd__phy__drv.html#ga7f7f94758771b173653d27c508c8b33f" title="Notify PD stack the PHY status. " alt="" coords="1007,1737,1089,1763"/>
+</map>

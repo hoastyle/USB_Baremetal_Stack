@@ -1,0 +1,63 @@
+\hypertarget{struct__pd__sink__pdo}{\section{\-\_\-pd\-\_\-sink\-\_\-pdo Struct Reference}
+\label{struct__pd__sink__pdo}\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+}
+
+
+sink P\-D\-O union  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-sink\-\_\-pdo\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__pd__sink__pdo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \hyperlink{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{PDOValue}\\
+\>\hyperlink{group__usb__pd__stack_ga7b2f5a42b9f5ae0e5b76f2ed44482ff3}{pd\_pdo\_common\_t} \hyperlink{struct__pd__sink__pdo_a8f6789929499a63a1326708206e016c5}{commonPDO}\\
+\>\hyperlink{group__usb__pd__stack_gac1092e8fe40315ed926966b5b17883aa}{pd\_sink\_fixed\_pdo\_t} \hyperlink{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{fixedPDO}\\
+\>\hyperlink{group__usb__pd__stack_gaf18073722dd91e4b87b60a6db76dc8dc}{pd\_sink\_variable\_pdo\_t} \hyperlink{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}{variablePDO}\\
+\>\hyperlink{group__usb__pd__stack_ga917a58335ea75ba8b8cc3c359e1dee7a}{pd\_sink\_battery\_pdo\_t} \hyperlink{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}{batteryPDO}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+sink P\-D\-O union 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__sink__pdo_a9bc2f094f51753cea6adc85552fa8100}{\subsubsection[{"@39}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct__pd__sink__pdo_a9bc2f094f51753cea6adc85552fa8100}
+\hypertarget{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}{\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}!battery\-P\-D\-O@{battery\-P\-D\-O}}
+\index{battery\-P\-D\-O@{battery\-P\-D\-O}!_pd_sink_pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+\subsubsection[{battery\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-sink\-\_\-battery\-\_\-pdo\-\_\-t} \-\_\-pd\-\_\-sink\-\_\-pdo\-::battery\-P\-D\-O}}\label{struct__pd__sink__pdo_adb7ddc7d4451cd6fe0f6eb13ebce229e}
+union, battery pdo \hypertarget{struct__pd__sink__pdo_a8f6789929499a63a1326708206e016c5}{\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}!common\-P\-D\-O@{common\-P\-D\-O}}
+\index{common\-P\-D\-O@{common\-P\-D\-O}!_pd_sink_pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+\subsubsection[{common\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-pdo\-\_\-common\-\_\-t} \-\_\-pd\-\_\-sink\-\_\-pdo\-::common\-P\-D\-O}}\label{struct__pd__sink__pdo_a8f6789929499a63a1326708206e016c5}
+union, common pdo \hypertarget{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}{\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}!fixed\-P\-D\-O@{fixed\-P\-D\-O}}
+\index{fixed\-P\-D\-O@{fixed\-P\-D\-O}!_pd_sink_pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+\subsubsection[{fixed\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-sink\-\_\-fixed\-\_\-pdo\-\_\-t} \-\_\-pd\-\_\-sink\-\_\-pdo\-::fixed\-P\-D\-O}}\label{struct__pd__sink__pdo_aebd2d1f5078757ee9a4c3d836e0df136}
+union, fixed pdo \hypertarget{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}{\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}!P\-D\-O\-Value@{P\-D\-O\-Value}}
+\index{P\-D\-O\-Value@{P\-D\-O\-Value}!_pd_sink_pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+\subsubsection[{P\-D\-O\-Value}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-pd\-\_\-sink\-\_\-pdo\-::\-P\-D\-O\-Value}}\label{struct__pd__sink__pdo_a2f3c5aa6d559d35227af11db28c5dac8}
+union, pdo 32 bits value \hypertarget{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}{\index{\-\_\-pd\-\_\-sink\-\_\-pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}!variable\-P\-D\-O@{variable\-P\-D\-O}}
+\index{variable\-P\-D\-O@{variable\-P\-D\-O}!_pd_sink_pdo@{\-\_\-pd\-\_\-sink\-\_\-pdo}}
+\subsubsection[{variable\-P\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-sink\-\_\-variable\-\_\-pdo\-\_\-t} \-\_\-pd\-\_\-sink\-\_\-pdo\-::variable\-P\-D\-O}}\label{struct__pd__sink__pdo_a15603e339ec84b653f83ee6865c1dfd8}
+union, variable pdo 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['g_5fpdappinstance',['g_PDAppInstance',['../pd__app_8c.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c'],['../pd__app_8h.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c'],['../battery_2pd__app_8c.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c'],['../battery_2pd__app_8h.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c'],['../source__charger_2pd__app_8c.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c'],['../source__charger_2pd__app_8h.html#a4c95db98c2e53feffacac68c5c3abd80',1,'g_PDAppInstance():&#160;pd_app.c']]],
+  ['g_5fpdconfig',['g_PDConfig',['../pd__app_8c.html#a33272daf4c2c919c757e12106af7ffd5',1,'g_PDConfig():&#160;pd_app.c'],['../battery_2pd__app_8c.html#a33272daf4c2c919c757e12106af7ffd5',1,'g_PDConfig():&#160;pd_app.c'],['../battery_2pd__app_8h.html#a33272daf4c2c919c757e12106af7ffd5',1,'g_PDConfig():&#160;pd_app.c'],['../source__charger_2pd__app_8c.html#a33272daf4c2c919c757e12106af7ffd5',1,'g_PDConfig():&#160;pd_app.c']]],
+  ['g_5fpowerportconfig',['g_PowerPortConfig',['../pd__app_8c.html#a31ad0b046935918c7fa0fed8885192c8',1,'g_PowerPortConfig():&#160;pd_app.c'],['../battery_2pd__app_8c.html#a31ad0b046935918c7fa0fed8885192c8',1,'g_PowerPortConfig():&#160;pd_app.c'],['../battery_2pd__app_8h.html#a31ad0b046935918c7fa0fed8885192c8',1,'g_PowerPortConfig():&#160;pd_app.c'],['../source__charger_2pd__app_8c.html#a31ad0b046935918c7fa0fed8885192c8',1,'g_PowerPortConfig():&#160;pd_app.c']]],
+  ['getbatterycapdatablock',['getBatteryCapDataBlock',['../struct__pd__app.html#a19d055bbc32fed273953f9dc02346c94',1,'_pd_app::getBatteryCapDataBlock()'],['../struct__pd__instance.html#a26c06a89ab6d2c3fbf265abd7dfc04a3',1,'_pd_instance::getBatteryCapDataBlock()']]],
+  ['giveback',['giveBack',['../struct__pd__rdo.html#a82acd4a018e44108ae1cb59e1da734b2',1,'_pd_rdo']]],
+  ['global',['GLOBAL',['../structpd__phy__TCPC__reg__cache__t.html#a0f3d76756d4ae848200a50d75bb6d18d',1,'pd_phy_TCPC_reg_cache_t']]],
+  ['guide_2emd',['Guide.md',['../Guide_8md.html',1,'']]]
+];

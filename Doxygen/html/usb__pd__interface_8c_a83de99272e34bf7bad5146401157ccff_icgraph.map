@@ -1,0 +1,17 @@
+<map id="PD_ConnectSetPowerProgress" name="PD_ConnectSetPowerProgress">
+<area shape="rect" id="node2" href="$group__usb__pd__phy__drv.html#ga7f7f94758771b173653d27c508c8b33f" title="Notify PD stack the PHY status. " alt="" coords="261,269,344,296"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html#a835e57283bb576d741f5668e2ebc55f6" title="PDPTN5110_PsStatChangeInt\lCallback" alt="" coords="691,227,893,269"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__hal_8c.html#a706cb45223c529b6d01188e28d28a817" title="Handler for Int10. " alt="" coords="955,293,1157,320"/>
+<area shape="rect" id="node7" href="$usb__pd__ptn5110__hal_8c.html#a8eed919866963307f312dd995cca3e82" title="Callback for VBUS Voltage Alarm Lo alert. " alt="" coords="687,345,897,386"/>
+<area shape="rect" id="node8" href="$usb__pd__ptn5110__interface_8c.html#a9bd17dd5e461a91ba93e8452b66820fa" title="PDPTN5110_Receive" alt="" coords="435,244,586,271"/>
+<area shape="rect" id="node9" href="$group__usb__pd__stack.html#gadc10377ece46e63b966463e501451e33" title="PD PTN5110 PHY ISR function. " alt="" coords="427,143,595,169"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__msg_8c.html#ab7229a8cdc4e1c840c8fd1a0d1d5b75c" title="Get the bist data from the HW registers (unused) " alt="" coords="397,402,624,443"/>
+<area shape="rect" id="node12" href="$usb__pd__ptn5110__msg_8c.html#aeab1126bfe7625c8fba3cb342eb6aa99" title="PDPTN5110_MsgSendCompLete" alt="" coords="401,63,620,89"/>
+<area shape="rect" id="node15" href="$usb__pd__ptn5110__msg_8c.html#ac5a47c3292f0eb098cbec28f49b8ede7" title="PDPTN5110_MsgReceiveCompLete" alt="" coords="393,469,629,496"/>
+<area shape="rect" id="node5" href="$usb__pd__ptn5110__hal_8c.html#ae5d40eccd3a7c7902b303d44cedb6a42" title="Callback to be called on assertion of INT_N by victoria. " alt="" coords="1206,293,1407,320"/>
+<area shape="rect" id="node6" href="$usb__pd__ptn5110__interface_8c.html#a91fdd39ab055725caf3867261e584c2f" title="PDPTN5110_Control" alt="" coords="1457,293,1602,320"/>
+<area shape="rect" id="node10" href="$pd__app_8c.html#af2521ef8b447748866a3ad2c818faa92" title="PORTB_PORTC_PORTD_PORTE\l_IRQHandler" alt="" coords="677,162,907,203"/>
+<area shape="rect" id="node13" href="$usb__pd__ptn5110__msg_8c.html#a9917c53219ae71793f1543d8433eae4e" title="PDPTN5110_MsgHalSendAbort\lIsrProcess" alt="" coords="687,31,897,73"/>
+<area shape="rect" id="node14" href="$usb__pd__ptn5110__msg_8c.html#a6ac6dd7f29e5cefa92f6b94392ea74b6" title="PDPTN5110_MsgHalSendSuccess\lIsrProcess" alt="" coords="677,97,907,138"/>
+<area shape="rect" id="node16" href="$usb__pd__ptn5110__msg_8c.html#aa9f537f03af07588daf3ee11e48f9f20" title="This is called by the interrupt controller when we receive a message. " alt="" coords="679,462,905,503"/>
+</map>

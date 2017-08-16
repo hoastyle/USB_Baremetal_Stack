@@ -247,6 +247,7 @@ static void pd_port_task(void *arg)
     EnableIRQ((IRQn_Type)BOARD_PTN5110_GPIO_IRQ);
     while (1)
     {
+		// 将不停进入StackStateMachine
         PD_InstanceTask(g_PDAppInstance.pdHandle);
     }
 }

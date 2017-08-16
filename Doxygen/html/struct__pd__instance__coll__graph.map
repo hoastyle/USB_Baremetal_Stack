@@ -1,0 +1,18 @@
+<map id="_pd_instance" name="_pd_instance">
+<area shape="rect" id="node2" href="$struct__pd__power__port__config.html" title="_pd_power_port_config" alt="" coords="323,23,479,49"/>
+<area shape="rect" id="node3" href="$struct__pd__unstructured__vdm__param.html" title="PD unstructured vdm command parameter. " alt="" coords="324,74,479,115"/>
+<area shape="rect" id="node4" href="$struct__pd__phy__vendor__info.html" title="PHY&#39;s vendor information. " alt="" coords="329,140,474,167"/>
+<area shape="rect" id="node5" href="$struct__pd__phy__api__interface.html" title="PD PHY interface table structure. " alt="" coords="325,191,477,217"/>
+<area shape="rect" id="node6" href="$struct__pd__command__data__param.html" title="For some command with data use this structure as parameter. " alt="" coords="310,241,493,268"/>
+<area shape="rect" id="node7" href="$struct__pd__power__callback.html" title="power control interface. " alt="" coords="331,292,471,319"/>
+<area shape="rect" id="node8" href="$struct__pd__msg__header.html" title="PD message header. " alt="" coords="341,343,462,369"/>
+<area shape="rect" id="node9" href="$struct__pd__svdm__param.html" title="PD structured vdm command parameter. " alt="" coords="339,393,464,420"/>
+<area shape="rect" id="node10" href="$struct__pd__structured__vdm__header.html" title="PD structured VDM header. " alt="" coords="21,386,161,427"/>
+<area shape="rect" id="node11" href="$struct__pd__rdo.html" title="PD request data object. " alt="" coords="367,456,435,483"/>
+<area shape="rect" id="node12" href="$struct__pd__source__pdo.html" title="source PDO union " alt="" coords="343,507,460,533"/>
+<area shape="rect" id="node13" href="$struct__pd__pdo__common.html" title="common PDO for union " alt="" coords="27,453,155,480"/>
+<area shape="rect" id="node14" href="$struct__pd__source__variable__pdo.html" title="variable source PDO " alt="" coords="6,504,175,531"/>
+<area shape="rect" id="node15" href="$struct__pd__source__battery__pdo.html" title="battery source PDO " alt="" coords="9,555,173,581"/>
+<area shape="rect" id="node16" href="$struct__pd__source__fixed__pdo.html" title="fixed source PDO " alt="" coords="15,605,167,632"/>
+<area shape="rect" id="node17" href="$struct__pd__instance__config.html" title="PD instance config. " alt="" coords="331,557,472,584"/>
+</map>

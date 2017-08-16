@@ -1,0 +1,68 @@
+\hypertarget{struct__pd__svdm__command__result}{\section{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result Struct Reference}
+\label{struct__pd__svdm__command__result}\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+}
+
+
+P\-D structured vdm command result.  
+
+
+
+
+{\ttfamily \#include $<$usb\-\_\-pd.\-h$>$}
+
+
+
+Collaboration diagram for \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{struct__pd__svdm__command__result__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t $\ast$ \hyperlink{struct__pd__svdm__command__result_acd15ff8f7fe85b7e8ed891199339053f}{vdo\-Data}
+\item 
+\hyperlink{group__usb__pd__stack_ga245b8bec3f3b7771e73016ac98595570}{pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \hyperlink{struct__pd__svdm__command__result_adc6934994780581eba3edc5b4fe47765}{vdm\-Header}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__command__result_a347c19dd5209bb9ef874aa11caf4c07b}{vdo\-Count}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__command__result_aa65006c48f37577f5cab247b07bb0cdf}{vdo\-Sop}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__command__result_af1f46eb3cd5009b29a5f3ba293a5fc84}{vdm\-Command}
+\item 
+uint8\-\_\-t \hyperlink{struct__pd__svdm__command__result_af52b0485285dda6a8eda1154989dc84e}{vdm\-Command\-Result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-D structured vdm command result. 
+
+it is used in P\-D\-\_\-\-D\-P\-M\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-\_\-\-S\-U\-C\-C\-E\-S\-S and P\-D\-\_\-\-D\-P\-M\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E\-D\-\_\-\-V\-D\-M\-\_\-\-F\-A\-I\-L events callback. it provide vdm command reply message information to application, it may be A\-C\-K (contain data), N\-A\-K or B\-U\-S\-Y. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct__pd__svdm__command__result_af1f46eb3cd5009b29a5f3ba293a5fc84}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdm\-Command@{vdm\-Command}}
+\index{vdm\-Command@{vdm\-Command}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdm\-Command}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdm\-Command}}\label{struct__pd__svdm__command__result_af1f46eb3cd5009b29a5f3ba293a5fc84}
+vdm command, the value is \hyperlink{group__usb__pd__stack_gabd6b0763d01e2d65501af70e4f67b039}{pd\-\_\-vdm\-\_\-command\-\_\-t} \hypertarget{struct__pd__svdm__command__result_af52b0485285dda6a8eda1154989dc84e}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdm\-Command\-Result@{vdm\-Command\-Result}}
+\index{vdm\-Command\-Result@{vdm\-Command\-Result}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdm\-Command\-Result}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdm\-Command\-Result}}\label{struct__pd__svdm__command__result_af52b0485285dda6a8eda1154989dc84e}
+vdm command's result\-: success with data or fail. the value is \hyperlink{group__usb__pd__stack_ga59917b1485caba4dd8d9b65ca5a5fd92}{pd\-\_\-command\-\_\-result\-\_\-t} \hypertarget{struct__pd__svdm__command__result_adc6934994780581eba3edc5b4fe47765}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdm\-Header@{vdm\-Header}}
+\index{vdm\-Header@{vdm\-Header}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdm\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pd\-\_\-structured\-\_\-vdm\-\_\-header\-\_\-t} \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdm\-Header}}\label{struct__pd__svdm__command__result_adc6934994780581eba3edc5b4fe47765}
+vdm header \hypertarget{struct__pd__svdm__command__result_a347c19dd5209bb9ef874aa11caf4c07b}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdo\-Count@{vdo\-Count}}
+\index{vdo\-Count@{vdo\-Count}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdo\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdo\-Count}}\label{struct__pd__svdm__command__result_a347c19dd5209bb9ef874aa11caf4c07b}
+vdm data length (unit is 4 bytes) \hypertarget{struct__pd__svdm__command__result_acd15ff8f7fe85b7e8ed891199339053f}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdo\-Data@{vdo\-Data}}
+\index{vdo\-Data@{vdo\-Data}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdo\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t$\ast$ \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdo\-Data}}\label{struct__pd__svdm__command__result_acd15ff8f7fe85b7e8ed891199339053f}
+vdm data buffer address \hypertarget{struct__pd__svdm__command__result_aa65006c48f37577f5cab247b07bb0cdf}{\index{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}!vdo\-Sop@{vdo\-Sop}}
+\index{vdo\-Sop@{vdo\-Sop}!_pd_svdm_command_result@{\-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result}}
+\subsubsection[{vdo\-Sop}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t \-\_\-pd\-\_\-svdm\-\_\-command\-\_\-result\-::vdo\-Sop}}\label{struct__pd__svdm__command__result_aa65006c48f37577f5cab247b07bb0cdf}
+vdm message's sop type 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pd/\hyperlink{usb__pd_8h}{usb\-\_\-pd.\-h}\end{DoxyCompactItemize}

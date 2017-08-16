@@ -1,0 +1,110 @@
+\hypertarget{usb__osa_8h}{\section{osa/usb\-\_\-osa.h File Reference}
+\label{usb__osa_8h}\index{osa/usb\-\_\-osa.\-h@{osa/usb\-\_\-osa.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usb__osa_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__usb__os__abstraction_gad5944548f0bdc76acfc43c033bd5a03c}{U\-S\-B\-\_\-\-B\-I\-G\-\_\-\-E\-N\-D\-I\-A\-N}~(0\-U)
+\begin{DoxyCompactList}\small\item\em Define big endian. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__os__abstraction_gaf92fbbf185d7cfa676bde9c48a9fd6b5}{U\-S\-B\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}~(1\-U)
+\begin{DoxyCompactList}\small\item\em Define little endian. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__usb__os__abstraction_ga10ef90ec5d824df4e5d923db4939e45c}{E\-N\-D\-I\-A\-N\-N\-E\-S\-S}~\hyperlink{group__usb__os__abstraction_gaf92fbbf185d7cfa676bde9c48a9fd6b5}{U\-S\-B\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}
+\begin{DoxyCompactList}\small\item\em Define current endian. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em Define U\-S\-B O\-S\-A event handle. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em Define U\-S\-B O\-S\-A semaphore handle. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em Define U\-S\-B O\-S\-A mutex handle. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle}
+\begin{DoxyCompactList}\small\item\em Define U\-S\-B O\-S\-A message queue handle. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__os__abstraction_ga453ebd2f93aafb8c938c3a23c815f9bd}{\-\_\-usb\-\_\-osa\-\_\-status} \hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t}
+\begin{DoxyCompactList}\small\item\em U\-S\-B O\-S\-A error code. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__usb__os__abstraction_gaf3dc48c688f7c71cce122a1a0d4a12bd}{\-\_\-usb\-\_\-osa\-\_\-event\-\_\-mode} \hyperlink{group__usb__os__abstraction_gaa3f24eb2797924d385f01a78695b645c}{usb\-\_\-osa\-\_\-event\-\_\-mode\-\_\-t}
+\begin{DoxyCompactList}\small\item\em The event flags are cleared automatically or manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__usb__os__abstraction_ga453ebd2f93aafb8c938c3a23c815f9bd}{\-\_\-usb\-\_\-osa\-\_\-status} \{ \hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bdab90805fb75297fda1ca60dbb2283f933}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-Success} = 0x00\-U, 
+\hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bda40b794ea06e27b8ec1d67538f12eb350}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-Error}, 
+\hyperlink{group__usb__os__abstraction_gga453ebd2f93aafb8c938c3a23c815f9bda9ff36cb34c565283214974d1097d08df}{k\-Status\-\_\-\-U\-S\-B\-\_\-\-O\-S\-A\-\_\-\-Time\-Out}
+ \}
+\begin{DoxyCompactList}\small\item\em U\-S\-B O\-S\-A error code. \end{DoxyCompactList}\item 
+enum \hyperlink{group__usb__os__abstraction_gaf3dc48c688f7c71cce122a1a0d4a12bd}{\-\_\-usb\-\_\-osa\-\_\-event\-\_\-mode} \{ \hyperlink{group__usb__os__abstraction_ggaf3dc48c688f7c71cce122a1a0d4a12bdac7c0be065c2f8e1f9c25758dd648fa24}{k\-U\-S\-B\-\_\-\-Osa\-Event\-Manual\-Clear} = 0\-U, 
+\hyperlink{group__usb__os__abstraction_ggaf3dc48c688f7c71cce122a1a0d4a12bda817b3244c099598106ffa78a4faac361}{k\-U\-S\-B\-\_\-\-Osa\-Event\-Auto\-Clear} = 1\-U
+ \}
+\begin{DoxyCompactList}\small\item\em The event flags are cleared automatically or manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf U\-S\-B O\-S\-A Memory Management}\par
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__usb__os__abstraction_gab17b3446bbcfb6207dc230fcdd4c9f99}{U\-S\-B\-\_\-\-Osa\-Memory\-Allocate} (uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Reserves the requested amount of memory in bytes. \end{DoxyCompactList}\item 
+void \hyperlink{group__usb__os__abstraction_ga3d4a16dd11d39ce340299876f92d9366}{U\-S\-B\-\_\-\-Osa\-Memory\-Free} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Frees the memory previously reserved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\-S\-B O\-S\-A Event}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf38d525580499ff2657303eb807efc61}{U\-S\-B\-\_\-\-Osa\-Event\-Create} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} $\ast$handle, uint32\-\_\-t flag)
+\begin{DoxyCompactList}\small\item\em Creates an event object with all flags cleared. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga3d07a809b1fa8450c1383aa8bbd49b37}{U\-S\-B\-\_\-\-Osa\-Event\-Destroy} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a created event object. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaa83073c31cced5742027d4046bd633db}{U\-S\-B\-\_\-\-Osa\-Event\-Set} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask)
+\begin{DoxyCompactList}\small\item\em Sets an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga5ce587209d676871f3ec62900054febd}{U\-S\-B\-\_\-\-Osa\-Event\-Wait} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask, uint32\-\_\-t flag, uint32\-\_\-t timeout, uint32\-\_\-t $\ast$bit\-Set)
+\begin{DoxyCompactList}\small\item\em Waits for an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gab25fb5d93d3b665ca8eadf2a670d3361}{U\-S\-B\-\_\-\-Osa\-Event\-Check} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask, uint32\-\_\-t $\ast$bit\-Set)
+\begin{DoxyCompactList}\small\item\em Checks an event flag. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga90357f04d40469dc07104033b3c8581c}{U\-S\-B\-\_\-\-Osa\-Event\-Clear} (\hyperlink{group__usb__os__abstraction_gaa5faa1787d0c772a2cf101b3eaf654f6}{usb\-\_\-osa\-\_\-event\-\_\-handle} handle, uint32\-\_\-t bit\-Mask)
+\begin{DoxyCompactList}\small\item\em Clears an event flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\-S\-B O\-S\-A Semaphore}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga9d4a6e4130aac6d6b65d4cf6545f6625}{U\-S\-B\-\_\-\-Osa\-Sem\-Create} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} $\ast$handle, uint32\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em Creates a semaphore with a given value. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga078945ac6116e19459d2f38fe8feb994}{U\-S\-B\-\_\-\-Osa\-Sem\-Destroy} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a semaphore object. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gad44e7105ccf6f06a6dac75307c6c1b0f}{U\-S\-B\-\_\-\-Osa\-Sem\-Post} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Posts a semaphore. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gafe9ff8755eb9afadd0ad328ca4fe4c8c}{U\-S\-B\-\_\-\-Osa\-Sem\-Wait} (\hyperlink{group__usb__os__abstraction_ga9f0e38944e1320d10c45eaacb67185b7}{usb\-\_\-osa\-\_\-sem\-\_\-handle} handle, uint32\-\_\-t timeout)
+\begin{DoxyCompactList}\small\item\em Waits on a semaphore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\-S\-B O\-S\-A Mutex}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf36ecc5a6c3359a6587750b17800f49d}{U\-S\-B\-\_\-\-Osa\-Mutex\-Create} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Creates a mutex. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga68f890c3d76f212e6fa8cf787b918a5b}{U\-S\-B\-\_\-\-Osa\-Mutex\-Destroy} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a mutex. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga1fed31c4b683c5f652b4e2e8b23c34fd}{U\-S\-B\-\_\-\-Osa\-Mutex\-Lock} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Waits for a mutex and locks it. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaad3249273d566eae00e2cea81192315a}{U\-S\-B\-\_\-\-Osa\-Mutex\-Unlock} (\hyperlink{group__usb__os__abstraction_gad259d0dfe125b11cccaf93163ef915fd}{usb\-\_\-osa\-\_\-mutex\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Unlocks a mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf U\-S\-B O\-S\-A Message Queue}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gacc28243bdfb636e21508879789ab5a0c}{U\-S\-B\-\_\-\-Osa\-Msgq\-Create} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} $\ast$handle, uint32\-\_\-t count, uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Creates a message queue. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gafc20008f4680ff9f0720574841b34e42}{U\-S\-B\-\_\-\-Osa\-Msgq\-Destroy} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle)
+\begin{DoxyCompactList}\small\item\em Destroys a message queue. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga6ba61c6cf5e772dbce90c5626dbd0db0}{U\-S\-B\-\_\-\-Osa\-Msgq\-Send} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Sends a message. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_gaf2effe68aa0486c0823e253f78836d17}{U\-S\-B\-\_\-\-Osa\-Msgq\-Recv} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg, uint32\-\_\-t timeout)
+\begin{DoxyCompactList}\small\item\em Receives a message. \end{DoxyCompactList}\item 
+\hyperlink{group__usb__os__abstraction_ga8de2fb7579de0a6621bbc1776519b0a9}{usb\-\_\-osa\-\_\-status\-\_\-t} \hyperlink{group__usb__os__abstraction_ga734fbdd1bae936ba6758087ad2d9d862}{U\-S\-B\-\_\-\-Osa\-Msgq\-Check} (\hyperlink{group__usb__os__abstraction_gab3a9f26ba50f3abea7fcbac07500cbb8}{usb\-\_\-osa\-\_\-msgq\-\_\-handle} handle, void $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Checks a message queue and receives a message if the queue is not empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}

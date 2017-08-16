@@ -1,0 +1,4 @@
+<map id="PDPTN5110_PsStatChangeEnableInterrupt" name="PDPTN5110_PsStatChangeEnableInterrupt">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__hal_8c.html#af840718cd0f3de58b800010cde92e847" title="Read the remote registers to local buffer. " alt="" coords="283,5,482,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110__hal_8c.html#abd805633921ee7371cf2b2b90774e990" title="Clear and enable external interrupt. " alt="" coords="285,57,480,98"/>
+</map>

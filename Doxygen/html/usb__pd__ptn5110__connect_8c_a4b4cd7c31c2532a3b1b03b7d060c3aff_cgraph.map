@@ -1,0 +1,4 @@
+<map id="PDPTN5110_ConnectGetCC" name="PDPTN5110_ConnectGetCC">
+<area shape="rect" id="node2" href="$usb__pd__timer_8c.html#a3d4072fbbc7b10a05c795eaf9ed33f5f" title="PD_TimerCheckInvalidOrTimeOut" alt="" coords="248,5,469,32"/>
+<area shape="rect" id="node3" href="$usb__pd__ptn5110_8h.html#af840718cd0f3de58b800010cde92e847" title="Read the remote registers to local buffer. " alt="" coords="259,56,458,83"/>
+</map>

@@ -1,0 +1,48 @@
+\hypertarget{source__charger_2board_8c}{\section{demo/pd\-\_\-source\-\_\-charger/board.c File Reference}
+\label{source__charger_2board_8c}\index{demo/pd\-\_\-source\-\_\-charger/board.\-c@{demo/pd\-\_\-source\-\_\-charger/board.\-c}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fsl\-\_\-debug\-\_\-console.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board.\-h\char`\"{}}\\*
+Include dependency graph for board.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{source__charger_2board_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{source__charger_2board_8c_a4c84ccb952cb083367d7040cf9de3db8}{B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{source__charger_2board_8c_a4c84ccb952cb083367d7040cf9de3db8}{\index{source\-\_\-charger/board.\-c@{source\-\_\-charger/board.\-c}!B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console@{B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console}}
+\index{B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console@{B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console}!source_charger/board.c@{source\-\_\-charger/board.\-c}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console}]{\setlength{\rightskip}{0pt plus 5cm}void B\-O\-A\-R\-D\-\_\-\-Init\-Debug\-Console (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{source__charger_2board_8c_a4c84ccb952cb083367d7040cf9de3db8}
+
+\begin{DoxyCode}
+45 \{
+46     uint32\_t uartClkSrcFreq;
+47     \textcolor{comment}{/* SIM\_SOPT2[27:26]:}
+48 \textcolor{comment}{     *  00: Clock Disabled}
+49 \textcolor{comment}{     *  01: IRC48M}
+50 \textcolor{comment}{     *  10: OSCERCLK}
+51 \textcolor{comment}{     *  11: MCGIRCCLK}
+52 \textcolor{comment}{     */}
+53     CLOCK\_SetLpuart0Clock(1);
+54 
+55     uartClkSrcFreq = \hyperlink{board_8h_a1edec5fed9dc97a37f9ddf9c8409f6b2}{BOARD\_DEBUG\_UART\_CLK\_FREQ};
+56     DbgConsole\_Init(\hyperlink{board_8h_aa57459420fa9e4f0a5f3fc5f57f1b9e8}{BOARD\_DEBUG\_UART\_BASEADDR}, 
+      \hyperlink{board_8h_a7bae38ce2df969e54e7d59ceb9de9195}{BOARD\_DEBUG\_UART\_BAUDRATE}, \hyperlink{board_8h_a1c5d72bb4c3165f9fe3a91144de2071d}{BOARD\_DEBUG\_UART\_TYPE}, 
+      uartClkSrcFreq);
+57 \}
+\end{DoxyCode}

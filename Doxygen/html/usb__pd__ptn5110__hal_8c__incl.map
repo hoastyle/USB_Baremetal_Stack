@@ -1,0 +1,9 @@
+<map id="pd/ptn5110/usb_pd_ptn5110_hal.c" name="pd/ptn5110/usb_pd_ptn5110_hal.c">
+<area shape="rect" id="node5" href="$usb__pd_8h.html" title="usb_pd.h" alt="" coords="333,96,407,123"/>
+<area shape="rect" id="node9" href="$usb__pd__phy_8h.html" title="usb_pd_phy.h" alt="" coords="433,96,535,123"/>
+<area shape="rect" id="node10" href="$usb__pd__ptn5110_8h.html" title="usb_pd_ptn5110.h" alt="" coords="560,96,688,123"/>
+<area shape="rect" id="node11" href="$usb__pd__ptn5110__register_8h.html" title="usb_pd_ptn5110_register.h" alt="" coords="712,96,891,123"/>
+<area shape="rect" id="node6" href="$usb__osa_8h.html" title="usb_osa.h" alt="" coords="219,171,300,197"/>
+<area shape="rect" id="node7" href="$usb__misc_8h.html" title="usb_misc.h" alt="" coords="326,171,415,197"/>
+<area shape="rect" id="node8" href="$usb__cmsis__wrapper_8h.html" title="usb_cmsis_wrapper.h" alt="" coords="440,171,588,197"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="pd/usb_pd_spec.h" name="pd/usb_pd_spec.h">
+<area shape="rect" id="node2" href="$usb__pd__ptn5110__msg_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_msg.c" alt="" coords="258,81,443,122"/>
+<area shape="rect" id="node3" href="$usb__pd__interface_8h.html" title="pd/usb_pd_interface.h" alt="" coords="467,88,617,115"/>
+<area shape="rect" id="node4" href="$usb__pd__ptn5110__interface_8c.html" title="pd/ptn5110/usb_pd_ptn5110\l_interface.c" alt="" coords="5,171,189,213"/>
+<area shape="rect" id="node5" href="$usb__pd__connect_8c.html" title="pd/usb_pd_connect.c" alt="" coords="215,179,361,205"/>
+<area shape="rect" id="node6" href="$usb__pd__interface_8c.html" title="pd/usb_pd_interface.c" alt="" coords="386,179,536,205"/>
+<area shape="rect" id="node7" href="$usb__pd__msg_8c.html" title="pd/usb_pd_msg.c" alt="" coords="561,179,687,205"/>
+<area shape="rect" id="node8" href="$usb__pd__policy_8c.html" title="pd/usb_pd_policy.c" alt="" coords="711,179,845,205"/>
+<area shape="rect" id="node9" href="$usb__pd__timer_8c.html" title="pd/usb_pd_timer.c" alt="" coords="870,179,999,205"/>
+</map>
