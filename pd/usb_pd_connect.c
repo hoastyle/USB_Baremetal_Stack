@@ -1439,6 +1439,7 @@ static TypeCState_t PD_ConnectStateMachine(pd_instance_t *pdInstance)
     /* This loop will repeat while the state is changed */
     while (1)
     {
+		// 根据phy role control and cc status 设置ccState
         PD_PhyControl(pdInstance, PD_PHY_GET_CC_LINE_STATE, &ccState);
         cc1State = (pd_phy_cc_state_t)ccState.cc1State;
         cc2State = (pd_phy_cc_state_t)ccState.cc2State;

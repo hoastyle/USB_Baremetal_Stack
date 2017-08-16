@@ -95,6 +95,8 @@ void PDPTN5110_ConnectGetCC(pd_phy_ptn5110_instance_t *ptn5110Instance, pd_phy_g
     ccStates->cc1State = kCCState_Unknown;
     ccStates->cc2State = kCCState_Unknown;
 
+	// Question: check cc filter timer是否在工作, cc filter的作用是什么？
+	// 用来保证CC status被正确获取，是最新的status？
     if (PD_TimerCheckInvalidOrTimeOut(ptn5110Instance->pdHandle, timrCCFilter))
     {
         if (rawStatus == 0xFFu)
@@ -135,14 +137,16 @@ void PDPTN5110_ConnectGetCC(pd_phy_ptn5110_instance_t *ptn5110Instance, pd_phy_g
         return;
     }
 
-    if (!(rawStatus & TCPC_CC_STATUS_CONNECT_RESULT_MASK)) /* Rp */
+	// 0 -> Rp, 1 -> Rd
+    if (!(rawStatus & TCPC_CC_STATUS_CONNECT_RESULT_MASK)) /* Rp for Source */
     {
+		// cc1 disconnect or don't care
         if ((roleControl & TCPC_ROLE_CONTROL_CC1_MASK) == ROLE_CONTROL_CC1_OPEN)
         {
             ccStates->cc1State = kCCState_Unknown;
         }
         else
-        {
+        
             switch (cc1Status)
             {
                 case CC_STATUS_CC1_STATE_SRC_OPEN:
@@ -183,7 +187,7 @@ void PDPTN5110_ConnectGetCC(pd_phy_ptn5110_instance_t *ptn5110Instance, pd_phy_g
             }
         }
     }
-    else /* Rd */
+    else /* Rd for Sink */
     {
         if ((roleControl & TCPC_ROLE_CONTROL_CC1_MASK) == ROLE_CONTROL_CC1_OPEN)
         {

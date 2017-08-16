@@ -55,6 +55,7 @@
 #define PD_WAIT_EVENT_TIME (10)
 
 /* private */
+// 通过event group来同步事件
 typedef enum _pd_task_event_type
 {
     PD_TASK_EVENT_RECEIVED_HARD_RESET = 0x01u,

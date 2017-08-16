@@ -660,6 +660,8 @@ static uint8_t PD_PsmPrimaryStateProcessPdMsg(pd_instance_t *pdInstance,
 // event handler
 void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
 {
+	// 如果phy state change, 则通过call back调用alert handler
+	// alert interrupt handler will set PD_TASK_EVENT_PHY_STATE_CHAGNE and PD_TASK_EVENT_TYPEC_STATE_PROCESS
     if (eventSet & PD_TASK_EVENT_PHY_STATE_CHAGNE)
     {
         PD_PhyControl(pdInstance, PD_PHY_UPDATE_STATE, NULL);
@@ -6673,10 +6675,12 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
         /* We want to override any existing MTP-based connection */
 		// 根据typec power role (typec_power_role_config_t) init
         PD_ConnectInitRole(pdInstance, pdInstance->pdPowerPortConfig->typecRole, 0);
+		// curConnectState
         pdInstance->connectedResult = PD_ConnectGetStateMachine(pdInstance);
         PD_DpmSetVconn(pdInstance, 0);
     }
 	// 该event group在init func中已经建立了
+	// not auto clear
     USB_OsaEventWait(pdInstance->taskEventHandle, 0xffu, 0, pdInstance->waitTime, &taskEventSet);
     pdInstance->waitTime = PD_WAIT_EVENT_TIME;
     PD_PortTaskEventProcess(pdInstance, taskEventSet);
@@ -6686,6 +6690,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
     }
 
     /* Process Type-C state change by PD stack */
+	// return curConnectState
     connectStatus = PD_ConnectGetStateMachine(pdInstance);
     if (connectStatus != pdInstance->connectedResult)
     {
