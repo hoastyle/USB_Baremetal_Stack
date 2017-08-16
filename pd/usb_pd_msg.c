@@ -138,6 +138,11 @@ uint8_t PD_MsgWaitSendResult(pd_instance_t *pdInstance)
     return ((pdInstance->sendingResult == kStatus_PD_Success) ? 1 : 0);
 }
 
+/* 
+ * Implement tx state machine in send function
+ * control and data use PD_MsgSend
+ * extended use PD_MsgSendExtendedMsg
+ */
 pd_status_t PD_MsgSend(
     pd_instance_t *pdInstance, start_of_packet_t sop, message_type_t msgType, uint32_t dataLength, uint8_t *dataBuffer)
 {
@@ -262,6 +267,10 @@ pd_status_t PD_MsgSendExtendedMsg(pd_instance_t *pdInstance,
     return PD_MsgSendExtendedMsgPart(pdInstance, sop, extMsgType, dataLength, dataBuffer);
 }
 
+/* 
+ * send extended message in chunked or unchunked way
+ * 提供了API，但是没有被使用
+ */
 pd_status_t PD_MsgSendChunkedExtendedMsg(pd_instance_t *pdInstance,
                                          start_of_packet_t sop,
                                          message_type_t extMsgType,

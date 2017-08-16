@@ -1,0 +1,37 @@
+var usb__pd__ptn5110__connect_8c =
+[
+    [ "discharge_mode_t", "usb__pd__ptn5110__connect_8c.html#a28187789d766599d2041078b07208b2c", [
+      [ "DCHRG_DISABLED", "usb__pd__ptn5110__connect_8c.html#a28187789d766599d2041078b07208b2ca17c87e8866acef97f9c220a24f30af67", null ],
+      [ "DCHRG_ENABLED", "usb__pd__ptn5110__connect_8c.html#a28187789d766599d2041078b07208b2ca3bd0be49c97113d3cdc11366c124a252", null ]
+    ] ],
+    [ "PDPTN5110_ConnectAssertDrpUnattached", "usb__pd__ptn5110__connect_8c.html#ad55a4f79062b33d94bd7284e08a73ba3", null ],
+    [ "PDPTN5110_ConnectAssertRdAttached", "usb__pd__ptn5110__connect_8c.html#ab94dc6e083ed76c5ff0dda5e184ee592", null ],
+    [ "PDPTN5110_ConnectAssertRdDbgAccSnk", "usb__pd__ptn5110__connect_8c.html#a50ff250867f55687d57baa1c76315239", null ],
+    [ "PDPTN5110_ConnectAssertRdUnattached", "usb__pd__ptn5110__connect_8c.html#a8c56e52ddbb1fbb4d9fc09d36fe49a73", null ],
+    [ "PDPTN5110_ConnectAssertRpAttached", "usb__pd__ptn5110__connect_8c.html#a0679fd98bbeb52b3046805a304939aaa", null ],
+    [ "PDPTN5110_ConnectAssertRpDbgAccSrc", "usb__pd__ptn5110__connect_8c.html#a6d7f033cf50fdc8a29caff893219629a", null ],
+    [ "PDPTN5110_ConnectAssertRpUnattached", "usb__pd__ptn5110__connect_8c.html#a04e4e22845301da2fa5e7555f9f59ba0", null ],
+    [ "PDPTN5110_ConnectAudioAccessoryAttached", "usb__pd__ptn5110__connect_8c.html#af57d909893f710a05924c70ee0a4d1a5", null ],
+    [ "PDPTN5110_ConnectCompareCcVoltage", "usb__pd__ptn5110__connect_8c.html#a45f7e996505f2487f22397d4f18b70fe", null ],
+    [ "PDPTN5110_ConnectDbgAccSnkAttached", "usb__pd__ptn5110__connect_8c.html#a21ff53f5b949eac37e29c4942c51a315", null ],
+    [ "PDPTN5110_ConnectDbgAccSrcAttached", "usb__pd__ptn5110__connect_8c.html#ac845e3e6c969e18371e948c8190123d2", null ],
+    [ "PDPTN5110_ConnectDetachOrDisableCallback", "usb__pd__ptn5110__connect_8c.html#a6626302ba190e99a55b7242f90fd2873", null ],
+    [ "PDPTN5110_ConnectDisableAll", "usb__pd__ptn5110__connect_8c.html#ae08e54c5c0945d6f40e0dde03d9cca41", null ],
+    [ "PDPTN5110_ConnectDisableComparators", "usb__pd__ptn5110__connect_8c.html#a2a4db861a676fce36fbfe7019f83212f", null ],
+    [ "PDPTN5110_ConnectEnableTypeCConnection", "usb__pd__ptn5110__connect_8c.html#a34b274ef814628d8ab8d9a7f1070360e", null ],
+    [ "PDPTN5110_ConnectGetCC", "usb__pd__ptn5110__connect_8c.html#a4b4cd7c31c2532a3b1b03b7d060c3aff", null ],
+    [ "PDPTN5110_ConnectGetTypeCCurrent", "usb__pd__ptn5110__connect_8c.html#a93f18c15d8ac2bccfec8a5b0dde20bd6", null ],
+    [ "PDPTN5110_ConnectInit", "usb__pd__ptn5110__connect_8c.html#a0dd9eaa05d32525cd38a9c5e94d11ea3", null ],
+    [ "PDPTN5110_ConnectInTcChecKDetacHDurIngHardReset", "usb__pd__ptn5110__connect_8c.html#ac096caab4176c744ae773ca2e079ada3", null ],
+    [ "PDPTN5110_ConnectINTcTypeCCurrentStable", "usb__pd__ptn5110__connect_8c.html#a719232873c71eb8c1ae556668d842007", null ],
+    [ "PDPTN5110_ConnectRawVbusDischarge", "usb__pd__ptn5110__connect_8c.html#aca1a6719003c681f4cf906b31fdfd1cc", null ],
+    [ "PDPTN5110_ConnectReleasePowerControl", "usb__pd__ptn5110__connect_8c.html#ae176a3f90e065c327a147a07c4b05885", null ],
+    [ "PDPTN5110_ConnectSetCC", "usb__pd__ptn5110__connect_8c.html#ac0f5a2e19ad75f706660e4037af19233", null ],
+    [ "PDPTN5110_ConnectSetInProgress", "usb__pd__ptn5110__connect_8c.html#a04c93cf6ac2b690c0837b01fc8b37068", null ],
+    [ "PDPTN5110_ConnectSrcSetTypecCurrent", "usb__pd__ptn5110__connect_8c.html#a4363da28058199bf22cacb67e5824518", null ],
+    [ "PDPTN5110_ConnectSWitchCCComms", "usb__pd__ptn5110__connect_8c.html#a784ca3f7cf79f3df2a26734007ebd767", null ],
+    [ "PDPTN5110_ConnectSwitchVConn", "usb__pd__ptn5110__connect_8c.html#ae7cdb7377bb383beaa0bbe287d3f3405", null ],
+    [ "PDPTN5110_ConnectSync", "usb__pd__ptn5110__connect_8c.html#ae27fca1a06ebec2028f45dd00e0eff8d", null ],
+    [ "PDPTN5110_ConnectUpdateAfterPRSwap", "usb__pd__ptn5110__connect_8c.html#a1136effbc01ddeeb75c6e70077fa1fca", null ],
+    [ "else", "usb__pd__ptn5110__connect_8c.html#a0544c3fe466e421738dae463968b70ba", null ]
+];

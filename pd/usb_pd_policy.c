@@ -297,6 +297,7 @@ static uint8_t PD_MsgSendExtTransition(pd_instance_t *pdInstance,
                                        uint8_t interruptedState,
                                        pd_psm_state_t errorState)
 {
+	// call by PD_MsgSendExtTransition
     if (PD_MsgSendExtendedMsg(pdInstance, sop, (message_type_t)msgType, dataLength, dataBuffer) &&
         PD_MsgWaitSendResult(pdInstance))
     {

@@ -1,0 +1,47 @@
+var usb__device__dci_8h =
+[
+    [ "usb_device_controller_handle", "usb__device__dci_8h.html#gaec03ce2e4732aa876cd2a91cf8e93b5b", null ],
+    [ "usb_device_callback_message_struct_t", "usb__device__dci_8h.html#ga85f9edb535af10a4a706061b9f06bc25", null ],
+    [ "usb_device_control_type_t", "usb__device__dci_8h.html#gae16dc18943ae9da34a2b122859568b5e", null ],
+    [ "usb_device_controller_cancel_t", "usb__device__dci_8h.html#ga476c2b07d6a5e467e104568aad59ef44", null ],
+    [ "usb_device_controller_control_t", "usb__device__dci_8h.html#gae484b958b5a84af6ce5921f8538ff1c4", null ],
+    [ "usb_device_controller_deinit_t", "usb__device__dci_8h.html#ga283139f5df38421250c30a094f34088d", null ],
+    [ "usb_device_controller_init_t", "usb__device__dci_8h.html#ga7f8af48e2f4f886f521f8128b6a05e9b", null ],
+    [ "usb_device_controller_interface_struct_t", "usb__device__dci_8h.html#ga634411452886b58586be873d8d631a3b", null ],
+    [ "usb_device_controller_recv_t", "usb__device__dci_8h.html#gac14df7129a0dc5e7c0b7148b05992dc8", null ],
+    [ "usb_device_controller_send_t", "usb__device__dci_8h.html#ga5879c987e628c5c5a27b5fcc685e90c8", null ],
+    [ "usb_device_notification_t", "usb__device__dci_8h.html#gabb134b8f1a6b63ae3979523ba53480bc", null ],
+    [ "usb_device_struct_t", "usb__device__dci_8h.html#ga4be463ccd1fe520b377febafb0a06c2f", null ],
+    [ "_usb_device_control_type", "usb__device__dci_8h.html#gaa7a58da69289c9e774119a7998835c54", [
+      [ "kUSB_DeviceControlRun", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a0d4334c836c8ddba19dd1b3c343bf718", null ],
+      [ "kUSB_DeviceControlStop", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a3e65ecf4751583140d63e6ad7129bb9a", null ],
+      [ "kUSB_DeviceControlEndpointInit", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a5f2f7690579a2582b74013d569f7a2b5", null ],
+      [ "kUSB_DeviceControlEndpointDeinit", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a758593417eb515bd9a64b5c9d9faf6c3", null ],
+      [ "kUSB_DeviceControlEndpointStall", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a667e55c04a0399ec26fd94a9aa6918e4", null ],
+      [ "kUSB_DeviceControlEndpointUnstall", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54ae3d343db3b169349791d2c1b14b8140b", null ],
+      [ "kUSB_DeviceControlGetDeviceStatus", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54aa04b915379ec7616d8e7318618652a1a", null ],
+      [ "kUSB_DeviceControlGetEndpointStatus", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a904c707abbfeac703932a25b731f668e", null ],
+      [ "kUSB_DeviceControlSetDeviceAddress", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a2e2b710fe6f299d1cd6655672b5d5c52", null ],
+      [ "kUSB_DeviceControlGetSynchFrame", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54ab290661a0aa5f30d61a22f9117a58899", null ],
+      [ "kUSB_DeviceControlResume", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a8bd921505bfadde8059c154c2025ae4e", null ],
+      [ "kUSB_DeviceControlSleepResume", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a7bed5173624dd0ebbb35da467111bd67", null ],
+      [ "kUSB_DeviceControlSuspend", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a8e66ee545151bb423cab8128033c5770", null ],
+      [ "kUSB_DeviceControlSleep", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a43941c46b3a3352c16a61ae2679c9c0b", null ],
+      [ "kUSB_DeviceControlSetDefaultStatus", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54aca7240a60464f7f19347ef3d518fd97f", null ],
+      [ "kUSB_DeviceControlGetSpeed", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54aa5de8d34f68ecf4e2948033b27f67567", null ],
+      [ "kUSB_DeviceControlGetOtgStatus", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a47e409659c5b7c11a8aa26ad4ec65279", null ],
+      [ "kUSB_DeviceControlSetOtgStatus", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a9b5a35a9f0054382e96410fffb7f2e8b", null ],
+      [ "kUSB_DeviceControlSetTestMode", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54ad3c6f680a4c3f112607d3a582b8b2cd8", null ],
+      [ "kUSB_DeviceControlGetRemoteWakeUp", "usb__device__dci_8h.html#ggaa7a58da69289c9e774119a7998835c54a268bbf4bd031a441273508f75d24ddc4", null ]
+    ] ],
+    [ "_usb_device_notification", "usb__device__dci_8h.html#gafdba1a6b57efd437d6a941bfbb9239db", [
+      [ "kUSB_DeviceNotifyBusReset", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba6b3844cfeb2f1acd91ec86e553cb4938", null ],
+      [ "kUSB_DeviceNotifySuspend", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dbaa9a1526acc96165a26fe187a771bd7ca", null ],
+      [ "kUSB_DeviceNotifyResume", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dbaf82ebeb85b3be0b518d0608052acfb46", null ],
+      [ "kUSB_DeviceNotifyLPMSleep", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba28a2f5e3abf7a469f1f39f154b8e72b9", null ],
+      [ "kUSB_DeviceNotifyLPMResume", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba35a2f56b459ad548456cc002b468a632", null ],
+      [ "kUSB_DeviceNotifyError", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba703fdebcf80a09a04f9149cc9171576f", null ],
+      [ "kUSB_DeviceNotifyDetach", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba26b9d31e47d99f112ebc74b17e1879cd", null ],
+      [ "kUSB_DeviceNotifyAttach", "usb__device__dci_8h.html#ggafdba1a6b57efd437d6a941bfbb9239dba9b4873734c36adcc45b205b5f55bad31", null ]
+    ] ]
+];
