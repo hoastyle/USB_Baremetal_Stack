@@ -176,19 +176,30 @@ typedef enum _pd_demo_sw_state
     kDEMO_SWProcessed,
 } pd_demo_sw_state_t;
 
-//app表示一种应用场景？
+//app表示一种应用场景？ 存储当前设备的信息，包括source/sink capabilities, infomation and so on
 typedef struct _pd_app
 {
+	/* PD Instance */
     pd_handle pdHandle;
+
+	/* Source Power Supply */
     pd_source_pdo_t selfSourcePdo1;
     pd_source_pdo_t selfSourcePdo2;
     pd_sink_pdo_t selfSinkPdo1;
     pd_sink_pdo_t selfSinkPdo2;
+
+	/* VDM Info Structure, including Identity, SVID, Modes */
     pd_vdm_identity_data_t selfVdmIdentity;
     uint32_t selfVdmSVIDs;
     uint32_t selfVdmModes;
+
+	/* Sink Request */
     pd_rdo_t sinkRequestRDO; /* sink - the self requested RDO; source - the partner sink requested RDO */
+
+
     pd_svdm_command_param_t structuredVDMCommandParam;
+
+	/* VDM Header */
 	/* structured vdm header */
     pd_structured_vdm_header_t defaultSVDMCommandHeader;
 	/* unstructured vdm header */
@@ -205,6 +216,7 @@ typedef struct _pd_app
     pd_battery_status_data_object_t selfBatteryStatus;
 	/* manufacturer info */
     pd_manufac_info_data_block_t selfManufacInfo;
+
     uint32_t sourceVbusVoltage;
     uint32_t sinkRequestVoltage;
     uint8_t commonData[8];

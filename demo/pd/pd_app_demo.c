@@ -566,7 +566,6 @@ void USB_PDDemoProcessSW(pd_app_t *pdAppInstance)
 	/* 短按 */
     if (pdAppInstance->sw1State == kDEMO_SWShortPress)
     {
-		// 表示已经处理过了
         pdAppInstance->sw1State = kDEMO_SWProcessed;
         if (powerRole == kPD_PowerRoleSink)
         {
@@ -751,6 +750,7 @@ uint32_t PD_DemoPrint(pd_app_t *pdAppInstance, const char *format, ...)
     va_end(arg);
 
     pdAppInstance->printProvider = (pdAppInstance->printProvider + 1) % PD_DEMO_PRINT_BUFFER_COUNT;
+	// 表示printBuffer满了？
     if (pdAppInstance->printProvider == pdAppInstance->printConsumer)
     {
         pdAppInstance->printFull = 1;
@@ -761,6 +761,13 @@ uint32_t PD_DemoPrint(pd_app_t *pdAppInstance, const char *format, ...)
 
 void PD_DemoProcessPrint(pd_app_t *pdAppInstance)
 {
+	/* Question:
+	 * - 什么情况会输出 ？
+     * - printProvider, printConsumer, printFull的作用 ？
+	 * - printBuffers由event call back function初始化
+	 */ 
+	// printProvider != printConsumer，表示还有buffer没有print
+	//
     if ((pdAppInstance->printProvider != pdAppInstance->printConsumer) || (pdAppInstance->printFull))
     {
         pdAppInstance->printFull = 0;
@@ -775,6 +782,7 @@ void PD_DemoTaskFun(pd_app_t *pdAppInstance)
     char uartData;
 
     PD_DemoProcessPrint(pdAppInstance);
+	// if no press, while(1)
     USB_PDDemoProcessSW(pdAppInstance);
     if (PD_DemoConsoleTryReadChar(&uartData) == kStatus_PD_Success)
     {
