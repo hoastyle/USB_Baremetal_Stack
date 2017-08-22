@@ -197,7 +197,10 @@ void BOARD_I2C1_ReleaseBus(void)
     i2c_release_bus_delay();
 }
 
-// call from startup.s, will be called whenever 1ms timer timeout
+/* 1ms timer interrupt handler
+ * Call from startup.s, will be called whenever 1ms timer timeout
+ * Including button handler and timer timeout handler
+ */
 void LPTMR0_IRQHandler(void)
 {
     LPTMR_ClearStatusFlags(LPTMR0, kLPTMR_TimerCompareFlag);

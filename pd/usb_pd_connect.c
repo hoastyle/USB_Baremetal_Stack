@@ -1445,6 +1445,7 @@ static TypeCState_t PD_ConnectStateMachine(pd_instance_t *pdInstance)
     {
 		// 根据phy role control and cc status 设置ccState
         PD_PhyControl(pdInstance, PD_PHY_GET_CC_LINE_STATE, &ccState);
+		// 这里cc1 state 以及 cc2 state相当于event
         cc1State = (pd_phy_cc_state_t)ccState.cc1State;
         cc2State = (pd_phy_cc_state_t)ccState.cc2State;
 
@@ -1589,6 +1590,7 @@ static TypeCState_t PD_ConnectStateMachine(pd_instance_t *pdInstance)
 // vbus power progress
 void PD_ConnectSetPowerProgress(pd_instance_t *pdInstance, uint8_t state)
 {
+	// state变化了才会执行
     if ((state != kVbusPower_Invalid) && (pdInstance->inProgress != state))
     {
 		// 设置power progress

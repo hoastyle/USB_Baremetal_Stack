@@ -334,6 +334,7 @@ static void PD_PsmSetNormalPower(pd_instance_t *pdInstance, uint8_t psmState)
     }
 }
 
+// PE Reset
 static void PD_PsmReset(pd_instance_t *pdInstance)
 {
     uint8_t uint8Tmp;
@@ -664,6 +665,7 @@ void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
 {
 	// 如果phy state change, 则通过call back调用alert handler
 	// alert interrupt handler will set PD_TASK_EVENT_PHY_STATE_CHAGNE and PD_TASK_EVENT_TYPEC_STATE_PROCESS, 中断只是设置flag，而不做处理
+	// Only be set by PHY, by phy interrupt
     if (eventSet & PD_TASK_EVENT_PHY_STATE_CHAGNE)
     {
         PD_PhyControl(pdInstance, PD_PHY_UPDATE_STATE, NULL);
@@ -688,7 +690,7 @@ void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
     /* clear the events that aren't processed in this condition */
     if (eventSet)
     {
-		// 如果dpm state machine不存在
+		// 如果是异常状态，则全部清楚 
         if (!((pdInstance->dpmStateMachine == 1) && (pdInstance->isConnected)))
         {
             USB_OsaEventClear(pdInstance->taskEventHandle, eventSet);
@@ -2528,6 +2530,7 @@ static uint8_t PD_PsmProcessState(pd_instance_t *pdInstance)
             else if (taskEventSet & PD_TASK_EVENT_DPM_MSG)
             {
                 uint8_t command;
+				/* 通过dpmMsgBits获取command */
                 command = PD_DpmGetMsg(pdInstance);
                 triggerInfo.dpmMsg = 0;
                 if (command)
@@ -6426,6 +6429,7 @@ static void PD_PsmConnect(pd_instance_t *pdInstance)
 
     pdInstance->psmCurState = PSM_UNKNOWN;
 
+	// 通过phy设置msg header相关信息
     PD_MsgSetPortRole(pdInstance, pdInstance->curPowerRole, pdInstance->curDataRole);
 
     pdInstance->psmPresentlyPdConnected = 0;
@@ -6477,6 +6481,7 @@ void PD_DpmConnect(pd_instance_t *pdInstance)
     /* do in the connect callback */
 
     pdInstance->dpmStateMachine = 0;
+	// psm initialization ?
     PD_PsmConnect(pdInstance);
 }
 
@@ -6671,7 +6676,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
     uint8_t connected;
 
 	//initializeLabel表示state machine是否被初始化过
-	//为0表示没有
+	// connect initialization, label will be initialized to 0 when disconnect or error recovery
     if (pdInstance->initializeLabel == 0)
     {
         pdInstance->initializeLabel = 1;
@@ -6704,6 +6709,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
     /* Process Type-C state change by Type-C state machine */
     connected = PD_ConnectCheck(pdInstance);
     connectStatus = PD_ConnectGetStateMachine(pdInstance);
+	// Question: 这部分算什么？
     if (connected != kConnectState_NotStable)
     {
         if (connected == kConnectState_Connected)
@@ -6768,6 +6774,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
                 }
 
 				// call PD_DpmDemoAppCallback in pd_app.c
+				// DPM call back event
                 PD_DpmAppCallback(pdInstance, PD_CONNECTED, NULL, 0);
                 PD_DpmConnect(pdInstance);
             }
@@ -7231,6 +7238,7 @@ pd_status_t PD_Command(pd_handle pdHandle, uint32_t command, void *param)
             break;
     }
 
+	/* 上面部分是根据command不同，对当前状态以及相关数据结构进行相应改动 */
     if (status == kStatus_PD_Success)
     {
 #if defined(PD_CONFIG_PD3_FAST_ROLE_SWAP_ENABLE) && (PD_CONFIG_PD3_FAST_ROLE_SWAP_ENABLE)

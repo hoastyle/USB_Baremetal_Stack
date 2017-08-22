@@ -69,6 +69,7 @@ typedef enum _pd_task_event_type
     PD_TASK_EVENT_TYPEC_STATE_PROCESS = 0x100u,
 } pd_task_event_type_t;
 
+// connection state machine，大粒度三种，小粒度 TypeCState_t
 typedef enum _pd_connect_state
 {
     kConnectState_NotStable,

@@ -703,7 +703,7 @@ void PDPTN5110_ConnectInTcChecKDetacHDurIngHardReset(pd_phy_ptn5110_instance_t *
 	input: phy instance, state in progress
 	output: void
 	function: enable/disable auto discharge of disconnect and cc status alert change according to different target state
-	question: 该action实在change之前或者之后，比如swap, reset ? 
+	question: 该action是在change之前或者之后，比如swap, reset ? 
  */
 void PDPTN5110_ConnectSetInProgress(pd_phy_ptn5110_instance_t *ptn5110Instance, uint8_t state)
 {

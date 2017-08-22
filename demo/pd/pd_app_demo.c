@@ -564,6 +564,7 @@ void USB_PDDemoProcessSW(pd_app_t *pdAppInstance)
 		   长按，request 9V@1.5A
 	*/
 	/* 短按 */
+	/* 按键状态信息由1ms timer 中轮询获取 */
     if (pdAppInstance->sw1State == kDEMO_SWShortPress)
     {
         pdAppInstance->sw1State = kDEMO_SWProcessed;

@@ -164,8 +164,10 @@ void PD_TimerIsrFunction(pd_handle pdHandle)
         return;
     }
 
+	/* If the number of timer <=32, then index = 1, if > 32, then 2, 3 ··· */
     for (index32 = 0; index32 < ((tTimerCount + 31) / 32); ++index32)
     {
+		/* Specify timer is running */
         if (pdInstance->timrsRunningState[index32] != 0)
         {
             for (index8 = 0; index8 < 32; ++index8)
@@ -173,6 +175,7 @@ void PD_TimerIsrFunction(pd_handle pdHandle)
                 bitMape = (0x00000001u << index8);
                 if (pdInstance->timrsRunningState[index32] & bitMape)
                 {
+					/* if timer timout, call timer callback */
                     if (((pdInstance->timrsTimeValue[(index32 * 32) + index8])--) == 0)
                     {
                         PD_TimerCallback(pdInstance, (index32 * 32) + index8);
