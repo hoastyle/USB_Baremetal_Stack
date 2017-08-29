@@ -6507,7 +6507,7 @@ uint8_t PD_PsmStateMachine(pd_instance_t *pdInstance)
             break;
 
         case 1:
-			// 什么情况会unknown, 如果unknown，则置为idle，否则保持
+			// Question: 什么情况会unknown, 如果unknown，则置为idle，否则保持
             pdInstance->psmNewState = (pdInstance->psmCurState == PSM_UNKNOWN) ? PSM_IDLE : pdInstance->psmCurState;
 
             /* Did we do anything in Step A or B or C */
