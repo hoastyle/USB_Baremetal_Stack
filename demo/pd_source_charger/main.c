@@ -273,6 +273,7 @@ int main(void)
 {
     BOARD_InitPins();
     BOARD_BootClockRUN();
+	// Question: 作用是什么？
     BOARD_I2C0_ReleaseBus();
     BOARD_InitDebugConsole();
 

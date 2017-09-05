@@ -41,6 +41,7 @@
  * Code
  ******************************************************************************/
 /* Initialize debug console. */
+// board gpio init中已经将uart io配置好
 void BOARD_InitDebugConsole(void)
 {
     uint32_t uartClkSrcFreq;

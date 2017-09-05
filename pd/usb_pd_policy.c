@@ -677,6 +677,9 @@ void PD_PortTaskEventProcess(pd_instance_t *pdInstance, uint32_t eventSet)
         USB_OsaEventClear(pdInstance->taskEventHandle, PD_TASK_EVENT_OTHER);
     }
 
+	// Question: 这部分的目的是什么, 表示这些部分不在这里处理，所以不clear ?
+	// PHY STATE CHANGE在phy control中已经被清除，所以这里应该有bug
+	// 如果连接的，后面就需要处理DPM_MSG
     if (pdInstance->isConnected)
     {
         eventSet &= (~(PD_TASK_EVENT_PHY_STATE_CHAGNE | PD_TASK_EVENT_OTHER | PD_TASK_EVENT_FR_SWAP_SINGAL |
@@ -6684,14 +6687,18 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
         /* We want to override any existing MTP-based connection */
 		// 根据typec power role (typec_power_role_config_t) init
         PD_ConnectInitRole(pdInstance, pdInstance->pdPowerPortConfig->typecRole, 0);
-		// curConnectState
+		// connectedResult也就是connect state machine当前的state
         pdInstance->connectedResult = PD_ConnectGetStateMachine(pdInstance);
         PD_DpmSetVconn(pdInstance, 0);
     }
 	// 该event group在init func中已经建立了
 	// not auto clear
+	// waitTime在instance init中被初始化为10ms
+	// 等待事件发生返回success或者timeout返回timeout, 这里为什么需要等10ms?
     USB_OsaEventWait(pdInstance->taskEventHandle, 0xffu, 0, pdInstance->waitTime, &taskEventSet);
+	// 有可能在操作过程中被修改，所以该处重新初始化一遍
     pdInstance->waitTime = PD_WAIT_EVENT_TIME;
+	// task event参数不是指针，所以该部分不变
     PD_PortTaskEventProcess(pdInstance, taskEventSet);
     if (taskEventSet & PD_TASK_EVENT_TYPEC_STATE_PROCESS)
     {
@@ -6709,7 +6716,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
     /* Process Type-C state change by Type-C state machine */
     connected = PD_ConnectCheck(pdInstance);
     connectStatus = PD_ConnectGetStateMachine(pdInstance);
-	// Question: 这部分算什么？
+	// Question: 这部分算什么？state status, include connected and disconnected
     if (connected != kConnectState_NotStable)
     {
         if (connected == kConnectState_Connected)
@@ -6841,6 +6848,7 @@ void PD_StackStateMachine(pd_instance_t *pdInstance)
         else if (pdInstance->isConnected) /* connect result stable and connected */
         {
             pdInstance->noConnectButVBusExit = 0;
+			// 只有连接稳定了才进入PE State Machine
             smState = PD_PsmStateMachine(pdInstance);
 
             /* Force a partner disconnect if the PSM has requested a error recovery */

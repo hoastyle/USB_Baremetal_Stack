@@ -298,11 +298,14 @@ usb_osa_status_t USB_OsaEventWait(
             autoClear = pdFALSE;
         }
 
+		// 等待事件或者timeout
         bits = xEventGroupWaitBits(event->handle, (EventBits_t)bitMask, autoClear, (BaseType_t)flag, timeout);
 
+		// 如果指针存在, 则将event group value & mask 存入bitset中
         if (bitSet)
         {
             *bitSet = bits & ((EventBits_t)bitMask);
+			// 如果event group value & mask不为0，也就是有希望的事件发生，则返回Success
             if (*bitSet)
             {
                 return kStatus_USB_OSA_Success;
